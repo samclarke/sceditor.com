@@ -1,0 +1,18 @@
+permalink: /posts/:title
+pygments: true
+markdown: rdiscount
+
+domain: sceditor.com
+title: SCEditor
+author: Sam Clarke
+email: sam@samclarke.com
+
+disqus:
+  id: sceditor
+
+github:
+  username: samclarke
+
+sceditor:
+  version: 1.4.2
+  download: https://github.com/samclarke/SCEditor/archive/v1.4.2.zip

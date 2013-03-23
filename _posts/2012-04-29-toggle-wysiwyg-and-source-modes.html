@@ -1,0 +1,62 @@
+---
+layout: post
+title: Toggle WYSIWYG and source modes
+excerpt: Example of how to programmatically toggle between WYSIWYG and source modes
+categories:
+    - Example
+    - How To
+---
+<h2>Toggle WYSIWYG and source modes</h2>
+
+<link rel="stylesheet" href="/minified/themes/default.min.css" type="text/css" media="all" />
+<script type="text/javascript" src="/minified/jquery.sceditor.bbcode.min.js"> </script>
+<script>
+$(function() {
+	$("#demo-toggle").sceditor({
+		plugins: 'bbcode',
+		toolbar: "bold,italic,underline|source",
+		style: "/minified/jquery.sceditor.default.min.css",
+		emoticonsRoot: "/"
+	});
+});
+
+function toggle()
+{
+	$("#demo-toggle").data("sceditor").toggleSourceMode();
+}
+</script>
+
+<p><textarea style="width:600px; height:300px" id="demo-toggle">Simple [b]demo[/b].</textarea></p>
+<p><a href="javascript:toggle();">Toggle editor mode</a></p>
+
+<h2>Code behind</h2>
+
+<h3>Create the editor</h3>
+<pre class="prettyprint linenums">
+$function() {
+	$("#demo-toggle").sceditor({
+		plugins: 'bbcode',
+		toolbar: "bold,italic,underline|source",
+		style: "/minified/jquery.sceditor.default.min.css"
+	});
+});
+</pre>
+
+<h3>Toggle source mode</h3>
+
+<p>Then, to switch between WYSIWYG mode and source mode, simply call the <code>toggleTextMode()</code> method on an editor instance.</p>
+<pre class="prettyprint linenums">
+$("#demo-toggle").data("sceditor").toggleTextMode();
+</pre>
+
+<p>You can also use <code>sourceMode([boolean] setToSourceMode)</code> to set the editor mode and <code>sourceMode()</code> to get the editor mode.
+<pre class="prettyprint linenums">
+// InSourceMode will be true if the editor is in source mdoe, false if not.
+var InSourceMode = $("#demo-toggle").data("sceditor").sourceMode();
+
+// Set the editor to source mode
+$("#demo-toggle").data("sceditor").sourceMode(true);
+
+// Set the editor to WYSIWYG mode
+$("#demo-toggle").data("sceditor").sourceMode(false);
+</pre>

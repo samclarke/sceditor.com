@@ -1,0 +1,147 @@
+---
+layout: post
+title: How to add custom commands
+excerpt: How to add custom HTML and BBCode commands
+tags: [HTML, BBCode, demo, example, custom, commands]
+categories:
+    - Demo
+    - BBCode
+    - HTML
+---
+<h2>Custom command demo</h2>
+
+<link rel="stylesheet" href="/minified/themes/default.min.css" type="text/css" media="all" />
+<script type="text/javascript" src="/minified/jquery.sceditor.bbcode.min.js"> </script>
+<style>
+	.sceditor-button-headers div { background: url('/images/headers-button.png'); }
+	.sceditor-header-option {
+		display: block;
+		cursor: pointer;
+		font-size: 14px;
+		text-decoration: none;
+		color: #222;
+	}
+	.sceditor-header-option h1,
+	.sceditor-header-option h2,
+	.sceditor-header-option h3,
+	.sceditor-header-option h4,
+	.sceditor-header-option h5,
+	.sceditor-header-option h6 {
+		border: 0;
+		margin: 0;
+		padding: .25em;
+	}
+	.sceditor-header-option:hover { background: #eee; }
+</style>
+<script>$(document).ready(function() {
+	$.sceditor.command.set(
+		"headers",
+		{
+			exec: function(caller) {
+				var	editor    = this,
+					content   = $("<div />"),
+					clickFunc = function (e) {
+						editor.execCommand("formatblock", "<h" + $(this).data('sceditor-hsize') + ">");
+						editor.closeDropDown(true);
+						e.preventDefault();
+					};
+
+				for (var i=1; i<= 6; i++) {
+					content.append(
+						$('<a class="sceditor-header-option" href="#"><h' + i + '>Heading ' + i + '</h' + i + '></a>')
+							.data('sceditor-hsize', i)
+							.click(clickFunc));
+				}
+
+				editor.createDropDown(caller, "header-picker", content);
+		 	},
+			tooltip: "Format Headers"
+		}
+	);
+
+	$.sceditorBBCodePlugin.bbcode
+		.set("h1", { tags: { h1: null }, format: "[h1]{0}[/h1]", html: "<h1>{0}</h1>" })
+		.set("h2", { tags: { h2: null }, format: "[h2]{0}[/h2]", html: "<h2>{0}</h2>" })
+		.set("h3", { tags: { h3: null }, format: "[h3]{0}[/h3]", html: "<h3>{0}</h3>" })
+		.set("h4", { tags: { h4: null }, format: "[h4]{0}[/h4]", html: "<h4>{0}</h4>" })
+		.set("h5", { tags: { h5: null }, format: "[h5]{0}[/h5]", html: "<h5>{0}</h5>" })
+		.set("h6", { tags: { h6: null }, format: "[h6]{0}[/h6]", html: "<h6>{0}</h6>" });
+
+	$("#demo-cust-cmd").sceditor({
+		plugins: 'bbcode',
+		toolbar: "headers|source",
+		style: "/minified/jquery.sceditor.default.min.css",
+		emoticonsRoot: "/"
+	});
+});
+</script>
+
+<p><textarea style="width:600px; height:300px" id="demo-cust-cmd">[h1]Header 1[/h1][h2]Sub header[/h2]Normal text</textarea></p>
+
+<h2>Code behind it</h2>
+
+<p>To add the HTML command, use the $.sceditor.command.set function:</p>
+
+{% highlight javascript %}
+$.sceditor.command.set(
+	"headers",
+	{
+		exec: function(caller) {
+			var	editor    = this,
+				content   = $("<div />"),
+				clickFunc = function (e) {
+					editor.execCommand("formatblock", "<h" + $(this).data('sceditor-hsize') + ">");
+					editor.closeDropDown(true);
+					e.preventDefault();
+				};
+
+			for (var i=1; i<= 6; i++) {
+				content.append(
+					$('<a class="sceditor-header-option" href="#"><h' + i + '>Heading ' + i + '</h' + i + '></a>')
+						.data('sceditor-hsize', i)
+						.click(clickFunc));
+			}
+
+			editor.createDropDown(caller, "header-picker", content);
+	 	},
+		tooltip: "Format Headers"
+	}
+);
+{% endhighlight %}
+
+<p>Then add the commands CSS:</p>
+
+{% highlight css %}
+.sceditor-button-headers div { background: url('/images/headers-button.png'); }
+.sceditor-header-option {
+	display: block;
+	cursor: pointer;
+	font-size: 14px;
+	text-decoration: none;
+	color: #222;
+}
+.sceditor-header-option:hover { background: #eee; }
+{% endhighlight %}
+
+<p>Then, if using BBCode output, add the BBCode commands using the $.sceditorBBCodePlugin.bbcode.set function:</p>
+{% highlight javascript %}
+$.sceditorBBCodePlugin.bbcode
+	.set("h1", { tags: { h1: null }, format: "[h1]{0}[/h1]", html: "<h1>{0}</h1>" })
+	.set("h2", { tags: { h2: null }, format: "[h2]{0}[/h2]", html: "<h2>{0}</h2>" })
+	.set("h3", { tags: { h3: null }, format: "[h3]{0}[/h3]", html: "<h3>{0}</h3>" })
+	.set("h4", { tags: { h4: null }, format: "[h4]{0}[/h4]", html: "<h4>{0}</h4>" })
+	.set("h5", { tags: { h5: null }, format: "[h5]{0}[/h5]", html: "<h5>{0}</h5>" })
+	.set("h6", { tags: { h6: null }, format: "[h6]{0}[/h6]", html: "<h6>{0}</h6>" });
+{% endhighlight %}
+
+<p>Finally add the command to the toolbar of the editor:</p>
+<pre class="prettyprint linenums">
+$("#demo-cust-cmd").sceditorBBCodePlugin({
+	toolbar: "headers|source",
+});
+</pre>
+
+<p>See the <a href="/documentation/">documentation</a> for more details on the above functions and CSS.</p>
+
+
+
