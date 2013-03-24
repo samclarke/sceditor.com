@@ -151,6 +151,13 @@ $(function() {
 The charset to use for the <abbr title="What You See Is What You Get">WYSIWYG</abbr> content.
 
 
+### emoticonsEnabled <a id="emoticonsEnabled"></a>
+
+**emoticonsEnabled** *Bool* Defaults to `true`
+
+If emoticons are enabled
+
+
 ### emoticonsCompat <a id="emoticonsCompat"></a>
 
 **emoticonsCompat** *Bool* Defaults to `false`
