@@ -16,7 +16,7 @@ You can set the editor to run in source mode if there is no <abbr title="What Yo
 ### Desktop <a id="desktop"></a>
 
  * IE 6+
- * FireFox
+ * Firefox
  * Chrome &amp; Chromium
  * Opera
  * Safari
