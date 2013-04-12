@@ -1,6 +1,8 @@
 permalink: /posts/:title
-pygments: true
-markdown: rdiscount
+markdown: kramdown
+kramdown:
+  auto_ids: false
+  enable_coderay: false
 
 domain: sceditor.com
 title: SCEditor

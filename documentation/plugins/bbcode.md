@@ -144,7 +144,7 @@ The default attribute quote type.
 
 Should be one of the following values:
 
-* **$.sceditor.BBCodeParser.QuoteType.auto**  
+* **$.sceditor.BBCodeParser.QuoteType.always**  
   Always quote the attribute value
 * **$.sceditor.BBCodeParser.QuoteType.never**  
   Never quote the attributes value

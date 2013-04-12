@@ -84,12 +84,17 @@ Or a function that takes 1 argument, `caller`. The functions `this` will be set 
 * **caller** *HTMLElement*  
   The commands HTML button element or null.
 
-e.g.:
+**Example**
 
 <pre class="prettyprint linenums">
 exec: function () {
-	this.insert("[b]Hello World"[/b]");
+	this.insert("[b]Hello World[/b]");
 }
+</pre>
+
+<pre class="prettyprint linenums">
+// Bold will be passed to the native execCommand
+exec: "bold"
 </pre>
 
 
@@ -113,12 +118,16 @@ If `txtExec` is a function it should take 1 argument, `caller`. The functions `t
 * **caller** *HTMLElement*  #
   The commands HTML button element or null.
 
-e.g.:
+**Example**
 
 <pre class="prettyprint linenums">
 txtExec: function () {
-	this.insert("[b]Hello World"[/b]");
+	this.insert("[b]Hello World[/b]");
 }
+</pre>
+
+<pre class="prettyprint linenums">
+txtExec: ["[b]", "[/b]"]
 </pre>
 
 

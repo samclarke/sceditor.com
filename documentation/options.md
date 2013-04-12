@@ -55,6 +55,8 @@ sections:
       title: ReadOnly
     - url: '#autofocus'
       title: Autofocus
+    - url: '#autofocusEnd'
+      title: AutofocusEnd
     - url: '#autoExpand'
       title: AutoExpand
     - url: '#autoUpdate'
@@ -99,7 +101,52 @@ $("textarea").sceditor({
 
 **toolbar** *String* Defaults to a list of all the built in commands
 
-A comma separated list of commands. To separate commands into groups, use the bar character (|) instead of a comma. e.g.: `"bold,italic,underline|source"`
+A comma separated list of commands. To separate commands into groups, use the bar character (&#124;) instead of a comma. e.g.: `"bold,italic,underline|source"`
+
+Below is a list of default commands that can be included.
+
+<div class="well" markdown="1">
+ * **bold**
+ * **italic**
+ * **underline**
+ * **strike**
+ * **subscript**
+ * **superscript**
+ * **left**
+ * **center**
+ * **right**
+ * **justify**
+ * **font**
+ * **size**
+ * **color**
+ * **removeformat**
+ * **cut**  
+ * This only works in IE due to security permissions. In all other browsers it's just disabled.
+ * **copy**  
+ * This only works in IE due to security permissions. In all other browsers it's just disabled.
+ * **paste**  
+ * This only works in IE due to security permissions. In all other browsers it's just disabled.
+ * **pastetext**
+ * **bulletlist**
+ * **orderedlist**
+ * **table**
+ * **code**
+ * **quote**
+ * **horizontalrule**
+ * **image**
+ * **email**
+ * **link**
+ * **unlink**
+ * **emoticon**
+ * **youtube**
+ * **date**
+ * **time**
+ * **ltr**
+ * **rtl**
+ * **print**
+ * **maximize**
+ * **source**
+</div>
 
 
 ### style <a id="style"></a>
@@ -317,6 +364,13 @@ This can be changed at runtime with the `rtl(bool)` method.
 **autofocus** *bool* Defaults to `false`
 
 If to auto focus the editor on page load.
+
+
+### autofocusEnd <a id="autofocusEnd"></a>
+
+**autofocus** *bool* Defaults to `true`
+
+If the cursor should be placed at the end when auto focusing or at the beginning.
 
 
 ### autoExpand <a id="autoExpand"></a>

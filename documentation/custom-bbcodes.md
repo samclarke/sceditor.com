@@ -91,7 +91,9 @@ To add a new BBCode, use the `$.sceditor.plugins.bbcode.bbcode.set()` function.
     breakAfter: false,
 
     format: 'string|function',
-    html: 'string|function'
+    html: 'string|function',
+
+    quoteType: $.sceditor.BBCodeParser.QuoteType.auto
 }
 </pre>
 
@@ -291,3 +293,21 @@ html: function(token, attrs, content) {
     return '&lt;blockquote&gt;' + content + '&lt;/blockquote&gt;';
 }
 </pre>
+
+
+### quoteType
+
+**quoteType** *$.sceditor.BBCodeParser.QuoteType* Defaults to `$.sceditor.BBCodeParser.QuoteType.auto`
+
+The attribute quote type.
+
+Should either be a function or one of the following values:
+
+* **$.sceditor.BBCodeParser.QuoteType.always**  
+  Always quote the attribute value
+* **$.sceditor.BBCodeParser.QuoteType.never**  
+  Never quote the attributes value
+* **$.sceditor.BBCodeParser.QuoteType.auto**  
+  Only quote the attributes value when it contains spaces ot equals
+
+
