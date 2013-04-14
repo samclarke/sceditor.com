@@ -104,18 +104,61 @@ code {
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-.api h3 {
+.api h3, .api h4 {
 	line-height: 1;
-	padding: .5em 0;
+	padding: .25em 0;
 	border-bottom: 1px solid #ddd;
+	margin-top: .15em;
 	margin-bottom: .75em;
 }
+.api h4 { margin-top: 1.5em; }
 
 .method .since {
 	font-size: 75%;
 	float: right;
 }
 
+.parameters {
+	border: 1px solid #E3E3E3;
+
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.api .parameter {
+	padding: 5px 19px;
+	margin-bottom: 0;
+	border: 0;
+	border-bottom: 1px solid #E3E3E3;
+
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.api .parameter:last-child { border: 0; }
+
+.api .parameter p {
+	margin: 10px 0;
+}
+
+.api .examples {
+	margin: 26px -19px -10px;
+	border-width: 0;
+
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
 .api .examples h2 {
 	font-size: 1.5em;
 }
