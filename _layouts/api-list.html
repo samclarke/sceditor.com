@@ -1,0 +1,18 @@
+---
+layout: api
+---
+
+<h2>{{ page.api_title }}</h2>
+
+<ul class="api-list">
+{% sorted_for link in site.html_pages sort_by:title %}
+	{% if link.categories contains page.api_category %}
+		<li>
+			<a href="{{ link.url }}">{{ link.title }}</a>
+			{% if link.excerpt %}
+				<div>{{ link.excerpt }}</div>
+			{% endif %}
+		</li>
+	{% endif %}
+{% endsorted_for %}
+</ul>

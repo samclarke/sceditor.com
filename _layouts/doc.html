@@ -19,55 +19,67 @@ docmenu:
       title: Custom Plugins
     - url: /documentation/theming/
       title: Theming
+    - url: '/api/'
+      title: API
     - url: '/documentation/files/'
       title: Files
     - url: '/documentation/browser-compatibility/'
       title: Browser Compatibility
     - url: '/documentation/support-licensing/'
       title: Support/Licensing
+url_parts:
+  - plugins: Plugins
 ---
 
-<ul class="pager">
-{% for link in page.docmenu %}
-{% 	if page.url == link.url %}
-{% 		if prev %}
-		<li class="previous"><a href="{{ prev.url }}">&larr; {{ prev.title }}</a></li>
-{% 		endif %}
-
-{% 		assign next = true %}
-{% 	elsif next %}
-		<li class="next"><a href="{{ link.url }}">{{ link.title }} &rarr;</a></li>
-{% 		assign next = nil %}
-{% 	else %}
-{% 		assign prev = link %}
-{% 	endif %}
-{% endfor %}
+<ul class="breadcrumb">
+  <li><a href="/documentation/">Documentation</a> <span class="divider">/</span></li>
+{%  assign base = '/documentation/' %}
+{%  assign crumbs = page.url | split: '/' %}
+{%  for crumb in crumbs %}
+{%    unless forloop.last %}
+{%      for part_hash in page.url_parts %}
+{%        for part in part_hash %}
+{%          if part[0] == crumb %}
+            <li><a href="{{ base }}{{ crumb }}/">{{ part[1] }}</a> <span class="divider">/</span></li>
+{%            assign base = base | append: crumb | append: '/' %}
+{%          endif %}
+{%        endfor %}
+{%      endfor %}
+{%    endunless %}
+{%  endfor %}
+  <li class="active">{{ page.title }}</li>
 </ul>
 
 <div class="row-fluid docs">
 	<div class="span3">
 		<ul class="nav nav-tabs nav-stacked">
-		{% for link in page.docmenu %}
-			{% if page.url == link.url %}
-			<li class="active"><a href="{{ link.url }}">{{ link.title }}</a></li>
-			{% else %}
-			<li><a href="{{ link.url }}">{{ link.title }}</a></li>
-			{% endif %}
-		{% endfor %}
+{% 		for link in page.docmenu %}
+{% 			if page.url == link.url %}
+				<li class="active"><a href="{{ link.url }}">{{ link.title }}</a></li>
+{% 			else %}
+				<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+{% 			endif %}
+{% 		endfor %}
 		</ul>
-
-
-		{% if page.sections != nil %}
-		<h5>Sections</h5>
-		<ul class="nav nav-tabs nav-stacked">
-			{% for section in page.sections %}
-			<li><a href="{{ section.url }}">{{ section.title }}</a></li>
-			{% endfor %}
-		</ul>
-		{% endif %}
 	</div>
 	<div class="span9">
 		{{ content }}
 	</div>
 </div>
 
+<ul class="pager">
+{% for link in page.docmenu %}
+{%  if page.url == link.url %}
+{%    if prev %}
+    <li class="previous"><a href="{{ prev.url }}">&larr; {{ prev.title }}</a></li>
+{%    endif %}
+
+{%    assign next = true %}
+{%  elsif next %}
+    <li class="next"><a href="{{ link.url }}">{{ link.title }} &rarr;</a></li>
+{%    assign next = nil %}
+{%  else %}
+{%    assign prev = link %}
+{%  endif %}
+{% endfor %}
+</ul>

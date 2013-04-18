@@ -18,3 +18,5 @@ github:
 sceditor:
   version: 1.4.2
   download: https://github.com/samclarke/SCEditor/archive/v1.4.2.zip
+
+paginate: 10
