@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Browser Compatibility
-permalink: /browser-compatibility/
+permalink: /documentation/browser-compatibility/
 categories:
     - Docs
 ---

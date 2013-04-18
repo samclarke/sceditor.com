@@ -1,40 +1,9 @@
 ---
 layout: doc
 title: Custom Commands
-permalink: /custom-plugins/
+permalink: /documentation/custom-plugins/
 categories:
     - Docs
-sections:
-    - url: '#custom-plugins'
-      title: Custom Plugins
-    - url: '#creating'
-      title: Creating a Plugin
-    - url: '#handling-signals'
-      title: Handling Signals
-    - url: '#init'
-      title: Init
-    - url: '#destroy'
-      title: Destroy
-    - url: '#signalReady'
-      title: SignalReady
-    - url: '#signalKeydownEvent'
-      title: SignalKeydownEvent
-    - url: '#signalKeyupEvent'
-      title: SignalKeyupEvent
-    - url: '#signalKeypressEvent'
-      title: SignalKeypressEvent
-    - url: '#signalFocusEvent'
-      title: SignalFocusEvent
-    - url: '#signalBlurEvent'
-      title: SignalBlurEvent
-    - url: '#signalContextmenuEvent'
-      title: SignalContextmenuEvent
-    - url: '#signalSelectionchangedEvent'
-      title: SignalSelectionchangedEvent
-    - url: '#signalToSource'
-      title: SignalToSource
-    - url: '#signalToWysiwyg'
-      title: SignalToWysiwyg
 ---
 
 ## Adding Custom Plugins <a id="custom-plugins"></a>

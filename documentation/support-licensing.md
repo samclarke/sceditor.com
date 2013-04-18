@@ -1,16 +1,9 @@
 ---
 layout: doc
 title: Support & Licensing
-permalink: /support-licensing/
+permalink: /documentation/support-licensing/
 categories:
     - Docs
-sections:
-    - url: '#support'
-      title: Support
-    - url: '#licensing'
-      title: Licensing
-    - url: '#faq'
-      title: FAQ
 ---
 
 ## Support/Licensing

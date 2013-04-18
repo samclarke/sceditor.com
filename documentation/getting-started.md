@@ -1,16 +1,9 @@
 ---
 layout: doc
 title: Getting started
-permalink: /getting-started/
+permalink: /documentation/getting-started/
 categories:
     - Docs
-sections:
-    - url: '#include'
-      title: Include
-    - url: '#bbcode'
-      title: BBCode
-    - url: '#xhtml'
-      title: XHTML
 ---
 
 ## Quick Start <a id="quick-start"></a>

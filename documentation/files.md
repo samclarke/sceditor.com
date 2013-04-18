@@ -1,18 +1,9 @@
 ---
 layout: doc
 title: Files
-permalink: /files/
+permalink: /documentation/files/
 categories:
     - Docs
-sections:
-    - url: '#files'
-      title: Files
-    - url: '#core'
-      title: Core Files
-    - url: '#plugins'
-      title: Plugins
-    - url: '#themes'
-      title: Themes
 ---
 
 ## Files <a id="files"></a>

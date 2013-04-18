@@ -1,24 +1,9 @@
 ---
 layout: doc
 title: Custom Commands
-permalink: /custom-commands/
+permalink: /documentation/custom-commands/
 categories:
     - Docs
-sections:
-    - url: '#custom-commands'
-      title: Custom Commands
-    - url: '#creating-command'
-      title: Creating/Updating
-    - url: '#command-structure'
-      title: Command Structure
-    - url: '#exec'
-      title: Exec
-    - url: '#errorMessage'
-      title: ErrorMessage
-    - url: '#txtExec'
-      title: TxtExec
-    - url: '#tooltip'
-      title: Tooltip
 ---
 
 ## Adding Custom Commands <a id="custom-commands"></a>

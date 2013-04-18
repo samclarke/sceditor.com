@@ -1,76 +1,9 @@
 ---
 layout: doc
 title: Options
-permalink: /options/
+permalink: /documentation/options/
 categories:
     - Docs
-sections:
-    - url: '#howto'
-      title: How to use
-    - url: '#toolbar'
-      title: Toolbar
-    - url: '#style'
-      title: Style
-    - url: '#fonts'
-      title: Fonts
-    - url: '#colors'
-      title: Colors
-    - url: '#locale'
-      title: Locale
-    - url: '#charset'
-      title: Charset
-    - url: '#emoticonsCompat'
-      title: EmoticonsCompat
-    - url: '#emoticonsRoot'
-      title: EmoticonsRoot
-    - url: '#emoticons'
-      title: Emoticons
-    - url: '#width'
-      title: Width
-    - url: '#height'
-      title: Height
-    - url: '#resizeEnabled'
-      title: ResizeEnabled
-    - url: '#resizeMinWidth'
-      title: ResizeMinWidth
-    - url: '#resizeMinHeight'
-      title: ResizeMinHeight
-    - url: '#resizeMaxHeight'
-      title: ResizeMaxHeight
-    - url: '#resizeMaxWidth'
-      title: ResizeMaxWidth
-    - url: '#resizeHeight'
-      title: ResizeHeight
-    - url: '#resizeHeight'
-      title: ResizeHeight
-    - url: '#dateFormat'
-      title: DateFormat
-    - url: '#toolbarContainer'
-      title: ToolbarContainer
-    - url: '#enablePasteFiltering'
-      title: EnablePasteFiltering
-    - url: '#rtl'
-      title: Rtl
-    - url: '#readOnly'
-      title: ReadOnly
-    - url: '#autofocus'
-      title: Autofocus
-    - url: '#autofocusEnd'
-      title: AutofocusEnd
-    - url: '#autoExpand'
-      title: AutoExpand
-    - url: '#autoUpdate'
-      title: AutoUpdate
-    - url: '#runWithoutWysiwygSupport'
-      title: RunWithoutWysiwygSupport
-    - url: '#id'
-      title: Id
-    - url: '#plugins'
-      title: Plugins
-    - url: '#parserOptions'
-      title: ParserOptions
-    - url: '#dropDownCss'
-      title: DropDownCss
 ---
 
 ## Options
@@ -202,7 +135,7 @@ The charset to use for the <abbr title="What You See Is What You Get">WYSIWYG</a
 
 **emoticonsEnabled** *Bool* Defaults to `true`
 
-If emoticons are enabled
+If emoticons should be enabled. Set to `false` to disable emoticons.
 
 
 ### emoticonsCompat <a id="emoticonsCompat"></a>

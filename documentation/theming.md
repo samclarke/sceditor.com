@@ -1,16 +1,9 @@
 ---
 layout: doc
 title: Theming
-permalink: /theming/
+permalink: /documentation/theming/
 categories:
     - Docs
-sections:
-    - url: '#html-structure'
-      title: HTML Structure
-    - url: '#css-structure'
-      title: CSS Structure
-    - url: '#theme-structure'
-      title: Theme Structure
 ---
 
 ## Theming

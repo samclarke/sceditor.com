@@ -1,46 +1,9 @@
 ---
 layout: doc
 title: Custom BBCodes
-permalink: /custom-bbcodes/
+permalink: /documentation/custom-bbcodes/
 categories:
     - Docs
-sections:
-    - url: '#custom-bbcodes'
-      title: Custom BBCodes
-    - url: '#adding'
-      title: Create/Update
-    - url: '#bbcode-structure'
-      title: BBCode Structure
-    - url: '#styles'
-      title: Styles
-    - url: '#tags'
-      title: Tags
-    - url: '#isSelfClosing'
-      title: IsSelfClosing
-    - url: '#isInline'
-      title: IsInline
-    - url: '#isHtmlInline'
-      title: IsHtmlInline
-    - url: '#allowedChildren'
-      title: AllowedChildren
-    - url: '#allowsEmpty'
-      title: AllowsEmpty
-    - url: '#excludeClosing'
-      title: ExcludeClosing
-    - url: '#skipLastLineBreak'
-      title: SkipLastLineBreak
-    - url: '#breakBefore'
-      title: BreakBefore
-    - url: '#breakStart'
-      title: BreakStart
-    - url: '#breakEnd'
-      title: BreakEnd
-    - url: '#breakAfter'
-      title: BreakAfter
-    - url: '#format'
-      title: Format
-    - url: '#html'
-      title: Html
 ---
 
 ## Adding Custom BBCodes <a id="custom-bbcodes"></a>

@@ -1,26 +1,9 @@
 ---
 layout: doc
 title: XHTML - Plugin
-permalink: /xhtml/
+permalink: /documentation/plugins/xhtml/
 categories:
     - Docs
-sections:
-    - url: '#xhtml'
-      title: XHTML Plugin
-    - url: '#initialise'
-      title: Initialise
-    - url: '#options'
-      title: Options
-    - url: '#converters'
-      title: Converters
-    - url: '#allowedAttribs'
-      title: AllowedAttribs
-    - url: '#disallowedAttribs'
-      title: DisallowedAttribs
-    - url: '#allowedTags'
-      title: AllowedTags
-    - url: '#disallowedTags'
-      title: DisallowedTags
 ---
 
 ## XHTML Plugin <a id="xhtml"></a>

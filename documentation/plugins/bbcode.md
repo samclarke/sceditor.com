@@ -1,18 +1,9 @@
 ---
 layout: doc
 title: BBCode - Plugin
-permalink: /bbcode/
+permalink: /documentation/plugins/bbcode/
 categories:
     - Docs
-sections:
-    - url: '#bbcode'
-      title: BBCode Plugin
-    - url: '#initialise'
-      title: Initialise
-    - url: '#custom-bbcodes'
-      title: Custom BBCodes
-    - url: '#parser-options'
-      title: Parser Options
 ---
 
 ## BBCode Plugin <a id="bbcode"></a>
@@ -151,3 +142,102 @@ Should be one of the following values:
 * **$.sceditor.BBCodeParser.QuoteType.auto**  
   Only quote the attributes value when it contains spaces ot equals
 
+
+
+
+### Added methods <a id="methods"></a>
+
+When the BBCode plugin is enabled, it will add the methods `toBBCode()` and `fromBBCode()` to the editor instance.
+
+<article class="api method" markdown="1">
+### <a id="toBBCode" href="#toBBCode">toBBCode()</a> <span class="since">Since: 1.4.3</span>
+
+Converts HTML or a DOM node to a BBCode string.
+
+
+#### Syntax
+
+	var bbcode = instance.toBBCode(html);
+
+
+#### Parameters
+
+<div class="parameters">
+<div class="parameter" markdown="1">
+**html**  
+Type: *[String](/api/types/#string)* or *[Node](/api/types/#node)*
+
+The HTML string or DOM node to convert.
+</div>
+</div>
+
+
+#### Return
+
+Type: **[String](/api/types/#string)**
+</article>
+
+
+<article class="api method" markdown="1">
+### <a id="toBBCode" href="#toBBCode">toBBCode()</a> <span class="since">Since: 1.4.3</span>
+
+Converts HTML or a DOM node to a BBCode string.
+
+
+#### Syntax
+
+	var html = instance.toBBCode(bbcode[, asFragment]);
+
+
+#### Parameters
+
+<div class="parameters">
+<div class="parameter" markdown="1">
+**bbcode**  
+Type: *[String](/api/types/#string)* or *[Node](/api/types/#node)*
+
+The BBCode string to convert.
+</div>
+<div class="parameter" markdown="1">
+**asFragment**  
+Type: *[Boolean](/api/types/#bool)*
+Default: `false`
+
+If to convert the BBCode to a HTML fragment or if to wrap it in `div` tags. For example:
+
+[b]Bold![/b] will convert to &lt;div&gt;&lt;strong&gt;Bold!&lt;/strong&gt;&lt;/div&gt;
+
+but if `asFragment` is `true`, it will convert to:
+
+[b]Bold![/b] will convert to &lt;strong&gt;Bold!&lt;/strong&gt;
+</div>
+</div>
+
+
+#### Return
+
+Type: **[String](/api/types/#string)**
+</article>
+
+
+#### Examples
+
+<pre class="prettyprint linenums">
+&lt;script&gt;
+$(function() {
+	$("textarea").sceditor({
+		plugins: "bbcode",
+		style: "minified/jquery.sceditor.default.min.css"
+	});
+
+	// Will be [b]Bold![/b]
+	var bbcode       = $("textarea").sceditor('instance').toBBCode('<strong>Bold!</strong>');
+
+	// Will be &lt;div&gt;&lt;strong&gt;Bold!&lt;/strong&gt;&lt;/div&gt;
+	var html         = $("textarea").sceditor('instance').fromBBCode('[b]Bold![b]');
+
+	// Will be &lt;strong&gt;Bold!&lt;/strong&gt;
+	var htmlFragment = $("textarea").sceditor('instance').fromBBCode('[b]Bold![b]', true);
+});
+&lt;/script&gt;
+</pre>

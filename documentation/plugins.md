@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Plugins
-permalink: /plugins/
+permalink: /documentation/plugins/
 categories:
     - Docs
 ---
