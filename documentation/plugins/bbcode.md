@@ -231,7 +231,7 @@ $(function() {
 	});
 
 	// Will be [b]Bold![/b]
-	var bbcode       = $("textarea").sceditor('instance').toBBCode('<strong>Bold!</strong>');
+	var bbcode       = $("textarea").sceditor('instance').toBBCode('&lt;strong&gt;Bold!&lt;/strong&gt;');
 
 	// Will be &lt;div&gt;&lt;strong&gt;Bold!&lt;/strong&gt;&lt;/div&gt;
 	var html         = $("textarea").sceditor('instance').fromBBCode('[b]Bold![b]');
