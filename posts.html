@@ -6,15 +6,17 @@ permalink: /posts/
 ---
 <ul class="posts">
 	{% for post in site.posts %}
-	<div class="post_info">
 		<li>
-			<a href="{{ post.url }}">{{ post.title }}</a>
-			<span>({{ post.date | date:"%Y-%m-%d" }})</span>
-		</li>
+			<div class="post-title">
+				<a href="{{ post.url }}">{{ post.title }}</a>
+			</div>
 
-		{% if post.excerpt %}
-			{{ post.excerpt }}
-		{% endif %}
-	</div>
+			{% if post.excerpt %}
+				<div class="post-excerpt">
+					{{ post.excerpt }}
+					<a href="{{ post.url }}"><br />Read more...</a>
+				</div>
+			{% endif %}
+		</li>
 	{% endfor %}
 </ul>
