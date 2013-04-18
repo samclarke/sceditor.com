@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+
+		<title>XHTML - Plugin - SCEditor</title>
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<link href="http://sceditor.com/atom.xml" rel="alternate" title="SCEditor" type="application/atom+xml" />
+
+		
+	</head>
+
+	<body>
+		<div id="main" class="container">
+			<div id="header">
+				<header>
+					<h1 id="project_title">SCEditor</h1>
+					<p>A lightweight WYSIWYG BBCode &amp; HTML editor</p>
+					</a>
+				</header>
+			</div>
+
+			<div class="navbar active">
+				<nav class="navbar-inner">
+					<ul class="nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="/posts/">Posts</a></li>
+						<li><a href="/documentation/getting-started/">Docs</a></li>
+						<li><a href="/integration/">Forum/CMS Plugins</a></li>
+						<li><a href="/documentation/support-licensing/">Support</a></li>
+						<li><a href="https://github.com/samclarke/SCEditor">GitHub</a></li>
+					</ul>
+
+					<div class="pull-right nav-collapse collapse">
+						<a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AVJSF5NEETYYG">Donate</a>
+						<a class="btn btn-primary" href="https://github.com/samclarke/SCEditor/archive/v1.4.2.zip">Download</a>
+						
+					</div>
+				</nav>
+			</div>
+
+			<div id="content">
+				<section>
+				<ul class="breadcrumb">
+  <li><a href="/documentation/">Documentation</a> <span class="divider">/</span></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <li><a href="/documentation/plugins/">Plugins</a> <span class="divider">/</span></li>
+
+
+
+
+
+
+
+
+  <li class="active">XHTML - Plugin</li>
+</ul>
+
+<div class="row-fluid docs">
+	<div class="span3">
+		<ul class="nav nav-tabs nav-stacked">
+
+
+				<li><a href="/documentation/getting-started/">Getting started</a></li>
+
+
+
+				<li><a href="/documentation/options/">Options</a></li>
+
+
+
+				<li><a href="/documentation/plugins/">Plugins</a></li>
+
+
+
+				<li><a href="/documentation/plugins/bbcode/">BBCode Plugin</a></li>
+
+
+
+				<li class="active"><a href="/documentation/plugins/xhtml/">XHTML Plugin</a></li>
+
+
+
+				<li><a href="/documentation/custom-commands/">Custom Commands</a></li>
+
+
+
+				<li><a href="/documentation/custom-bbcodes/">Custom BBCodes</a></li>
+
+
+
+				<li><a href="/documentation/custom-plugins/">Custom Plugins</a></li>
+
+
+
+				<li><a href="/documentation/theming/">Theming</a></li>
+
+
+
+				<li><a href="/api/">API</a></li>
+
+
+
+				<li><a href="/documentation/files/">Files</a></li>
+
+
+
+				<li><a href="/documentation/browser-compatibility/">Browser Compatibility</a></li>
+
+
+
+				<li><a href="/documentation/support-licensing/">Support/Licensing</a></li>
+
+
+		</ul>
+	</div>
+	<div class="span9">
+		<h2>XHTML Plugin <a id="xhtml"></a></h2>
+
+<p>This plugin will convert the output of SCEditor into valid XHTML.</p>
+
+<div class="alert alert-block alert-error">
+	<h4>Warning!</h4>
+	<p>Never trust the output from this plugin. Like all client side code the output can be altered or forged to produce XSS attacks.</p>
+	<p>Always make sure to filter the XHTML, as well as the data from all other user inputs, server side through a library like <a href="http://htmlpurifier.org/">htmlpurifier (PHP)</a> or  <a href="https://www.owasp.org/index.php/OWASP_Java_HTML_Sanitizer">OWASP Java HTML Sanitizer</a> to prevent XSS attacks.</p>
+</div>
+
+<h3>Initialise <a id="initialise"></a></h3>
+
+<p>To enable the XHTML plugin just add <code>xhtml</code> to the <code>plugins</code> option. e.g.</p>
+
+<pre class="prettyprint linenums">
+&lt;script&gt;
+$(function() {
+	$("textarea").sceditor({
+		plugins: "xhtml",
+		style: "minified/jquery.sceditor.default.min.css"
+	});
+});
+&lt;/script&gt;
+</pre>
+
+<h3>Options <a id="options"></a></h3>
+
+<p>All of the options below should be set before creating an instance of the editor. If they are set after they will not take effect until source mode is toggled.</p>
+
+<h3>converters <a id="converters"></a></h3>
+
+<p><code>$.sceditor.plugins.xhtml.converters</code> <em>Array</em></p>
+
+<p>An <code>array of</code> converter <code>objects</code> used to convert HTML into valid XHTML or HTML5.</p>
+
+<p>A converter object must be in the following format:</p>
+
+<pre class="prettyprint linenums">
+{
+	// Object with all the tags to match
+	tags: {
+		// Matches any &lt;tagname&gt; that has the following attributes
+		"tagname": {
+			// Will match if tagname has the attribute attributename with
+			// one of the specified values from the array
+			attributename: [
+				'an array', 'of values or', 'null to match', 'all values'
+			],
+
+			// Will match if it has the attribute anotherattribute regardless
+			// of the attributes value
+			anotherattribute: null
+		},
+
+		// Matches any &lt;anothertagname&gt; tag
+		'anothertagname': null
+		
+	},
+	conv: function(node) {
+		// convert node here
+	}
+}
+</pre>
+
+<p>To match any tag use <code>*</code> for the name.</p>
+
+<p>For example:</p>
+
+<pre class="prettyprint linenums">
+// Push this converter onto the end of the converters array
+$.sceditor.plugins.xhtml.converters.push({
+	tags: {
+		// Match any tag with the attribute border
+		"*": {
+			border: null
+		}
+		
+	},
+	conv: function(node) {
+		var $node = $(node);
+
+		// Change border attribute to CSS
+		$node.css('border-size', $node.attr('border')).removeAttr('border');
+	}
+});
+</pre>
+
+<p>The above will match any tag with the attibute <code>border</code> and convert the <code>border</code> attribute into <code>border-size</code> CSS.</p>
+
+<h3>allowedAttribs <a id="allowedAttribs"></a></h3>
+
+<p><code>$.sceditor.plugins.xhtml.allowedAttribs</code> <em>Object</em></p>
+
+<p>Acts as a whitelist of allowed attributes. If this is null or empty then all attributes will be allowed unless blacklisted.</p>
+
+<p>The allowed attributes can be specified on a tag by tag basis or for all tags by using <code>*</code> as the tag name.</p>
+
+<p><code>allowedAttribs</code> should be in the following format format:</p>
+
+<pre class="prettyprint linenums">
+$.sceditor.plugins.xhtml.disallowedAttribs['tagname']['attributename'] = [
+	'array', 'of', 'valid', 'values', 'or', 'null', 'to', 'allow', 'all', 'values'
+];
+</pre>
+
+<p>For example:</p>
+
+<pre class="prettyprint linenums">
+$.sceditor.plugins.xhtml.disallowedAttribs = {
+	// The * sign matches every tags so this will allow the id
+	// and class attributes on all tags
+	'*': {
+		id: null,
+		'class': null
+	},
+	// This will allow the href attribute on the a tag
+	a: {
+		href: null
+	},
+	// This will allow the face attribute on the font tag
+	// with a value of 'Arial' or 'Times New Roman'
+	font: {
+		face: ['Arial', 'Times New Roman']
+	}
+};
+</pre>
+
+<p>Acts as a blacklist of disallowed tags. If null or empty then all tags will be allowed.</p>
+
+<h3>disallowedAttribs <a id="disallowedAttribs"></a></h3>
+
+<p><code>$.sceditor.plugins.xhtml.disallowedAttribs</code> <em>Object</em></p>
+
+<p><span class="label label-important">Important:</span> This will only be used if allowedAttribs is empty.</p>
+
+<p>Acts as a blacklist of disallowed attributes. If null or empty then all attributes will be allowed.</p>
+
+<p>The format of <code>disallowedAttribs</code> is the same as <code>allowedAttribs</code> above except instead of allowing attributes, this will blacklist them.</p>
+
+<h3>allowedTags <a id="allowedTags"></a></h3>
+
+<p><code>$.sceditor.plugins.xhtml.allowedTags</code> <em>Array</em> </p>
+
+<p>Acts as a whitelist of allowed tags. If null or empty then all tags will be allowed unless blacklisted.</p>
+
+<pre class="prettyprint linenums">
+$.sceditor.plugins.xhtml.allowedTags = ['a', 'strong', 'p', 'span', 'div'];
+</pre>
+
+<h3>disallowedTags <a id="disallowedTags"></a></h3>
+
+<p><code>$.sceditor.plugins.xhtml.disallowedTags</code> <em>Array</em></p>
+
+<p><span class="label label-important">Important:</span> This will only be used if allowedTags is empty.</p>
+
+<p>Acts as a blacklist of disallowed tags. If null or empty then all tags will be allowed.</p>
+
+<pre class="prettyprint linenums">
+$.sceditor.plugins.xhtml.disallowedTags = ['a', 'strong', 'p', 'span', 'div'];
+</pre>
+
+
+	</div>
+</div>
+
+<ul class="pager">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="previous"><a href="/documentation/plugins/bbcode/">&larr; BBCode Plugin</a></li>
+
+
+
+
+
+
+    <li class="next"><a href="/documentation/custom-commands/">Custom Commands &rarr;</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+
+
+<div id="comments">
+        <div id="disqus_thread"></div>
+	<script type="text/javascript">
+	var disqus_shortname = 'sceditor';
+
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+				</section>
+			</div>
+
+			<div id="footer">
+				<footer>
+					<p class="muted credit">Website by <a href="https://github.com/samclarke">samclarke</a> &copy; 2013 &ndash;
+						Hosted by <a href="http://pages.github.com">GitHub Pages</a>
+						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/documentation/plugins/xhtml.md">Edit this page</a></span></p>
+				</footer>
+			</div>
+		</div>
+
+		<script src="/scripts.js"></script>
+		<script>
+			$(prettyPrint());
+		</script>
+		<!-- Piwik -->
+		<script>
+			var purl = "//www.samclarke.com/piwik/";
+			document.write(unescape("%3Cscript src='" + purl + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script>
+		try {
+			var p = Piwik.getTracker(purl + "piwik.php", 2);
+			p.trackPageView();
+			p.enableLinkTracking();
+		} catch( err ) {}
+		</script>
+		<noscript><p style="height: 0; width: 0;"><img src="//www.samclarke.com/piwik/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+		<!-- End Piwik -->
+	</body>
+</html>

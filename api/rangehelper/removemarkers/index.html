@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+
+		<title>removeMarkers() - SCEditor</title>
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<link href="http://sceditor.com/atom.xml" rel="alternate" title="SCEditor" type="application/atom+xml" />
+
+		
+	</head>
+
+	<body>
+		<div id="main" class="container">
+			<div id="header">
+				<header>
+					<h1 id="project_title">SCEditor</h1>
+					<p>A lightweight WYSIWYG BBCode &amp; HTML editor</p>
+					</a>
+				</header>
+			</div>
+
+			<div class="navbar active">
+				<nav class="navbar-inner">
+					<ul class="nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="/posts/">Posts</a></li>
+						<li><a href="/documentation/getting-started/">Docs</a></li>
+						<li><a href="/integration/">Forum/CMS Plugins</a></li>
+						<li><a href="/documentation/support-licensing/">Support</a></li>
+						<li><a href="https://github.com/samclarke/SCEditor">GitHub</a></li>
+					</ul>
+
+					<div class="pull-right nav-collapse collapse">
+						<a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AVJSF5NEETYYG">Donate</a>
+						<a class="btn btn-primary" href="https://github.com/samclarke/SCEditor/archive/v1.4.2.zip">Download</a>
+						
+					</div>
+				</nav>
+			</div>
+
+			<div id="content">
+				<section>
+				<ul class="breadcrumb">
+	<li><a href="/documentation/">Documentation</a> <span class="divider">/</span></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<li><a href="/api/">API</a> <span class="divider">/</span></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<li><a href="/api/rangehelper/">RangeHelper</a> <span class="divider">/</span></li>
+
+
+
+
+
+
+
+
+	<li class="active">removeMarkers()</li>
+</ul>
+
+
+
+
+
+
+<div class="row-fluid docs">
+	<div class="span3">
+		<h5>RangeHelper</h5>
+		<ul class="nav nav-tabs nav-stacked">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<li><a href="/api/rangehelper/cloneselected/">cloneSelected()</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<li><a href="/api/rangehelper/getfirstblockparent/">getFirstBlockParent()</a></li>
+
+
+
+
+
+					<li><a href="/api/rangehelper/getmakrer/">getMarker()</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<li><a href="/api/rangehelper/inserthtml/">insertHTML()</a></li>
+
+
+
+
+
+					<li><a href="/api/rangehelper/insertmarkers/">insertMarkers()</a></li>
+
+
+
+
+
+					<li><a href="/api/rangehelper/insertnode/">insertNode()</a></li>
+
+
+
+
+
+					<li><a href="/api/rangehelper/insertnodeat/">insertNodeAt()</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<li><a href="/api/rangehelper/parentnode/">parentNode()</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<li><a href="/api/rangehelper/removmakrer/">removeMarker()</a></li>
+
+
+
+
+
+					<li class="active"><a href="/api/rangehelper/removemarkers/">removeMarkers()</a></li>
+
+
+
+
+
+					<li><a href="/api/rangehelper/restorerange/">restoreRange()</a></li>
+
+
+
+
+
+
+
+					<li><a href="/api/rangehelper/saverange/">saveRange()</a></li>
+
+
+
+
+
+
+
+
+
+
+
+					<li><a href="/api/rangehelper/selectedhtml/">selectedHtml()</a></li>
+
+
+
+
+
+					<li><a href="/api/rangehelper/selectedrange/">selectedRange()</a></li>
+
+
+
+
+
+
+
+					<li><a href="/api/rangehelper/selectrange/">selectRange()</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</ul>
+	</div>
+	<div class="span9">
+		<h2>RemoveMarkers()</h2>
+
+<article class="api method">
+  <h3><a id="removeMarkers" href="#removeMarkers">removeMarkers()</a> <span class="since">Since: 1.3.5</span></h3>
+
+  <p>Removes the markers inserted by the <a href="/api/rangehelper/insertmarkers/">insertMarkers()</a> method.</p>
+
+  <h4>Syntax</h4>
+
+  <pre><code>instance.removeMarkers();
+</code></pre>
+</article>
+
+	</div>
+</div>
+
+<ul class="pager">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<li class="previous"><a href="/api/rangehelper/removmakrer/">&larr; removeMarker()</a></li>
+
+
+
+
+
+
+
+
+			<li class="next"><a href="/api/rangehelper/restorerange/">restoreRange() &rarr;</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+
+
+<div id="comments">
+        <div id="disqus_thread"></div>
+	<script type="text/javascript">
+	var disqus_shortname = 'sceditor';
+
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+				</section>
+			</div>
+
+			<div id="footer">
+				<footer>
+					<p class="muted credit">Website by <a href="https://github.com/samclarke">samclarke</a> &copy; 2013 &ndash;
+						Hosted by <a href="http://pages.github.com">GitHub Pages</a>
+						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/api/rangehelper/removemarkers.md">Edit this page</a></span></p>
+				</footer>
+			</div>
+		</div>
+
+		<script src="/scripts.js"></script>
+		<script>
+			$(prettyPrint());
+		</script>
+		<!-- Piwik -->
+		<script>
+			var purl = "//www.samclarke.com/piwik/";
+			document.write(unescape("%3Cscript src='" + purl + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script>
+		try {
+			var p = Piwik.getTracker(purl + "piwik.php", 2);
+			p.trackPageView();
+			p.enableLinkTracking();
+		} catch( err ) {}
+		</script>
+		<noscript><p style="height: 0; width: 0;"><img src="//www.samclarke.com/piwik/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+		<!-- End Piwik -->
+	</body>
+</html>

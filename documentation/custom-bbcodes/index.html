@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+
+		<title>Custom BBCodes - SCEditor</title>
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<link href="http://sceditor.com/atom.xml" rel="alternate" title="SCEditor" type="application/atom+xml" />
+
+		
+	</head>
+
+	<body>
+		<div id="main" class="container">
+			<div id="header">
+				<header>
+					<h1 id="project_title">SCEditor</h1>
+					<p>A lightweight WYSIWYG BBCode &amp; HTML editor</p>
+					</a>
+				</header>
+			</div>
+
+			<div class="navbar active">
+				<nav class="navbar-inner">
+					<ul class="nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="/posts/">Posts</a></li>
+						<li><a href="/documentation/getting-started/">Docs</a></li>
+						<li><a href="/integration/">Forum/CMS Plugins</a></li>
+						<li><a href="/documentation/support-licensing/">Support</a></li>
+						<li><a href="https://github.com/samclarke/SCEditor">GitHub</a></li>
+					</ul>
+
+					<div class="pull-right nav-collapse collapse">
+						<a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AVJSF5NEETYYG">Donate</a>
+						<a class="btn btn-primary" href="https://github.com/samclarke/SCEditor/archive/v1.4.2.zip">Download</a>
+						
+					</div>
+				</nav>
+			</div>
+
+			<div id="content">
+				<section>
+				<ul class="breadcrumb">
+  <li><a href="/documentation/">Documentation</a> <span class="divider">/</span></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li class="active">Custom BBCodes</li>
+</ul>
+
+<div class="row-fluid docs">
+	<div class="span3">
+		<ul class="nav nav-tabs nav-stacked">
+
+
+				<li><a href="/documentation/getting-started/">Getting started</a></li>
+
+
+
+				<li><a href="/documentation/options/">Options</a></li>
+
+
+
+				<li><a href="/documentation/plugins/">Plugins</a></li>
+
+
+
+				<li><a href="/documentation/plugins/bbcode/">BBCode Plugin</a></li>
+
+
+
+				<li><a href="/documentation/plugins/xhtml/">XHTML Plugin</a></li>
+
+
+
+				<li><a href="/documentation/custom-commands/">Custom Commands</a></li>
+
+
+
+				<li class="active"><a href="/documentation/custom-bbcodes/">Custom BBCodes</a></li>
+
+
+
+				<li><a href="/documentation/custom-plugins/">Custom Plugins</a></li>
+
+
+
+				<li><a href="/documentation/theming/">Theming</a></li>
+
+
+
+				<li><a href="/api/">API</a></li>
+
+
+
+				<li><a href="/documentation/files/">Files</a></li>
+
+
+
+				<li><a href="/documentation/browser-compatibility/">Browser Compatibility</a></li>
+
+
+
+				<li><a href="/documentation/support-licensing/">Support/Licensing</a></li>
+
+
+		</ul>
+	</div>
+	<div class="span9">
+		<h2>Adding Custom BBCodes <a id="custom-bbcodes"></a></h2>
+
+<h3>Creating/Updating a BBCode <a id="adding"></a></h3>
+
+<p>To add a new BBCode, use the <code>$.sceditor.plugins.bbcode.bbcode.set()</code> function.</p>
+
+<p><span class="label label-warning">Warning:</span> This function will update any existing BBCode with the same name.</p>
+
+<p><code>$.sceditor.plugins.bbcode.bbcode.set()</code> takes two arguments, <code>name</code> and <code>bbcode</code>.</p>
+
+<ul>
+  <li><strong>name</strong> <em>String</em><br />
+Should be the name of the BBCode e.g. for <code>[b]</code> it would be <code>"b"</code>. This value <em>must</em> be lower-case!</li>
+  <li><strong>bbcode</strong> <em>Object</em><br />
+The BBCode object. See below for more information</li>
+</ul>
+
+<p><span class="label label-info">Note:</span> The function <code>$.sceditorBBCodePlugin.bbcode.set()</code> is now deprecated in favour of <code>$.sceditor.plugins.bbcode.bbcode.set()</code>.</p>
+
+<h3>Structure of a BBCode object <a id="bbcode-structure"></a></h3>
+
+<pre class="prettyprint linenums">
+{
+    styles: {
+        "stylename": null,
+        "another-style-name": ["value1", "value2"]
+    }
+    tags: {
+        "tag": null,
+        "another-tag": {
+            "attribute1": null,
+            "attribute2": ["value1", "value2"]
+        }
+    }
+    isSelfClosing: false,
+    isInline: true,
+    isHtmlInline: undefined,
+    allowedChildren: null,
+    allowsEmpty: false,
+    excludeClosing: false,
+    skipLastLineBreak: false,
+
+    breakBefore: false,
+    breakStart: false,
+    breakEnd: false,
+    breakAfter: false,
+
+    format: 'string|function',
+    html: 'string|function',
+
+    quoteType: $.sceditor.BBCodeParser.QuoteType.auto
+}
+</pre>
+
+<h3>styles <a id="styles"></a></h3>
+
+<p><strong>styles</strong> <em>object</em> Defaults to <code>null</code></p>
+
+<p>All matching tags will be passed to the <code>format</code> function or string to be converted into BBCode.</p>
+
+<p>To match all occurrences of a CSS style do with a specific value do:</p>
+
+<pre class="prettyprint linenums">
+"style-name": ["value1", "value2"]
+</pre>
+
+<p>Any DOM node that has the style <code>style-name</code> with the value <code>value1</code> or <code>value2</code> will be matched and passed to the <code>format</code> property to be converted.</p>
+
+<p>To match all occurrences of a style regardless of value do:</p>
+
+<pre class="prettyprint linenums">
+"style-name": null
+</pre>
+
+<p>The <code>null</code> value means that the value of the CSS property doesn’t matter all that matters is the node has the property <code>style-name</code>.</p>
+
+<h3>tags <a id="tags"></a></h3>
+
+<p><strong>tags</strong> <em>object</em> Defaults to <code>null</code></p>
+
+<p>All matching tags will be passed to the <code>format</code> function or string to be converted into BBCode.</p>
+
+<p>To match all occurrences of a specific tag do:</p>
+
+<pre class="prettyprint linenums">
+"tag-name": null
+</pre>
+
+<p>Any DOM node that is an instance of <code>&lt;tag-name&gt;</code> will be passed to the <code>format</code> property to be converted.</p>
+
+<p>To match all occurrences of a tag with that has a specific attribute do:</p>
+
+<pre class="prettyprint linenums">
+"tag-name": {
+    "attribute-name": null,
+    "another-attribute-name": null
+}
+</pre>
+
+<p>That will match any tag that is an instance of <code>&lt;tag-name&gt;</code> and has the attribute <code>attribute-name</code> or <code>another-attribute-name</code>.</p>
+
+<p>To match all occurrences of a tag with an attribute with a specific value do:</p>
+
+<pre class="prettyprint linenums">
+"tag-name": {
+    "attribute-name": ["value1", "value2"]
+}
+</pre>
+
+<p>This will match any tag that is an instance of <code>&lt;tag-name&gt;</code> and has the attribute <code>attribute-name</code> with the value <code>value1</code> or <code>value2</code>.</p>
+
+<h3>isSelfClosing <a id="isSelfClosing"></a></h3>
+
+<p><strong>isSelfClosing</strong> <em>Bool</em> Defaults to <code>false</code></p>
+
+<p>If this BBCode is a self closing tag (has no closing tag i.e. <code>[hr]</code>).</p>
+
+<h3>isInline <a id="isInline"></a></h3>
+
+<p><strong>isInline</strong> <em>Bool</em> Defaults to <code>true</code></p>
+
+<p>If this BBCode is an inline or block level BBCode.</p>
+
+<h3>isHtmlInline <a id="isHtmlInline"></a></h3>
+
+<p><strong>isHtmlInline</strong> <em>Bool or undefined</em> Defaults to <code>undefined</code></p>
+
+<p>If this output HTML for this BBCode is inline or not. Only needs to be set if it differs from the BBCodes <code>isInline</code> value. If undefined this is ignored and <code>isInline</code> is used.</p>
+
+<h3>allowedChildren <a id="allowedChildren"></a></h3>
+
+<p><strong>allowedChildren</strong> <em>Array or null</em> Defaults to <code>null</code></p>
+
+<p>If null/undefined then all children will be allowed. If it’s an array only the tags specified will be allowed. To allow plain text use <code>#</code> as the tag name.</p>
+
+<p>To only allow plain text:
+<code>allowedChildren: [#]</code></p>
+
+<p>To only allow bold and italic as children:
+<code>allowedChildren: ['b', 'i']</code></p>
+
+<h3>allowsEmpty <a id="allowsEmpty"></a></h3>
+
+<p><strong>allowsEmpty</strong> <em>Bool</em> Defaults to <code>false</code></p>
+
+<p>If this tag is allowed to be empty (have no children or content).</p>
+
+<h3>excludeClosing <a id="excludeClosing"></a></h3>
+
+<p><strong>excludeClosing</strong> <em>Bool</em> Defaults to <code>false</code></p>
+
+<p>If to not add a closing tag. Mostly so that <code>[*]</code> can be used without <code>[/*]</code>.</p>
+
+<h3>skipLastLineBreak <a id="skipLastLineBreak"></a></h3>
+
+<p><strong>skipLastLineBreak</strong> <em>Bool</em> Defaults to <code>false</code></p>
+
+<p>Block level tags have an extra <code>&lt;br /&gt;</code> added to the end of them in all browsers except IE. If this is set to true the extra line break will not be added.</p>
+
+<h3>breakBefore <a id="breakBefore"></a></h3>
+
+<p><strong>breakBefore</strong> <em>Bool</em> Defaults to <code>false</code></p>
+
+<p>If to insert a new line before the start tag.</p>
+
+<h3>breakStart <a id="breakStart"></a></h3>
+
+<p><strong>breakStart</strong> <em>Bool</em> Defaults to <code>false</code></p>
+
+<p>If to insert a new line after the start tag.</p>
+
+<p><span class="label label-info">Note:</span> This does not apply to self closing tags.</p>
+
+<h3>breakEnd <a id="breakEnd"></a></h3>
+
+<p><strong>breakEnd</strong> <em>Bool</em> Defaults to <code>false</code></p>
+
+<p>If to insert a new line before the end tag.</p>
+
+<p><span class="label label-info">Note:</span> This does not apply to self closing tags.</p>
+
+<h3>breakAfter <a id="breakAfter"></a></h3>
+<p><strong>breakAfter</strong> <em>Bool</em> Defaults to <code>false</code></p>
+
+<p>If to insert a new line after the end tag.</p>
+
+<h3>format <a id="format"></a></h3>
+
+<p><strong>format</strong> <em>String or function</em></p>
+
+<p>Should be either a string in the format <code>"[b]{0}[/b]"</code> where <code>{0}</code> will be replaced with the BBCode tags content.</p>
+
+<p>Or a function that takes two arguments, <code>element</code> &amp; <code>content</code> and returns the formatted BBCode string.</p>
+
+<ul>
+  <li><strong>element</strong> <em>HTMLElement</em><br />
+The DOM HTMLElement object to be converted</li>
+  <li><strong>content</strong> <em>String</em><br />
+A string containing the BBCodes content</li>
+</ul>
+
+<p>e.g.:</p>
+
+<pre class="prettyprint linenums">
+function(element, content) {
+    if(!element.attr('data-youtube-id'))
+        return content;
+
+    return '[youtube]' + element.attr('data-youtube-id') + '[/youtube]';
+}
+</pre>
+
+<h3>html <a id="html"></a></h3>
+
+<p><strong>html</strong> <em>String or function</em></p>
+
+<p>Should be either a string in the format <code>"&lt;strong&gt;{0}&lt;/strong&gt;"</code> where <code>{0}</code> will be replaced with the HTML tags content.</p>
+
+<p>Or a function that takes 3 arguments (token, attrs, content) and returns the HTML string.</p>
+
+<ul>
+  <li><strong>token</strong> <em>Object</em><br />
+TokenizeToken object</li>
+  <li><strong>attrs</strong> <em>Object</em><br />
+Map of attributes. The default attribute <code>[tag=default]</code> will be set to <code>defaultAttr</code></li>
+  <li><strong>content</strong> <em>String</em><br />
+The HTML content of this tag</li>
+</ul>
+
+<p>e.g.:</p>
+
+<pre class="prettyprint linenums">
+html: function(token, attrs, content) {
+    if(typeof attrs.defaultAttr !== "undefined")
+        content = '&lt;cite&gt;' + attrs.defaultAttr + '&lt;/cite&gt;' + content;
+
+    return '&lt;blockquote&gt;' + content + '&lt;/blockquote&gt;';
+}
+</pre>
+
+<h3>quoteType</h3>
+
+<p><strong>quoteType</strong> <em>$.sceditor.BBCodeParser.QuoteType</em> Defaults to <code>$.sceditor.BBCodeParser.QuoteType.auto</code></p>
+
+<p>The attribute quote type.</p>
+
+<p>Should either be a function or one of the following values:</p>
+
+<ul>
+  <li><strong>$.sceditor.BBCodeParser.QuoteType.always</strong><br />
+Always quote the attribute value</li>
+  <li><strong>$.sceditor.BBCodeParser.QuoteType.never</strong><br />
+Never quote the attributes value</li>
+  <li><strong>$.sceditor.BBCodeParser.QuoteType.auto</strong><br />
+Only quote the attributes value when it contains spaces ot equals</li>
+</ul>
+
+
+	</div>
+</div>
+
+<ul class="pager">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="previous"><a href="/documentation/custom-commands/">&larr; Custom Commands</a></li>
+
+
+
+
+
+
+    <li class="next"><a href="/documentation/custom-plugins/">Custom Plugins &rarr;</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+
+
+<div id="comments">
+        <div id="disqus_thread"></div>
+	<script type="text/javascript">
+	var disqus_shortname = 'sceditor';
+
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+				</section>
+			</div>
+
+			<div id="footer">
+				<footer>
+					<p class="muted credit">Website by <a href="https://github.com/samclarke">samclarke</a> &copy; 2013 &ndash;
+						Hosted by <a href="http://pages.github.com">GitHub Pages</a>
+						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/documentation/custom-bbcodes.md">Edit this page</a></span></p>
+				</footer>
+			</div>
+		</div>
+
+		<script src="/scripts.js"></script>
+		<script>
+			$(prettyPrint());
+		</script>
+		<!-- Piwik -->
+		<script>
+			var purl = "//www.samclarke.com/piwik/";
+			document.write(unescape("%3Cscript src='" + purl + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script>
+		try {
+			var p = Piwik.getTracker(purl + "piwik.php", 2);
+			p.trackPageView();
+			p.enableLinkTracking();
+		} catch( err ) {}
+		</script>
+		<noscript><p style="height: 0; width: 0;"><img src="//www.samclarke.com/piwik/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+		<!-- End Piwik -->
+	</body>
+</html>

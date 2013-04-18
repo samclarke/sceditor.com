@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+
+		<title>Theming - SCEditor</title>
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<link href="http://sceditor.com/atom.xml" rel="alternate" title="SCEditor" type="application/atom+xml" />
+
+		
+	</head>
+
+	<body>
+		<div id="main" class="container">
+			<div id="header">
+				<header>
+					<h1 id="project_title">SCEditor</h1>
+					<p>A lightweight WYSIWYG BBCode &amp; HTML editor</p>
+					</a>
+				</header>
+			</div>
+
+			<div class="navbar active">
+				<nav class="navbar-inner">
+					<ul class="nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="/posts/">Posts</a></li>
+						<li><a href="/documentation/getting-started/">Docs</a></li>
+						<li><a href="/integration/">Forum/CMS Plugins</a></li>
+						<li><a href="/documentation/support-licensing/">Support</a></li>
+						<li><a href="https://github.com/samclarke/SCEditor">GitHub</a></li>
+					</ul>
+
+					<div class="pull-right nav-collapse collapse">
+						<a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AVJSF5NEETYYG">Donate</a>
+						<a class="btn btn-primary" href="https://github.com/samclarke/SCEditor/archive/v1.4.2.zip">Download</a>
+						
+					</div>
+				</nav>
+			</div>
+
+			<div id="content">
+				<section>
+				<ul class="breadcrumb">
+  <li><a href="/documentation/">Documentation</a> <span class="divider">/</span></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li class="active">Theming</li>
+</ul>
+
+<div class="row-fluid docs">
+	<div class="span3">
+		<ul class="nav nav-tabs nav-stacked">
+
+
+				<li><a href="/documentation/getting-started/">Getting started</a></li>
+
+
+
+				<li><a href="/documentation/options/">Options</a></li>
+
+
+
+				<li><a href="/documentation/plugins/">Plugins</a></li>
+
+
+
+				<li><a href="/documentation/plugins/bbcode/">BBCode Plugin</a></li>
+
+
+
+				<li><a href="/documentation/plugins/xhtml/">XHTML Plugin</a></li>
+
+
+
+				<li><a href="/documentation/custom-commands/">Custom Commands</a></li>
+
+
+
+				<li><a href="/documentation/custom-bbcodes/">Custom BBCodes</a></li>
+
+
+
+				<li><a href="/documentation/custom-plugins/">Custom Plugins</a></li>
+
+
+
+				<li class="active"><a href="/documentation/theming/">Theming</a></li>
+
+
+
+				<li><a href="/api/">API</a></li>
+
+
+
+				<li><a href="/documentation/files/">Files</a></li>
+
+
+
+				<li><a href="/documentation/browser-compatibility/">Browser Compatibility</a></li>
+
+
+
+				<li><a href="/documentation/support-licensing/">Support/Licensing</a></li>
+
+
+		</ul>
+	</div>
+	<div class="span9">
+		<h2>Theming</h2>
+
+<h3>HTML Structure <a id="html-structure"></a></h3>
+
+<p>Outline of SCEditors HTML structure.</p>
+
+<pre class="prettyprint linenums">
+&lt;!-- Main container --&gt;
+&lt;div class="sceditor-container"&gt;
+    &lt;!-- Toolbar container --&gt;
+    &lt;div class="sceditor-toolbar"&gt;
+        &lt;!-- Toolbar group container --&gt;
+        &lt;div class="sceditor-group"&gt;
+            &lt;!-- Toolbar button --&gt;
+            &lt;a class="sceditor-button sceditor-button-[name]"
+                data-sceditor-command="[name]"
+                unselectable="on" title="[name]"&gt;
+
+                &lt;!-- Toolbar button text container --&gt;
+                &lt;div unselectable="on"&gt;[tooltip or name]&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Contains the WYSIWYG editor --&gt;
+    &lt;iframe&gt;&lt;/iframe&gt;
+
+    &lt;!-- Contains the source mode editor --&gt;
+    &lt;textarea&gt;&lt;/textarea&gt;
+
+    &lt;!-- Grip used to resize the editor --&gt;
+    &lt;div class="sceditor-grip"&gt;&lt;/div&gt;
+
+    &lt;!-- Used to cover the WYSIWYG editor so mousemove events are still handled --&gt;
+    &lt;div class="sceditor-resize-cover"&gt;&lt;/div&gt;
+
+    &lt;!-- This is hidden and only used so that blur() can work --&gt;
+    &lt;input&gt;
+&lt;/div&gt;
+</pre>
+
+<h3>CSS Structure <a id="css-structure"></a></h3>
+
+<p><span class="label label-info">Note:</span> The contents of the <abbr title="What You See Is What You Get">WYSIWYG</abbr> iframe is styled via an external stylesheet which can be passed via the <a href="/documentation/options/#style">style option</a> in the editors constructor.</p>
+
+<div class="well">
+	<ul>
+		<li>
+			<strong>div.sceditor-container</strong><br />
+			The container for the whole editor.
+			The CSS class <code>.sourceMode</code> will be added when in source mode and the class <code>.wysiwygMode</code> will be added when in <abbr title="What You See Is What You Get">WYSIWYG</abbr> mode.
+
+			<ul>
+				<li>
+					<strong>div.sceditor-toolbar</strong><br />
+					The container for the toolbar.
+				</li>
+
+				<li>
+					<strong>div.sceditor-group</strong><br />
+					Toolbar group.
+
+					<ul>
+						<li>
+							<strong>a.sceditor-button</strong><br />
+							A toolbar button.
+							The class <code>.disabled</code> will be added if the command is not supported in the current mode.
+						</li>
+
+						<li>
+							<strong>a.sceditor-button-[name]</strong><br />
+							Same as the previous class but [name] is replaced with the buttons command name, e.g. <code>.sceditor-button-bold</code>, <code>.sceditor-button-italic</code>
+						</li>
+
+						<li>
+							<strong>div</strong><br />
+							<code>div</code> containing the buttons accessibility text and normally has the background image is set to the button's icon too
+						</li>
+					</ul>
+				</li>
+
+				<li>
+					<strong>iframe</strong><br />
+					<code>iframe</code> used for the <abbr title="What You See Is What You Get">WYSIWYG</abbr> editor. This must be selected with the HTML element tag name
+				</li>
+
+				<li>
+					<strong>textarea</strong><br />
+					<code>textarea</code> used for the source mode editor. This must be selected with the HTML element tag name
+				</li>
+
+				<li>
+					<strong>div.sceditor-grip</strong><br />
+					Grip used to resize the editor
+				</li>
+
+				<li>
+					<strong>div.sceditor-resize-cover</strong><br />
+					<code>div</code> which covers the editor during resizing
+				</li>
+
+				<li>
+					<strong>div.sceditor-dropdown</strong><br />
+					<code>div</code> containing the dropdown
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<h3>Theme Structure <a id="theme-structure"></a></h3>
+
+<p>All the default themes in LESS CSS format and are located in the <code>src/themes/</code> directory.</p>
+
+<p>To build and minify the themes run the command <code>build/build.sh --css</code> from the root SCEditor directory. The output will be placed in the <code>minified/themes</code> directory.</p>
+
+	</div>
+</div>
+
+<ul class="pager">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="previous"><a href="/documentation/custom-plugins/">&larr; Custom Plugins</a></li>
+
+
+
+
+
+
+    <li class="next"><a href="/api/">API &rarr;</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+
+
+<div id="comments">
+        <div id="disqus_thread"></div>
+	<script type="text/javascript">
+	var disqus_shortname = 'sceditor';
+
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+				</section>
+			</div>
+
+			<div id="footer">
+				<footer>
+					<p class="muted credit">Website by <a href="https://github.com/samclarke">samclarke</a> &copy; 2013 &ndash;
+						Hosted by <a href="http://pages.github.com">GitHub Pages</a>
+						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/documentation/theming.md">Edit this page</a></span></p>
+				</footer>
+			</div>
+		</div>
+
+		<script src="/scripts.js"></script>
+		<script>
+			$(prettyPrint());
+		</script>
+		<!-- Piwik -->
+		<script>
+			var purl = "//www.samclarke.com/piwik/";
+			document.write(unescape("%3Cscript src='" + purl + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script>
+		try {
+			var p = Piwik.getTracker(purl + "piwik.php", 2);
+			p.trackPageView();
+			p.enableLinkTracking();
+		} catch( err ) {}
+		</script>
+		<noscript><p style="height: 0; width: 0;"><img src="//www.samclarke.com/piwik/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+		<!-- End Piwik -->
+	</body>
+</html>

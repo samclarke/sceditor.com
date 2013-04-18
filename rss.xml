@@ -1,26 +1,1017 @@
----
----
 <?xml version="1.0"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>{{ site.title }}</title>
-		<link>http://{{ site.domain }}/</link>
-		<atom:link href="http://{{ site.domain }}/rss.xml" rel="self" type="application/rss+xml" />
+		<title>SCEditor</title>
+		<link>http://sceditor.com/</link>
+		<atom:link href="http://sceditor.com/rss.xml" rel="self" type="application/rss+xml" />
 		<description>SCEditor posts and relesases RSS feed</description>
 		<language>en</language>
-	<pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-	<lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+	<pubDate>Thu, 18 Apr 2013 11:34:22 +0100</pubDate>
+	<lastBuildDate>Thu, 18 Apr 2013 11:34:22 +0100</lastBuildDate>
 
-	{% for post in site.posts %}
+	
 	<item>
-		<title>{{ post.title }}</title>
-		<link>http://{{ site.domain }}{{ post.url }}</link>
-		<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+		<title>Version 1.4.2 released</title>
+		<link>http://sceditor.com/posts/version-1-4-2-released</link>
+		<pubDate>Fri, 29 Mar 2013 00:00:00 +0000</pubDate>
 		<author>sam@samclarke.com (Sam Clarke)</author>
-		<guid>http://{{ site.domain }}{{ post.id }}</guid>
-		<description>{{ post.content | xml_escape }}</description>
+		<guid>http://sceditor.com/posts/version-1-4-2-released</guid>
+		<description>&lt;h2&gt;Version 1.4.2&lt;/h2&gt;
+
+&lt;p&gt;Version 1.4.2 has been released with numerous bug fixes. Thanks to everyone who contributed!&lt;/p&gt;
+
+&lt;p&gt;The only big change this version, other than the bug fixes, is the addition of the &lt;code&gt;emoticons()&lt;/code&gt; method which lets you enable/disable emoticons while editing.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.4.2 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Added emoticons() method which allows enabling/disabling emoticons at runtime.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with jQuery UI dialogs and SCEditor dropdowns appearing behind them.&lt;br /&gt;
+		 &amp;ndash; Thanks to @EugeneAksyonov for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with multiple editors and maximise.&lt;br /&gt;
+		 &amp;ndash; Thanks to Tauno for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed whitespace handling bug causing new lines to be removed from text pasted from Word.&lt;br /&gt;
+		 &amp;ndash; Thanks to @lpuig for reporting&lt;/li&gt;
+		&lt;li&gt;Improved dropdowns to close if the button is clicked twice.&lt;br /&gt;
+		 &amp;ndash; Thanks to @hhy89 for updating&lt;/li&gt;
+		&lt;li&gt;Fixed bug with Chrome losing the selection when using autoUpdate option.&lt;br /&gt;
+		 &amp;ndash; Thanks to @lpuig for reporting&lt;/li&gt;
+		&lt;li&gt;Added support for auto focus to place the cursor at the end.&lt;/li&gt;
+		&lt;li&gt;Fixed bug where pasted emoticons &quot;:)&quot; were not being converted into emoticon images.&lt;br /&gt;
+		 &amp;ndash; Thanks to @shaoner for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug where if the BBCode styles property was null it caused an error.&lt;br /&gt;
+		 &amp;ndash; Thanks to @OmarHawk for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with iOS losing focus.&lt;br /&gt;
+		 &amp;ndash; Thanks to @coder4u for reporting.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with emoticonsRoot option not working at startup.&lt;br /&gt;
+		 &amp;ndash; Thanks to @tucan39 for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with unknown BBCodes being handled incorrectly.&lt;br /&gt;
+		 &amp;ndash; Thanks to @KN4CK3R for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with % based widths and heights.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with editor height when created in a hidden div.&lt;br /&gt;
+		 &amp;ndash; Thanks to @berridgeab for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with new lines and when two block level elements are next to each other.&lt;br /&gt;- Thanks to @martec for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with emoticonsRoot being preprended multiple times if more than one editor instance.&lt;br /&gt;
+		 &amp;ndash; Thanks to @KN4CK3R for reporting&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+</description>
 	</item>
-	{% endfor %}
+	
+	<item>
+		<title>Version 1.4.1 released</title>
+		<link>http://sceditor.com/posts/version-1-4-1-released</link>
+		<pubDate>Fri, 25 Jan 2013 00:00:00 +0000</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-4-1-released</guid>
+		<description>&lt;h2&gt;Version 1.4.1&lt;/h2&gt;
+
+&lt;p&gt;Version 1.4.1 has been released with numerous bug fixes. Thanks to everyone who contributed!&lt;/p&gt;
+
+&lt;p&gt;Other than bug fixes the main changes are plugin support, the &lt;code&gt;blur()&lt;/code&gt;, &lt;code&gt;keyDown()&lt;/code&gt;, &lt;code&gt;keyPress()&lt;/code&gt;, &lt;code&gt;keyUp()&lt;/code&gt;, &lt;code&gt;rtl()&lt;/code&gt; and &lt;code&gt;maximize()&lt;/code&gt; methods and RTL theme support.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;label label-important&quot;&gt;Important&lt;/span&gt; The minified file &lt;code&gt;jquery.sceditor.min.js&lt;/code&gt; no longer has the BBCode plugin bundled in it. For both the editor and BBCode plugin use the &lt;code&gt;jquery.sceditor.bbcode.min.js&lt;/code&gt; file instead.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.4.1 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Dropped GPL to match jQuery license.&lt;br /&gt;
+		 The editor can still be used under the GPLv2, GPLv3 or any other MIT compatible&lt;br /&gt;
+		 license. Changes can&amp;#39;t be submitted back unless they are licensed under the MIT&lt;br /&gt;
+		 but then they couldn&amp;#39;t before either as it was dual licensed under the MIT so&lt;br /&gt;
+		 there isn&amp;#39;t really any change, just a bit simpler.&lt;/li&gt;
+		&lt;li&gt;Added blur, keyDown, keyPress and KeyUp helpers&lt;/li&gt;
+		&lt;li&gt;Added Turkish translation&lt;br /&gt;
+		 &amp;ndash; Thanks to @MYaman34 for translating.&lt;/li&gt;
+		&lt;li&gt;Added button state support&lt;/li&gt;
+		&lt;li&gt;Added better plugin system&lt;/li&gt;
+		&lt;li&gt;Fixed emoticons now showing their code as a tooltip.&lt;/li&gt;
+		&lt;li&gt;Added support for custom emoticon tooltips.&lt;br /&gt;
+		 &amp;ndash; Thanks to @Spuds for reporting&lt;/li&gt;
+		&lt;li&gt;Added nodechanged event.&lt;/li&gt;
+		&lt;li&gt;Improved BBCode attribute quoting support.&lt;br /&gt;
+		 &amp;ndash; Thanks to @Spuds for reporting&lt;/li&gt;
+		&lt;li&gt;Added Arabic translation.&lt;br /&gt;
+		 &amp;ndash; Thanks to @Atramez-Zeton for translating&lt;/li&gt;
+		&lt;li&gt;Added disablePasting option.&lt;/li&gt;
+		&lt;li&gt;Fixed problem with HTML5 form validation not working when using the editor.&lt;br /&gt;
+		 The editor will now just remove the required attribute from the original textarea&lt;br /&gt;
+		 so validation will either need to be done server side or manually.&lt;/li&gt;
+		&lt;li&gt;Added tabindex support. The tabindex will be picked up from the original textarea.&lt;br /&gt;
+		 &amp;ndash; Thanks to @bmxgrover for reporting&lt;br /&gt;
+		 &amp;ndash; Thanks to @Spuds for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with nested lists.&lt;br /&gt;
+		 &amp;ndash; Thanks to @brunoais for reporting.&lt;/li&gt;
+		&lt;li&gt;Improved IE resize speed.&lt;/li&gt;
+		&lt;li&gt;Update themes to support showing active commands.&lt;/li&gt;
+		&lt;li&gt;Update themes to support showing a commands icon, text or both.&lt;/li&gt;
+		&lt;li&gt;Added new Monocon icons, licensed under the MIT license.&lt;/li&gt;
+		&lt;li&gt;Added selectionchanged event&lt;/li&gt;
+		&lt;li&gt;Fixed bug with LTR command not working.&lt;br /&gt;
+		 &amp;ndash; Thanks to @charafweb for reporting&lt;/li&gt;
+		&lt;li&gt;Added zIndex option to allow setting the containers z-index.&lt;br /&gt;
+		 Fixes bug with modal jQuery UI dialogs.&lt;br /&gt;
+		 &amp;ndash; Thanks to @prdatur for reporting and the fix.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with percentage based widths.&lt;br /&gt;
+		 &amp;ndash; Thanks to @charafweb for reporting.&lt;/li&gt;
+		&lt;li&gt;Improved RTL support. Added rtl() helper and improved all themes RTL support.&lt;/li&gt;
+		&lt;li&gt;Added maximize command and maximize() helper.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with sentences wrapped in [] sometimes causing problems.&lt;br /&gt;
+		 &amp;ndash; Thanks to @liamdawe for reporting&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.4.0 released</title>
+		<link>http://sceditor.com/posts/version-1-4-0-released</link>
+		<pubDate>Fri, 23 Nov 2012 00:00:00 +0000</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-4-0-released</guid>
+		<description>&lt;h2&gt;Version 1.4.0&lt;/h2&gt;
+
+&lt;p&gt;It’s finally here! Version 1.4.0 has been released. Thanks to everyone who contributed!&lt;/p&gt;
+
+&lt;p&gt;There has been lot of improvements to the BBCode parser in this version, including better support for custom self closing tags and different BBCode dialects.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;label label-important&quot;&gt;Important&lt;/span&gt; This version is &lt;em&gt;not&lt;/em&gt; backwards compatible with previous versions. Some functions have been removed/renamed plus the default BBCode dialect has changed slightly.&lt;/p&gt;
+
+&lt;p&gt;As much as I hate breaking backwards compatibility these updates really needed doing. Hopefully it will be a long time before any more non-backwards compatible changes will need to be done.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.4.0 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;New theme &quot;square&quot; added&lt;/li&gt;
+		&lt;li&gt;Some none-backwards compatible tidying:&lt;br /&gt;
+		All occurrences of &lt;code&gt;textEditor&lt;/code&gt; have been changed to &lt;code&gt;sourceEditor&lt;/code&gt;&lt;br /&gt;
+		All occurrences of &lt;code&gt;updateTextareaValue&lt;/code&gt; have been changed to &lt;code&gt;updateOriginal&lt;/code&gt;&lt;br /&gt;
+		All occurrences of &lt;code&gt;destory&lt;/code&gt; have finally been renamed to &lt;code&gt;destroy&lt;/code&gt;&lt;br /&gt;
+		Removed the deprecated &lt;code&gt;setCommand&lt;/code&gt; and &lt;code&gt;commandExists&lt;/code&gt; functions.&lt;/li&gt;
+		&lt;li&gt;Added resizeWidth and resizeHeight options to allow disabling of either width or height resizing while keeping the other&lt;/li&gt;
+		&lt;li&gt;Improved resize handling&lt;/li&gt;
+		&lt;li&gt;Updated build.php&lt;/li&gt;
+		&lt;li&gt;Fixed bug with emoticons containing backslashes.&lt;br /&gt;
+			&amp;ndash; Thanks to emanuele45 for the fix.&lt;/li&gt;
+		&lt;li&gt;Fixed bug when pasting from Word.&lt;br /&gt;
+			&amp;ndash; Thanks to @Spuds for reporting.&lt;/li&gt;
+		&lt;li&gt;Fixed bug causing scrollbar to change when inserting BBCode in source mode.&lt;br /&gt;
+			&amp;ndash; Thanks to Martec for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug causing cursor position to be lost in FF when getting the editors value.&lt;br /&gt;
+			&amp;ndash; Thanks to @Spuds for reporting&lt;/li&gt;
+		&lt;li&gt;Improve IE support&lt;/li&gt;
+		&lt;li&gt;Moved roadmap from GitHub wiki to source directory for easier editing.&lt;/li&gt;
+		&lt;li&gt;Added a new much more flexible BBCode parser&lt;/li&gt;
+		&lt;li&gt;Added new option to auto-update original textbox on blur event occurring on SCEditor.&lt;br /&gt;
+			&amp;ndash; Thanks to @maiiku for adding this feature&lt;/li&gt;
+		&lt;li&gt;Updated sceditor() to return the instance/instances of the editor by passing &quot;instance&quot; to sceditor() and protect against re-initialization.&lt;br /&gt;
+			&amp;ndash; Thanks to @maiiku for reporting&lt;/li&gt;
+		&lt;li&gt;Updated sceditor() to return the current state of the editor by passing state to sceditor().&lt;br /&gt;
+			&amp;ndash; Thanks to @maiiku&lt;/li&gt;
+		&lt;li&gt;Added IE 10 support&lt;/li&gt;
+		&lt;li&gt;Added Vietnamese translation.&lt;br /&gt;
+			&amp;ndash; Thanks to Chien for translating&lt;/li&gt;
+		&lt;li&gt;Added plugins option - Thanks to @maiiku&lt;/li&gt;
+		&lt;li&gt;Updated editor to force new line after code and quote tags so that text can be entered after them.&lt;br /&gt;
+			&amp;ndash; Thanks to Logan&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.3.7 released</title>
+		<link>http://sceditor.com/posts/version-1-3-7-released</link>
+		<pubDate>Fri, 20 Jul 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-3-7-released</guid>
+		<description>&lt;h2&gt;Version 1.3.7&lt;/h2&gt;
+
+&lt;p&gt;This update is only to fix a few small bugs from the previous version. The
+next set of new features will be in the 1.4.0 version.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.3.7 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Fix emoticon &quot;more&quot; button closing the dropdown&lt;/li&gt;
+		&lt;li&gt;Fix blur() function causing small box to appear in IE&lt;/li&gt;
+		&lt;li&gt;Update theme so that the container has no z-index set&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.3.6 released</title>
+		<link>http://sceditor.com/posts/version-1-3-6-released</link>
+		<pubDate>Sat, 14 Jul 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-3-6-released</guid>
+		<description>&lt;h2&gt;Version 1.3.6&lt;/h2&gt;
+
+&lt;p&gt;Mostly bug fixes with this release. The biggest change is that the editor now has much better iOS support.&lt;/p&gt;
+
+&lt;p&gt;A new function &lt;code&gt;blur()&lt;/code&gt; has also been added which will remove focus from the editor.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.3.6 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Added Spanish translation&lt;br /&gt;
+			&amp;ndash; Thanks to Maxpower for translating&lt;/li&gt;
+		&lt;li&gt;Fixed YouTube command not matching youtu.be URLs&lt;/li&gt;
+		&lt;li&gt;Added form reset support&lt;/li&gt;
+		&lt;li&gt;Added autoExpand option&lt;/li&gt;
+		&lt;li&gt;Fixed bug related to inserting BBCodes in source mode when textarea is empty.&lt;br /&gt;
+			&amp;ndash; Thanks to Martec for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed stripQuotes bug&lt;br /&gt;
+			&amp;ndash; Thanks to Maxpower for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed destory() to stop memory leak&lt;/li&gt;
+		&lt;li&gt;iOS bug with content overflowing the container&lt;/li&gt;
+		&lt;li&gt;Fixed font size BBCode bug with WebOS browser&lt;/li&gt;
+		&lt;li&gt;Added blur() function&lt;/li&gt;
+		&lt;li&gt;Fixed list bug where newlines from the end would be removed&lt;br /&gt;
+			&amp;ndash; Thanks to Birkoff Keren for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed whitespace removal bug causing some whitespace to be left.&lt;br /&gt;
+			&amp;ndash; Thanks to Martec for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed val() helper function bug returning HTML when in source mode.&lt;br /&gt;
+			&amp;ndash; Thanks to Maxpower for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with IE compatibility modes &quot;Quirks&quot; and &quot;IE 7&quot; causing new lines not to show.&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.3.5 released</title>
+		<link>http://sceditor.com/posts/version-1-3-5-released</link>
+		<pubDate>Thu, 28 Jun 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-3-5-released</guid>
+		<description>&lt;h2&gt;Version 1.3.5&lt;/h2&gt;
+
+&lt;p&gt;The biggest change in this update is the themes. All the themes now live in their own directory and &lt;a href=&quot;/posts/themes-demo/&quot;&gt;3 news ones have been added&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Some extra options have also been added, &lt;code&gt;readOnly&lt;/code&gt;, &lt;code&gt;autofocus&lt;/code&gt;, &lt;code&gt;rtl&lt;/code&gt; and &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are also quite a few small changes in this update like the addition of &lt;code&gt;sourceMode()&lt;/code&gt;, &lt;code&gt;val()&lt;/code&gt;, &lt;code&gt;insertText()&lt;/code&gt; and &lt;code&gt;insert()&lt;/code&gt; methods.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.3.5 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Fixed bug in FF making pasting via right click difficult when empty&lt;br /&gt;
+			&amp;ndash; Thanks to Nibogo2 for reporting&lt;/li&gt;
+		&lt;li&gt;Added readonly method and option&lt;/li&gt;
+		&lt;li&gt;Added expandToContent method&lt;/li&gt;
+		&lt;li&gt;Reorgernised themes to their own directory.&lt;/li&gt;
+		&lt;li&gt;hanged themes to be in .less format and added to build file&lt;/li&gt;
+		&lt;li&gt;Added modern, office-toolbar and office themes&lt;/li&gt;
+		&lt;li&gt;Added autofocus option&lt;/li&gt;
+		&lt;li&gt;Added a roadmap to the GitHub wiki&lt;/li&gt;
+		&lt;li&gt;Added height and width methods&lt;/li&gt;
+		&lt;li&gt;Added method to check for WYSIWYG support&lt;/li&gt;
+		&lt;li&gt;Changed so that by default the editor won't start in browsers that do not support WYSIWYG editing (old mobile browsers)&lt;/li&gt;
+		&lt;li&gt;Added rtl option along with rtl &amp;amp; ltr commands&lt;/li&gt;
+		&lt;li&gt;Added id option&lt;/li&gt;
+		&lt;li&gt;Added sourceMode, val, insertText and insert methods&lt;/li&gt;
+		&lt;li&gt;Fixed quote bug where author from nested quotes would be removed&lt;/li&gt;
+		&lt;li&gt;Added Estonian language file&lt;br /&gt;
+			&amp;ndash; Thanks to Rivo for translating&lt;/li&gt;
+		&lt;li&gt;Fixed bug with dom.fixNesting when fixing certain tags&lt;/li&gt;
+		&lt;li&gt;Improve adding/updating/removing of commands and BBCodes&lt;/li&gt;
+		&lt;li&gt;Fixed bug causing elements that are styled with diplay: block to be treated as block level elements&lt;br /&gt;
+			&amp;ndash; Thanks to Rene for reporting&lt;/li&gt;
+		&lt;li&gt;Added Brazilian Portuguese language file&lt;br /&gt;
+			&amp;ndash; Thanks to Martec for translating&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Themes Demo</title>
+		<link>http://sceditor.com/posts/themes-demo</link>
+		<pubDate>Thu, 28 Jun 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/themes-demo</guid>
+		<description>&lt;link id=&quot;default&quot; rel=&quot;stylesheet&quot; href=&quot;/minified/themes/default.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/minified/jquery.sceditor.bbcode.min.js&quot;&gt; &lt;/script&gt;
+&lt;script&gt;
+	// Source: http://www.backalleycoder.com/2011/03/20/link-tag-css-stylesheet-load-event/
+	var loadCSS = function(url, callback){
+		var link = document.createElement('link');
+		link.type = 'text/css';
+		link.rel = 'stylesheet';
+		link.href = url;
+		link.id = 'theme-style';
+	
+		document.getElementsByTagName('head')[0].appendChild(link);
+	
+		var img = document.createElement('img');
+		img.onerror = function(){
+			if(callback)
+				setTimeout(function() { callback(link); }, 250);
+		}
+		img.src = url;
+	}
+	
+	$(function() {
+		var initEditor = function() {
+			$(&quot;textarea&quot;).sceditor({
+				plugins: 'bbcode',
+				style: &quot;/minified/jquery.sceditor.default.min.css&quot;
+			});
+		};
+
+		$(&quot;#theme&quot;).change(function() {
+			var theme = &quot;/minified/themes/&quot; + $(this).val() + &quot;.min.css&quot;;
+
+			$(&quot;textarea&quot;).data(&quot;sceditor&quot;).destroy();
+			$(&quot;#default&quot;).remove();
+			$(&quot;#theme-style&quot;).remove();
+			
+			loadCSS(theme, initEditor);
+		});
+
+		initEditor();
+	});
+&lt;/script&gt;
+	
+&lt;p&gt;&lt;textarea name=&quot;bbcode_field&quot; style=&quot;height:300px;width:500px;&quot;&gt;Themes example&lt;/textarea&gt;&lt;/p&gt;
+
+&lt;p&gt;
+	&lt;label for=&quot;theme&quot;&gt;Theme:&lt;/label&gt;
+	&lt;select id=&quot;theme&quot;&gt;
+		&lt;option value=&quot;default&quot;&gt;Default&lt;/option&gt;
+		&lt;option value=&quot;modern&quot;&gt;Modern&lt;/option&gt;
+		&lt;option value=&quot;office-toolbar&quot;&gt;Office Toolbar&lt;/option&gt;
+		&lt;option value=&quot;office&quot;&gt;Office&lt;/option&gt;
+		&lt;option value=&quot;square&quot;&gt;Square&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.3.4 released</title>
+		<link>http://sceditor.com/posts/version-1-3-4-released</link>
+		<pubDate>Mon, 04 Jun 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-3-4-released</guid>
+		<description>&lt;h2&gt;Version 1.3.4&lt;/h2&gt;
+
+&lt;p&gt;The main fix in this release is a nasty bug causing some BBCodes to be stripped.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.3.4 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Updated focus method to work in source mode&lt;/li&gt;
+		&lt;li&gt;Added public inSourceMode method&lt;/li&gt;
+		&lt;li&gt;Fix bug causing BBCodes to be striped&lt;br /&gt;
+			&amp;ndash; Thanks to Nibogo2 for reporting&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.3.3 released</title>
+		<link>http://sceditor.com/posts/version-1-3-3-released</link>
+		<pubDate>Tue, 22 May 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-3-3-released</guid>
+		<description>&lt;h2&gt;Version 1.3.3&lt;/h2&gt;
+
+&lt;p&gt;The biggest changes in this version are the new experimental paste filtering and the support for some BBCodes in source mode BBCode.&lt;/p&gt;
+
+&lt;p&gt;The paste filetering is disabled by default to avoid any problems.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.3.3 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Added dropDownCss option&lt;br /&gt;
+			&amp;ndash; Thanks to @esion&lt;/li&gt;
+		&lt;li&gt;Add txtExec option to setCommand function&lt;/li&gt;
+		&lt;li&gt;Updated BBCode plugin to support some BBCodes in source mode&lt;/li&gt;
+		&lt;li&gt;Updated editor to disable AYT emotion converstion if emotions is not in toolbar&lt;/li&gt;
+		&lt;li&gt;Fixed rare problem with value not being subbmited&lt;br /&gt;
+			&amp;ndash; Thanks to Marco for reporting&lt;/li&gt;
+		&lt;li&gt;Added experimental paste filtering&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Toggle WYSIWYG and source modes</title>
+		<link>http://sceditor.com/posts/toggle-wysiwyg-and-source-modes</link>
+		<pubDate>Sun, 29 Apr 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/toggle-wysiwyg-and-source-modes</guid>
+		<description>&lt;h2&gt;Toggle WYSIWYG and source modes&lt;/h2&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/minified/themes/default.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/minified/jquery.sceditor.bbcode.min.js&quot;&gt; &lt;/script&gt;
+&lt;script&gt;
+$(function() {
+	$(&quot;#demo-toggle&quot;).sceditor({
+		plugins: 'bbcode',
+		toolbar: &quot;bold,italic,underline|source&quot;,
+		style: &quot;/minified/jquery.sceditor.default.min.css&quot;,
+		emoticonsRoot: &quot;/&quot;
+	});
+});
+
+function toggle()
+{
+	$(&quot;#demo-toggle&quot;).data(&quot;sceditor&quot;).toggleSourceMode();
+}
+&lt;/script&gt;
+
+&lt;p&gt;&lt;textarea style=&quot;width:600px; height:300px&quot; id=&quot;demo-toggle&quot;&gt;Simple [b]demo[/b].&lt;/textarea&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;javascript:toggle();&quot;&gt;Toggle editor mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Code behind&lt;/h2&gt;
+
+&lt;h3&gt;Create the editor&lt;/h3&gt;
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+$function() {
+	$(&quot;#demo-toggle&quot;).sceditor({
+		plugins: 'bbcode',
+		toolbar: &quot;bold,italic,underline|source&quot;,
+		style: &quot;/minified/jquery.sceditor.default.min.css&quot;
+	});
+});
+&lt;/pre&gt;
+
+&lt;h3&gt;Toggle source mode&lt;/h3&gt;
+
+&lt;p&gt;Then, to switch between WYSIWYG mode and source mode, simply call the &lt;code&gt;toggleTextMode()&lt;/code&gt; method on an editor instance.&lt;/p&gt;
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+$(&quot;#demo-toggle&quot;).data(&quot;sceditor&quot;).toggleTextMode();
+&lt;/pre&gt;
+
+&lt;p&gt;You can also use &lt;code&gt;sourceMode([boolean] setToSourceMode)&lt;/code&gt; to set the editor mode and &lt;code&gt;sourceMode()&lt;/code&gt; to get the editor mode.
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+// InSourceMode will be true if the editor is in source mdoe, false if not.
+var InSourceMode = $(&quot;#demo-toggle&quot;).data(&quot;sceditor&quot;).sourceMode();
+
+// Set the editor to source mode
+$(&quot;#demo-toggle&quot;).data(&quot;sceditor&quot;).sourceMode(true);
+
+// Set the editor to WYSIWYG mode
+$(&quot;#demo-toggle&quot;).data(&quot;sceditor&quot;).sourceMode(false);
+&lt;/pre&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>How to add custom commands</title>
+		<link>http://sceditor.com/posts/how-to-add-custom-commands</link>
+		<pubDate>Sat, 28 Apr 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/how-to-add-custom-commands</guid>
+		<description>&lt;h2&gt;Custom command demo&lt;/h2&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/minified/themes/default.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/minified/jquery.sceditor.bbcode.min.js&quot;&gt; &lt;/script&gt;
+&lt;style&gt;
+	.sceditor-button-headers div { background: url('/misc/headers-button.png'); }
+	.sceditor-header-option {
+		display: block;
+		cursor: pointer;
+		font-size: 14px;
+		text-decoration: none;
+		color: #222;
+	}
+	.sceditor-header-option h1,
+	.sceditor-header-option h2,
+	.sceditor-header-option h3,
+	.sceditor-header-option h4,
+	.sceditor-header-option h5,
+	.sceditor-header-option h6 {
+		border: 0;
+		margin: 0;
+		padding: .25em;
+	}
+	.sceditor-header-option:hover { background: #eee; }
+&lt;/style&gt;
+&lt;script&gt;
+$(function() {
+$.sceditor.command.set(&quot;headers&quot;, {
+	exec: function(caller) {
+		var	editor   = this,
+			$content = $(&quot;&lt;div /&gt;&quot;);
+
+		for (var i=1; i&lt;= 6; i++) {
+			$(
+				'&lt;a class=&quot;sceditor-header-option&quot; href=&quot;#&quot;&gt;' +
+					'&lt;h' + i + '&gt;Heading ' + i + '&lt;/h' + i + '&gt;' +
+				'&lt;/a&gt;'
+			)
+			.data('headersize', i)
+			.click(function (e) {
+				editor.execCommand(&quot;formatblock&quot;, &quot;&lt;h&quot; + $(this).data('headersize') + &quot;&gt;&quot;);
+				editor.closeDropDown(true);
+
+				e.preventDefault();
+			})
+			.appendTo($content);
+		}
+
+		editor.createDropDown(caller, &quot;header-picker&quot;, $content);
+	},
+	tooltip: &quot;Format Headers&quot;
+});
+
+	$.sceditor.plugins.bbcode.bbcode
+		.set(&quot;h1&quot;, { tags: { h1: null }, format: &quot;[h1]{0}[/h1]&quot;, html: &quot;&lt;h1&gt;{0}&lt;/h1&gt;&quot; })
+		.set(&quot;h2&quot;, { tags: { h2: null }, format: &quot;[h2]{0}[/h2]&quot;, html: &quot;&lt;h2&gt;{0}&lt;/h2&gt;&quot; })
+		.set(&quot;h3&quot;, { tags: { h3: null }, format: &quot;[h3]{0}[/h3]&quot;, html: &quot;&lt;h3&gt;{0}&lt;/h3&gt;&quot; })
+		.set(&quot;h4&quot;, { tags: { h4: null }, format: &quot;[h4]{0}[/h4]&quot;, html: &quot;&lt;h4&gt;{0}&lt;/h4&gt;&quot; })
+		.set(&quot;h5&quot;, { tags: { h5: null }, format: &quot;[h5]{0}[/h5]&quot;, html: &quot;&lt;h5&gt;{0}&lt;/h5&gt;&quot; })
+		.set(&quot;h6&quot;, { tags: { h6: null }, format: &quot;[h6]{0}[/h6]&quot;, html: &quot;&lt;h6&gt;{0}&lt;/h6&gt;&quot; });
+
+	$(&quot;#demo-cust-cmd&quot;).sceditor({
+		plugins: 'bbcode',
+		toolbar: &quot;headers|source&quot;,
+		style: &quot;/minified/jquery.sceditor.default.min.css&quot;,
+		emoticonsRoot: &quot;/&quot;
+	});
+});
+&lt;/script&gt;
+
+&lt;p&gt;&lt;textarea style=&quot;width:600px; height:300px&quot; id=&quot;demo-cust-cmd&quot;&gt;[h1]Header 1[/h1][h2]Sub header[/h2]Normal text&lt;/textarea&gt;&lt;/p&gt;
+
+&lt;h2&gt;Code behind it&lt;/h2&gt;
+
+&lt;p&gt;To add the toolbar command, use the &lt;code&gt;$.sceditor.command.set&lt;/code&gt; function:&lt;/p&gt;
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+$.sceditor.command.set(&quot;headers&quot;, {
+    exec: function(caller) {
+        // Store the editor instance so it can be used
+        // in the click handler
+        var editor   = this,
+            $content = $(&quot;&amp;lt;div /&gt;&quot;);
+
+        // Create the 1-6 header options
+        for (var i=1; i&lt;= 6; i++) {
+            $(
+                '&amp;lt;a class=&quot;sceditor-header-option&quot; href=&quot;#&quot;&amp;gt;' +
+                    '&amp;lt;h' + i + '&amp;gt;Heading ' + i + '&amp;lt;/h' + i + '&amp;gt;' +
+                '&amp;lt;/a&amp;gt;'
+            )
+            .data('headersize', i)
+            .click(function (e) {
+                // When the option is clicked call the native contenteditable
+                // formatblock to format this block to the header
+                // 
+                // It's nearly always better to use the editors methods like
+                // insert() over the browsers native execCommand as 
+                // execCommand has many browser incompatibilites.
+                editor.execCommand(&quot;formatblock&quot;, &quot;&amp;lt;h&quot; + $(this).data('headersize') + &quot;&amp;gt;&quot;);
+                editor.closeDropDown(true);
+
+                e.preventDefault();
+            })
+            .appendTo($content);
+        }
+
+        editor.createDropDown(caller, &quot;header-picker&quot;, $content);
+    },
+    tooltip: &quot;Format Headers&quot;
+});
+&lt;/pre&gt;
+
+&lt;p&gt;Add the commands CSS:&lt;/p&gt;
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+.sceditor-button-headers div { background: url('/images/headers-button.png'); }
+.sceditor-header-option {
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    color: #222;
+}
+.sceditor-header-option:hover { background: #eee; }
+&lt;/pre&gt;
+
+&lt;p&gt;Then, if using the BBCode plugin, add the BBCode commands using the &lt;code&gt;$.plugins.bbcode.bbcode.set&lt;/code&gt; function:&lt;/p&gt;
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+$.sceditor.plugins.bbcode.bbcode
+    .set(&quot;h1&quot;, { tags: { h1: null }, format: &quot;[h1]{0}[/h1]&quot;, html: &quot;&amp;lt;h1&amp;gt;{0}&amp;lt;/h1&amp;gt;&quot; })
+    .set(&quot;h2&quot;, { tags: { h2: null }, format: &quot;[h2]{0}[/h2]&quot;, html: &quot;&amp;lt;h2&amp;gt;{0}&amp;lt;/h2&amp;gt;&quot; })
+    .set(&quot;h3&quot;, { tags: { h3: null }, format: &quot;[h3]{0}[/h3]&quot;, html: &quot;&amp;lt;h3&amp;gt;{0}&amp;lt;/h3&amp;gt;&quot; })
+    .set(&quot;h4&quot;, { tags: { h4: null }, format: &quot;[h4]{0}[/h4]&quot;, html: &quot;&amp;lt;h4&amp;gt;{0}&amp;lt;/h4&amp;gt;&quot; })
+    .set(&quot;h5&quot;, { tags: { h5: null }, format: &quot;[h5]{0}[/h5]&quot;, html: &quot;&amp;lt;h5&amp;gt;{0}&amp;lt;/h5&amp;gt;&quot; })
+    .set(&quot;h6&quot;, { tags: { h6: null }, format: &quot;[h6]{0}[/h6]&quot;, html: &quot;&amp;lt;h6&amp;gt;{0}&amp;lt;/h6&amp;gt;&quot; });
+&lt;/pre&gt;
+
+&lt;p&gt;Finally add the command to the toolbar of the editor:&lt;/p&gt;
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+$(&quot;#demo-cust-cmd&quot;).sceditor({
+    plugins: 'bbcode',
+    toolbar: &quot;headers|source&quot;,
+});
+&lt;/pre&gt;
+
+&lt;p&gt;See the &lt;a href=&quot;/documentation/&quot;&gt;documentation&lt;/a&gt; for more details on the above functions and CSS.&lt;/p&gt;
+
+
+
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.3.2 released</title>
+		<link>http://sceditor.com/posts/version-1-3-2-released</link>
+		<pubDate>Fri, 27 Apr 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-3-2-released</guid>
+		<description>&lt;h2&gt;Version 1.3.2&lt;/h2&gt;
+
+&lt;p&gt;The biggest change in this version is changing the code to use a new rangeHelper which should help reduce bugs.&lt;/p&gt;
+
+&lt;p&gt;This also allows As You Type emoticon conversion to work in all browsers including IE &amp;lt; 9! IE &amp;lt; 9 dose not support the emoticonsCompat.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.3.2 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Created rangeHelper class to improve code quality&lt;/li&gt;
+		&lt;li&gt;Fix bug with IE8 and below related to newlines&lt;/li&gt;
+		&lt;li&gt;Updated to remove empty BBCodes such as [b][/b]&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.3.1 released</title>
+		<link>http://sceditor.com/posts/version-1-3-1-released</link>
+		<pubDate>Sat, 21 Apr 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-3-1-released</guid>
+		<description>&lt;h2&gt;Version 1.3.1&lt;/h2&gt;
+
+&lt;p&gt;There are only a few changes in this version. The main change is to fix another quite a bad bug related to IE9.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.3.1 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Add emoticonsRoot option. Allows adding a root URL to be prepended to all emoticons.&lt;br /&gt;
+		&amp;ndash; Thanks to @primehalo for the idea&lt;/li&gt;
+		&lt;li&gt;Fix IE9 bug showing resize handles&lt;/li&gt;
+		&lt;li&gt;Fix IE ranges sometimes causing the last typed charecter to be unselected&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.3.0 released</title>
+		<link>http://sceditor.com/posts/version-1-3-0-released</link>
+		<pubDate>Wed, 18 Apr 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-3-0-released</guid>
+		<description>&lt;h2&gt;Version 1.3.0&lt;/h2&gt;
+
+&lt;p&gt;There are only a few changes in this version. The main change is to fix quite a bad bug related to new line handling.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.3.0 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Add package.json file&lt;/li&gt;
+		&lt;li&gt;Add Contribute to README&lt;/li&gt;
+		&lt;li&gt;Add GitHub pages page&lt;/li&gt;
+		&lt;li&gt;Fix newline bug. This greatly improves the BBCode to HTML parsers handling of newlines.&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>How to upload and insert an image</title>
+		<link>http://sceditor.com/posts/how-to-upload-and-insert-an-image</link>
+		<pubDate>Tue, 17 Apr 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/how-to-upload-and-insert-an-image</guid>
+		<description>&lt;h2&gt;Image upload demo&lt;/h2&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot;&gt; &lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/minified/themes/default.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/minified/jquery.sceditor.bbcode.min.js&quot;&gt; &lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function() {
+	$(&quot;#demo-image&quot;).sceditor({
+		plugins: 'bbcode',
+		style: &quot;/minified/jquery.sceditor.default.min.css&quot;,
+		emoticonsRoot: '/'
+	});
+
+	window.sceditorInstance = $(&quot;#demo-image&quot;).sceditor(&quot;instance&quot;);
+});
+&lt;/script&gt;
+
+&lt;p&gt;&lt;textarea style=&quot;width:600px; height:300px&quot; id=&quot;demo-image&quot;&gt;This [b]is[/b] [color=#ff0000]a[/color] [size=3]demo[/size] :).&lt;/textarea&gt;&lt;/p&gt;
+&lt;form action=&quot;http://www.imageshack.us/redirect_api.php&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot; target=&quot;upload&quot;&gt;
+	&lt;p&gt;&lt;label&gt;Image: &lt;input type=&quot;file&quot; name=&quot;media&quot; /&gt;&lt;/label&gt;&lt;/p&gt;
+
+	&lt;p&gt;&lt;label&gt;Resize Image? &lt;input type=&quot;checkbox&quot; name=&quot;optimage&quot; id=&quot;optimage&quot; value=&quot;1&quot; checked onclick=&quot;optsize.disabled=!this.checked&quot;&gt;&lt;/label&gt;&lt;/p&gt;
+
+	&lt;p&gt;&lt;label&gt;Size: &lt;select name=&quot;optsize&quot; id=&quot;optsize&quot;&gt;
+		&lt;option value=&quot;resample&quot;&gt;optimize without resizing&lt;/option&gt;
+		&lt;option value=&quot;100x100&quot;&gt;100x75 (avatar)&lt;/option&gt;
+		&lt;option value=&quot;150x150&quot;&gt;150x112 (thumbnail)&lt;/option&gt;
+		&lt;option value=&quot;320x320&quot;&gt;320x240 (for websites and email)&lt;/option&gt;
+		&lt;option value=&quot;640x640&quot;&gt;640x480 (for message boards)&lt;/option&gt;
+		&lt;option value=&quot;800x800&quot;&gt;800x600 (15-inch monitor)&lt;/option&gt;
+		&lt;option value=&quot;1024x1024&quot;&gt;1024x768 (17-inch monitor)&lt;/option&gt;
+		&lt;option value=&quot;1280x1280&quot;&gt;1280x1024 (19-inch monitor)&lt;/option&gt;
+		&lt;option value=&quot;1600x1600&quot;&gt;1600x1200 (21-inch monitor)&lt;/option&gt;
+	&lt;/select&gt;&lt;/label&gt;&lt;/p&gt;
+
+	&lt;input type=&quot;hidden&quot; name=&quot;key&quot; value=&quot;346BFSTXbeec88bae13b92b2f4c8d888fdc8e420&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;rembar&quot; value=&quot;yes&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;error_url&quot; value=&quot;http://sceditor.com/misc/imageshack-example.html&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;success_url&quot; value=&quot;http://sceditor.com/misc/imageshack-example.html?url=%u&amp;server=%s&amp;bucket=%b&amp;filename=%i&quot; /&gt;
+
+	&lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;Upload&quot; /&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;iframe style=&quot;visibility: hidden; height: 0; width: 0&quot; id=&quot;upload&quot; name=&quot;upload&quot;&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;Code behind&lt;/h2&gt;
+
+&lt;p&gt;Quite a few people have asked how to upload and insert images into the editor so I've decided to make this little demo with the ImageShack API.&lt;/p&gt;
+
+&lt;p&gt;All that's really needed to insert an image is to call &lt;code&gt;wysiwygEditorInsertHtml()&lt;/code&gt; or even just &lt;code&gt;insert()&lt;/code&gt; on an editor instance. &lt;code&gt;insert()&lt;/code&gt; accepts BBCode if using the BBCode plugin, otherwise it accepts HTML.&lt;/p&gt;
+
+&lt;h4&gt;Setup the editor &amp;amp; upload form&lt;/h4&gt;
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+&amp;lt;script&amp;gt;
+$(function() {
+    $(&quot;textarea&quot;).sceditor({
+        plugins: &quot;bbcode&quot;,
+        style: &quot;/minified/jquery.sceditor.default.min.css&quot;
+    });
+
+    // Save this editor instance so the iframe can access it
+    window.sceditorInstance = $(&quot;textarea&quot;).sceditor(&quot;instance&quot;);
+});
+&amp;lt;/script&amp;gt;
+
+&amp;lt;textarea&amp;gt;&amp;lt;/textarea&amp;gt;
+
+&amp;lt;form action=&quot;http://www.imageshack.us/redirect_api.php&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot; target=&quot;upload&quot;&amp;gt;
+    &amp;lt;p&amp;gt;&amp;lt;label&amp;gt;Image: &amp;lt;input type=&quot;file&quot; name=&quot;media&quot; /&amp;gt;&amp;lt;/label&amp;gt;&amp;lt;/p&amp;gt;
+
+    &amp;lt;p&amp;gt;&amp;lt;label&amp;gt;Resize Image? &amp;lt;input type=&quot;checkbox&quot; name=&quot;optimage&quot; id=&quot;optimage&quot; value=&quot;1&quot; checked onclick=&quot;optsize.disabled=!this.checked&quot;&amp;gt;&amp;lt;/label&amp;gt;&amp;lt;/p&amp;gt;
+
+    &amp;lt;p&amp;gt;&amp;lt;label&amp;gt;Size: &amp;lt;select name=&quot;optsize&quot; id=&quot;optsize&quot;&amp;gt;
+        &amp;lt;option value=&quot;resample&quot;&amp;gt;optimize without resizing&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;100x100&quot;&amp;gt;100x75 (avatar)&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;150x150&quot;&amp;gt;150x112 (thumbnail)&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;320x320&quot;&amp;gt;320x240 (for websites and email)&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;640x640&quot;&amp;gt;640x480 (for message boards)&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;800x800&quot;&amp;gt;800x600 (15-inch monitor)&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;1024x1024&quot;&amp;gt;1024x768 (17-inch monitor)&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;1280x1280&quot;&amp;gt;1280x1024 (19-inch monitor)&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;1600x1600&quot;&amp;gt;1600x1200 (21-inch monitor)&amp;lt;/option&amp;gt;
+    &amp;lt;/select&amp;gt;&amp;lt;/label&amp;gt;&amp;lt;/p&amp;gt;
+
+    &amp;lt;input type=&quot;hidden&quot; name=&quot;key&quot; value=&quot;DEVELOPER_KEY_HERE&quot; /&amp;gt;
+    &amp;lt;input type=&quot;hidden&quot; name=&quot;rembar&quot; value=&quot;yes&quot; /&amp;gt;
+    &amp;lt;input type=&quot;hidden&quot; name=&quot;error_url&quot; value=&quot;http://example.com/imageshack-example.html&quot; /&amp;gt;
+    &amp;lt;input type=&quot;hidden&quot; name=&quot;success_url&quot; value=&quot;http://example.com/imageshack-example.html?url=%u&amp;server=%s&amp;bucket=%b&amp;filename=%i&quot; /&amp;gt;
+
+    &amp;lt;p&amp;gt;&amp;lt;input type=&quot;submit&quot; value=&quot;Upload&quot; /&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/form&amp;gt;
+&amp;lt;iframe style=&quot;visibility: hidden; height: 0; width: 0&quot; id=&quot;upload&quot; name=&quot;upload&quot;&amp;gt;&amp;lt;/iframe&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;imageshack-example.html - Page redirected to by the ImageShack API. This will insert the HTML or show the error message.&lt;/p&gt;
+
+&lt;h4&gt;imageshack-example.html&lt;/h4&gt;
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+&amp;lt;script&amp;gt;
+// Query strnig parser source: http://stevenbenner.com/2010/03/javascript-regex-trick-parse-a-query-string-into-an-object/
+var queryString = {};
+window.location.search.replace(
+    new RegExp(&quot;([^?=&amp;]+)(=([^&amp;]*))?&quot;, &quot;g&quot;),
+    function($0, $1, $2, $3) { queryString[$1] = $3; }
+);
+
+if(queryString.url)
+{
+    var img_url = &quot;http://&quot; +
+        queryString.server + &quot;.imageshack.us/img&quot; +
+        queryString.server + &quot;/&quot; +
+        queryString.bucket + &quot;/&quot; + queryString.filename;
+
+    var html = &quot;&amp;lt;a href=\&quot;&quot; + queryString.url + &quot;\&quot;&amp;gt;&quot; +
+            &quot;&amp;lt;img src=\&quot;&quot; + img_url + &quot;\&quot; alt=\&quot;Uploaded Image\&quot; /&amp;gt;&quot; +
+        &quot;&amp;lt;/a&amp;lt;&quot;;
+
+    // This called wysiwygEditorInsertHtml on the parent windows
+    // SCEditor instance
+    parent.window.sceditorInstance.wysiwygEditorInsertHtml(html);
+}
+else if(queryString.message)
+    alert(queryString.message);
+
+&amp;lt;/script&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;When upload form is submitted, it will upload the image to ImageShack via the iframe. Once uploaded ImageShack will then redirect within the iframe to the &lt;code&gt;imageshack-example.html&lt;/code&gt; file which will handle inserting the image or showing the error.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>How to insert quotes</title>
+		<link>http://sceditor.com/posts/how-to-insert-a-quote</link>
+		<pubDate>Tue, 17 Apr 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/how-to-insert-a-quote</guid>
+		<description>&lt;h2&gt;Quote demo&lt;/h2&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/minified/themes/default.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/minified/jquery.sceditor.bbcode.min.js&quot;&gt; &lt;/script&gt;
+
+&lt;script&gt;$(function() {
+	$(&quot;#demo-quote&quot;).sceditor({
+		plugins: 'bbcode',
+		style: &quot;/minified/jquery.sceditor.default.min.css&quot;,
+		emoticonsRoot: '/'
+	});
+});
+
+function insertQuote(includeAuthor)
+{
+	// first get the editor's instance
+	var editor = $(&quot;#demo-quote&quot;).sceditor(&quot;instance&quot;);
+
+	// execute the insert command
+	if(includeAuthor)
+		editor.insert('[quote=author]This is an [b]example[/b] quote.[/quote]');
+	else
+		editor.insert('[quote]This is an [b]example[/b] quote.[/quote]');
+}
+
+&lt;/script&gt;
+
+&lt;p&gt;&lt;textarea style=&quot;width:600px; height:300px&quot; id=&quot;demo-quote&quot;&gt;This [b]is[/b] [color=#ff0000]a[/color] [size=3]demo[/size] :).&lt;/textarea&gt;
+&lt;a href=&quot;javascript:insertQuote();&quot;&gt;Insert Quote&lt;/a&gt; | &lt;a href=&quot;javascript:insertQuote(true);&quot;&gt;Insert Quote with author&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Code behind&lt;/h2&gt;
+
+&lt;p&gt;To insert a BBCode quote, just pass the BBCode to the &lt;code&gt;insert()&lt;/code&gt; command.
+e.g.:&lt;/p&gt;
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+// Get the editor instance
+var editor = $(&quot;#demo-quote&quot;).sceditor(&quot;instance&quot;);
+
+// Insert some BBCode
+editor.insert('[quote=author]This is an [b]example[/b] quote.[/quote]');
+&lt;/pre&gt;
+
+</description>
+	</item>
+	
+	<item>
+		<title>XHTML Demo</title>
+		<link>http://sceditor.com/posts/html-demo</link>
+		<pubDate>Mon, 16 Apr 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/html-demo</guid>
+		<description>&lt;h2&gt;XHTML demo&lt;/h2&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/minified/themes/default.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/minified/jquery.sceditor.bbcode.min.js&quot;&gt; &lt;/script&gt;
+
+&lt;script&gt;$(function() {
+	$('#demo-bbcode').sceditor({
+		style: '/minified/jquery.sceditor.default.min.css',
+		emoticonsRoot: '/',
+		plugins: 'xhtml'
+	});
+});&lt;/script&gt;
+
+&lt;p&gt;&lt;textarea style=&quot;width:600px; height:300px&quot; id=&quot;demo-bbcode&quot;&gt;This &amp;lt;strong&amp;gt;is&amp;lt;/strong&amp;gt; &amp;lt;span style=&quot;color:#ff0000&quot;&amp;gt;a&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;font-size: 16px;&quot;&amp;gt;demo&amp;lt;/span&amp;gt; :).&lt;/textarea&gt;&lt;/p&gt;
+
+&lt;h2&gt;Code behind&lt;/h2&gt;
+
+&lt;h3&gt;Include the JS &amp;amp; CSS:&lt;/h3&gt;
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+&amp;lt;!-- Include jQuery, can be omitted if already included --&amp;gt;
+&amp;lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;!-- Include the default SCEditor theme --&amp;gt;
+&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;minified/jquery.sceditor.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&amp;gt;
+
+&amp;lt;!-- Include SCEditor's JS --&amp;gt;
+&amp;lt;script type=&quot;text/javascript&quot; src=&quot;minified/jquery.sceditor.bbcode.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+
+&lt;h3&gt;Initialize SCEditor:&lt;/h3&gt;
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+&amp;lt;script&amp;gt;
+$(function() {
+	// Convert all textareas to SCEditor instances
+	// Change the &quot;textarea&quot; to convert specific textareas
+	$(&quot;textarea&quot;).sceditor({
+
+		// Load the XHTML plugin
+		plugins: &quot;xhtml&quot;,
+
+		// Use jquery.sceditor.default.min.css to style the content
+		style: &quot;/minified/jquery.sceditor.default.min.css&quot;
+	});
+});
+&amp;lt;/script&amp;gt;
+&lt;/pre&gt;
+
+&lt;h3&gt;Finished!&lt;/h3&gt;
+
+&lt;p&gt;That’s it, any textareas on the page should now be instances of SCEditor.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>BBCode Demo</title>
+		<link>http://sceditor.com/posts/bbcode-demo</link>
+		<pubDate>Mon, 16 Apr 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/bbcode-demo</guid>
+		<description>&lt;h2&gt;BBCode demo&lt;/h2&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/minified/themes/default.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/minified/jquery.sceditor.bbcode.min.js&quot;&gt; &lt;/script&gt;
+
+&lt;script&gt;$(function() {
+	$('#demo-bbcode').sceditor({
+		style: '/minified/jquery.sceditor.default.min.css',
+		emoticonsRoot: '/',
+		plugins: 'bbcode'
+	});
+});&lt;/script&gt;
+
+&lt;p&gt;&lt;textarea style=&quot;width:600px; height:300px&quot; id=&quot;demo-bbcode&quot;&gt;This [b]is[/b] [color=#ff0000]a[/color] [size=3]demo[/size] :).&lt;/textarea&gt;&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;h2&gt;Code behind&lt;/h2&gt;
+
+&lt;h3&gt;Include the JS &amp;amp; CSS:&lt;/h3&gt;
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+&amp;lt;!-- Include jQuery, can be omitted if already included --&amp;gt;
+&amp;lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;!-- Include the default SCEditor theme --&amp;gt;
+&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;minified/jquery.sceditor.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&amp;gt;
+
+&amp;lt;!-- Include SCEditor's JS --&amp;gt;
+&amp;lt;script type=&quot;text/javascript&quot; src=&quot;minified/jquery.sceditor.bbcode.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+
+&lt;h3&gt;Initialize SCEditor:&lt;/h3&gt;
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+&amp;lt;script&amp;gt;
+$(function() {
+	// Convert all textareas to SCEditor instances
+	// Change the &quot;textarea&quot; to convert specific textareas
+	$(&quot;textarea&quot;).sceditor({
+
+		// Load the BBCode plugin
+		plugins: &quot;bbcode&quot;,
+
+		// Use jquery.sceditor.default.min.css to style the content
+		style: &quot;/minified/jquery.sceditor.default.min.css&quot;
+	});
+});
+&amp;lt;/script&amp;gt;
+&lt;/pre&gt;
+
+&lt;h3&gt;Finished!&lt;/h3&gt;
+
+&lt;p&gt;That’s it, any textareas on the page should now be instances of SCEditor.&lt;/p&gt;
+</description>
+	</item>
+	
 
 	</channel> 
 </rss>

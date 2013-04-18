@@ -1,26 +1,422 @@
----
----
 <?xml version="1.0"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>{{ site.title }}</title>
-		<link>http://{{ site.domain }}/</link>
-		<atom:link href="http://{{ site.domain }}/release.xml" rel="self" type="application/rss+xml" />
+		<title>SCEditor</title>
+		<link>http://sceditor.com/</link>
+		<atom:link href="http://sceditor.com/release.xml" rel="self" type="application/rss+xml" />
 		<description>SCEditor releases RSS feed</description>
 		<language>en</language>
-	<pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-	<lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+	<pubDate>Thu, 18 Apr 2013 11:34:22 +0100</pubDate>
+	<lastBuildDate>Thu, 18 Apr 2013 11:34:22 +0100</lastBuildDate>
 
-	{% for post in site.categories.releases %}
+	
 	<item>
-		<title>{{ post.title }}</title>
-		<link>http://{{ site.domain }}{{ post.url }}</link>
-		<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+		<title>Version 1.4.2 released</title>
+		<link>http://sceditor.com/posts/version-1-4-2-released</link>
+		<pubDate>Fri, 29 Mar 2013 00:00:00 +0000</pubDate>
 		<author>sam@samclarke.com (Sam Clarke)</author>
-		<guid>http://{{ site.domain }}{{ post.id }}</guid>
-		<description>{{ post.content | xml_escape }}</description>
+		<guid>http://sceditor.com/posts/version-1-4-2-released</guid>
+		<description>&lt;h2&gt;Version 1.4.2&lt;/h2&gt;
+
+&lt;p&gt;Version 1.4.2 has been released with numerous bug fixes. Thanks to everyone who contributed!&lt;/p&gt;
+
+&lt;p&gt;The only big change this version, other than the bug fixes, is the addition of the &lt;code&gt;emoticons()&lt;/code&gt; method which lets you enable/disable emoticons while editing.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.4.2 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Added emoticons() method which allows enabling/disabling emoticons at runtime.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with jQuery UI dialogs and SCEditor dropdowns appearing behind them.&lt;br /&gt;
+		 &amp;ndash; Thanks to @EugeneAksyonov for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with multiple editors and maximise.&lt;br /&gt;
+		 &amp;ndash; Thanks to Tauno for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed whitespace handling bug causing new lines to be removed from text pasted from Word.&lt;br /&gt;
+		 &amp;ndash; Thanks to @lpuig for reporting&lt;/li&gt;
+		&lt;li&gt;Improved dropdowns to close if the button is clicked twice.&lt;br /&gt;
+		 &amp;ndash; Thanks to @hhy89 for updating&lt;/li&gt;
+		&lt;li&gt;Fixed bug with Chrome losing the selection when using autoUpdate option.&lt;br /&gt;
+		 &amp;ndash; Thanks to @lpuig for reporting&lt;/li&gt;
+		&lt;li&gt;Added support for auto focus to place the cursor at the end.&lt;/li&gt;
+		&lt;li&gt;Fixed bug where pasted emoticons &quot;:)&quot; were not being converted into emoticon images.&lt;br /&gt;
+		 &amp;ndash; Thanks to @shaoner for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug where if the BBCode styles property was null it caused an error.&lt;br /&gt;
+		 &amp;ndash; Thanks to @OmarHawk for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with iOS losing focus.&lt;br /&gt;
+		 &amp;ndash; Thanks to @coder4u for reporting.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with emoticonsRoot option not working at startup.&lt;br /&gt;
+		 &amp;ndash; Thanks to @tucan39 for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with unknown BBCodes being handled incorrectly.&lt;br /&gt;
+		 &amp;ndash; Thanks to @KN4CK3R for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with % based widths and heights.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with editor height when created in a hidden div.&lt;br /&gt;
+		 &amp;ndash; Thanks to @berridgeab for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with new lines and when two block level elements are next to each other.&lt;br /&gt;- Thanks to @martec for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with emoticonsRoot being preprended multiple times if more than one editor instance.&lt;br /&gt;
+		 &amp;ndash; Thanks to @KN4CK3R for reporting&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+</description>
 	</item>
-	{% endfor %}
+	
+	<item>
+		<title>Version 1.4.1 released</title>
+		<link>http://sceditor.com/posts/version-1-4-1-released</link>
+		<pubDate>Fri, 25 Jan 2013 00:00:00 +0000</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-4-1-released</guid>
+		<description>&lt;h2&gt;Version 1.4.1&lt;/h2&gt;
+
+&lt;p&gt;Version 1.4.1 has been released with numerous bug fixes. Thanks to everyone who contributed!&lt;/p&gt;
+
+&lt;p&gt;Other than bug fixes the main changes are plugin support, the &lt;code&gt;blur()&lt;/code&gt;, &lt;code&gt;keyDown()&lt;/code&gt;, &lt;code&gt;keyPress()&lt;/code&gt;, &lt;code&gt;keyUp()&lt;/code&gt;, &lt;code&gt;rtl()&lt;/code&gt; and &lt;code&gt;maximize()&lt;/code&gt; methods and RTL theme support.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;label label-important&quot;&gt;Important&lt;/span&gt; The minified file &lt;code&gt;jquery.sceditor.min.js&lt;/code&gt; no longer has the BBCode plugin bundled in it. For both the editor and BBCode plugin use the &lt;code&gt;jquery.sceditor.bbcode.min.js&lt;/code&gt; file instead.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.4.1 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Dropped GPL to match jQuery license.&lt;br /&gt;
+		 The editor can still be used under the GPLv2, GPLv3 or any other MIT compatible&lt;br /&gt;
+		 license. Changes can&amp;#39;t be submitted back unless they are licensed under the MIT&lt;br /&gt;
+		 but then they couldn&amp;#39;t before either as it was dual licensed under the MIT so&lt;br /&gt;
+		 there isn&amp;#39;t really any change, just a bit simpler.&lt;/li&gt;
+		&lt;li&gt;Added blur, keyDown, keyPress and KeyUp helpers&lt;/li&gt;
+		&lt;li&gt;Added Turkish translation&lt;br /&gt;
+		 &amp;ndash; Thanks to @MYaman34 for translating.&lt;/li&gt;
+		&lt;li&gt;Added button state support&lt;/li&gt;
+		&lt;li&gt;Added better plugin system&lt;/li&gt;
+		&lt;li&gt;Fixed emoticons now showing their code as a tooltip.&lt;/li&gt;
+		&lt;li&gt;Added support for custom emoticon tooltips.&lt;br /&gt;
+		 &amp;ndash; Thanks to @Spuds for reporting&lt;/li&gt;
+		&lt;li&gt;Added nodechanged event.&lt;/li&gt;
+		&lt;li&gt;Improved BBCode attribute quoting support.&lt;br /&gt;
+		 &amp;ndash; Thanks to @Spuds for reporting&lt;/li&gt;
+		&lt;li&gt;Added Arabic translation.&lt;br /&gt;
+		 &amp;ndash; Thanks to @Atramez-Zeton for translating&lt;/li&gt;
+		&lt;li&gt;Added disablePasting option.&lt;/li&gt;
+		&lt;li&gt;Fixed problem with HTML5 form validation not working when using the editor.&lt;br /&gt;
+		 The editor will now just remove the required attribute from the original textarea&lt;br /&gt;
+		 so validation will either need to be done server side or manually.&lt;/li&gt;
+		&lt;li&gt;Added tabindex support. The tabindex will be picked up from the original textarea.&lt;br /&gt;
+		 &amp;ndash; Thanks to @bmxgrover for reporting&lt;br /&gt;
+		 &amp;ndash; Thanks to @Spuds for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with nested lists.&lt;br /&gt;
+		 &amp;ndash; Thanks to @brunoais for reporting.&lt;/li&gt;
+		&lt;li&gt;Improved IE resize speed.&lt;/li&gt;
+		&lt;li&gt;Update themes to support showing active commands.&lt;/li&gt;
+		&lt;li&gt;Update themes to support showing a commands icon, text or both.&lt;/li&gt;
+		&lt;li&gt;Added new Monocon icons, licensed under the MIT license.&lt;/li&gt;
+		&lt;li&gt;Added selectionchanged event&lt;/li&gt;
+		&lt;li&gt;Fixed bug with LTR command not working.&lt;br /&gt;
+		 &amp;ndash; Thanks to @charafweb for reporting&lt;/li&gt;
+		&lt;li&gt;Added zIndex option to allow setting the containers z-index.&lt;br /&gt;
+		 Fixes bug with modal jQuery UI dialogs.&lt;br /&gt;
+		 &amp;ndash; Thanks to @prdatur for reporting and the fix.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with percentage based widths.&lt;br /&gt;
+		 &amp;ndash; Thanks to @charafweb for reporting.&lt;/li&gt;
+		&lt;li&gt;Improved RTL support. Added rtl() helper and improved all themes RTL support.&lt;/li&gt;
+		&lt;li&gt;Added maximize command and maximize() helper.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with sentences wrapped in [] sometimes causing problems.&lt;br /&gt;
+		 &amp;ndash; Thanks to @liamdawe for reporting&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.4.0 released</title>
+		<link>http://sceditor.com/posts/version-1-4-0-released</link>
+		<pubDate>Fri, 23 Nov 2012 00:00:00 +0000</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-4-0-released</guid>
+		<description>&lt;h2&gt;Version 1.4.0&lt;/h2&gt;
+
+&lt;p&gt;It’s finally here! Version 1.4.0 has been released. Thanks to everyone who contributed!&lt;/p&gt;
+
+&lt;p&gt;There has been lot of improvements to the BBCode parser in this version, including better support for custom self closing tags and different BBCode dialects.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;label label-important&quot;&gt;Important&lt;/span&gt; This version is &lt;em&gt;not&lt;/em&gt; backwards compatible with previous versions. Some functions have been removed/renamed plus the default BBCode dialect has changed slightly.&lt;/p&gt;
+
+&lt;p&gt;As much as I hate breaking backwards compatibility these updates really needed doing. Hopefully it will be a long time before any more non-backwards compatible changes will need to be done.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.4.0 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;New theme &quot;square&quot; added&lt;/li&gt;
+		&lt;li&gt;Some none-backwards compatible tidying:&lt;br /&gt;
+		All occurrences of &lt;code&gt;textEditor&lt;/code&gt; have been changed to &lt;code&gt;sourceEditor&lt;/code&gt;&lt;br /&gt;
+		All occurrences of &lt;code&gt;updateTextareaValue&lt;/code&gt; have been changed to &lt;code&gt;updateOriginal&lt;/code&gt;&lt;br /&gt;
+		All occurrences of &lt;code&gt;destory&lt;/code&gt; have finally been renamed to &lt;code&gt;destroy&lt;/code&gt;&lt;br /&gt;
+		Removed the deprecated &lt;code&gt;setCommand&lt;/code&gt; and &lt;code&gt;commandExists&lt;/code&gt; functions.&lt;/li&gt;
+		&lt;li&gt;Added resizeWidth and resizeHeight options to allow disabling of either width or height resizing while keeping the other&lt;/li&gt;
+		&lt;li&gt;Improved resize handling&lt;/li&gt;
+		&lt;li&gt;Updated build.php&lt;/li&gt;
+		&lt;li&gt;Fixed bug with emoticons containing backslashes.&lt;br /&gt;
+			&amp;ndash; Thanks to emanuele45 for the fix.&lt;/li&gt;
+		&lt;li&gt;Fixed bug when pasting from Word.&lt;br /&gt;
+			&amp;ndash; Thanks to @Spuds for reporting.&lt;/li&gt;
+		&lt;li&gt;Fixed bug causing scrollbar to change when inserting BBCode in source mode.&lt;br /&gt;
+			&amp;ndash; Thanks to Martec for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug causing cursor position to be lost in FF when getting the editors value.&lt;br /&gt;
+			&amp;ndash; Thanks to @Spuds for reporting&lt;/li&gt;
+		&lt;li&gt;Improve IE support&lt;/li&gt;
+		&lt;li&gt;Moved roadmap from GitHub wiki to source directory for easier editing.&lt;/li&gt;
+		&lt;li&gt;Added a new much more flexible BBCode parser&lt;/li&gt;
+		&lt;li&gt;Added new option to auto-update original textbox on blur event occurring on SCEditor.&lt;br /&gt;
+			&amp;ndash; Thanks to @maiiku for adding this feature&lt;/li&gt;
+		&lt;li&gt;Updated sceditor() to return the instance/instances of the editor by passing &quot;instance&quot; to sceditor() and protect against re-initialization.&lt;br /&gt;
+			&amp;ndash; Thanks to @maiiku for reporting&lt;/li&gt;
+		&lt;li&gt;Updated sceditor() to return the current state of the editor by passing state to sceditor().&lt;br /&gt;
+			&amp;ndash; Thanks to @maiiku&lt;/li&gt;
+		&lt;li&gt;Added IE 10 support&lt;/li&gt;
+		&lt;li&gt;Added Vietnamese translation.&lt;br /&gt;
+			&amp;ndash; Thanks to Chien for translating&lt;/li&gt;
+		&lt;li&gt;Added plugins option - Thanks to @maiiku&lt;/li&gt;
+		&lt;li&gt;Updated editor to force new line after code and quote tags so that text can be entered after them.&lt;br /&gt;
+			&amp;ndash; Thanks to Logan&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.3.7 released</title>
+		<link>http://sceditor.com/posts/version-1-3-7-released</link>
+		<pubDate>Fri, 20 Jul 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-3-7-released</guid>
+		<description>&lt;h2&gt;Version 1.3.7&lt;/h2&gt;
+
+&lt;p&gt;This update is only to fix a few small bugs from the previous version. The
+next set of new features will be in the 1.4.0 version.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.3.7 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Fix emoticon &quot;more&quot; button closing the dropdown&lt;/li&gt;
+		&lt;li&gt;Fix blur() function causing small box to appear in IE&lt;/li&gt;
+		&lt;li&gt;Update theme so that the container has no z-index set&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.3.6 released</title>
+		<link>http://sceditor.com/posts/version-1-3-6-released</link>
+		<pubDate>Sat, 14 Jul 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-3-6-released</guid>
+		<description>&lt;h2&gt;Version 1.3.6&lt;/h2&gt;
+
+&lt;p&gt;Mostly bug fixes with this release. The biggest change is that the editor now has much better iOS support.&lt;/p&gt;
+
+&lt;p&gt;A new function &lt;code&gt;blur()&lt;/code&gt; has also been added which will remove focus from the editor.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.3.6 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Added Spanish translation&lt;br /&gt;
+			&amp;ndash; Thanks to Maxpower for translating&lt;/li&gt;
+		&lt;li&gt;Fixed YouTube command not matching youtu.be URLs&lt;/li&gt;
+		&lt;li&gt;Added form reset support&lt;/li&gt;
+		&lt;li&gt;Added autoExpand option&lt;/li&gt;
+		&lt;li&gt;Fixed bug related to inserting BBCodes in source mode when textarea is empty.&lt;br /&gt;
+			&amp;ndash; Thanks to Martec for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed stripQuotes bug&lt;br /&gt;
+			&amp;ndash; Thanks to Maxpower for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed destory() to stop memory leak&lt;/li&gt;
+		&lt;li&gt;iOS bug with content overflowing the container&lt;/li&gt;
+		&lt;li&gt;Fixed font size BBCode bug with WebOS browser&lt;/li&gt;
+		&lt;li&gt;Added blur() function&lt;/li&gt;
+		&lt;li&gt;Fixed list bug where newlines from the end would be removed&lt;br /&gt;
+			&amp;ndash; Thanks to Birkoff Keren for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed whitespace removal bug causing some whitespace to be left.&lt;br /&gt;
+			&amp;ndash; Thanks to Martec for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed val() helper function bug returning HTML when in source mode.&lt;br /&gt;
+			&amp;ndash; Thanks to Maxpower for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with IE compatibility modes &quot;Quirks&quot; and &quot;IE 7&quot; causing new lines not to show.&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.3.5 released</title>
+		<link>http://sceditor.com/posts/version-1-3-5-released</link>
+		<pubDate>Thu, 28 Jun 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-3-5-released</guid>
+		<description>&lt;h2&gt;Version 1.3.5&lt;/h2&gt;
+
+&lt;p&gt;The biggest change in this update is the themes. All the themes now live in their own directory and &lt;a href=&quot;/posts/themes-demo/&quot;&gt;3 news ones have been added&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Some extra options have also been added, &lt;code&gt;readOnly&lt;/code&gt;, &lt;code&gt;autofocus&lt;/code&gt;, &lt;code&gt;rtl&lt;/code&gt; and &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are also quite a few small changes in this update like the addition of &lt;code&gt;sourceMode()&lt;/code&gt;, &lt;code&gt;val()&lt;/code&gt;, &lt;code&gt;insertText()&lt;/code&gt; and &lt;code&gt;insert()&lt;/code&gt; methods.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.3.5 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Fixed bug in FF making pasting via right click difficult when empty&lt;br /&gt;
+			&amp;ndash; Thanks to Nibogo2 for reporting&lt;/li&gt;
+		&lt;li&gt;Added readonly method and option&lt;/li&gt;
+		&lt;li&gt;Added expandToContent method&lt;/li&gt;
+		&lt;li&gt;Reorgernised themes to their own directory.&lt;/li&gt;
+		&lt;li&gt;hanged themes to be in .less format and added to build file&lt;/li&gt;
+		&lt;li&gt;Added modern, office-toolbar and office themes&lt;/li&gt;
+		&lt;li&gt;Added autofocus option&lt;/li&gt;
+		&lt;li&gt;Added a roadmap to the GitHub wiki&lt;/li&gt;
+		&lt;li&gt;Added height and width methods&lt;/li&gt;
+		&lt;li&gt;Added method to check for WYSIWYG support&lt;/li&gt;
+		&lt;li&gt;Changed so that by default the editor won't start in browsers that do not support WYSIWYG editing (old mobile browsers)&lt;/li&gt;
+		&lt;li&gt;Added rtl option along with rtl &amp;amp; ltr commands&lt;/li&gt;
+		&lt;li&gt;Added id option&lt;/li&gt;
+		&lt;li&gt;Added sourceMode, val, insertText and insert methods&lt;/li&gt;
+		&lt;li&gt;Fixed quote bug where author from nested quotes would be removed&lt;/li&gt;
+		&lt;li&gt;Added Estonian language file&lt;br /&gt;
+			&amp;ndash; Thanks to Rivo for translating&lt;/li&gt;
+		&lt;li&gt;Fixed bug with dom.fixNesting when fixing certain tags&lt;/li&gt;
+		&lt;li&gt;Improve adding/updating/removing of commands and BBCodes&lt;/li&gt;
+		&lt;li&gt;Fixed bug causing elements that are styled with diplay: block to be treated as block level elements&lt;br /&gt;
+			&amp;ndash; Thanks to Rene for reporting&lt;/li&gt;
+		&lt;li&gt;Added Brazilian Portuguese language file&lt;br /&gt;
+			&amp;ndash; Thanks to Martec for translating&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.3.4 released</title>
+		<link>http://sceditor.com/posts/version-1-3-4-released</link>
+		<pubDate>Mon, 04 Jun 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-3-4-released</guid>
+		<description>&lt;h2&gt;Version 1.3.4&lt;/h2&gt;
+
+&lt;p&gt;The main fix in this release is a nasty bug causing some BBCodes to be stripped.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.3.4 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Updated focus method to work in source mode&lt;/li&gt;
+		&lt;li&gt;Added public inSourceMode method&lt;/li&gt;
+		&lt;li&gt;Fix bug causing BBCodes to be striped&lt;br /&gt;
+			&amp;ndash; Thanks to Nibogo2 for reporting&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.3.3 released</title>
+		<link>http://sceditor.com/posts/version-1-3-3-released</link>
+		<pubDate>Tue, 22 May 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-3-3-released</guid>
+		<description>&lt;h2&gt;Version 1.3.3&lt;/h2&gt;
+
+&lt;p&gt;The biggest changes in this version are the new experimental paste filtering and the support for some BBCodes in source mode BBCode.&lt;/p&gt;
+
+&lt;p&gt;The paste filetering is disabled by default to avoid any problems.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.3.3 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Added dropDownCss option&lt;br /&gt;
+			&amp;ndash; Thanks to @esion&lt;/li&gt;
+		&lt;li&gt;Add txtExec option to setCommand function&lt;/li&gt;
+		&lt;li&gt;Updated BBCode plugin to support some BBCodes in source mode&lt;/li&gt;
+		&lt;li&gt;Updated editor to disable AYT emotion converstion if emotions is not in toolbar&lt;/li&gt;
+		&lt;li&gt;Fixed rare problem with value not being subbmited&lt;br /&gt;
+			&amp;ndash; Thanks to Marco for reporting&lt;/li&gt;
+		&lt;li&gt;Added experimental paste filtering&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.3.2 released</title>
+		<link>http://sceditor.com/posts/version-1-3-2-released</link>
+		<pubDate>Fri, 27 Apr 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-3-2-released</guid>
+		<description>&lt;h2&gt;Version 1.3.2&lt;/h2&gt;
+
+&lt;p&gt;The biggest change in this version is changing the code to use a new rangeHelper which should help reduce bugs.&lt;/p&gt;
+
+&lt;p&gt;This also allows As You Type emoticon conversion to work in all browsers including IE &amp;lt; 9! IE &amp;lt; 9 dose not support the emoticonsCompat.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.3.2 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Created rangeHelper class to improve code quality&lt;/li&gt;
+		&lt;li&gt;Fix bug with IE8 and below related to newlines&lt;/li&gt;
+		&lt;li&gt;Updated to remove empty BBCodes such as [b][/b]&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.3.1 released</title>
+		<link>http://sceditor.com/posts/version-1-3-1-released</link>
+		<pubDate>Sat, 21 Apr 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-3-1-released</guid>
+		<description>&lt;h2&gt;Version 1.3.1&lt;/h2&gt;
+
+&lt;p&gt;There are only a few changes in this version. The main change is to fix another quite a bad bug related to IE9.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.3.1 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Add emoticonsRoot option. Allows adding a root URL to be prepended to all emoticons.&lt;br /&gt;
+		&amp;ndash; Thanks to @primehalo for the idea&lt;/li&gt;
+		&lt;li&gt;Fix IE9 bug showing resize handles&lt;/li&gt;
+		&lt;li&gt;Fix IE ranges sometimes causing the last typed charecter to be unselected&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Version 1.3.0 released</title>
+		<link>http://sceditor.com/posts/version-1-3-0-released</link>
+		<pubDate>Wed, 18 Apr 2012 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-3-0-released</guid>
+		<description>&lt;h2&gt;Version 1.3.0&lt;/h2&gt;
+
+&lt;p&gt;There are only a few changes in this version. The main change is to fix quite a bad bug related to new line handling.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.3.0 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Add package.json file&lt;/li&gt;
+		&lt;li&gt;Add Contribute to README&lt;/li&gt;
+		&lt;li&gt;Add GitHub pages page&lt;/li&gt;
+		&lt;li&gt;Fix newline bug. This greatly improves the BBCode to HTML parsers handling of newlines.&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
 
 	</channel> 
 </rss>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+
+		<title>Options - SCEditor</title>
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<link href="http://sceditor.com/atom.xml" rel="alternate" title="SCEditor" type="application/atom+xml" />
+
+		
+	</head>
+
+	<body>
+		<div id="main" class="container">
+			<div id="header">
+				<header>
+					<h1 id="project_title">SCEditor</h1>
+					<p>A lightweight WYSIWYG BBCode &amp; HTML editor</p>
+					</a>
+				</header>
+			</div>
+
+			<div class="navbar active">
+				<nav class="navbar-inner">
+					<ul class="nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="/posts/">Posts</a></li>
+						<li><a href="/documentation/getting-started/">Docs</a></li>
+						<li><a href="/integration/">Forum/CMS Plugins</a></li>
+						<li><a href="/documentation/support-licensing/">Support</a></li>
+						<li><a href="https://github.com/samclarke/SCEditor">GitHub</a></li>
+					</ul>
+
+					<div class="pull-right nav-collapse collapse">
+						<a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AVJSF5NEETYYG">Donate</a>
+						<a class="btn btn-primary" href="https://github.com/samclarke/SCEditor/archive/v1.4.2.zip">Download</a>
+						
+					</div>
+				</nav>
+			</div>
+
+			<div id="content">
+				<section>
+				<ul class="breadcrumb">
+  <li><a href="/documentation/">Documentation</a> <span class="divider">/</span></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li class="active">Options</li>
+</ul>
+
+<div class="row-fluid docs">
+	<div class="span3">
+		<ul class="nav nav-tabs nav-stacked">
+
+
+				<li><a href="/documentation/getting-started/">Getting started</a></li>
+
+
+
+				<li class="active"><a href="/documentation/options/">Options</a></li>
+
+
+
+				<li><a href="/documentation/plugins/">Plugins</a></li>
+
+
+
+				<li><a href="/documentation/plugins/bbcode/">BBCode Plugin</a></li>
+
+
+
+				<li><a href="/documentation/plugins/xhtml/">XHTML Plugin</a></li>
+
+
+
+				<li><a href="/documentation/custom-commands/">Custom Commands</a></li>
+
+
+
+				<li><a href="/documentation/custom-bbcodes/">Custom BBCodes</a></li>
+
+
+
+				<li><a href="/documentation/custom-plugins/">Custom Plugins</a></li>
+
+
+
+				<li><a href="/documentation/theming/">Theming</a></li>
+
+
+
+				<li><a href="/api/">API</a></li>
+
+
+
+				<li><a href="/documentation/files/">Files</a></li>
+
+
+
+				<li><a href="/documentation/browser-compatibility/">Browser Compatibility</a></li>
+
+
+
+				<li><a href="/documentation/support-licensing/">Support/Licensing</a></li>
+
+
+		</ul>
+	</div>
+	<div class="span9">
+		<h2>Options</h2>
+
+<h3>How to use <a id="howto"></a></h3>
+
+<p>All options should be passed via the constructor.</p>
+
+<p>e.g.</p>
+
+<pre class="prettyprint linenums">
+// Create the editor
+$("textarea").sceditor({
+	// Options go here
+
+	// Option 1
+	plugins: "bbcode",
+
+	// Option 2
+	toolbar: "bold,italic,underline|source",
+
+	// Option 3
+	locale: "no-NB"
+});
+</pre>
+
+<h3>toolbar <a id="toolbar"></a></h3>
+
+<p><strong>toolbar</strong> <em>String</em> Defaults to a list of all the built in commands</p>
+
+<p>A comma separated list of commands. To separate commands into groups, use the bar character (|) instead of a comma. e.g.: <code>"bold,italic,underline|source"</code></p>
+
+<p>Below is a list of default commands that can be included.</p>
+
+<div class="well">
+  <ul>
+    <li><strong>bold</strong></li>
+    <li><strong>italic</strong></li>
+    <li><strong>underline</strong></li>
+    <li><strong>strike</strong></li>
+    <li><strong>subscript</strong></li>
+    <li><strong>superscript</strong></li>
+    <li><strong>left</strong></li>
+    <li><strong>center</strong></li>
+    <li><strong>right</strong></li>
+    <li><strong>justify</strong></li>
+    <li><strong>font</strong></li>
+    <li><strong>size</strong></li>
+    <li><strong>color</strong></li>
+    <li><strong>removeformat</strong></li>
+    <li><strong>cut</strong>  </li>
+    <li>This only works in IE due to security permissions. In all other browsers it’s just disabled.</li>
+    <li><strong>copy</strong>  </li>
+    <li>This only works in IE due to security permissions. In all other browsers it’s just disabled.</li>
+    <li><strong>paste</strong>  </li>
+    <li>This only works in IE due to security permissions. In all other browsers it’s just disabled.</li>
+    <li><strong>pastetext</strong></li>
+    <li><strong>bulletlist</strong></li>
+    <li><strong>orderedlist</strong></li>
+    <li><strong>table</strong></li>
+    <li><strong>code</strong></li>
+    <li><strong>quote</strong></li>
+    <li><strong>horizontalrule</strong></li>
+    <li><strong>image</strong></li>
+    <li><strong>email</strong></li>
+    <li><strong>link</strong></li>
+    <li><strong>unlink</strong></li>
+    <li><strong>emoticon</strong></li>
+    <li><strong>youtube</strong></li>
+    <li><strong>date</strong></li>
+    <li><strong>time</strong></li>
+    <li><strong>ltr</strong></li>
+    <li><strong>rtl</strong></li>
+    <li><strong>print</strong></li>
+    <li><strong>maximize</strong></li>
+    <li><strong>source</strong></li>
+  </ul>
+</div>
+
+<h3>style <a id="style"></a></h3>
+
+<p><strong>style</strong> <em>String</em> Defaults to <code>"jquery.sceditor.default.css"</code></p>
+
+<p>URL of the stylesheet to used to style the <abbr title="What You See Is What You Get">WYSIWYG</abbr> editors content.</p>
+
+<h3>fonts <a id="fonts"></a></h3>
+
+<p><strong>fonts</strong> <em>String</em> Defaults to <code>"Arial,Arial Black,Comic Sans MS,Courier New,Georgia,Impact,Sans-serif,Serif,Times New Roman,Trebuchet MS,Verdana"</code></p>
+
+<p>A comma separated list of fonts to use with the font selector.</p>
+
+<h3>colors <a id="colors"></a></h3>
+
+<p><strong>colors</strong> <em>String</em> Defaults to <code>null</code></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Colors should be comma separated list of hex colours with bar (</td>
+      <td>) characters to signal a new column. If set to null the colours will be auto generated.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>locale <a id="locale"></a></h3>
+
+<p><strong>locale</strong> <em>String</em> Defaults to <code>"en"</code></p>
+
+<p>The locale to use, e.g.: <code>en</code>, <code>en-US</code>, <code>fr</code>, ect.</p>
+
+<p><span class="label label-important">Important</span> The language file must be included after the editors main JS file but before the editor is created. e.g.</p>
+
+<pre class="prettyprint linenums">
+&lt;script src="../minified/jquery.sceditor.min.js"&gt;&lt;/script&gt;
+&lt;script src="../languages/nl.js"&gt;&lt;/scrip&gt;
+
+&lt;!-- create the editor here --&gt;
+$(function() {
+	$('textarea').sceditor({
+		plugins: 'bbcode'
+	});
+});
+</pre>
+
+<h3>charset <a id="charset"></a></h3>
+
+<p><strong>charset</strong> <em>String</em> Defaults to <code>"utf-8"</code></p>
+
+<p>The charset to use for the <abbr title="What You See Is What You Get">WYSIWYG</abbr> content.</p>
+
+<h3>emoticonsEnabled <a id="emoticonsEnabled"></a></h3>
+
+<p><strong>emoticonsEnabled</strong> <em>Bool</em> Defaults to <code>true</code></p>
+
+<p>If emoticons should be enabled. Set to <code>false</code> to disable emoticons.</p>
+
+<h3>emoticonsCompat <a id="emoticonsCompat"></a></h3>
+
+<p><strong>emoticonsCompat</strong> <em>Bool</em> Defaults to <code>false</code></p>
+
+<p>Enables or disables emoticons compatibility mode.</p>
+
+<p>When this is enabled, emoticons must be surrounded by whitespace or <abbr title="End Of Line">EOL</abbr> characters. For example, if you have an emoticon with the code <code>:/</code>, in compatibility mode it will not replace the <code>:/</code> in <code>http://</code>.</p>
+
+<p>Compatibility mode currently has limited As You Type emoticon conversion support. <abbr title="End Of Line">EOL</abbr> characters are not recognised as whitespace with <abbr title="As You Type">AYT</abbr> conversion so only emoticons surrounded by whitespace will be converted. This does not affect non-<abbr title="As You Type">AYT</abbr> conversion which will still work as normal.</p>
+
+<h3>emoticonsRoot <a id="emoticonsRoot"></a></h3>
+
+<p><strong>emoticonsRoot</strong> <em>String</em> Defaults to an empty string</p>
+
+<p>Root URL of all emoticons. This string will be pre-pended to all emoticon URLs.</p>
+
+<h3>emoticons <a id="emoticons"></a></h3>
+
+<p><strong>emoticons</strong> <em>Object</em></p>
+
+<p>Object in the following format:</p>
+
+<pre class="prettyprint linenums">
+{
+    // Emoticons to be included in the dropdown
+    dropdown: {
+        ":)": "emoticons/smile.png",
+        ":angel:": "emoticons/angel.png"
+    },
+    // Emoticons to be included in the more section
+    more: {
+        ":alien:": "emoticons/alien.png",
+        ":blink:": "emoticons/blink.png"
+    },
+    // Emoticons that are not shwon in the dropdown but will still
+    // be converted. Can be used for things like aliases
+    hidden: {
+        ":aliasforalien:": "emoticons/alien.png",
+        ":aliasforblink:": "emoticons/blink.png"
+    }
+}
+</pre>
+
+<h3>width <a id="width"></a></h3>
+
+<p><strong>width</strong> <em>String or int</em> Defaults to <code>null</code></p>
+
+<p>Initial width of the editor. Can be either an int which will be treated as the px value or a string percentage. e.g. <code>"100%"</code>.</p>
+
+<p>If set to null the width will be set the with of the textarea it is replacing.</p>
+
+<h3>height <a id="height"></a></h3>
+
+<p><strong>height</strong> <em>String or int</em> Defaults to <code>null</code></p>
+
+<p>Initial height of the editor. Can be either an int which will be treated as the px value or a string percentage. e.g. <code>"100%"</code>.</p>
+
+<p>If set to null the height will be set the height of the textarea it is replacing.</p>
+
+<h3>resizeEnabled <a id="resizeEnabled"></a></h3>
+
+<p><strong>resizeEnabled</strong> <em>Bool</em> Defaults to <code>true</code></p>
+
+<p>If to allow the editor to be resized. If set to true, a small grip will be added to the bottom right-hand corner (bottom left-hand corner in LTR mode) of the editor which allows it to be resized.</p>
+
+<h3>resizeMinWidth <a id="resizeMinWidth"></a></h3>
+
+<p><strong>resizeEnabled</strong> <em>int</em> Defaults to <code>null</code></p>
+
+<p>Minimum width that the editor can be resized to. Set to null for half textarea width or -1 for unlimited.</p>
+
+<h3>resizeMinHeight <a id="resizeMinHeight"></a></h3>
+
+<p><strong>resizeMinHeight</strong> <em>int</em> Defaults to <code>null</code></p>
+
+<p>Minimum height that the editor can be resized. Set to null for half textarea height or -1 for unlimited</p>
+
+<h3>resizeMaxHeight <a id="resizeMaxHeight"></a></h3>
+
+<p><strong>resizeMaxHeight</strong> <em>int</em> Defaults to <code>null</code></p>
+
+<p>Maximum height the editor can be resized to. Set to null for double textarea height or -1 for unlimited</p>
+
+<h3>resizeMaxWidth <a id="resizeMaxWidth"></a></h3>
+
+<p><strong>resizeMaxWidth</strong> <em>int</em> Defaults to <code>null</code></p>
+
+<p>Maximum width the editor can be resized to. Set to null for double textarea width or -1 for unlimited</p>
+
+<h3>resizeHeight <a id="resizeHeight"></a></h3>
+
+<p><strong>resizeHeight</strong> <em>bool</em> Defaults to <code>true</code></p>
+
+<p>If to enable resizing the editors height.</p>
+
+<h3>resizeWidth <a id="resizeHeight"></a></h3>
+
+<p><strong>resizeWidth</strong> <em>bool</em> Defaults to <code>true</code></p>
+
+<p>If to enable resizing the editors width.</p>
+
+<h3>dateFormat <a id="dateFormat"></a></h3>
+
+<p><strong>dateFormat</strong> <em>String</em> Defaults to <code>"year-month-day"</code></p>
+
+<p>Date format to used by the date command. This option will be overridden if the current locale specifies a date format.</p>
+
+<p>The words year, month and day will be replaced with the users current year, month and day.</p>
+
+<h3>toolbarContainer <a id="toolbarContainer"></a></h3>
+
+<p><strong>toolbarContainer</strong> <em>HTMLElement</em> Defaults to <code>null</code></p>
+
+<p>HTML node that to contain the toolbar into. Defaults to adding the toolbar above the iframe.</p>
+
+<h3>enablePasteFiltering <a id="enablePasteFiltering"></a></h3>
+
+<p><strong>enablePasteFiltering</strong> <em>bool</em> Defaults to <code>false</code></p>
+
+<p>If to enable paste filtering. When text is pasted it will be filtered through any plugins.</p>
+
+<p>With the BBCode plugin this will cause any HTML without a valid BBCode to be stripped.</p>
+
+<h3>readOnly <a id="readOnly"></a></h3>
+
+<p><strong>readOnly</strong> <em>bool</em> Defaults to <code>false</code></p>
+
+<p>If the editor is read only.</p>
+
+<h3>rtl <a id="rtl"></a></h3>
+
+<p><strong>rtl</strong> <em>bool</em> Defaults to <code>false</code></p>
+
+<p>If to set the editor to right-to-left mode.</p>
+
+<p>This can be changed at runtime with the <code>rtl(bool)</code> method.</p>
+
+<h3>autofocus <a id="autofocus"></a></h3>
+
+<p><strong>autofocus</strong> <em>bool</em> Defaults to <code>false</code></p>
+
+<p>If to auto focus the editor on page load.</p>
+
+<h3>autofocusEnd <a id="autofocusEnd"></a></h3>
+
+<p><strong>autofocus</strong> <em>bool</em> Defaults to <code>true</code></p>
+
+<p>If the cursor should be placed at the end when auto focusing or at the beginning.</p>
+
+<h3>autoExpand <a id="autoExpand"></a></h3>
+
+<p><strong>autoExpand</strong> <em>bool</em> Defaults to <code>false</code></p>
+
+<p>If to auto expand the editor to fit the content</p>
+
+<h3>autoUpdate <a id="autoUpdate"></a></h3>
+
+<p><strong>autoUpdate</strong> <em>bool</em> Defaults to <code>false</code></p>
+
+<p>If true, the original textbox will be updated with the editors current value when the editor loses focus.</p>
+
+<h3>runWithoutWysiwygSupport <a id="runWithoutWysiwygSupport"></a></h3>
+
+<p><strong>runWithoutWysiwygSupport</strong> <em>bool</em> Defaults to <code>false</code></p>
+
+<p>If to run the source editor when there is no browser <abbr title="What You See Is What You Get">WYSIWYG</abbr> support. Only really applies to mobile OS’s as all modern desktop browsers support <abbr title="What You See Is What You Get">WYSIWYG</abbr> editing.</p>
+
+<h3>id <a id="id"></a></h3>
+
+<p><strong>id</strong> <em>String</em> Defaults to <code>null</code></p>
+
+<p>ID to assign the editor.</p>
+
+<h3>plugins <a id="plugins"></a></h3>
+
+<p><strong>plugins</strong> <em>String</em> Defaults to an empty string</p>
+
+<p>A commas seperated list of plugins. e.g. <code>"plugin1,plugin2"</code></p>
+
+<p>See plugins documentation for list of default plugins.</p>
+
+<h3>parserOptions <a id="parserOptions"></a></h3>
+
+<p><strong>parserOptions</strong> <em>Object</em> Defaults to an empty object</p>
+
+<p>BBCode parser options, only applies if using the editor in BBCode mode.</p>
+
+<p>See $.sceditor.BBCodeParser.defaults for list of valid options</p>
+
+<h3>dropDownCss <a id="dropDownCss"></a></h3>
+
+<p><strong>dropDownCss</strong> <em>Object</em> Defaults to an empty object</p>
+
+<p>Extra CSS to add to the dropdown menu (e.g. z-index).</p>
+
+	</div>
+</div>
+
+<ul class="pager">
+
+
+
+
+
+
+
+    <li class="previous"><a href="/documentation/getting-started/">&larr; Getting started</a></li>
+
+
+
+
+
+
+    <li class="next"><a href="/documentation/plugins/">Plugins &rarr;</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+
+
+<div id="comments">
+        <div id="disqus_thread"></div>
+	<script type="text/javascript">
+	var disqus_shortname = 'sceditor';
+
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+				</section>
+			</div>
+
+			<div id="footer">
+				<footer>
+					<p class="muted credit">Website by <a href="https://github.com/samclarke">samclarke</a> &copy; 2013 &ndash;
+						Hosted by <a href="http://pages.github.com">GitHub Pages</a>
+						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/documentation/options.md">Edit this page</a></span></p>
+				</footer>
+			</div>
+		</div>
+
+		<script src="/scripts.js"></script>
+		<script>
+			$(prettyPrint());
+		</script>
+		<!-- Piwik -->
+		<script>
+			var purl = "//www.samclarke.com/piwik/";
+			document.write(unescape("%3Cscript src='" + purl + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script>
+		try {
+			var p = Piwik.getTracker(purl + "piwik.php", 2);
+			p.trackPageView();
+			p.enableLinkTracking();
+		} catch( err ) {}
+		</script>
+		<noscript><p style="height: 0; width: 0;"><img src="//www.samclarke.com/piwik/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+		<!-- End Piwik -->
+	</body>
+</html>

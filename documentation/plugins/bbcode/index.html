@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+
+		<title>BBCode - Plugin - SCEditor</title>
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<link href="http://sceditor.com/atom.xml" rel="alternate" title="SCEditor" type="application/atom+xml" />
+
+		
+	</head>
+
+	<body>
+		<div id="main" class="container">
+			<div id="header">
+				<header>
+					<h1 id="project_title">SCEditor</h1>
+					<p>A lightweight WYSIWYG BBCode &amp; HTML editor</p>
+					</a>
+				</header>
+			</div>
+
+			<div class="navbar active">
+				<nav class="navbar-inner">
+					<ul class="nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="/posts/">Posts</a></li>
+						<li><a href="/documentation/getting-started/">Docs</a></li>
+						<li><a href="/integration/">Forum/CMS Plugins</a></li>
+						<li><a href="/documentation/support-licensing/">Support</a></li>
+						<li><a href="https://github.com/samclarke/SCEditor">GitHub</a></li>
+					</ul>
+
+					<div class="pull-right nav-collapse collapse">
+						<a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AVJSF5NEETYYG">Donate</a>
+						<a class="btn btn-primary" href="https://github.com/samclarke/SCEditor/archive/v1.4.2.zip">Download</a>
+						
+					</div>
+				</nav>
+			</div>
+
+			<div id="content">
+				<section>
+				<ul class="breadcrumb">
+  <li><a href="/documentation/">Documentation</a> <span class="divider">/</span></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <li><a href="/documentation/plugins/">Plugins</a> <span class="divider">/</span></li>
+
+
+
+
+
+
+
+
+  <li class="active">BBCode - Plugin</li>
+</ul>
+
+<div class="row-fluid docs">
+	<div class="span3">
+		<ul class="nav nav-tabs nav-stacked">
+
+
+				<li><a href="/documentation/getting-started/">Getting started</a></li>
+
+
+
+				<li><a href="/documentation/options/">Options</a></li>
+
+
+
+				<li><a href="/documentation/plugins/">Plugins</a></li>
+
+
+
+				<li class="active"><a href="/documentation/plugins/bbcode/">BBCode Plugin</a></li>
+
+
+
+				<li><a href="/documentation/plugins/xhtml/">XHTML Plugin</a></li>
+
+
+
+				<li><a href="/documentation/custom-commands/">Custom Commands</a></li>
+
+
+
+				<li><a href="/documentation/custom-bbcodes/">Custom BBCodes</a></li>
+
+
+
+				<li><a href="/documentation/custom-plugins/">Custom Plugins</a></li>
+
+
+
+				<li><a href="/documentation/theming/">Theming</a></li>
+
+
+
+				<li><a href="/api/">API</a></li>
+
+
+
+				<li><a href="/documentation/files/">Files</a></li>
+
+
+
+				<li><a href="/documentation/browser-compatibility/">Browser Compatibility</a></li>
+
+
+
+				<li><a href="/documentation/support-licensing/">Support/Licensing</a></li>
+
+
+		</ul>
+	</div>
+	<div class="span9">
+		<h2>BBCode Plugin <a id="bbcode"></a></h2>
+
+<p>This plugin will convert the output of SCEditor into BBCode. To add custom BBCodes see the <a href="/documentation/custom-bbcodes/">Custom BBCodes page</a>.</p>
+
+<h3>Initialise <a id="initialise"></a></h3>
+
+<p>To enable the BBCode plugin just add <code>bbcode</code> to the <code>plugins</code> option. e.g.</p>
+
+<pre class="prettyprint linenums">
+&lt;script&gt;
+$(function() {
+	$("textarea").sceditor({
+		plugins: "bbcode",
+		style: "minified/jquery.sceditor.default.min.css"
+	});
+});
+&lt;/script&gt;
+</pre>
+
+<h3>Custom BBCodes <a id="custom-bbcodes"></a></h3>
+
+<p>To create custom BBCodes see the <a href="/documentation/custom-bbcodes/">Custom BBCodes page</a>.</p>
+
+<h3>Parser Options <a id="parser-options"></a></h3>
+
+<p>To set parser options, use the <a href="/documentation/options/#parserOptions">parserOptions option</a> when creating the editor.</p>
+
+<p>e.g.</p>
+
+<pre class="prettyprint linenums">
+&lt;script&gt;
+$(function() {
+	$("textarea").sceditor({
+		plugins: "bbcode",
+		style: "minified/jquery.sceditor.default.min.css",
+
+		parserOptions: {
+			breakBeforeBlock: false,
+			breakStartBlock: false
+			// ect.
+		}
+	});
+});
+&lt;/script&gt;
+</pre>
+
+<h3>breakBeforeBlock</h3>
+
+<p><strong>breakBeforeBlock</strong> <em>Boolean</em> Defaults to <code>false</code></p>
+
+<p>If to add a new line before block level elements</p>
+
+<p>This can be overridden by individual BBCodes using the <code>breakBefore</code> property.</p>
+
+<h3>breakStartBlock</h3>
+
+<p><strong>breakStartBlock</strong> <em>Boolean</em> Defaults to <code>false</code></p>
+
+<p>If to add a new line after the start of block level elements</p>
+
+<p>This can be overridden by individual BBCodes using the <code>breakStart</code> property.</p>
+
+<h3>breakEndBlock</h3>
+
+<p><strong>breakEndBlock</strong> <em>Boolean</em> Defaults to <code>false</code></p>
+
+<p>If to add a new line before the end of block level elements</p>
+
+<p>This can be overridden by individual BBCodes using the <code>breakEnd</code> property.</p>
+
+<h3>breakAfterBlock</h3>
+
+<p><strong>breakAfterBlock</strong> <em>Boolean</em> Defaults to <code>true</code></p>
+
+<p>If to add a new line after block level elements.</p>
+
+<p>This can be overridden by individual BBCodes using the <code>breakAfter</code> property.</p>
+
+<h3>removeEmptyTags</h3>
+
+<p><strong>removeEmptyTags</strong> <em>Boolean</em> Defaults to <code>true</code></p>
+
+<p>If to remove empty tags.</p>
+
+<p>This can be overridden by individual BBCodes using the <code>allowsEmpty</code> property.</p>
+
+<h3>fixInvalidNesting</h3>
+
+<p><strong>fixInvalidNesting</strong> <em>Boolean</em> Defaults to <code>true</code></p>
+
+<p>If to fix invalid nesting, like block level elements inside inline elements.</p>
+
+<p>For example.</p>
+
+<pre class="prettyprint linenums lang-bbcode">
+[inline]testing[block]test[/block]123[/inline]
+</pre>
+
+<p>Would become:</p>
+
+<pre class="prettyprint linenums lang-bbcode">
+[inline]testing[/inline][block]test[/block][inline]123[/inline]
+</pre>
+
+<h3>fixInvalidChildren</h3>
+
+<p><strong>fixInvalidChildren</strong> <em>Boolean</em> Defaults to <code>true</code></p>
+
+<p>If to fix invalid children. i.e. A tag which is inside a parent that doesn’t allow that type of tag as a child.</p>
+
+<h3>quoteType</h3>
+
+<p><strong>quoteType</strong> <em>$.sceditor.BBCodeParser.QuoteType</em> Defaults to <code>$.sceditor.BBCodeParser.QuoteType.auto</code></p>
+
+<p>The default attribute quote type.</p>
+
+<p>Should be one of the following values:</p>
+
+<ul>
+  <li><strong>$.sceditor.BBCodeParser.QuoteType.always</strong><br />
+Always quote the attribute value</li>
+  <li><strong>$.sceditor.BBCodeParser.QuoteType.never</strong><br />
+Never quote the attributes value</li>
+  <li><strong>$.sceditor.BBCodeParser.QuoteType.auto</strong><br />
+Only quote the attributes value when it contains spaces ot equals</li>
+</ul>
+
+<h3>Added methods <a id="methods"></a></h3>
+
+<p>When the BBCode plugin is enabled, it will add the methods <code>toBBCode()</code> and <code>fromBBCode()</code> to the editor instance.</p>
+
+<article class="api method">
+  <h3><a id="toBBCode" href="#toBBCode">toBBCode()</a> <span class="since">Since: 1.4.3</span></h3>
+
+  <p>Converts HTML or a DOM node to a BBCode string.</p>
+
+  <h4>Syntax</h4>
+
+  <pre><code>var bbcode = instance.toBBCode(html);
+</code></pre>
+
+  <h4>Parameters</h4>
+
+  <div class="parameters">
+<div class="parameter">
+      <p><strong>html</strong><br />
+Type: <em><a href="/api/types/#string">String</a></em> or <em><a href="/api/types/#node">Node</a></em></p>
+
+      <p>The HTML string or DOM node to convert.</p>
+    </div>
+</div>
+
+  <h4>Return</h4>
+
+  <p>Type: <strong><a href="/api/types/#string">String</a></strong></p>
+</article>
+
+<article class="api method">
+  <h3><a id="toBBCode" href="#toBBCode">toBBCode()</a> <span class="since">Since: 1.4.3</span></h3>
+
+  <p>Converts HTML or a DOM node to a BBCode string.</p>
+
+  <h4>Syntax</h4>
+
+  <pre><code>var html = instance.toBBCode(bbcode[, asFragment]);
+</code></pre>
+
+  <h4>Parameters</h4>
+
+  <div class="parameters">
+<div class="parameter">
+      <p><strong>bbcode</strong><br />
+Type: <em><a href="/api/types/#string">String</a></em> or <em><a href="/api/types/#node">Node</a></em></p>
+
+      <p>The BBCode string to convert.</p>
+    </div>
+<div class="parameter">
+      <p><strong>asFragment</strong><br />
+Type: <em><a href="/api/types/#bool">Boolean</a></em>
+Default: <code>false</code></p>
+
+      <p>If to convert the BBCode to a HTML fragment or if to wrap it in <code>div</code> tags. For example:</p>
+
+      <p>[b]Bold![/b] will convert to &lt;div&gt;&lt;strong&gt;Bold!&lt;/strong&gt;&lt;/div&gt;</p>
+
+      <p>but if <code>asFragment</code> is <code>true</code>, it will convert to:</p>
+
+      <p>[b]Bold![/b] will convert to &lt;strong&gt;Bold!&lt;/strong&gt;</p>
+    </div>
+</div>
+
+  <h4>Return</h4>
+
+  <p>Type: <strong><a href="/api/types/#string">String</a></strong></p>
+</article>
+
+<h4>Examples</h4>
+
+<pre class="prettyprint linenums">
+&lt;script&gt;
+$(function() {
+	$("textarea").sceditor({
+		plugins: "bbcode",
+		style: "minified/jquery.sceditor.default.min.css"
+	});
+
+	// Will be [b]Bold![/b]
+	var bbcode       = $("textarea").sceditor('instance').toBBCode('&lt;strong&gt;Bold!&lt;/strong&gt;');
+
+	// Will be &lt;div&gt;&lt;strong&gt;Bold!&lt;/strong&gt;&lt;/div&gt;
+	var html         = $("textarea").sceditor('instance').fromBBCode('[b]Bold![b]');
+
+	// Will be &lt;strong&gt;Bold!&lt;/strong&gt;
+	var htmlFragment = $("textarea").sceditor('instance').fromBBCode('[b]Bold![b]', true);
+});
+&lt;/script&gt;
+</pre>
+
+	</div>
+</div>
+
+<ul class="pager">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="previous"><a href="/documentation/plugins/">&larr; Plugins</a></li>
+
+
+
+
+
+
+    <li class="next"><a href="/documentation/plugins/xhtml/">XHTML Plugin &rarr;</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+
+
+<div id="comments">
+        <div id="disqus_thread"></div>
+	<script type="text/javascript">
+	var disqus_shortname = 'sceditor';
+
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+				</section>
+			</div>
+
+			<div id="footer">
+				<footer>
+					<p class="muted credit">Website by <a href="https://github.com/samclarke">samclarke</a> &copy; 2013 &ndash;
+						Hosted by <a href="http://pages.github.com">GitHub Pages</a>
+						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/documentation/plugins/bbcode.md">Edit this page</a></span></p>
+				</footer>
+			</div>
+		</div>
+
+		<script src="/scripts.js"></script>
+		<script>
+			$(prettyPrint());
+		</script>
+		<!-- Piwik -->
+		<script>
+			var purl = "//www.samclarke.com/piwik/";
+			document.write(unescape("%3Cscript src='" + purl + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script>
+		try {
+			var p = Piwik.getTracker(purl + "piwik.php", 2);
+			p.trackPageView();
+			p.enableLinkTracking();
+		} catch( err ) {}
+		</script>
+		<noscript><p style="height: 0; width: 0;"><img src="//www.samclarke.com/piwik/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+		<!-- End Piwik -->
+	</body>
+</html>

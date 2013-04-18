@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+
+		<title>Version 1.4.1 released - SCEditor</title>
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<link href="http://sceditor.com/atom.xml" rel="alternate" title="SCEditor" type="application/atom+xml" />
+
+		
+	</head>
+
+	<body>
+		<div id="main" class="container">
+			<div id="header">
+				<header>
+					<h1 id="project_title">SCEditor</h1>
+					<p>A lightweight WYSIWYG BBCode &amp; HTML editor</p>
+					</a>
+				</header>
+			</div>
+
+			<div class="navbar active">
+				<nav class="navbar-inner">
+					<ul class="nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="/posts/">Posts</a></li>
+						<li><a href="/documentation/getting-started/">Docs</a></li>
+						<li><a href="/integration/">Forum/CMS Plugins</a></li>
+						<li><a href="/documentation/support-licensing/">Support</a></li>
+						<li><a href="https://github.com/samclarke/SCEditor">GitHub</a></li>
+					</ul>
+
+					<div class="pull-right nav-collapse collapse">
+						<a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AVJSF5NEETYYG">Donate</a>
+						<a class="btn btn-primary" href="https://github.com/samclarke/SCEditor/archive/v1.4.2.zip">Download</a>
+						
+					</div>
+				</nav>
+			</div>
+
+			<div id="content">
+				<section>
+				<div class="post">
+	<h2>Version 1.4.1</h2>
+
+<p>Version 1.4.1 has been released with numerous bug fixes. Thanks to everyone who contributed!</p>
+
+<p>Other than bug fixes the main changes are plugin support, the <code>blur()</code>, <code>keyDown()</code>, <code>keyPress()</code>, <code>keyUp()</code>, <code>rtl()</code> and <code>maximize()</code> methods and RTL theme support.</p>
+
+<p><span class="label label-important">Important</span> The minified file <code>jquery.sceditor.min.js</code> no longer has the BBCode plugin bundled in it. For both the editor and BBCode plugin use the <code>jquery.sceditor.bbcode.min.js</code> file instead.</p>
+
+<h3>Full 1.4.1 changelog:</h3>
+
+<div class="well">
+	<ul>
+		<li>Dropped GPL to match jQuery license.<br />
+		 The editor can still be used under the GPLv2, GPLv3 or any other MIT compatible<br />
+		 license. Changes can&#39;t be submitted back unless they are licensed under the MIT<br />
+		 but then they couldn&#39;t before either as it was dual licensed under the MIT so<br />
+		 there isn&#39;t really any change, just a bit simpler.</li>
+		<li>Added blur, keyDown, keyPress and KeyUp helpers</li>
+		<li>Added Turkish translation<br />
+		 &ndash; Thanks to @MYaman34 for translating.</li>
+		<li>Added button state support</li>
+		<li>Added better plugin system</li>
+		<li>Fixed emoticons now showing their code as a tooltip.</li>
+		<li>Added support for custom emoticon tooltips.<br />
+		 &ndash; Thanks to @Spuds for reporting</li>
+		<li>Added nodechanged event.</li>
+		<li>Improved BBCode attribute quoting support.<br />
+		 &ndash; Thanks to @Spuds for reporting</li>
+		<li>Added Arabic translation.<br />
+		 &ndash; Thanks to @Atramez-Zeton for translating</li>
+		<li>Added disablePasting option.</li>
+		<li>Fixed problem with HTML5 form validation not working when using the editor.<br />
+		 The editor will now just remove the required attribute from the original textarea<br />
+		 so validation will either need to be done server side or manually.</li>
+		<li>Added tabindex support. The tabindex will be picked up from the original textarea.<br />
+		 &ndash; Thanks to @bmxgrover for reporting<br />
+		 &ndash; Thanks to @Spuds for reporting</li>
+		<li>Fixed bug with nested lists.<br />
+		 &ndash; Thanks to @brunoais for reporting.</li>
+		<li>Improved IE resize speed.</li>
+		<li>Update themes to support showing active commands.</li>
+		<li>Update themes to support showing a commands icon, text or both.</li>
+		<li>Added new Monocon icons, licensed under the MIT license.</li>
+		<li>Added selectionchanged event</li>
+		<li>Fixed bug with LTR command not working.<br />
+		 &ndash; Thanks to @charafweb for reporting</li>
+		<li>Added zIndex option to allow setting the containers z-index.<br />
+		 Fixes bug with modal jQuery UI dialogs.<br />
+		 &ndash; Thanks to @prdatur for reporting and the fix.</li>
+		<li>Fixed bug with percentage based widths.<br />
+		 &ndash; Thanks to @charafweb for reporting.</li>
+		<li>Improved RTL support. Added rtl() helper and improved all themes RTL support.</li>
+		<li>Added maximize command and maximize() helper.</li>
+		<li>Fixed bug with sentences wrapped in [] sometimes causing problems.<br />
+		 &ndash; Thanks to @liamdawe for reporting</li>
+	</ul>
+</div>
+
+
+
+<p>If you are interested in new releases, subscribe to the <a href="http://sceditor.com/release.xml">releases RSS</a>.</p>
+
+</div>
+
+
+
+
+<div id="comments">
+        <div id="disqus_thread"></div>
+	<script type="text/javascript">
+	var disqus_shortname = 'sceditor';
+
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+				</section>
+			</div>
+
+			<div id="footer">
+				<footer>
+					<p class="muted credit">Website by <a href="https://github.com/samclarke">samclarke</a> &copy; 2013 &ndash;
+						Hosted by <a href="http://pages.github.com">GitHub Pages</a>
+						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/_posts/2013-01-25-version-1-4-1-released.md">Edit this page</a></span></p>
+				</footer>
+			</div>
+		</div>
+
+		<script src="/scripts.js"></script>
+		<script>
+			$(prettyPrint());
+		</script>
+		<!-- Piwik -->
+		<script>
+			var purl = "//www.samclarke.com/piwik/";
+			document.write(unescape("%3Cscript src='" + purl + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script>
+		try {
+			var p = Piwik.getTracker(purl + "piwik.php", 2);
+			p.trackPageView();
+			p.enableLinkTracking();
+		} catch( err ) {}
+		</script>
+		<noscript><p style="height: 0; width: 0;"><img src="//www.samclarke.com/piwik/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+		<!-- End Piwik -->
+	</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+
+		<title>Custom Commands - SCEditor</title>
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<link href="http://sceditor.com/atom.xml" rel="alternate" title="SCEditor" type="application/atom+xml" />
+
+		
+	</head>
+
+	<body>
+		<div id="main" class="container">
+			<div id="header">
+				<header>
+					<h1 id="project_title">SCEditor</h1>
+					<p>A lightweight WYSIWYG BBCode &amp; HTML editor</p>
+					</a>
+				</header>
+			</div>
+
+			<div class="navbar active">
+				<nav class="navbar-inner">
+					<ul class="nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="/posts/">Posts</a></li>
+						<li><a href="/documentation/getting-started/">Docs</a></li>
+						<li><a href="/integration/">Forum/CMS Plugins</a></li>
+						<li><a href="/documentation/support-licensing/">Support</a></li>
+						<li><a href="https://github.com/samclarke/SCEditor">GitHub</a></li>
+					</ul>
+
+					<div class="pull-right nav-collapse collapse">
+						<a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AVJSF5NEETYYG">Donate</a>
+						<a class="btn btn-primary" href="https://github.com/samclarke/SCEditor/archive/v1.4.2.zip">Download</a>
+						
+					</div>
+				</nav>
+			</div>
+
+			<div id="content">
+				<section>
+				<ul class="breadcrumb">
+  <li><a href="/documentation/">Documentation</a> <span class="divider">/</span></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li class="active">Custom Commands</li>
+</ul>
+
+<div class="row-fluid docs">
+	<div class="span3">
+		<ul class="nav nav-tabs nav-stacked">
+
+
+				<li><a href="/documentation/getting-started/">Getting started</a></li>
+
+
+
+				<li><a href="/documentation/options/">Options</a></li>
+
+
+
+				<li><a href="/documentation/plugins/">Plugins</a></li>
+
+
+
+				<li><a href="/documentation/plugins/bbcode/">BBCode Plugin</a></li>
+
+
+
+				<li><a href="/documentation/plugins/xhtml/">XHTML Plugin</a></li>
+
+
+
+				<li><a href="/documentation/custom-commands/">Custom Commands</a></li>
+
+
+
+				<li><a href="/documentation/custom-bbcodes/">Custom BBCodes</a></li>
+
+
+
+				<li class="active"><a href="/documentation/custom-plugins/">Custom Plugins</a></li>
+
+
+
+				<li><a href="/documentation/theming/">Theming</a></li>
+
+
+
+				<li><a href="/api/">API</a></li>
+
+
+
+				<li><a href="/documentation/files/">Files</a></li>
+
+
+
+				<li><a href="/documentation/browser-compatibility/">Browser Compatibility</a></li>
+
+
+
+				<li><a href="/documentation/support-licensing/">Support/Licensing</a></li>
+
+
+		</ul>
+	</div>
+	<div class="span9">
+		<h2>Adding Custom Plugins <a id="custom-plugins"></a></h2>
+
+<h3>Creating a Plugin <a id="creating"></a></h3>
+
+<p>Plugins <em>must</em> be created in the <code>$.sceditor.plugins.*</code> namespace.</p>
+
+<p>For example to create a plugin called <code>myplugin</code> it would be:</p>
+
+<pre class="prettyprint linenums">
+// Created in $.sceditor.plugins.[name] namespace
+$.sceditor.plugins.myplugin = function() {
+	// Store the value of this
+	var base = this;
+
+	// Place signal handlers and functions here
+};
+</pre>
+
+<p>The to add the plugin to the editor just add <code>myplugin</code> to the <a href="http://localhost:8080/documentation/options/#plugins">plugins option</a> when creating the editor.</p>
+
+<h3>Handling Signals <a id="handling-signals"></a></h3>
+
+<p>To create a signal handler, just create a function with the name of the signal and it will automatically be called whenever that signal is raised.</p>
+
+<p>e.g.</p>
+
+<pre class="prettyprint linenums">
+$.sceditor.plugins.myplugin = function() {
+	var base = this;
+
+	base.signalKeydownEvent = function(e) {
+		// this will automatically be called when 'myplugin'
+		// is registered with an editor instance and there
+		// is a keydown event
+	};
+};
+</pre>
+
+<p>All signals will have <code>this</code> set to the editor instance that the plugin applies to.</p>
+
+<h3>init <a id="init"></a></h3>
+
+<p>Called when the plugin is registered to the editor.</p>
+
+<h3>destroy <a id="destroy"></a></h3>
+
+<p>Called when <code>destory()</code> is called on the editor or the plugin is removed from the editor.</p>
+
+<p>This signal should be used to unbind any DOM events and to do any clean up so that any memory used can be freed by the browser.</p>
+
+<h3>signalReady <a id="signalReady"></a></h3>
+
+<p>Called after the editor is created.</p>
+
+<p><span class="label label-important">Important:</span> This can be called before the page fully loaded.</p>
+
+<h3>signalKeydownEvent <a id="signalKeydownEvent"></a></h3>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li><strong>e</strong> <em>event</em><br />
+The <code>keydown</code> event object</li>
+</ul>
+
+<p>Called whenever the <code>keydown</code> event is triggered in either the WYSIWYG or Source Mode editors.</p>
+
+<p>Use <code>this.sourceMode()</code> to check which mode the editor is in.</p>
+
+<h3>signalKeyupEvent <a id="signalKeyupEvent"></a></h3>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li><strong>e</strong> <em>event</em><br />
+The <code>keyup</code> event object</li>
+</ul>
+
+<p>Called whenever the <code>keyup</code> event is triggered in either the WYSIWYG or Source Mode editors.</p>
+
+<p>Use <code>this.sourceMode()</code> to check which mode the editor is in.</p>
+
+<h3>signalKeypressEvent <a id="signalKeypressEvent"></a></h3>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li><strong>e</strong> <em>event</em><br />
+The <code>keypress</code> event object</li>
+</ul>
+
+<p>Called whenever the <code>keypress</code> event is triggered in either the WYSIWYG or Source Mode editors.</p>
+
+<p>Use <code>this.sourceMode()</code> to check which mode the editor is in.</p>
+
+<h3>signalFocusEvent <a id="signalFocusEvent"></a></h3>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li><strong>e</strong> <em>event</em><br />
+The <code>focus</code> event object</li>
+</ul>
+
+<p>Called whenever the <code>focus</code> event is triggered in either the WYSIWYG or Source Mode editors.</p>
+
+<p>Use <code>this.sourceMode()</code> to check which mode the editor is in.</p>
+
+<h3>signalBlurEvent <a id="signalBlurEvent"></a></h3>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li><strong>e</strong> <em>event</em><br />
+The <code>blur</code> event object</li>
+</ul>
+
+<p>Called whenever the <code>blur</code> event is triggered in either the WYSIWYG or Source Mode editors.</p>
+
+<p>Use <code>this.sourceMode()</code> to check which mode the editor is in.</p>
+
+<h3>signalContextmenuEvent <a id="signalContextmenuEvent"></a></h3>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li><strong>e</strong> <em>event</em><br />
+The <code>contextmenu</code> event object</li>
+</ul>
+
+<p>Called whenever the <code>contextmenu</code> event is triggered in either the WYSIWYG or Source Mode editors.</p>
+
+<p>Use <code>this.sourceMode()</code> to check which mode the editor is in.</p>
+
+<h3>signalSelectionchangedEvent <a id="signalSelectionchangedEvent"></a></h3>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li><strong>e</strong> <em>event</em><br />
+The <code>selectionchanged</code> event object</li>
+</ul>
+
+<p>Called whenever the selection has changed in the WYSIWYG editor.</p>
+
+<p><span class="label label-important">Important:</span> This signal does not occur when in source mode.</p>
+
+<h3>signalToSource <a id="signalToSource"></a></h3>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li><strong>html</strong> <em>string</em><br />
+A string containing the HTML content of the WYSIWYG editor</li>
+  <li><strong>body</strong> <em>jQuery element</em><br />
+The <code>body</code> element wrapped in a jQuery object.</li>
+</ul>
+
+<p><span class="label label-important">Important:</span> Only the first plugin to handle this signal will be called, all other plugins will be ignored.</p>
+
+<p>This should return the source string to be used when in source mode or returned when <code>val()</code> is called.</p>
+
+<p>For example the BBCode plugin returns the source BBCode string when this is called.</p>
+
+<h3>signalToWysiwyg <a id="signalToWysiwyg"></a></h3>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li><strong>sourceStr</strong> <em>string</em><br />
+A string contianing the source code to be converted ready to be displayed in the WYSIWYG editor.</li>
+  <li><strong>asFragment</strong> <em>bool</em><br />
+If this is a fragment. Currently only used by the paste event.</li>
+</ul>
+
+<p><span class="label label-important">Important:</span> Only the first plugin to handle this signal will be called, all other plugins will be ignored.</p>
+
+<p>This should return a HTML string ready to be used with the WYSIWYG editor.</p>
+
+
+	</div>
+</div>
+
+<ul class="pager">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="previous"><a href="/documentation/custom-bbcodes/">&larr; Custom BBCodes</a></li>
+
+
+
+
+
+
+    <li class="next"><a href="/documentation/theming/">Theming &rarr;</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+
+
+<div id="comments">
+        <div id="disqus_thread"></div>
+	<script type="text/javascript">
+	var disqus_shortname = 'sceditor';
+
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+				</section>
+			</div>
+
+			<div id="footer">
+				<footer>
+					<p class="muted credit">Website by <a href="https://github.com/samclarke">samclarke</a> &copy; 2013 &ndash;
+						Hosted by <a href="http://pages.github.com">GitHub Pages</a>
+						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/documentation/custom-plugins.md">Edit this page</a></span></p>
+				</footer>
+			</div>
+		</div>
+
+		<script src="/scripts.js"></script>
+		<script>
+			$(prettyPrint());
+		</script>
+		<!-- Piwik -->
+		<script>
+			var purl = "//www.samclarke.com/piwik/";
+			document.write(unescape("%3Cscript src='" + purl + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script>
+		try {
+			var p = Piwik.getTracker(purl + "piwik.php", 2);
+			p.trackPageView();
+			p.enableLinkTracking();
+		} catch( err ) {}
+		</script>
+		<noscript><p style="height: 0; width: 0;"><img src="//www.samclarke.com/piwik/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+		<!-- End Piwik -->
+	</body>
+</html>

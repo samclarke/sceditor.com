@@ -1,6 +1,4 @@
----
----
 User-agent: *
 Disallow:
 
-Sitemap: http://{{ site.domain }}/sitemap.xml
+Sitemap: http://sceditor.com/sitemap.xml

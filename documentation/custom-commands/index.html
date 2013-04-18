@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+
+		<title>Custom Commands - SCEditor</title>
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<link href="http://sceditor.com/atom.xml" rel="alternate" title="SCEditor" type="application/atom+xml" />
+
+		
+	</head>
+
+	<body>
+		<div id="main" class="container">
+			<div id="header">
+				<header>
+					<h1 id="project_title">SCEditor</h1>
+					<p>A lightweight WYSIWYG BBCode &amp; HTML editor</p>
+					</a>
+				</header>
+			</div>
+
+			<div class="navbar active">
+				<nav class="navbar-inner">
+					<ul class="nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="/posts/">Posts</a></li>
+						<li><a href="/documentation/getting-started/">Docs</a></li>
+						<li><a href="/integration/">Forum/CMS Plugins</a></li>
+						<li><a href="/documentation/support-licensing/">Support</a></li>
+						<li><a href="https://github.com/samclarke/SCEditor">GitHub</a></li>
+					</ul>
+
+					<div class="pull-right nav-collapse collapse">
+						<a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AVJSF5NEETYYG">Donate</a>
+						<a class="btn btn-primary" href="https://github.com/samclarke/SCEditor/archive/v1.4.2.zip">Download</a>
+						
+					</div>
+				</nav>
+			</div>
+
+			<div id="content">
+				<section>
+				<ul class="breadcrumb">
+  <li><a href="/documentation/">Documentation</a> <span class="divider">/</span></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li class="active">Custom Commands</li>
+</ul>
+
+<div class="row-fluid docs">
+	<div class="span3">
+		<ul class="nav nav-tabs nav-stacked">
+
+
+				<li><a href="/documentation/getting-started/">Getting started</a></li>
+
+
+
+				<li><a href="/documentation/options/">Options</a></li>
+
+
+
+				<li><a href="/documentation/plugins/">Plugins</a></li>
+
+
+
+				<li><a href="/documentation/plugins/bbcode/">BBCode Plugin</a></li>
+
+
+
+				<li><a href="/documentation/plugins/xhtml/">XHTML Plugin</a></li>
+
+
+
+				<li class="active"><a href="/documentation/custom-commands/">Custom Commands</a></li>
+
+
+
+				<li><a href="/documentation/custom-bbcodes/">Custom BBCodes</a></li>
+
+
+
+				<li><a href="/documentation/custom-plugins/">Custom Plugins</a></li>
+
+
+
+				<li><a href="/documentation/theming/">Theming</a></li>
+
+
+
+				<li><a href="/api/">API</a></li>
+
+
+
+				<li><a href="/documentation/files/">Files</a></li>
+
+
+
+				<li><a href="/documentation/browser-compatibility/">Browser Compatibility</a></li>
+
+
+
+				<li><a href="/documentation/support-licensing/">Support/Licensing</a></li>
+
+
+		</ul>
+	</div>
+	<div class="span9">
+		<h2>Adding Custom Commands <a id="custom-commands"></a></h2>
+
+<h3>Creating/Updating a Custom Command<a id="creating-command"></a></h3>
+
+<p>To add/update a command use the <code>$.sceditor.command.set()</code> function.</p>
+
+<p><span class="label label-warning">Warning:</span>  This function will update any existing command with the same name.</p>
+
+<p>The <code>$.sceditor.command.set()</code> function takes two arguments, <code>name</code> and <code>cmd</code>.</p>
+
+<ul>
+  <li><strong>name</strong> <em>String</em><br />
+The name of the command, used to include it in the toolbar. Must be lower-case!</li>
+  <li><strong>cmd</strong> <em>Object</em><br />
+The command object. See below for more details of this.</li>
+</ul>
+
+<pre class="prettyprint linenums">
+$.sceditor.command.set("commandname", {
+	exec: function() {
+		this.insert("a");
+	},
+	txtExec: function() {
+		this.insert("a");
+	},
+	tooltip: "Insert the letter a"
+});
+</pre>
+
+<p>To add an icon to the command use the the following CSS:</p>
+
+<pre class="prettyprint linenums">
+.sceditor-button-[name] div { background: url('/images/icon.png'); }
+</pre>
+
+<p>where <code>[name]</code> is the name used with <code>$.sceditor.command.set()</code>. See <a href="/documentation/theming/">Theming</a> for more information.</p>
+
+<p>Once you’ve created a command you can add it to the editor toolbar via the <a href="/documentation/options/#toolbar">toolbar option</a>.</p>
+
+<h3>Structure of a command object: <a id="command-structure"></a></h3>
+
+<pre class="prettyprint linenums">
+{
+	exec: undefined,
+	errorMessage: undefined,
+	txtExec: undefined,
+	tooltip: undefined
+}
+</pre>
+
+<h3>exec <a id="exec"></a></h3>
+
+<p><strong>exec</strong> <em>String or function</em></p>
+
+<p>Executed whenever the command is click in WYSIWYG mode.</p>
+
+<p>Should be either a string which will be passed to the browsers native <code>execCommand()</code> function.</p>
+
+<p>Or a function that takes 1 argument, <code>caller</code>. The functions <code>this</code> will be set to the editors instance.</p>
+
+<ul>
+  <li><strong>caller</strong> <em>HTMLElement</em><br />
+The commands HTML button element or null.</li>
+</ul>
+
+<p><strong>Example</strong></p>
+
+<pre class="prettyprint linenums">
+exec: function () {
+	this.insert("[b]Hello World[/b]");
+}
+</pre>
+
+<pre class="prettyprint linenums">
+// Bold will be passed to the native execCommand
+exec: "bold"
+</pre>
+
+<h3>errorMessage <a id="errorMessage"></a></h3>
+
+<p><strong>errorMessage</strong> <em>String</em></p>
+
+<p>Error message to show if the <code>exec</code> fails when calling the browsers native <code>execCommand()</code>. Only applies if <code>exec</code> is a string.</p>
+
+<h3>txtExec <a id="txtExec"></a></h3>
+
+<p><strong>txtExec</strong> <em>String or array</em></p>
+
+<p>Should be either an array containing 1-2 strings or a function.</p>
+
+<p>If set to an array and has two strings, then any selected content will be surrounded with both strings and the cursor placed before the last one. If the array has only 1 string and there is any selected content, the selected content will be replaced and the cursor placed after the inserted string.</p>
+
+<p>If <code>txtExec</code> is a function it should take 1 argument, <code>caller</code>. The functions <code>this</code> will be set to the editor.</p>
+
+<ul>
+  <li><strong>caller</strong> <em>HTMLElement</em>  #
+The commands HTML button element or null.</li>
+</ul>
+
+<p><strong>Example</strong></p>
+
+<pre class="prettyprint linenums">
+txtExec: function () {
+	this.insert("[b]Hello World[/b]");
+}
+</pre>
+
+<pre class="prettyprint linenums">
+txtExec: ["[b]", "[/b]"]
+</pre>
+
+<h3>tooltip <a id="tooltip"></a></h3>
+
+<p><strong>tooltip</strong> <em>String</em></p>
+
+<p>The tooltip to show when the users mouse hovers over the command.</p>
+
+
+	</div>
+</div>
+
+<ul class="pager">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="previous"><a href="/documentation/plugins/xhtml/">&larr; XHTML Plugin</a></li>
+
+
+
+
+
+
+    <li class="next"><a href="/documentation/custom-bbcodes/">Custom BBCodes &rarr;</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+
+
+<div id="comments">
+        <div id="disqus_thread"></div>
+	<script type="text/javascript">
+	var disqus_shortname = 'sceditor';
+
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+				</section>
+			</div>
+
+			<div id="footer">
+				<footer>
+					<p class="muted credit">Website by <a href="https://github.com/samclarke">samclarke</a> &copy; 2013 &ndash;
+						Hosted by <a href="http://pages.github.com">GitHub Pages</a>
+						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/documentation/custom-commands.md">Edit this page</a></span></p>
+				</footer>
+			</div>
+		</div>
+
+		<script src="/scripts.js"></script>
+		<script>
+			$(prettyPrint());
+		</script>
+		<!-- Piwik -->
+		<script>
+			var purl = "//www.samclarke.com/piwik/";
+			document.write(unescape("%3Cscript src='" + purl + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script>
+		try {
+			var p = Piwik.getTracker(purl + "piwik.php", 2);
+			p.trackPageView();
+			p.enableLinkTracking();
+		} catch( err ) {}
+		</script>
+		<noscript><p style="height: 0; width: 0;"><img src="//www.samclarke.com/piwik/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+		<!-- End Piwik -->
+	</body>
+</html>

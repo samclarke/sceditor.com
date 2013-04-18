@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+
+		<title>insertNode() - SCEditor</title>
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<link href="http://sceditor.com/atom.xml" rel="alternate" title="SCEditor" type="application/atom+xml" />
+
+		
+	</head>
+
+	<body>
+		<div id="main" class="container">
+			<div id="header">
+				<header>
+					<h1 id="project_title">SCEditor</h1>
+					<p>A lightweight WYSIWYG BBCode &amp; HTML editor</p>
+					</a>
+				</header>
+			</div>
+
+			<div class="navbar active">
+				<nav class="navbar-inner">
+					<ul class="nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="/posts/">Posts</a></li>
+						<li><a href="/documentation/getting-started/">Docs</a></li>
+						<li><a href="/integration/">Forum/CMS Plugins</a></li>
+						<li><a href="/documentation/support-licensing/">Support</a></li>
+						<li><a href="https://github.com/samclarke/SCEditor">GitHub</a></li>
+					</ul>
+
+					<div class="pull-right nav-collapse collapse">
+						<a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AVJSF5NEETYYG">Donate</a>
+						<a class="btn btn-primary" href="https://github.com/samclarke/SCEditor/archive/v1.4.2.zip">Download</a>
+						
+					</div>
+				</nav>
+			</div>
+
+			<div id="content">
+				<section>
+				<ul class="breadcrumb">
+	<li><a href="/documentation/">Documentation</a> <span class="divider">/</span></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<li><a href="/api/">API</a> <span class="divider">/</span></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<li><a href="/api/rangehelper/">RangeHelper</a> <span class="divider">/</span></li>
+
+
+
+
+
+
+
+
+	<li class="active">insertNode()</li>
+</ul>
+
+
+
+
+
+
+<div class="row-fluid docs">
+	<div class="span3">
+		<h5>RangeHelper</h5>
+		<ul class="nav nav-tabs nav-stacked">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<li><a href="/api/rangehelper/cloneselected/">cloneSelected()</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<li><a href="/api/rangehelper/getfirstblockparent/">getFirstBlockParent()</a></li>
+
+
+
+
+
+					<li><a href="/api/rangehelper/getmakrer/">getMarker()</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<li><a href="/api/rangehelper/inserthtml/">insertHTML()</a></li>
+
+
+
+
+
+					<li><a href="/api/rangehelper/insertmarkers/">insertMarkers()</a></li>
+
+
+
+
+
+					<li class="active"><a href="/api/rangehelper/insertnode/">insertNode()</a></li>
+
+
+
+
+
+					<li><a href="/api/rangehelper/insertnodeat/">insertNodeAt()</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<li><a href="/api/rangehelper/parentnode/">parentNode()</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<li><a href="/api/rangehelper/removmakrer/">removeMarker()</a></li>
+
+
+
+
+
+					<li><a href="/api/rangehelper/removemarkers/">removeMarkers()</a></li>
+
+
+
+
+
+					<li><a href="/api/rangehelper/restorerange/">restoreRange()</a></li>
+
+
+
+
+
+
+
+					<li><a href="/api/rangehelper/saverange/">saveRange()</a></li>
+
+
+
+
+
+
+
+
+
+
+
+					<li><a href="/api/rangehelper/selectedhtml/">selectedHtml()</a></li>
+
+
+
+
+
+					<li><a href="/api/rangehelper/selectedrange/">selectedRange()</a></li>
+
+
+
+
+
+
+
+					<li><a href="/api/rangehelper/selectrange/">selectRange()</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</ul>
+	</div>
+	<div class="span9">
+		<h2>InsertNode()</h2>
+
+<article class="api method">
+  <h3><a id="insertNode" href="#insertNode">insertNode(start)</a> <span class="since">Since: 1.3.5</span></h3>
+
+  <div class="alert alert-block alert-error">
+	<p><strong>Warning!</strong></p>
+	<p>The DOM nodes must belong to the <code>document</code> they are being inserted in. If they belong to another <code>document</code>, an error will be thrown.</p>
+</div>
+
+  <p>Inserts a DOM node at the position of the current selection.</p>
+
+  <p>See the <a href="/api/rangehelper/inserthtml/">insertHTML()</a> method for the HTML equivalent.</p>
+
+  <p><span class="label label-info">Info:</span> Using the <a href="/api/sceditor/val/">sceditor.insert()</a> method is the prefered way of inserting HTML into the editor. It will check if the editor is in WYSIWYG or source mode and insert into the appropriate editor.</p>
+
+  <h4>Syntax</h4>
+
+  <pre><code>instance.insertNode(start[, end]);
+</code></pre>
+
+  <h4>Parameters</h4>
+
+  <div class="parameters">
+<div class="parameter">
+      <p><strong>start</strong><br />
+Type: <strong><a href="/api/types/#node">Node</a></strong></p>
+
+      <p>The DOM node to insert.</p>
+    </div>
+
+<div class="parameter">
+      <p><strong>end</strong><br />
+Type: <strong><a href="/api/types/#node">Node</a></strong>
+Default: <code>null</code></p>
+
+      <p>If specified and there is any text selected, the selected text will be placed between the <code>start</code> and <code>end</code> nodes.</p>
+    </div>
+</div>
+</article>
+
+	</div>
+</div>
+
+<ul class="pager">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<li class="previous"><a href="/api/rangehelper/insertmarkers/">&larr; insertMarkers()</a></li>
+
+
+
+
+
+
+
+
+			<li class="next"><a href="/api/rangehelper/insertnodeat/">insertNodeAt() &rarr;</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+
+
+<div id="comments">
+        <div id="disqus_thread"></div>
+	<script type="text/javascript">
+	var disqus_shortname = 'sceditor';
+
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+				</section>
+			</div>
+
+			<div id="footer">
+				<footer>
+					<p class="muted credit">Website by <a href="https://github.com/samclarke">samclarke</a> &copy; 2013 &ndash;
+						Hosted by <a href="http://pages.github.com">GitHub Pages</a>
+						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/api/rangehelper/insertnode.md">Edit this page</a></span></p>
+				</footer>
+			</div>
+		</div>
+
+		<script src="/scripts.js"></script>
+		<script>
+			$(prettyPrint());
+		</script>
+		<!-- Piwik -->
+		<script>
+			var purl = "//www.samclarke.com/piwik/";
+			document.write(unescape("%3Cscript src='" + purl + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script>
+		try {
+			var p = Piwik.getTracker(purl + "piwik.php", 2);
+			p.trackPageView();
+			p.enableLinkTracking();
+		} catch( err ) {}
+		</script>
+		<noscript><p style="height: 0; width: 0;"><img src="//www.samclarke.com/piwik/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+		<!-- End Piwik -->
+	</body>
+</html>
