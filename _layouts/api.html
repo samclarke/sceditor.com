@@ -32,6 +32,9 @@ url_parts:
 {% elsif page.categories contains 'SCEditor-API' %}
 {% 	assign api_title = 'SCEditor' %}
 {% 	assign api_category = 'SCEditor-API' %}
+{% elsif page.categories contains 'DOM-API' %}
+{% 	assign api_title = 'DOM' %}
+{% 	assign api_category = 'DOM-API' %}
 {% else %}
 {% 	assign api_title = 'RangeHelper' %}
 {% 	assign api_category = 'RangeHelper-API' %}
