@@ -53,17 +53,17 @@ Function that to unbind
 <div class="parameter" markdown="1">
 **excludeWysiwyg**  
 Type: *[Boolean](/api/types/#bool)*  
-Default: `true`
+Default: `false`
 
-If to unbind to the event from the WYSIWYG editor.
+If to not unbind the event from the WYSIWYG editor.
 </div>
 
 <div class="parameter" markdown="1">
 **excludeSource**  
 Type: *[Boolean](/api/types/#bool)*  
-Default: `true`
+Default: `false`
 
-If to unbind to the event from the source editor.
+If to not unbind the event from the source editor.
 </div>
 </div>
 

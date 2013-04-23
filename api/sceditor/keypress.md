@@ -35,17 +35,17 @@ Function that will be called when the event occurs
 <div class="parameter" markdown="1">
 **excludeWysiwyg**  
 Type: *[Boolean](/api/types/#bool)*  
-Default: `true`
+Default: `false`
 
-If to bind to the event in the WYSIWYG editor.
+If to not bind the event to the WYSIWYG editor.
 </div>
 
 <div class="parameter" markdown="1">
 **excludeSource**  
 Type: *[Boolean](/api/types/#bool)*  
-Default: `true`
+Default: `false`
 
-If to bind to the event in the source editor.
+If to not bind the event to the source editor.
 </div>
 </div>
 
