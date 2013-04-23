@@ -82,6 +82,13 @@ Below is a list of default commands that can be included.
 </div>
 
 
+### toolbarExclude <a id="toolbarexclude"></a>
+
+**toolbarExclude** *String* Defaults to `null`
+
+Comma seperated list of commands to exclude from the toolbar. Leave as `null` to not exclude any.
+
+
 ### style <a id="style"></a>
 
 **style** *String* Defaults to `"jquery.sceditor.default.css"`
