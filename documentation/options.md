@@ -308,7 +308,7 @@ If to auto focus the editor on page load.
 
 ### autofocusEnd <a id="autofocusEnd"></a>
 
-**autofocus** *bool* Defaults to `true`
+**autofocusEnd** *bool* Defaults to `true`
 
 If the cursor should be placed at the end when auto focusing or at the beginning.
 
