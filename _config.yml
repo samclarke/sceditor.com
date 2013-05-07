@@ -16,7 +16,7 @@ github:
   username: samclarke
 
 sceditor:
-  version: 1.4.2
-  download: https://github.com/samclarke/SCEditor/archive/v1.4.2.zip
+  version: 1.4.3
+  download: http://www.sceditor.com/latest.zip
 
 paginate: 10
