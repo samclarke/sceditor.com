@@ -16,7 +16,7 @@ categories:
 &lt;script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
 
 &lt;!-- Include the default theme --&gt;
-&lt;link rel="stylesheet" href="minified/jquery.sceditor.min.css" type="text/css" media="all" /&gt;
+&lt;link rel="stylesheet" href="minified/themes/default.min.css" type="text/css" media="all" /&gt;
 
 &lt;!-- Include the editors JS --&gt;
 &lt;script type="text/javascript" src="minified/jquery.sceditor.bbcode.min.js">&lt;/script&gt;
