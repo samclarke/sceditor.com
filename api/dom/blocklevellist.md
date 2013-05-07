@@ -13,7 +13,7 @@ categories:
 <article class="api method" markdown="1">
 ### <a id="blockLevelList" href="#blockLevelList">blockLevelList</a> <span class="since">Since: 1.3.0</span>
 
-Static property containing the names of block-level nodes seperated by the bar (&bar;) character.
+Static property containing the names of block-level nodes separated by the bar (&bar;) character.
 
 This is used by the [isInline()](/api/dom/isinline/) method.
 

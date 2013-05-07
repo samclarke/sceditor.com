@@ -86,7 +86,7 @@ Below is a list of default commands that can be included.
 
 **toolbarExclude** *String* Defaults to `null`
 
-Comma seperated list of commands to exclude from the toolbar. Leave as `null` to not exclude any.
+Comma separated list of commands to exclude from the toolbar. Leave as `null` to not exclude any.
 
 
 ### style <a id="style"></a>
@@ -160,7 +160,7 @@ Compatibility mode currently has limited As You Type emoticon conversion support
 
 **emoticonsRoot** *String* Defaults to an empty string
 
-Root URL of all emoticons. This string will be pre-pended to all emoticon URLs.
+Root URL of all emoticons. This string will be prepended to all emoticon URLs.
 
 
 ### emoticons <a id="emoticons"></a>
@@ -181,7 +181,7 @@ Object in the following format:
         ":alien:": "emoticons/alien.png",
         ":blink:": "emoticons/blink.png"
     },
-    // Emoticons that are not shwon in the dropdown but will still
+    // Emoticons that are not shown in the dropdown but will still
     // be converted. Can be used for things like aliases
     hidden: {
         ":aliasforalien:": "emoticons/alien.png",
@@ -345,7 +345,7 @@ ID to assign the editor.
 
 **plugins** *String* Defaults to an empty string
 
-A commas seperated list of plugins. e.g. `"plugin1,plugin2"`
+A commas separated list of plugins. e.g. `"plugin1,plugin2"`
 
 See plugins documentation for list of default plugins.
 

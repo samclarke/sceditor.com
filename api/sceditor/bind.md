@@ -40,7 +40,7 @@ The supported events are:
 **events**  
 Type: *[String](/api/types/#string)*
 
-List of events seperated by spaces to bind the handler to.
+List of events separated by spaces to bind the handler to.
 </div>
 
 <div class="parameter" markdown="1">

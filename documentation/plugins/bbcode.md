@@ -179,14 +179,14 @@ Type: **[String](/api/types/#string)**
 
 
 <article class="api method" markdown="1">
-### <a id="toBBCode" href="#toBBCode">toBBCode()</a> <span class="since">Since: 1.4.3</span>
+### <a id="fromBBCode" href="#fromBBCode">fromBBCode()</a> <span class="since">Since: 1.4.3</span>
 
-Converts HTML or a DOM node to a BBCode string.
+Converts a string of BBCode into a string of HTML.
 
 
 #### Syntax
 
-	var html = instance.toBBCode(bbcode[, asFragment]);
+	var html = instance.fromBBCode(bbcode[, asFragment]);
 
 
 #### Parameters
