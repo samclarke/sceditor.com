@@ -7,7 +7,7 @@
 
 		
 
-		<title>findCommonAncestor() - SCEditor</title>
+		<title>Version 1.4.3 released - SCEditor</title>
 
 		<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -52,587 +52,65 @@
 
 			<div id="content">
 				<section>
-				<ul class="breadcrumb">
-	<li><a href="/documentation/">Documentation</a> <span class="divider">/</span></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-						<li><a href="/api/">API</a> <span class="divider">/</span></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-						<li><a href="/api/dom/">DOM</a> <span class="divider">/</span></li>
-
-
-
-
-
-
-
-
-
-
-
-
-	<li class="active">findCommonAncestor()</li>
-</ul>
-
-
-
-
-
-
-<div class="row-fluid docs">
-	<div class="span3">
-		<h5>DOM</h5>
-		<ul class="nav nav-tabs nav-stacked">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					<li><a href="/api/dom/blocklevellist/">blockLevelList</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					<li><a href="/api/dom/copycss/">copyCSS()</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					<li><a href="/api/dom/extractcontents/">extractContents()</a></li>
-
-
-
-
-
-
-
-					<li class="active"><a href="/api/dom/findcommonancestor/">findCommonAncestor()</a></li>
-
-
-
-
-
-					<li><a href="/api/dom/fixnesting/">fixNesting()</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					<li><a href="/api/dom/isinline/">isInline()</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					<li><a href="/api/dom/rtraverse/">rTraverse()</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					<li><a href="/api/dom/traverse/">traverse()</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		</ul>
-	</div>
-	<div class="span9">
-		<h2>FindCommonAncestor()</h2>
-
-<article class="api method">
-  <h3><a id="findCommonAncestor" href="#findCommonAncestor">findCommonAncestor(nodeA, nodeB)</a> <span class="since">Since: 1.3.0</span></h3>
-
-  <p>Finds the first common parent of two DOM nodes.</p>
-
-  <h4>Syntax</h4>
-
-  <pre><code>var commonAncestor = $.sceditor.dom.findCommonAncestor(nodeA, nodeB);
-</code></pre>
-
-  <h4>Parameters</h4>
-
-  <div class="parameters">
-<div class="parameter">
-      <p><strong>nodeA</strong><br />
-Type: <strong><a href="/api/types/#node">Node</a></strong></p>
-    </div>
-
-<div class="parameter">
-      <p><strong>nodeB</strong><br />
-Type: <strong><a href="/api/types/#node">Node</a></strong></p>
-    </div>
+				<div class="post">
+	<h2>Version 1.4.3</h2>
+
+<p>Version 1.4.3 has been released. Thanks to everyone who contributed!</p>
+
+<p>There are a lot of bug fixes in this release along with three new translations.</p>
+
+<p>There are also some new methods, <a href="/api/sceditor/css/">css()</a>, <a href="/documentation/plugins/bbcode/#toBBCode">toBBCode()</a>, <a href="/documentation/plugins/bbcode/#fromBBCode">fromBBCode()</a>, <a href="/api/rangehelper/selectoutertext/">selectOuterText()</a> and <a href="/api/rangehelper/getoutertext/">getOuterText()</a> and <a href="/api/sceditor/getbody/">getBody()</a>.</p>
+
+<h3>Full 1.4.3 changelog:</h3>
+
+<div class="well">
+	<ul>
+		<li>Added css() method which allows getting/setting inline CSS for the WYSIWYG editor.</li>
+		<li>Added Simplified Chinese translation.
+		 &ndash; Thanks to Yorgo for translating.</li>
+		<li>Fixed bug with insert() and setting filtering to false.</li>
+		<li>Added Travis-CI testing and improved tests</li>
+		<li>Fixed bug with emoticons preloading even if disabled.
+		 &ndash; Thanks to @novadk for reporting.</li>
+		<li>Fixed error when editor is hidden and autofocus is enabled.</li>
+		<li>Fixed bug with insert() removing first or last div even if it has styling.</li>
+		<li>Fixed error with IE 8 height.
+		 &ndash; Thanks to @arjunasuresh3 for reporting and fixing.</li>
+		<li>Added toBBCode() and fromBBCode() methods.</li>
+		<li>Fixed bug with spaces being removed if they are the only content of a tag.</li>
+		<li>Renamed Norwegian translation from no-NB to nb-NO.
+		 &ndash; Thanks to @tim-se for reporting</li>
+		<li>Fixed bug with jQuery UI dialogs appearing behind the editor.
+		 &ndash; Thanks to @OmarHawk for reporting</li>
+		<li>Added toolbarExclude option.
+		 &ndash; Thanks to @tim-se for suggestion</li>
+		<li>Fixed bug with unclosed BBCode tags being parsed as if they had a closing tag.
+		 &ndash; Thanks to @KN4CK3R for reporting</li>
+		<li>Added Polish translation.
+		 &ndash; Thanks to @TheKerimek for translating</li>
+		<li>Fixed bug with IE 10 not being able to select outside of the editor.
+		 &ndash; Thanks to @novadk for reporting</li>
+		<li>Added getBody() method which gets the WYSIWYG body node.
+		 &ndash; Thanks to @arjunasuresh3 for adding</li>
+		<li>Made selectOuterText() and getOuterText() methods on the rangeHelper accessible.</li>
+		<li>Greatly increased the number of tests.</li>
+		<li>Improved the XHTML plugin.</li>
+		<li>Fixed bug with XHTML plugin outputting <br /> when editor is empty.
+		 &ndash; Thanks to @tim-se for reporting</li>
+		<li>Fixed Mozilla's junk attributes, type="_moz", _moz_dirty="" and _moz_editor_bogus_node.
+		 &ndash; Thanks to @tim-se for reporting</li>
+		<li>Added XHTML format plugin.</li>
+		<li>Added shortcut support.</li>
+		<li>Added Persian translation.
+		 &ndash; Thanks to @ebadgh for translating!</li>
+	</ul>
 </div>
 
-  <h4>Return</h4>
 
-  <p>Type: <strong><a href="/api/types/#node">Node</a></strong></p>
+<p>If you are interested in new releases, subscribe to the <a href="http://sceditor.com/release.xml">releases RSS</a>.</p>
 
-  <p>Will return <code>null</code> if there are no common ancestor of the two nodes.</p>
-</article>
-
-	</div>
 </div>
 
-<ul class="pager">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			<li class="previous"><a href="/api/dom/extractcontents/">&larr; extractContents()</a></li>
-
-
-
-
-
-
-
-
-			<li class="next"><a href="/api/dom/fixnesting/">fixNesting() &rarr;</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</ul>
 
 
 
@@ -659,7 +137,7 @@ Type: <strong><a href="/api/types/#node">Node</a></strong></p>
 				<footer>
 					<p class="muted credit">Website by <a href="https://github.com/samclarke">samclarke</a> &copy; 2013 &ndash;
 						Hosted by <a href="http://pages.github.com">GitHub Pages</a>
-						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/api/dom/findcommonancestor.md">Edit this page</a></span></p>
+						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/_posts/2013-05-07-version-1-4-3-released.md">Edit this page</a></span></p>
 				</footer>
 			</div>
 		</div>

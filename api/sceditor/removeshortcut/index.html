@@ -7,7 +7,7 @@
 
 		
 
-		<title>updateOriginal() - SCEditor</title>
+		<title>removeShortcut() - SCEditor</title>
 
 		<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -125,7 +125,7 @@
 
 
 
-	<li class="active">updateOriginal()</li>
+	<li class="active">removeShortcut()</li>
 </ul>
 
 
@@ -394,7 +394,7 @@
 
 
 
-					<li><a href="/api/sceditor/removeshortcut/">removeShortcut()</a></li>
+					<li class="active"><a href="/api/sceditor/removeshortcut/">removeShortcut()</a></li>
 
 
 
@@ -476,7 +476,7 @@
 
 
 
-					<li class="active"><a href="/api/sceditor/updateoriginal/">updateOriginal()</a></li>
+					<li><a href="/api/sceditor/updateoriginal/">updateOriginal()</a></li>
 
 
 
@@ -509,19 +509,33 @@
 		</ul>
 	</div>
 	<div class="span9">
-		<h2>UpdateOriginal()</h2>
+		<h2>RemoveShortcut()</h2>
 
 <article class="api method">
-  <h3><a id="updateOriginal" href="#updateOriginal">updateOriginal()</a> <span class="since">Since: 1.4.0</span></h3>
+  <h3><a id="removeShortcut" href="#removeShortcut">removeShortcut()</a> <span class="since">Since: 1.4.3</span></h3>
 
-  <p>Updates the original textarea that the editor is replacing with the value currently inside the editor.</p>
+  <p>Removes a shortcut from the editor.</p>
 
   <h4>Syntax</h4>
 
-  <pre><code>instance.updateOriginal();
+  <pre><code>instance.removeShortcut(shortcut);
 </code></pre>
-</article>
 
+  <h4>Parameters</h4>
+
+  <div class="parameters">
+<div class="parameter">
+      <p><strong>shortcut</strong>
+Type: <em><a href="/api/types/#string">String</a></em></p>
+
+      <p>The shortcut string to remove. See <a href="/api/sceditor/addshortcut/">addShortcut()</a> for more information.</p>
+    </div>
+</div>
+
+  <h4>Return</h4>
+
+  <p>Type: <strong><a href="/api/types/#sceditor">sceditor</a></strong></p>
+</article>
 
 	</div>
 </div>
@@ -785,6 +799,7 @@
 
 
 
+			<li class="previous"><a href="/api/sceditor/readonly/">&larr; readOnly()</a></li>
 
 
 
@@ -795,6 +810,7 @@
 
 
 
+			<li class="next"><a href="/api/sceditor/rtl/">rtl() &rarr;</a></li>
 
 
 
@@ -867,7 +883,6 @@
 
 
 
-			<li class="previous"><a href="/api/sceditor/unbind/">&larr; unbind()</a></li>
 
 
 
@@ -876,7 +891,6 @@
 
 
 
-			<li class="next"><a href="/api/sceditor/val/">val() &rarr;</a></li>
 
 
 
@@ -928,7 +942,7 @@
 				<footer>
 					<p class="muted credit">Website by <a href="https://github.com/samclarke">samclarke</a> &copy; 2013 &ndash;
 						Hosted by <a href="http://pages.github.com">GitHub Pages</a>
-						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/api/sceditor/updateoriginal.md">Edit this page</a></span></p>
+						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/api/sceditor/removeshortcut.md">Edit this page</a></span></p>
 				</footer>
 			</div>
 		</div>

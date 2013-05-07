@@ -3,12 +3,72 @@
 	<title>SCEditor</title>
 	<link href="http://sceditor.com/atom.xml" rel="self"/>
 	<link href="http://sceditor.com/"/>
-	<updated>2013-04-23T16:25:28+01:00</updated>
+	<updated>2013-05-07T01:45:27+01:00</updated>
 	<id>http://sceditor.com/</id>
 	<author>
 		<name>Sam Clarke</name>
 		<email>sam@samclarke.com</email>
 	</author>
+	
+	<entry>
+		<title>Version 1.4.3 released</title>
+		<link href="http://sceditor.com/posts/version-1-4-3-released"/>
+		<updated>2013-05-07T00:00:00+01:00</updated>
+		<id>http://sceditor.com/posts/version-1-4-3-released</id>
+		<content type="html">&lt;h2&gt;Version 1.4.3&lt;/h2&gt;
+
+&lt;p&gt;Version 1.4.3 has been released. Thanks to everyone who contributed!&lt;/p&gt;
+
+&lt;p&gt;There are a lot of bug fixes in this release along with three new translations.&lt;/p&gt;
+
+&lt;p&gt;There are also some new methods, &lt;a href=&quot;/api/sceditor/css/&quot;&gt;css()&lt;/a&gt;, &lt;a href=&quot;/documentation/plugins/bbcode/#toBBCode&quot;&gt;toBBCode()&lt;/a&gt;, &lt;a href=&quot;/documentation/plugins/bbcode/#fromBBCode&quot;&gt;fromBBCode()&lt;/a&gt;, &lt;a href=&quot;/api/rangehelper/selectoutertext/&quot;&gt;selectOuterText()&lt;/a&gt; and &lt;a href=&quot;/api/rangehelper/getoutertext/&quot;&gt;getOuterText()&lt;/a&gt; and &lt;a href=&quot;/api/sceditor/getbody/&quot;&gt;getBody()&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.4.3 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Added css() method which allows getting/setting inline CSS for the WYSIWYG editor.&lt;/li&gt;
+		&lt;li&gt;Added Simplified Chinese translation.
+		 &amp;ndash; Thanks to Yorgo for translating.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with insert() and setting filtering to false.&lt;/li&gt;
+		&lt;li&gt;Added Travis-CI testing and improved tests&lt;/li&gt;
+		&lt;li&gt;Fixed bug with emoticons preloading even if disabled.
+		 &amp;ndash; Thanks to @novadk for reporting.&lt;/li&gt;
+		&lt;li&gt;Fixed error when editor is hidden and autofocus is enabled.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with insert() removing first or last div even if it has styling.&lt;/li&gt;
+		&lt;li&gt;Fixed error with IE 8 height.
+		 &amp;ndash; Thanks to @arjunasuresh3 for reporting and fixing.&lt;/li&gt;
+		&lt;li&gt;Added toBBCode() and fromBBCode() methods.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with spaces being removed if they are the only content of a tag.&lt;/li&gt;
+		&lt;li&gt;Renamed Norwegian translation from no-NB to nb-NO.
+		 &amp;ndash; Thanks to @tim-se for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with jQuery UI dialogs appearing behind the editor.
+		 &amp;ndash; Thanks to @OmarHawk for reporting&lt;/li&gt;
+		&lt;li&gt;Added toolbarExclude option.
+		 &amp;ndash; Thanks to @tim-se for suggestion&lt;/li&gt;
+		&lt;li&gt;Fixed bug with unclosed BBCode tags being parsed as if they had a closing tag.
+		 &amp;ndash; Thanks to @KN4CK3R for reporting&lt;/li&gt;
+		&lt;li&gt;Added Polish translation.
+		 &amp;ndash; Thanks to @TheKerimek for translating&lt;/li&gt;
+		&lt;li&gt;Fixed bug with IE 10 not being able to select outside of the editor.
+		 &amp;ndash; Thanks to @novadk for reporting&lt;/li&gt;
+		&lt;li&gt;Added getBody() method which gets the WYSIWYG body node.
+		 &amp;ndash; Thanks to @arjunasuresh3 for adding&lt;/li&gt;
+		&lt;li&gt;Made selectOuterText() and getOuterText() methods on the rangeHelper accessible.&lt;/li&gt;
+		&lt;li&gt;Greatly increased the number of tests.&lt;/li&gt;
+		&lt;li&gt;Improved the XHTML plugin.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with XHTML plugin outputting &lt;br /&gt; when editor is empty.
+		 &amp;ndash; Thanks to @tim-se for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed Mozilla's junk attributes, type=&quot;_moz&quot;, _moz_dirty=&quot;&quot; and _moz_editor_bogus_node.
+		 &amp;ndash; Thanks to @tim-se for reporting&lt;/li&gt;
+		&lt;li&gt;Added XHTML format plugin.&lt;/li&gt;
+		&lt;li&gt;Added shortcut support.&lt;/li&gt;
+		&lt;li&gt;Added Persian translation.
+		 &amp;ndash; Thanks to @ebadgh for translating!&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Version 1.4.2 released</title>
