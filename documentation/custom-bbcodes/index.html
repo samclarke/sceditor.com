@@ -43,9 +43,9 @@
 					</ul>
 
 					<div class="pull-right nav-collapse collapse">
-						<a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AVJSF5NEETYYG">Donate</a>
+						<a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=AVJSF5NEETYYG">Donate</a>
 						<a class="btn btn-primary" href="http://www.sceditor.com/latest.zip">Download</a>
-						
+
 					</div>
 				</nav>
 			</div>
@@ -361,7 +361,7 @@ function(element, content) {
   <li><strong>token</strong> <em>Object</em><br />
 TokenizeToken object</li>
   <li><strong>attrs</strong> <em>Object</em><br />
-Map of attributes. The default attribute <code>[tag=default]</code> will be set to <code>defaultAttr</code></li>
+Map of attributes. The default attribute <code>[tag=default]</code> will be set to <code>defaultattr</code></li>
   <li><strong>content</strong> <em>String</em><br />
 The HTML content of this tag</li>
 </ul>
@@ -370,8 +370,8 @@ The HTML content of this tag</li>
 
 <pre class="prettyprint linenums">
 html: function(token, attrs, content) {
-    if(typeof attrs.defaultAttr !== "undefined")
-        content = '&lt;cite&gt;' + attrs.defaultAttr + '&lt;/cite&gt;' + content;
+    if(typeof attrs.defaultattr !== "undefined")
+        content = '&lt;cite&gt;' + attrs.defaultattr + '&lt;/cite&gt;' + content;
 
     return '&lt;blockquote&gt;' + content + '&lt;/blockquote&gt;';
 }
