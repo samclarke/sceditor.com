@@ -242,7 +242,7 @@ Or a function that takes 3 arguments (token, attrs, content) and returns the HTM
 * **token** *Object*  
   TokenizeToken object
 * **attrs** *Object*  
-  Map of attributes. The default attribute `[tag=default]` will be set to `defaultAttr`
+  Map of attributes. The default attribute `[tag=default]` will be set to `defaultattr`
 * **content** *String*  
   The HTML content of this tag
 
@@ -250,8 +250,8 @@ e.g.:
 
 <pre class="prettyprint linenums">
 html: function(token, attrs, content) {
-    if(typeof attrs.defaultAttr !== "undefined")
-        content = '&lt;cite&gt;' + attrs.defaultAttr + '&lt;/cite&gt;' + content;
+    if(typeof attrs.defaultattr !== "undefined")
+        content = '&lt;cite&gt;' + attrs.defaultattr + '&lt;/cite&gt;' + content;
 
     return '&lt;blockquote&gt;' + content + '&lt;/blockquote&gt;';
 }
