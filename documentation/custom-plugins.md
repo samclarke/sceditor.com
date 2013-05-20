@@ -25,7 +25,7 @@ $.sceditor.plugins.myplugin = function() {
 };
 </pre>
 
-The to add the plugin to the editor just add `myplugin` to the [plugins option](http://localhost:8080/documentation/options/#plugins) when creating the editor.
+The to add the plugin to the editor just add `myplugin` to the [plugins option](/documentation/options/#plugins) when creating the editor.
 
 
 ### Handling Signals <a id="handling-signals"></a>
