@@ -2,7 +2,7 @@
 layout: api
 title: currentBlockNode()
 excerpt: Gets the current block level DOM node that contains the selection/caret.
-permalink: /api/sceditor/currentnode/
+permalink: /api/sceditor/currentblocknode/
 categories:
     - Docs
     - API
