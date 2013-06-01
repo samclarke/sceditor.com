@@ -57,3 +57,17 @@ Alternatively you can also contact me directly at `sam [at] sceditor.com`.
 Yes! SCEditor is licensed under the MIT license which allows both commercial and non-commercial use.
 
 
+#### Do you offer paid commercial support?
+
+If you would like commercial support, just send an e-mail to `sam [at] sceditor.com`. If you only have a basic question, support is free!
+
+
+#### Can the BBCode be parsed client side?
+
+While it can technically be parsed client side, the whole point of using BBCode is so the server can safely convert it into HTML.
+
+If BBCode is parsed on the client side, it can no longer be trusted. There is nothing to stop an attacker sending malicious HTML instead of the HTML from the parsed BBCode.
+
+Nothing on client side can prevent this as an attacker can simply disable JavaScript or bypass the web page completely by sending a request directly to the server.
+
+If you want to send (X)HTML, the XHTML plugin would be a better choice. The HTML will still need to sanitised server side to prevent XSS attacks.
