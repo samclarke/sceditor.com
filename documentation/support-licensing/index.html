@@ -43,9 +43,9 @@
 					</ul>
 
 					<div class="pull-right nav-collapse collapse">
-						<a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AVJSF5NEETYYG">Donate</a>
+						<a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=AVJSF5NEETYYG">Donate</a>
 						<a class="btn btn-primary" href="http://www.sceditor.com/latest.zip">Download</a>
-						
+
 					</div>
 				</nav>
 			</div>
@@ -182,6 +182,19 @@
 
 <p>Yes! SCEditor is licensed under the MIT license which allows both commercial and non-commercial use.</p>
 
+<h4>Do you offer paid commercial support?</h4>
+
+<p>If you would like commercial support, just send an e-mail to <code>sam [at] sceditor.com</code>. If you only have a basic question, support is free!</p>
+
+<h4>Can the BBCode be parsed client side?</h4>
+
+<p>While it can technically be parsed client side, the whole point of using BBCode is so the server can safely convert it into HTML.</p>
+
+<p>If BBCode is parsed on the client side, it can no longer be trusted. There is nothing to stop an attacker sending malicious HTML instead of the HTML from the parsed BBCode.</p>
+
+<p>Nothing on client side can prevent this as an attacker can simply disable JavaScript or bypass the web page completely by sending a request directly to the server.</p>
+
+<p>If you want to send (X)HTML, the XHTML plugin would be a better choice. The HTML will still need to sanitised server side to prevent XSS attacks.</p>
 
 	</div>
 </div>
