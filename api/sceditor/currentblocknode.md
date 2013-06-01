@@ -8,7 +8,7 @@ categories:
     - API
     - SCEditor-API
 ---
-## CurrentNode()
+## CurrentBlockNode()
 
 <article class="api method" markdown="1">
 ### <a id="currentBlockNode" href="#currentBlockNode">currentBlockNode()</a> <span class="since">Since: 1.4.4</span>
