@@ -3,7 +3,7 @@
 	<title>SCEditor</title>
 	<link href="http://sceditor.com/atom.xml" rel="self"/>
 	<link href="http://sceditor.com/"/>
-	<updated>2013-06-02T00:23:25+01:00</updated>
+	<updated>2013-06-15T15:19:01+01:00</updated>
 	<id>http://sceditor.com/</id>
 	<author>
 		<name>Sam Clarke</name>
@@ -943,7 +943,7 @@ editor.insert('[quote=author]This is an [b]example[/b] quote.[/quote]');
 
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/minified/themes/default.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;
 
-&lt;script type=&quot;text/javascript&quot; src=&quot;/minified/jquery.sceditor.bbcode.min.js&quot;&gt; &lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/minified/jquery.sceditor.xhtml.min.js&quot;&gt; &lt;/script&gt;
 
 &lt;script&gt;$(function() {
 	$('#demo-bbcode').sceditor({
