@@ -30,6 +30,7 @@ $("textarea").sceditor({
 });
 </pre>
 
+
 ### toolbar <a id="toolbar"></a>
 
 **toolbar** *String* Defaults to a list of all the built in commands
@@ -54,11 +55,11 @@ Below is a list of default commands that can be included.
  * **color**
  * **removeformat**
  * **cut**  
- * This only works in IE due to security permissions. In all other browsers it's just disabled.
+ * This only works in IE because of security permissions. It's disabled in other browsers.
  * **copy**  
- * This only works in IE due to security permissions. In all other browsers it's just disabled.
+ * This only works in IE because of security permissions. It's disabled in other browsers.
  * **paste**  
- * This only works in IE due to security permissions. In all other browsers it's just disabled.
+ * This only works in IE because of security permissions. It's disabled in other browsers.
  * **pastetext**
  * **bulletlist**
  * **orderedlist**
@@ -107,7 +108,28 @@ A comma separated list of fonts to use with the font selector.
 
 **colors** *String* Defaults to `null`
 
-Colors should be comma separated list of hex colours with bar (|) characters to signal a new column. If set to null the colours will be auto generated.
+Should be comma separated list of hex colours with bar (&#124;) characters to signal a new columns. If set to `null` the colors will be auto generated.
+
+For example:
+
+<pre class="prettyprint linenums">
+colors: '#ffff00,#ff00ff,#00ffff|#ff000,#00ff00,#0000ff',
+</pre>
+
+Would produce:
+
+<div style="overflow: hidden">
+    <div class="sceditor-color-column" style="float: left;">
+        <span class="sceditor-color-option" style="display: block; border: 1px solid #fff; height: 10px; width: 10px; overflow: hidden; background-color: #ffff00" data-color="#ffff00"></span>
+        <span class="sceditor-color-option" style="display: block; border: 1px solid #fff; height: 10px; width: 10px; overflow: hidden; background-color: #ff00ff" data-color="#ff00ff"></span>
+        <span class="sceditor-color-option" style="display: block; border: 1px solid #fff; height: 10px; width: 10px; overflow: hidden; background-color: #00ffff" data-color="#00ffff"></span>
+    </div>
+    <div class="sceditor-color-column" style="float: left;">
+        <span class="sceditor-color-option" style="display: block; border: 1px solid #fff; height: 10px; width: 10px; overflow: hidden; background-color: #ff000" data-color="#ff000"></span>
+        <span class="sceditor-color-option" style="display: block; border: 1px solid #fff; height: 10px; width: 10px; overflow: hidden; background-color: #00ff00" data-color="#00ff00"></span>
+        <span class="sceditor-color-option" style="display: block; border: 1px solid #fff; height: 10px; width: 10px; overflow: hidden; background-color: #0000ff" data-color="#0000ff"></span>
+    </div>
+</div>
 
 
 ### locale <a id="locale"></a>
