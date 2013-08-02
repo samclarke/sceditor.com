@@ -372,6 +372,21 @@ A commas separated list of plugins. e.g. `"plugin1,plugin2"`
 See plugins documentation for list of default plugins.
 
 
+### spellcheck <a id="spellcheck"></a>
+
+**spellcheck** *Boolean* Defaults to `true`
+
+If to enable the browsers built in spell checker. This option is mostly so the built in spell checker can be disabled.
+
+
+
+### disableBlockRemove <a id="disableBlockRemove"></a>
+
+**disableBlockRemove** *Boolean* Defaults to `false`
+
+By default the editor will remove block level elements when the cursor is placed at the start of them and backspace is pressed. This option allows that behaviour to be disabled.
+
+
 ### parserOptions <a id="parserOptions"></a>
 
 **parserOptions** *Object* Defaults to an empty object
