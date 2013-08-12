@@ -136,7 +136,7 @@ Would produce:
 
 **locale** *String* Defaults to `"en"`
 
-The locale to use, e.g.: `en`, `en-US`, `fr`, ect.
+The locale to use, e.g.: `en`, `en-US`, `fr`, etc.
 
 <span class="label label-important">Important</span> The language file must be included after the editors main JS file but before the editor is created. e.g.
 
@@ -390,6 +390,13 @@ By default the editor will remove block level elements when the cursor is placed
 ### parserOptions <a id="parserOptions"></a>
 
 **parserOptions** *Object* Defaults to an empty object
+
+If to trim the whitespace from the start and end of BBCode. By default the whitespace will be left.
+
+
+### bbcodeTrim <a id="bbcodeTrim"></a>
+
+**bbcodeTrim** *Boolean* Defaults to `false`
 
 BBCode parser options, only applies if using the editor in BBCode mode.
 

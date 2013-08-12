@@ -17,8 +17,10 @@ disqus:
 github:
   username: samclarke
 
+exclude: [build]
+
 sceditor:
-  version: 1.4.3
+  version: 1.4.4
   download: http://www.sceditor.com/latest.zip
 
 paginate: 10
