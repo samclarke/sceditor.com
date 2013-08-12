@@ -19,7 +19,7 @@ If `end` is not null and there is some selected text, the selected text will be 
 
 If there is no selection and `end` is set, it will just be appended to the end of `start` before inserting.
 
-<span class="label label-info">Info:</span> Using the [insert()](/api/sceditor/val/) method is the prefered way of inserting HTML into the editor. It will check if the editor is in WYSIWYG or source mode and insert into the correct editor.
+<span class="label label-info">Info:</span> Using the [insert()](/api/sceditor/insert/) method is the prefered way of inserting HTML into the editor. It will check if the editor is in WYSIWYG or source mode and insert into the correct editor.
 
 
 #### Syntax

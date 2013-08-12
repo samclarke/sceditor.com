@@ -46,8 +46,8 @@ You should normally only include the minified files from the `minified/` directo
    * `minified/themes/office-toolbar.css`  
      Office Toolbar theme.
 
-   * `minified/themes/default.css`  
+   * `minified/themes/office.css`  
      Office theme.
 
-   * `minified/themes/default.css`  
+   * `minified/themes/square.css`  
      Square theme.
