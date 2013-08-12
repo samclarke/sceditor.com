@@ -6,9 +6,74 @@
 		<atom:link href="http://sceditor.com/release.xml" rel="self" type="application/rss+xml" />
 		<description>SCEditor releases RSS feed</description>
 		<language>en</language>
-	<pubDate>Sun, 02 Jun 2013 00:23:25 +0100</pubDate>
-	<lastBuildDate>Sun, 02 Jun 2013 00:23:25 +0100</lastBuildDate>
+	<pubDate>Mon, 12 Aug 2013 23:45:21 +0100</pubDate>
+	<lastBuildDate>Mon, 12 Aug 2013 23:45:21 +0100</lastBuildDate>
 
+	
+	<item>
+		<title>Version 1.4.4 released</title>
+		<link>http://sceditor.com/posts/version-1-4-4-released</link>
+		<pubDate>Mon, 12 Aug 2013 00:00:00 +0100</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-4-4-released</guid>
+		<description>&lt;h2&gt;Version 1.4.4&lt;/h2&gt;
+
+&lt;p&gt;Version 1.4.4 has been released. Thanks to everyone who contributed!&lt;/p&gt;
+
+&lt;p&gt;Lots of bug have been fixede along with two new translations.&lt;/p&gt;
+
+&lt;p&gt;There is also a couple of new options, &lt;a href=&quot;/documentation/options/#spellcheck&quot;&gt;spellcheck&lt;/a&gt; and &lt;a href=&quot;/documentation/options/#bbcodeTrim&quot;&gt;bbcodeTrim&lt;/a&gt; as well as a new method &lt;a href=&quot;/api/sceditor/currentblocknode/&quot;&gt;currentBlockNode()&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.4.4 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Fixed height auto expanding when resized.
+		 &amp;ndash; Thanks to @TimWardC3 for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed emoticons with greater than (&amp;gt;) not being converted.
+		 &amp;ndash; Thanks to @imansa for reporting.&lt;/li&gt;
+		&lt;li&gt;Improved emoticonsCompat support so emoticons are converted to text if whitespace is removed.
+		 &amp;ndash; Thanks to @ostinelli for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug causing spaces to not be inserted when an emoticon is inserted in emoticonsCompat mode.
+		 &amp;ndash; Thanks to @ostinelli for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with toolbar not being removed by destroy() when in a custom toolbarContainer.
+		 &amp;ndash; Thanks to @imansa for reporting.&lt;/li&gt;
+		&lt;li&gt;Added currentBlockNode() method.&lt;/li&gt;
+		&lt;li&gt;Improved multiline lists in source mode.
+		 &amp;ndash; Thanks to @liamdawe for reporting.&lt;/li&gt;
+		&lt;li&gt;Improve theme compatibility.&lt;/li&gt;
+		&lt;li&gt;Fixed issue with iOS not breaking long words.
+		 &amp;ndash; Thanks to Francesco for reporting.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with IE not releasing focus when autoUpdate is enabled.
+		 &amp;ndash; Thanks to @LeeMcNeil for reporting.&lt;/li&gt;
+		&lt;li&gt;Improved IE range handling.&lt;/li&gt;
+		&lt;li&gt;Fixed IE height bug where blur() method increased the editors height.&lt;/li&gt;
+		&lt;li&gt;Fixed IE6/7 bug where there was a 2px height difference between WYSIWYG and source modes.&lt;/li&gt;
+		&lt;li&gt;Fixed new line auto appending after code/quote blocks not working.
+		 &amp;ndash; Thanks to @Dr1ks for reporting.&lt;/li&gt;
+		&lt;li&gt;Fixed issue with Opera adding blank lines.
+		 &amp;ndash; Thanks to @Dr1ks for reporting.&lt;/li&gt;
+		&lt;li&gt;Improved unlink to remove links without selecing the whole link.
+		 &amp;ndash; Thanks to @liamdawe for reporting.&lt;/li&gt;
+		&lt;li&gt;Fixed newline after [quote] being stripped.
+		 &amp;ndash; Thanks to @liamdawe for reporting.&lt;/li&gt;
+		&lt;li&gt;Fixed IE bug loading initially loading shorthand colors.
+		 &amp;ndash; Thanks to @Olive140 for reporting.&lt;/li&gt;
+		&lt;li&gt;Added bbcodeTrim option.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with stripWhiteSpace and saved ranges causing a space after the caret to be removed.&lt;/li&gt;
+		&lt;li&gt;Added spellcheck option to disable the browsers built in spellchecker.&lt;/li&gt;
+		&lt;li&gt;Added ability to remove block level elements by placing the cursor at the start of them and
+		 &amp;ndash;ressing backspace.&lt;/li&gt;
+		&lt;li&gt;Added Greek translation.
+		 &amp;ndash; Thanks to Nikos Aggelis for translating.&lt;/li&gt;
+		&lt;li&gt;Improved insert and pasting to scroll to after the inserted/pasted content.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with emoticons sometimes getting converted in code blocks.&lt;/li&gt;
+		&lt;li&gt;Added Hungarian translation
+		 &amp;ndash; Thanks to Ángyán László for translating.&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
 	
 	<item>
 		<title>Version 1.4.3 released</title>

@@ -263,7 +263,7 @@ colors: '#ffff00,#ff00ff,#00ffff|#ff000,#00ff00,#0000ff',
 
 <p><strong>locale</strong> <em>String</em> Defaults to <code>"en"</code></p>
 
-<p>The locale to use, e.g.: <code>en</code>, <code>en-US</code>, <code>fr</code>, ect.</p>
+<p>The locale to use, e.g.: <code>en</code>, <code>en-US</code>, <code>fr</code>, etc.</p>
 
 <p><span class="label label-important">Important</span> The language file must be included after the editors main JS file but before the editor is created. e.g.</p>
 
@@ -472,9 +472,27 @@ $(function() {
 
 <p>See plugins documentation for list of default plugins.</p>
 
+<h3>spellcheck <a id="spellcheck"></a></h3>
+
+<p><strong>spellcheck</strong> <em>Boolean</em> Defaults to <code>true</code></p>
+
+<p>If to enable the browsers built in spell checker. This option is mostly so the built in spell checker can be disabled.</p>
+
+<h3>disableBlockRemove <a id="disableBlockRemove"></a></h3>
+
+<p><strong>disableBlockRemove</strong> <em>Boolean</em> Defaults to <code>false</code></p>
+
+<p>By default the editor will remove block level elements when the cursor is placed at the start of them and backspace is pressed. This option allows that behaviour to be disabled.</p>
+
 <h3>parserOptions <a id="parserOptions"></a></h3>
 
 <p><strong>parserOptions</strong> <em>Object</em> Defaults to an empty object</p>
+
+<p>If to trim the whitespace from the start and end of BBCode. By default the whitespace will be left.</p>
+
+<h3>bbcodeTrim <a id="bbcodeTrim"></a></h3>
+
+<p><strong>bbcodeTrim</strong> <em>Boolean</em> Defaults to <code>false</code></p>
 
 <p>BBCode parser options, only applies if using the editor in BBCode mode.</p>
 

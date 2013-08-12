@@ -7,7 +7,7 @@
 
 		
 
-		<title>removeMarker() - SCEditor</title>
+		<title>hasStyling() - SCEditor</title>
 
 		<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -112,12 +112,7 @@
 
 
 
-
-
-
-
-						<li><a href="/api/rangehelper/">RangeHelper</a> <span class="divider">/</span></li>
-
+						<li><a href="/api/dom/">DOM</a> <span class="divider">/</span></li>
 
 
 
@@ -125,7 +120,12 @@
 
 
 
-	<li class="active">removeMarker()</li>
+
+
+
+
+
+	<li class="active">hasStyling()</li>
 </ul>
 
 
@@ -135,7 +135,7 @@
 
 <div class="row-fluid docs">
 	<div class="span3">
-		<h5>RangeHelper</h5>
+		<h5>DOM</h5>
 		<ul class="nav nav-tabs nav-stacked">
 
 
@@ -158,6 +158,7 @@
 
 
 
+					<li><a href="/api/dom/blocklevellist/">blockLevelList</a></li>
 
 
 
@@ -166,7 +167,6 @@
 
 
 
-					<li><a href="/api/rangehelper/cloneselected/">cloneSelected()</a></li>
 
 
 
@@ -176,6 +176,7 @@
 
 
 
+					<li><a href="/api/dom/copycss/">copyCSS()</a></li>
 
 
 
@@ -209,6 +210,7 @@
 
 
 
+					<li><a href="/api/dom/extractcontents/">extractContents()</a></li>
 
 
 
@@ -216,23 +218,22 @@
 
 
 
+					<li><a href="/api/dom/findcommonancestor/">findCommonAncestor()</a></li>
 
 
 
 
-					<li><a href="/api/rangehelper/getfirstblockparent/">getFirstBlockParent()</a></li>
 
+					<li><a href="/api/dom/fixnesting/">fixNesting()</a></li>
 
 
 
 
-					<li><a href="/api/rangehelper/getmakrer/">getMarker()</a></li>
 
 
 
 
 
-					<li><a href="/api/rangehelper/getoutertext/">getOuterText()</a></li>
 
 
 
@@ -249,33 +250,31 @@
 
 
 
+					<li class="active"><a href="/api/dom/hasstyling/">hasStyling()</a></li>
 
 
 
 
 
-					<li><a href="/api/rangehelper/inserthtml/">insertHTML()</a></li>
 
 
 
 
 
-					<li><a href="/api/rangehelper/insertmarkers/">insertMarkers()</a></li>
 
 
 
 
 
-					<li><a href="/api/rangehelper/insertnode/">insertNode()</a></li>
 
 
 
 
 
-					<li><a href="/api/rangehelper/insertnodeat/">insertNodeAt()</a></li>
 
 
 
+					<li><a href="/api/dom/isinline/">isInline()</a></li>
 
 
 
@@ -298,7 +297,6 @@
 
 
 
-					<li><a href="/api/rangehelper/parentnode/">parentNode()</a></li>
 
 
 
@@ -312,13 +310,12 @@
 
 
 
-					<li class="active"><a href="/api/rangehelper/removmakrer/">removeMarker()</a></li>
 
 
 
 
+					<li><a href="/api/dom/rtraverse/">rTraverse()</a></li>
 
-					<li><a href="/api/rangehelper/removemarkers/">removeMarkers()</a></li>
 
 
 
@@ -326,7 +323,6 @@
 
 
 
-					<li><a href="/api/rangehelper/restorerange/">restoreRange()</a></li>
 
 
 
@@ -336,7 +332,6 @@
 
 
 
-					<li><a href="/api/rangehelper/saverange/">saveRange()</a></li>
 
 
 
@@ -348,43 +343,16 @@
 
 
 
-					<li><a href="/api/rangehelper/selectedhtml/">selectedHtml()</a></li>
 
 
 
 
 
-					<li><a href="/api/rangehelper/selectedrange/">selectedRange()</a></li>
 
 
 
 
-
-
-
-					<li><a href="/api/rangehelper/selectoutertext/">selectOuterText()</a></li>
-
-
-
-
-
-					<li><a href="/api/rangehelper/selectrange/">selectRange()</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+					<li><a href="/api/dom/traverse/">traverse()</a></li>
 
 
 
@@ -407,26 +375,32 @@
 		</ul>
 	</div>
 	<div class="span9">
-		<h2>RemoveMarker()</h2>
+		<h2>HasStyling()</h2>
 
 <article class="api method">
-  <h3><a id="removeMarker" href="#removeMarker">removeMarker(id)</a> <span class="since">Since: 1.3.5</span></h3>
+  <h3><a id="hasStyling" href="#hasStyling">hasStyling(element)</a> <span class="since">Since: 1.4.4</span></h3>
 
-  <p>Removes the current marker for the specified ID.</p>
+  <p>Returns true if the passed element is not a <code>p</code> or <code>div</code> tag, has any inline CSS or has any CSS classes.</p>
 
   <h4>Syntax</h4>
 
-  <pre><code>instance.removeMarker(id);
+  <pre><code>var hasStyling = $.sceditor.dom.hasStyling(element);
 </code></pre>
 
   <h4>Parameters</h4>
 
   <div class="parameters">
 <div class="parameter">
-      <p><strong>id</strong><br />
-Type: <strong><a href="/api/types/#string">String</a></strong> </p>
+      <p><strong>element</strong><br />
+Type: <strong><a href="/api/types/#htmlelement">HTMLElement</a></strong></p>
+
+      <p>The DOM element to check.</p>
     </div>
 </div>
+
+  <h4>Return</h4>
+
+  <p>Type: <strong><a href="/api/types/#bool">Boolean</a></strong></p>
 </article>
 
 	</div>
@@ -547,6 +521,7 @@ Type: <strong><a href="/api/types/#string">String</a></strong> </p>
 
 
 
+			<li class="previous"><a href="/api/dom/fixnesting/">&larr; fixNesting()</a></li>
 
 
 
@@ -573,6 +548,7 @@ Type: <strong><a href="/api/types/#string">String</a></strong> </p>
 
 
 
+			<li class="next"><a href="/api/dom/isinline/">isInline() &rarr;</a></li>
 
 
 
@@ -585,40 +561,6 @@ Type: <strong><a href="/api/types/#string">String</a></strong> </p>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			<li class="previous"><a href="/api/rangehelper/parentnode/">&larr; parentNode()</a></li>
-
-
-
-
-
-
-
-
-			<li class="next"><a href="/api/rangehelper/removemarkers/">removeMarkers() &rarr;</a></li>
 
 
 
@@ -732,7 +674,7 @@ Type: <strong><a href="/api/types/#string">String</a></strong> </p>
 				<footer>
 					<p class="muted credit">Website by <a href="https://github.com/samclarke">samclarke</a> &copy; 2013 &ndash;
 						Hosted by <a href="http://pages.github.com">GitHub Pages</a>
-						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/api/rangehelper/removemarker.md">Edit this page</a></span></p>
+						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/api/dom/hasstyling.md">Edit this page</a></span></p>
 				</footer>
 			</div>
 		</div>
