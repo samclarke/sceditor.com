@@ -2,7 +2,7 @@
 layout: api
 title: clearBlockFormatting()
 excerpt: Clears the formatting of the first block level element that has the cursor
-permalink: /api/sceditor/blur/
+permalink: /api/sceditor/clearblockformatting/
 categories:
     - Docs
     - API
