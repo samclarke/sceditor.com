@@ -24,3 +24,4 @@ sceditor:
   download: http://www.sceditor.com/latest.zip
 
 paginate: 10
+paginate_path: "posts/page:num"

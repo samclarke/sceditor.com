@@ -10,7 +10,7 @@ categories:
 
 Version 1.4.4 has been released. Thanks to everyone who contributed!
 
-Lots of bug have been fixede along with two new translations.
+Lots of bug have been fixed along with two new translations.
 
 There is also a couple of new options, [spellcheck][spellcheck] and [bbcodeTrim][bbcodeTrim] as well as a new method [currentBlockNode()][currentBlockNode].
 

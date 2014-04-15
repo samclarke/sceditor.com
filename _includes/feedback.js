@@ -1,15 +1,15 @@
-$(function(){
+$(function () {
 	var
-		formUrl    = 'https://docs.google.com/spreadsheet/embeddedform?formkey=dFloM0ZCdVVRZkI2dDRLeVozaUtNS0E6MQ',
+		formUrl    = 'https://docs.google.com/forms/d/1d6fvE6LVJ2JuGhDT157dbdvBPGMbm5buiTEfLevJWbc/viewform?embedded=true',
 		$button    = $('<div id="feedback-btn"><div>Feedback</div></div>'),
 		$body      = $(document.body),
 		$container = null,
 		$backdrop  = $('<div class="modal-backdrop" />');
 
-	$button.click(function() {
-		if(!$container)
-		{
+	$button.click(function () {
+		if (!$container) {
 			$container    = $('<div class="modal" />');
+
 			var $header   = $('<div class="modal-header" />');
 			var $content  = $('<div class="modal-body" />').height(400);
 			var $closeBtn = $('<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>');
@@ -23,24 +23,24 @@ $(function(){
 							'Loading...' +
 					'</iframe>');
 
-			$closeBtn.click(function() {
-				$container.hide();
-				$backdrop.hide();
+			$closeBtn.click(function () {
+				$container.fadeOut();
+				$backdrop.fadeOut();
 			});
 
-			$backdrop.click(function() {
+			$backdrop.click(function () {
 				$closeBtn.click();
 			});
 
-			$content.append($iframe.show());
 			$header.append($closeBtn).append($('<h3>Submit Feedback</h3>'));
+			$content.append($iframe);
+
 			$container.append($header).append($content);
+
 			$body.append($backdrop).append($container);
-		}
-		else
-		{
-			$container.show();
-			$backdrop.show();
+		} else {
+			$container.fadeIn();
+			$backdrop.fadeIn();
 		}
 	});
 
