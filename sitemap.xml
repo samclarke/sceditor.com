@@ -2,744 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>http://sceditor.com/</loc>
-		<lastmod>2013-08-19</lastmod>
+		<lastmod>2014-04-15</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 	
 	<url>
-		<loc>http://sceditor.com/docs/</loc>
+		<loc>http://sceditor.com/posts/</loc>
 		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/plugins/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/license/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/types/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/getfirstblockparent/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/selectedrange/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/removemarkers/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/inserthtml/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/insertnode/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/selectedhtml/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/selectrange/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/restorerange/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/getmakrer/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/parentnode/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/cloneselected/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/selectoutertext/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/insertnodeat/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/getoutertext/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/insertmarkers/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/saverange/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/rangehelper/removmakrer/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/createdropdown/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/inserttext/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/css/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/getsourceeditorvalue/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/height/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/getwysiwygeditorvalue/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/setsourceeditorvalue/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/sourcemode/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/val/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/width/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/updateoriginal/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/addshortcut/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/keypress/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/focus/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/rtl/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/getbody/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/readonly/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/blur/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/bind/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/clearblockformatting/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/dimensions/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/maximize/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/ie/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/destroy/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/sourceeditorinserttext/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/iswysiwygsupported/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/expandtocontent/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/underscore/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/closedropdown/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/insourcemode/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/execcommand/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/setwysiwygeditorvalue/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/unbind/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/insert/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/currentblocknode/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/currentnode/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/removeshortcut/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/selectionchanged/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/getrangehelper/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/nodechanged/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/keyup/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/wysiwygeditorinserttext/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/keydown/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/emoticons/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/togglesourcemode/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/sceditor/wysiwygeditorinserthtml/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/dom/fixnesting/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/dom/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/dom/hasstyling/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/dom/blocklevellist/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/dom/rtraverse/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/dom/extractcontents/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/dom/findcommonancestor/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/dom/isinline/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/dom/copycss/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/api/dom/traverse/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/documentation/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
+		<lastmod>2014-04-15</lastmod>
 		
 		
 		
@@ -748,124 +19,736 @@
 	<url>
 		<loc>http://sceditor.com/support/</loc>
 		
-		<lastmod>2013-08-19</lastmod>
+		<lastmod>2014-04-15</lastmod>
 		
 		
 		
 	</url>
 	
 	<url>
-		<loc>http://sceditor.com/integration/</loc>
+		<loc>http://sceditor.com/documentation/</loc>
 		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/posts/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
+		<lastmod>2014-04-15</lastmod>
 		
 		
 		
 	</url>
 	
 	<url>
-		<loc>http://sceditor.com/documentation/plugins/xhtml/</loc>
+		<loc>http://sceditor.com/api/rangehelper/getfirstblockparent/</loc>
 		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/documentation/plugins/bbcode/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
+		<lastmod>2014-04-15</lastmod>
 		
 		
 		
 	</url>
 	
 	<url>
-		<loc>http://sceditor.com/documentation/options/</loc>
+		<loc>http://sceditor.com/api/rangehelper/selectedhtml/</loc>
 		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/documentation/custom-plugins/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
+		<lastmod>2014-04-15</lastmod>
 		
 		
 		
 	</url>
 	
 	<url>
-		<loc>http://sceditor.com/documentation/plugins/</loc>
+		<loc>http://sceditor.com/api/rangehelper/insertnodeat/</loc>
 		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/documentation/custom-commands/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
+		<lastmod>2014-04-15</lastmod>
 		
 		
 		
 	</url>
 	
 	<url>
-		<loc>http://sceditor.com/documentation/theming/</loc>
+		<loc>http://sceditor.com/api/rangehelper/selectoutertext/</loc>
 		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/documentation/browser-compatibility/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
+		<lastmod>2014-04-15</lastmod>
 		
 		
 		
 	</url>
 	
 	<url>
-		<loc>http://sceditor.com/documentation/contributing/</loc>
+		<loc>http://sceditor.com/api/rangehelper/inserthtml/</loc>
 		
-		<lastmod>2013-08-19</lastmod>
-		
-		
-		
-	</url>
-	
-	<url>
-		<loc>http://sceditor.com/documentation/files/</loc>
-		
-		<lastmod>2013-08-19</lastmod>
+		<lastmod>2014-04-15</lastmod>
 		
 		
 		
 	</url>
 	
 	<url>
-		<loc>http://sceditor.com/documentation/support-licensing/</loc>
+		<loc>http://sceditor.com/api/rangehelper/getoutertext/</loc>
 		
-		<lastmod>2013-08-19</lastmod>
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/rangehelper/removmakrer/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/rangehelper/selectedrange/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/rangehelper/selectrange/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/rangehelper/removemarkers/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/rangehelper/getmakrer/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/rangehelper/insertnode/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/rangehelper/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/rangehelper/restorerange/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/rangehelper/insertmarkers/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/rangehelper/parentnode/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/rangehelper/saverange/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/rangehelper/cloneselected/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/unbind/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/destroy/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/sourceeditorinserttext/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/css/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/expandtocontent/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/focus/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/maximize/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/nodechanged/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/insert/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/getwysiwygeditorvalue/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/getbody/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/getrangehelper/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/createdropdown/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/selectionchanged/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/keydown/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/bind/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/emoticons/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/iswysiwygsupported/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/getsourceeditorvalue/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/wysiwygeditorinserttext/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/readonly/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/setwysiwygeditorvalue/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/val/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/sourcemode/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/execcommand/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/currentblocknode/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/currentnode/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/height/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/closedropdown/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/removeshortcut/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/blur/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/addshortcut/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/rtl/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/inserttext/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/clearblockformatting/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/setsourceeditorvalue/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/width/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/keyup/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/insourcemode/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/ie/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/wysiwygeditorinserthtml/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/underscore/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/dimensions/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/togglesourcemode/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/updateoriginal/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/sceditor/keypress/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/types/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/dom/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/dom/copycss/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/dom/rtraverse/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/dom/extractcontents/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/dom/blocklevellist/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/dom/isinline/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/dom/hasstyling/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/dom/fixnesting/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/dom/traverse/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/api/dom/findcommonancestor/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/plugins/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/license/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/docs/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
 		
 		
 		
@@ -874,7 +757,16 @@
 	<url>
 		<loc>http://sceditor.com/documentation/getting-started/</loc>
 		
-		<lastmod>2013-08-19</lastmod>
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/documentation/custom-plugins/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
 		
 		
 		
@@ -883,7 +775,106 @@
 	<url>
 		<loc>http://sceditor.com/documentation/custom-bbcodes/</loc>
 		
-		<lastmod>2013-08-19</lastmod>
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/documentation/support-licensing/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/documentation/options/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/documentation/theming/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/documentation/contributing/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/documentation/plugins/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/documentation/custom-commands/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/documentation/plugins/xhtml/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/documentation/plugins/bbcode/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/documentation/files/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/documentation/browser-compatibility/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/integration/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
 		
 		
 		
@@ -892,12 +883,37 @@
 	<url>
 		<loc>http://sceditor.com/</loc>
 		
-		<lastmod>2013-08-19</lastmod>
+		<lastmod>2014-04-15</lastmod>
 		
 		
 		
 	</url>
 	
+	<url>
+		<loc>http://sceditor.com/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	<url>
+		<loc>http://sceditor.com/</loc>
+		
+		<lastmod>2014-04-15</lastmod>
+		
+		
+		
+	</url>
+	
+	
+	<url>
+		<loc>http://sceditor.com/posts/version-1-4-5-released</loc>
+		
+ 		<lastmod>2014-04-15</lastmod>
+		
+	</url>
 	
 	<url>
 		<loc>http://sceditor.com/posts/version-1-4-4-released</loc>

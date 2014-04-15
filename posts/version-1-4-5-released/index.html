@@ -7,7 +7,7 @@
 
 		
 
-		<title>saveRange() - SCEditor</title>
+		<title>Version 1.4.5 released - SCEditor</title>
 
 		<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -52,655 +52,65 @@
 
 			<div id="content">
 				<section>
-				<ul class="breadcrumb">
-	<li><a href="/documentation/">Documentation</a> <span class="divider">/</span></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-						<li><a href="/api/">API</a> <span class="divider">/</span></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-						<li><a href="/api/rangehelper/">RangeHelper</a> <span class="divider">/</span></li>
-
-
-
-
-
-
-
-
-	<li class="active">saveRange()</li>
-</ul>
-
-
-
-
-
-
-<div class="row-fluid docs">
-	<div class="span3">
-		<h5>RangeHelper</h5>
-		<ul class="nav nav-tabs nav-stacked">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					<li><a href="/api/rangehelper/cloneselected/">cloneSelected()</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					<li><a href="/api/rangehelper/getfirstblockparent/">getFirstBlockParent()</a></li>
-
-
-
-
-
-					<li><a href="/api/rangehelper/getmakrer/">getMarker()</a></li>
-
-
-
-
-
-					<li><a href="/api/rangehelper/getoutertext/">getOuterText()</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					<li><a href="/api/rangehelper/inserthtml/">insertHTML()</a></li>
-
-
-
-
-
-					<li><a href="/api/rangehelper/insertmarkers/">insertMarkers()</a></li>
-
-
-
-
-
-					<li><a href="/api/rangehelper/insertnode/">insertNode()</a></li>
-
-
-
-
-
-					<li><a href="/api/rangehelper/insertnodeat/">insertNodeAt()</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					<li><a href="/api/rangehelper/parentnode/">parentNode()</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-					<li><a href="/api/rangehelper/removmakrer/">removeMarker()</a></li>
-
-
-
-
-
-					<li><a href="/api/rangehelper/removemarkers/">removeMarkers()</a></li>
-
-
-
-
-
-
-
-					<li><a href="/api/rangehelper/restorerange/">restoreRange()</a></li>
-
-
-
-
-
-
-
-
-
-					<li class="active"><a href="/api/rangehelper/saverange/">saveRange()</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-					<li><a href="/api/rangehelper/selectedhtml/">selectedHtml()</a></li>
-
-
-
-
-
-					<li><a href="/api/rangehelper/selectedrange/">selectedRange()</a></li>
-
-
-
-
-
-
-
-					<li><a href="/api/rangehelper/selectoutertext/">selectOuterText()</a></li>
-
-
-
-
-
-					<li><a href="/api/rangehelper/selectrange/">selectRange()</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		</ul>
-	</div>
-	<div class="span9">
-		<h2>SaveRange()</h2>
-
-<article class="api method">
-  <h3><a id="saveRange" href="#saveRange">saveRange()</a> <span class="since">Since: 1.3.5</span></h3>
-
-  <p>Saveds the current range by inserting markers. The range be restored by the <a href="/api/rangehelper/restorerange/">restoreRange()</a> method.</p>
-
-  <h4>Syntax</h4>
-
-  <pre><code>instance.saveRange();
-</code></pre>
-</article>
-
-	</div>
+				<div class="post">
+	<h2>Version 1.4.5</h2>
+
+<p>Version 1.4.5 has been released. Thanks to everyone who contributed!</p>
+
+<p><strong>Important</strong>: This version fixes a potential XSS exploit where if someone loaded malicious BBCode into the editor (i.e. editing a malicious users BBCode) it could cause an XSS exploit. This does not affect the XHTML plugin as all XHTML, regardless of source, should be filtered server side unless it’s from a trusted user. See the <a href="/documentation/plugins/xhtml/#xhtml">XHTML plugin warning</a> for more information.</p>
+
+<p>Other than that this version is mostly just bug fixes, there are a few new translations as well as the new indent/outdent commands.</p>
+
+<p>Also there is a <a href="http://bugs.jquery.com/ticket/14386">bug in jQuery</a> that causes IE 11 not to work. This is fixed in jQuery version 1.10.2 and above.</p>
+
+<h3>Full 1.4.5 changelog:</h3>
+
+<div class="well">
+	<ul>
+		<li>Added command shortcuts to tooltips.</li>
+		 &ndash; Thanks to @brunoais
+		<li>Added Portuguese translation.</li>
+		 &ndash; Thanks to @brunoais
+		<li>Added list indent and outdent commands.</li>
+		 &ndash; Thanks to @brunoais
+		<li>Added Ukrainian translation.</li>
+		 &ndash;hanks to @aqrln for translating
+		<li>Fixed bug with BBCode source editor creating links with [img] tags selected.</li>
+		 &ndash; Thanks to @liamdawe for reporting.
+		<li>Fixed issue with insert() and FF.</li>
+		 &ndash; Thanks to @martec for reporting.
+		<li>Fixed in IE8 and below with XHTML font size attribute converstion.</li>
+		<li>Fixed typo in German translation.</li>
+		 &ndash; Thanks to Ulf for reporting.
+		<li>Removed build.sh as grunt now does everything build.sh could.</li>
+		<li>Added Italian translation.</li>
+		 &ndash; Thanks to Tropico for translating.
+		<li>Fixed bug when insert empty node.</li>
+		 &ndash; Thanks to @spuds for reporting.
+		<li>Fixed FF bug with dropdowns not opening via shortcuts.</li>
+		 &ndash; Thanks to @echteinfachtv for reporting.
+		<li>Improved inserting so only scrolls if the end of the inserted HTML isn't in view.</li>
+		<li>Added zh-TW translation.</li>
+		 &ndash; Thanks to @gan068 for translating.
+		<li>Updated Polish translation.</li>
+		 &ndash; Thanks to @gnysek for updating.
+		<li>Fix possible XSS if editing loading BBCode that someone else has written.</li>
+		 &ndash; Thanks to for Sergiu reporting.
+		<li>Fixed default font size.</li>
+		 &ndash; Thanks to @jetand for fixing.
+		<li>Added Japanese translation.</li>
+		 &ndash; Thanks to @PyYoshi for translating.
+		<li>Fixed bug with XHTML plugin stripping iframes.</li>
+		 &ndash; Thanks to @tim-se for reporting.
+		<li>Fixed bug with IE11 newline handling.</li>
+	</ul>
 </div>
 
-<ul class="pager">
 
+<p>If you are interested in new releases, subscribe to the <a href="http://sceditor.com/release.xml">releases RSS</a>.</p>
 
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			<li class="previous"><a href="/api/rangehelper/restorerange/">&larr; restoreRange()</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			<li class="next"><a href="/api/rangehelper/selectedhtml/">selectedHtml() &rarr;</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</ul>
 
 
 
@@ -727,7 +137,7 @@
 				<footer>
 					<p class="muted credit">Website by <a href="https://github.com/samclarke">samclarke</a> &copy; 2013 &ndash;
 						Hosted by <a href="http://pages.github.com">GitHub Pages</a>
-						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/api/rangehelper/saverange.md">Edit this page</a></span></p>
+						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/_posts/2014-04-15-version-1-4-5-released.md">Edit this page</a></span></p>
 				</footer>
 			</div>
 		</div>

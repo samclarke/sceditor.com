@@ -27,18 +27,18 @@ hashComments:3,cStyleComments:!0,multilineStrings:!0,tripleQuotedStrings:!0,rege
 250):a&&a()}for(var e=[document.getElementsByTagName("pre"),document.getElementsByTagName("code"),document.getElementsByTagName("xmp")],h=[],k=0;k<e.length;++k)for(var t=0,s=e[k].length;t<s;++t)h.push(e[k][t]);var e=q,l=Date;l.now||(l={now:function(){return+new Date}});var p=0,d,g=/\blang(?:uage)?-([\w.]+)(?!\S)/;m()};window.PR={createSimpleLexer:x,registerLangHandler:k,sourceDecorator:u,PR_ATTRIB_NAME:"atn",PR_ATTRIB_VALUE:"atv",PR_COMMENT:"com",PR_DECLARATION:"dec",PR_KEYWORD:"kwd",PR_LITERAL:"lit",
 PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING:"str",PR_TAG:"tag",PR_TYPE:"typ"}})();
 
-$(function(){
+$(function () {
 	var
-		formUrl    = 'https://docs.google.com/spreadsheet/embeddedform?formkey=dFloM0ZCdVVRZkI2dDRLeVozaUtNS0E6MQ',
+		formUrl    = 'https://docs.google.com/forms/d/1d6fvE6LVJ2JuGhDT157dbdvBPGMbm5buiTEfLevJWbc/viewform?embedded=true',
 		$button    = $('<div id="feedback-btn"><div>Feedback</div></div>'),
 		$body      = $(document.body),
 		$container = null,
 		$backdrop  = $('<div class="modal-backdrop" />');
 
-	$button.click(function() {
-		if(!$container)
-		{
+	$button.click(function () {
+		if (!$container) {
 			$container    = $('<div class="modal" />');
+
 			var $header   = $('<div class="modal-header" />');
 			var $content  = $('<div class="modal-body" />').height(400);
 			var $closeBtn = $('<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>');
@@ -52,24 +52,24 @@ $(function(){
 							'Loading...' +
 					'</iframe>');
 
-			$closeBtn.click(function() {
-				$container.hide();
-				$backdrop.hide();
+			$closeBtn.click(function () {
+				$container.fadeOut();
+				$backdrop.fadeOut();
 			});
 
-			$backdrop.click(function() {
+			$backdrop.click(function () {
 				$closeBtn.click();
 			});
 
-			$content.append($iframe.show());
 			$header.append($closeBtn).append($('<h3>Submit Feedback</h3>'));
+			$content.append($iframe);
+
 			$container.append($header).append($content);
+
 			$body.append($backdrop).append($container);
-		}
-		else
-		{
-			$container.show();
-			$backdrop.show();
+		} else {
+			$container.fadeIn();
+			$backdrop.fadeIn();
 		}
 	});
 

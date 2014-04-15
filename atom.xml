@@ -3,12 +3,72 @@
 	<title>SCEditor</title>
 	<link href="http://sceditor.com/atom.xml" rel="self"/>
 	<link href="http://sceditor.com/"/>
-	<updated>2013-08-19T00:49:06+01:00</updated>
+	<updated>2014-04-15T19:41:34+01:00</updated>
 	<id>http://sceditor.com/</id>
 	<author>
 		<name>Sam Clarke</name>
 		<email>sam@samclarke.com</email>
 	</author>
+	
+	<entry>
+		<title>Version 1.4.5 released</title>
+		<link href="http://sceditor.com/posts/version-1-4-5-released"/>
+		<updated>2014-04-15T00:00:00+01:00</updated>
+		<id>http://sceditor.com/posts/version-1-4-5-released</id>
+		<content type="html">&lt;h2&gt;Version 1.4.5&lt;/h2&gt;
+
+&lt;p&gt;Version 1.4.5 has been released. Thanks to everyone who contributed!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt;: This version fixes a potential XSS exploit where if someone loaded malicious BBCode into the editor (i.e. editing a malicious users BBCode) it could cause an XSS exploit. This does not affect the XHTML plugin as all XHTML, regardless of source, should be filtered server side unless it’s from a trusted user. See the &lt;a href=&quot;/documentation/plugins/xhtml/#xhtml&quot;&gt;XHTML plugin warning&lt;/a&gt; for more information.&lt;/p&gt;
+
+&lt;p&gt;Other than that this version is mostly just bug fixes, there are a few new translations as well as the new indent/outdent commands.&lt;/p&gt;
+
+&lt;p&gt;Also there is a &lt;a href=&quot;http://bugs.jquery.com/ticket/14386&quot;&gt;bug in jQuery&lt;/a&gt; that causes IE 11 not to work. This is fixed in jQuery version 1.10.2 and above.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.4.5 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Added command shortcuts to tooltips.&lt;/li&gt;
+		 &amp;ndash; Thanks to @brunoais
+		&lt;li&gt;Added Portuguese translation.&lt;/li&gt;
+		 &amp;ndash; Thanks to @brunoais
+		&lt;li&gt;Added list indent and outdent commands.&lt;/li&gt;
+		 &amp;ndash; Thanks to @brunoais
+		&lt;li&gt;Added Ukrainian translation.&lt;/li&gt;
+		 &amp;ndash;hanks to @aqrln for translating
+		&lt;li&gt;Fixed bug with BBCode source editor creating links with [img] tags selected.&lt;/li&gt;
+		 &amp;ndash; Thanks to @liamdawe for reporting.
+		&lt;li&gt;Fixed issue with insert() and FF.&lt;/li&gt;
+		 &amp;ndash; Thanks to @martec for reporting.
+		&lt;li&gt;Fixed in IE8 and below with XHTML font size attribute converstion.&lt;/li&gt;
+		&lt;li&gt;Fixed typo in German translation.&lt;/li&gt;
+		 &amp;ndash; Thanks to Ulf for reporting.
+		&lt;li&gt;Removed build.sh as grunt now does everything build.sh could.&lt;/li&gt;
+		&lt;li&gt;Added Italian translation.&lt;/li&gt;
+		 &amp;ndash; Thanks to Tropico for translating.
+		&lt;li&gt;Fixed bug when insert empty node.&lt;/li&gt;
+		 &amp;ndash; Thanks to @spuds for reporting.
+		&lt;li&gt;Fixed FF bug with dropdowns not opening via shortcuts.&lt;/li&gt;
+		 &amp;ndash; Thanks to @echteinfachtv for reporting.
+		&lt;li&gt;Improved inserting so only scrolls if the end of the inserted HTML isn't in view.&lt;/li&gt;
+		&lt;li&gt;Added zh-TW translation.&lt;/li&gt;
+		 &amp;ndash; Thanks to @gan068 for translating.
+		&lt;li&gt;Updated Polish translation.&lt;/li&gt;
+		 &amp;ndash; Thanks to @gnysek for updating.
+		&lt;li&gt;Fix possible XSS if editing loading BBCode that someone else has written.&lt;/li&gt;
+		 &amp;ndash; Thanks to for Sergiu reporting.
+		&lt;li&gt;Fixed default font size.&lt;/li&gt;
+		 &amp;ndash; Thanks to @jetand for fixing.
+		&lt;li&gt;Added Japanese translation.&lt;/li&gt;
+		 &amp;ndash; Thanks to @PyYoshi for translating.
+		&lt;li&gt;Fixed bug with XHTML plugin stripping iframes.&lt;/li&gt;
+		 &amp;ndash; Thanks to @tim-se for reporting.
+		&lt;li&gt;Fixed bug with IE11 newline handling.&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Version 1.4.4 released</title>
@@ -19,7 +79,7 @@
 
 &lt;p&gt;Version 1.4.4 has been released. Thanks to everyone who contributed!&lt;/p&gt;
 
-&lt;p&gt;Lots of bug have been fixede along with two new translations.&lt;/p&gt;
+&lt;p&gt;Lots of bug have been fixed along with two new translations.&lt;/p&gt;
 
 &lt;p&gt;There is also a couple of new options, &lt;a href=&quot;/documentation/options/#spellcheck&quot;&gt;spellcheck&lt;/a&gt; and &lt;a href=&quot;/documentation/options/#bbcodeTrim&quot;&gt;bbcodeTrim&lt;/a&gt; as well as a new method &lt;a href=&quot;/api/sceditor/currentblocknode/&quot;&gt;currentBlockNode()&lt;/a&gt;.&lt;/p&gt;
 
