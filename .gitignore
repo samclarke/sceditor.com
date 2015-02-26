@@ -1,5 +1,6 @@
 Gemfile.lock
 ._site/*
 _site/*
+build/
 sceditor.com.sublime-workspace
 sceditor.com.sublime-project
