@@ -3,12 +3,102 @@
 	<title>SCEditor</title>
 	<link href="http://sceditor.com/atom.xml" rel="self"/>
 	<link href="http://sceditor.com/"/>
-	<updated>2014-04-15T19:41:34+01:00</updated>
+	<updated>2015-02-26T16:42:57+00:00</updated>
 	<id>http://sceditor.com/</id>
 	<author>
 		<name>Sam Clarke</name>
 		<email>sam@samclarke.com</email>
 	</author>
+	
+	<entry>
+		<title>Version 1.4.6 released</title>
+		<link href="http://sceditor.com/posts/version-1-4-6-released"/>
+		<updated>2015-02-26T00:00:00+00:00</updated>
+		<id>http://sceditor.com/posts/version-1-4-6-released</id>
+		<content type="html">&lt;h2&gt;Version 1.4.6&lt;/h2&gt;
+
+&lt;p&gt;Version 1.4.6 has been released. Thanks to everyone who contributed!&lt;/p&gt;
+
+&lt;p&gt;This release is mostly code refactoring and bug fixes. There are a few new translations which have been added too.&lt;/p&gt;
+
+&lt;p&gt;From this release onwards the version numbering will use &lt;a href=&quot;http://semver.org&quot;&gt;Semantic Versioning&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.4.6 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+			&lt;li&gt;Fixed resize issue with Android browsers.
+			 &amp;ndash; Thanks to @scripple for fixing.&lt;/li&gt;
+			&lt;li&gt;Fixed bug with table being turned into paragraphs.
+			 &amp;ndash; Thanks to @jetand for fixing.&lt;/li&gt;
+			&lt;li&gt;Refactored the code so that it&#39;s in modules.
+				The code is now much more readable and far easier to maintain and test.
+				This change is 100% backwards compatible with the minified version and
+				running the build will also create a backwards compatible non-minified
+				version.
+				The non-minified non-built code will require an AMD module loader to
+				load it.&lt;/li&gt;
+			&lt;li&gt;Refactored all the unit tests for the new modules.&lt;/li&gt;
+			&lt;li&gt;Added manual tests.&lt;/li&gt;
+			&lt;li&gt;Fixed bug with RangeHelper.getOuterText() in IE &amp;lt; 9 when getting text after&lt;/li&gt;
+			&lt;li&gt;Fixed bug with RangeHelper.insertNode() in IE &amp;lt; 9 when inserting a documentFragment&lt;/li&gt;
+			&lt;li&gt;Fixed bug with dom.extractContents() method moving extracted element
+				children into the returned documentFragment&lt;/li&gt;
+			&lt;li&gt;Fixed bug with valueChanged event causing an error if the editor is
+				destroyed before it has finished its checks.&lt;/li&gt;
+			&lt;li&gt;Enabled valueChanged on sourceMode.&lt;/li&gt;
+			&lt;li&gt;Updated the Brazilian Portuguese translation.
+			 &amp;ndash; Thanks to @martec&lt;/li&gt;
+			&lt;li&gt;Fixed HTML to BBCode newline handling causing extra newlines to be added.
+			 &amp;ndash; Thanks to @jetand for reporting.&lt;/li&gt;
+			&lt;li&gt;Added SaurceLabs integration to automatically run QUnit tests in multiple
+				browsers.&lt;/li&gt;
+			&lt;li&gt;Added undo plugin.
+			 &amp;ndash; Thanks to @brunoais for creating.&lt;/li&gt;
+			&lt;li&gt;Added galician and catalan translations and updated Spanish translation.
+			 &amp;ndash; Thanks to @FranSobrino for translating.&lt;/li&gt;
+			&lt;li&gt;Fixed bug with FF causing newline to appear when something is typed.
+			 &amp;ndash; Thanks to @q2apro for reporting.&lt;/li&gt;
+			&lt;li&gt;Fixed bug with spaces sometimes disappearing from pasted text when using the
+				XHTML plugin.
+			 &amp;ndash; Thanks to @q2apro for reporting.&lt;/li&gt;
+			&lt;li&gt;Fixed issue with YouTube not showing fullscreen button inside the editor.
+			 &amp;ndash; Thanks to @kron-1 for reporting.&lt;/li&gt;
+			&lt;li&gt;Fixed bug causing window to scroll when blur is called in FF.
+			 &amp;ndash; Thanks to @spuds for reporting.&lt;/li&gt;
+			&lt;li&gt;Remove deprecated keyPress property from commands.&lt;/li&gt;
+			&lt;li&gt;Fixed bug with button states not being updated when called via shortcuts.
+			 &amp;ndash; Thanks to @echteinfachtv for reporting.&lt;/li&gt;
+			&lt;li&gt;Added Lithuanian translation.
+			 &amp;ndash; Thanks to @q2apro for translating.&lt;/li&gt;
+			&lt;li&gt;Fixed bug causing newlines to not always be added when return is pressed
+				at the end of quotes and code blocks.
+			 &amp;ndash; Thanks to @barbuslex for reporting.&lt;/li&gt;
+			&lt;li&gt;Changed the http:// value in inputs to be a placeholder.&lt;/li&gt;
+			&lt;li&gt;Changed createDropDown() to focus on the first input or textarea element.&lt;/li&gt;
+			&lt;li&gt;Fixed bug with lists inside quote blocks.
+			 &amp;ndash; Thanks to @barbuslex for reporting.&lt;/li&gt;
+			&lt;li&gt;Fixed bug with code blocks not being removed when backspace is pressed.&lt;/li&gt;
+			&lt;li&gt;Fixed bug with IE not removing blocks when backspace is pressed.&lt;/li&gt;
+			&lt;li&gt;Added optional description to email dropdown.
+			 &amp;ndash; Thanks to @PaulBender for suggesting.&lt;/li&gt;
+			&lt;li&gt;Fixed bug with autoUpdate causing double clicking on [sub]/[sup] to not
+				remove styling.
+			 &amp;ndash; Thanks to @q2apro for reporting.&lt;/li&gt;
+			&lt;li&gt;Fixed possible XSS attack in IE &amp;lt;= 8 when using BBCode plugin to edit
+				malicious BBCode.&lt;/li&gt;
+			&lt;li&gt;Improved build and added CSS autoprefixer.
+			 &amp;ndash; Thanks to @Gazenwagen for improving&lt;/li&gt;
+			&lt;li&gt;Added Czech translation
+			 &amp;ndash; Thanks to Daniel Vítek for translating&lt;/li&gt;
+			&lt;li&gt;Fixed source button not showing as active when in source mode.
+			 &amp;ndash; Thanks to @cyphix333 for reporting.&lt;/li&gt;
+			&lt;li&gt;Fixed bug with extra newlines being ad
+			 &amp;ndash; Thanks to @cyphix333 for reporting.&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Version 1.4.5 released</title>
@@ -51,7 +141,7 @@
 		 &amp;ndash; Thanks to @spuds for reporting.
 		&lt;li&gt;Fixed FF bug with dropdowns not opening via shortcuts.&lt;/li&gt;
 		 &amp;ndash; Thanks to @echteinfachtv for reporting.
-		&lt;li&gt;Improved inserting so only scrolls if the end of the inserted HTML isn't in view.&lt;/li&gt;
+		&lt;li&gt;Improved inserting so only scrolls if the end of the inserted HTML isn&#39;t in view.&lt;/li&gt;
 		&lt;li&gt;Added zh-TW translation.&lt;/li&gt;
 		 &amp;ndash; Thanks to @gan068 for translating.
 		&lt;li&gt;Updated Polish translation.&lt;/li&gt;
@@ -183,7 +273,7 @@
 		&lt;li&gt;Improved the XHTML plugin.&lt;/li&gt;
 		&lt;li&gt;Fixed bug with XHTML plugin outputting &lt;br /&gt; when editor is empty.
 		 &amp;ndash; Thanks to @tim-se for reporting&lt;/li&gt;
-		&lt;li&gt;Fixed Mozilla's junk attributes, type=&quot;_moz&quot;, _moz_dirty=&quot;&quot; and _moz_editor_bogus_node.
+		&lt;li&gt;Fixed Mozilla&#39;s junk attributes, type=&quot;_moz&quot;, _moz_dirty=&quot;&quot; and _moz_editor_bogus_node.
 		 &amp;ndash; Thanks to @tim-se for reporting&lt;/li&gt;
 		&lt;li&gt;Added XHTML format plugin.&lt;/li&gt;
 		&lt;li&gt;Added shortcut support.&lt;/li&gt;
@@ -455,7 +545,7 @@ next set of new features will be in the 1.4.0 version.&lt;/p&gt;
 		&lt;li&gt;Added a roadmap to the GitHub wiki&lt;/li&gt;
 		&lt;li&gt;Added height and width methods&lt;/li&gt;
 		&lt;li&gt;Added method to check for WYSIWYG support&lt;/li&gt;
-		&lt;li&gt;Changed so that by default the editor won't start in browsers that do not support WYSIWYG editing (old mobile browsers)&lt;/li&gt;
+		&lt;li&gt;Changed so that by default the editor won&#39;t start in browsers that do not support WYSIWYG editing (old mobile browsers)&lt;/li&gt;
 		&lt;li&gt;Added rtl option along with rtl &amp;amp; ltr commands&lt;/li&gt;
 		&lt;li&gt;Added id option&lt;/li&gt;
 		&lt;li&gt;Added sourceMode, val, insertText and insert methods&lt;/li&gt;
@@ -483,15 +573,15 @@ next set of new features will be in the 1.4.0 version.&lt;/p&gt;
 &lt;script&gt;
 	// Source: http://www.backalleycoder.com/2011/03/20/link-tag-css-stylesheet-load-event/
 	var loadCSS = function(url, callback){
-		var link = document.createElement('link');
-		link.type = 'text/css';
-		link.rel = 'stylesheet';
+		var link = document.createElement(&#39;link&#39;);
+		link.type = &#39;text/css&#39;;
+		link.rel = &#39;stylesheet&#39;;
 		link.href = url;
-		link.id = 'theme-style';
+		link.id = &#39;theme-style&#39;;
 	
-		document.getElementsByTagName('head')[0].appendChild(link);
+		document.getElementsByTagName(&#39;head&#39;)[0].appendChild(link);
 	
-		var img = document.createElement('img');
+		var img = document.createElement(&#39;img&#39;);
 		img.onerror = function(){
 			if(callback)
 				setTimeout(function() { callback(link); }, 250);
@@ -502,7 +592,7 @@ next set of new features will be in the 1.4.0 version.&lt;/p&gt;
 	$(function() {
 		var initEditor = function() {
 			$(&quot;textarea&quot;).sceditor({
-				plugins: 'bbcode',
+				plugins: &#39;bbcode&#39;,
 				style: &quot;/minified/jquery.sceditor.default.min.css&quot;
 			});
 		};
@@ -598,7 +688,7 @@ next set of new features will be in the 1.4.0 version.&lt;/p&gt;
 &lt;script&gt;
 $(function() {
 	$(&quot;#demo-toggle&quot;).sceditor({
-		plugins: 'bbcode',
+		plugins: &#39;bbcode&#39;,
 		toolbar: &quot;bold,italic,underline|source&quot;,
 		style: &quot;/minified/jquery.sceditor.default.min.css&quot;,
 		emoticonsRoot: &quot;/&quot;
@@ -620,7 +710,7 @@ function toggle()
 &lt;pre class=&quot;prettyprint linenums&quot;&gt;
 $function() {
 	$(&quot;#demo-toggle&quot;).sceditor({
-		plugins: 'bbcode',
+		plugins: &#39;bbcode&#39;,
 		toolbar: &quot;bold,italic,underline|source&quot;,
 		style: &quot;/minified/jquery.sceditor.default.min.css&quot;
 	});
@@ -658,7 +748,7 @@ $(&quot;#demo-toggle&quot;).data(&quot;sceditor&quot;).sourceMode(false);
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/minified/themes/default.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;/minified/jquery.sceditor.bbcode.min.js&quot;&gt; &lt;/script&gt;
 &lt;style&gt;
-	.sceditor-button-headers div { background: url('/misc/headers-button.png'); }
+	.sceditor-button-headers div { background: url(&#39;/misc/headers-button.png&#39;); }
 	.sceditor-header-option {
 		display: block;
 		cursor: pointer;
@@ -687,13 +777,13 @@ $.sceditor.command.set(&quot;headers&quot;, {
 
 		for (var i=1; i&lt;= 6; i++) {
 			$(
-				'&lt;a class=&quot;sceditor-header-option&quot; href=&quot;#&quot;&gt;' +
-					'&lt;h' + i + '&gt;Heading ' + i + '&lt;/h' + i + '&gt;' +
-				'&lt;/a&gt;'
+				&#39;&lt;a class=&quot;sceditor-header-option&quot; href=&quot;#&quot;&gt;&#39; +
+					&#39;&lt;h&#39; + i + &#39;&gt;Heading &#39; + i + &#39;&lt;/h&#39; + i + &#39;&gt;&#39; +
+				&#39;&lt;/a&gt;&#39;
 			)
-			.data('headersize', i)
+			.data(&#39;headersize&#39;, i)
 			.click(function (e) {
-				editor.execCommand(&quot;formatblock&quot;, &quot;&lt;h&quot; + $(this).data('headersize') + &quot;&gt;&quot;);
+				editor.execCommand(&quot;formatblock&quot;, &quot;&lt;h&quot; + $(this).data(&#39;headersize&#39;) + &quot;&gt;&quot;);
 				editor.closeDropDown(true);
 
 				e.preventDefault();
@@ -715,7 +805,7 @@ $.sceditor.command.set(&quot;headers&quot;, {
 		.set(&quot;h6&quot;, { tags: { h6: null }, format: &quot;[h6]{0}[/h6]&quot;, html: &quot;&lt;h6&gt;{0}&lt;/h6&gt;&quot; });
 
 	$(&quot;#demo-cust-cmd&quot;).sceditor({
-		plugins: 'bbcode',
+		plugins: &#39;bbcode&#39;,
 		toolbar: &quot;headers|source&quot;,
 		style: &quot;/minified/jquery.sceditor.default.min.css&quot;,
 		emoticonsRoot: &quot;/&quot;
@@ -739,19 +829,19 @@ $.sceditor.command.set(&quot;headers&quot;, {
         // Create the 1-6 header options
         for (var i=1; i&lt;= 6; i++) {
             $(
-                '&amp;lt;a class=&quot;sceditor-header-option&quot; href=&quot;#&quot;&amp;gt;' +
-                    '&amp;lt;h' + i + '&amp;gt;Heading ' + i + '&amp;lt;/h' + i + '&amp;gt;' +
-                '&amp;lt;/a&amp;gt;'
+                &#39;&amp;lt;a class=&quot;sceditor-header-option&quot; href=&quot;#&quot;&amp;gt;&#39; +
+                    &#39;&amp;lt;h&#39; + i + &#39;&amp;gt;Heading &#39; + i + &#39;&amp;lt;/h&#39; + i + &#39;&amp;gt;&#39; +
+                &#39;&amp;lt;/a&amp;gt;&#39;
             )
-            .data('headersize', i)
+            .data(&#39;headersize&#39;, i)
             .click(function (e) {
                 // When the option is clicked call the native contenteditable
                 // formatblock to format this block to the header
                 // 
-                // It's nearly always better to use the editors methods like
+                // It&#39;s nearly always better to use the editors methods like
                 // insert() over the browsers native execCommand as 
                 // execCommand has many browser incompatibilites.
-                editor.execCommand(&quot;formatblock&quot;, &quot;&amp;lt;h&quot; + $(this).data('headersize') + &quot;&amp;gt;&quot;);
+                editor.execCommand(&quot;formatblock&quot;, &quot;&amp;lt;h&quot; + $(this).data(&#39;headersize&#39;) + &quot;&amp;gt;&quot;);
                 editor.closeDropDown(true);
 
                 e.preventDefault();
@@ -767,7 +857,7 @@ $.sceditor.command.set(&quot;headers&quot;, {
 
 &lt;p&gt;Add the commands CSS:&lt;/p&gt;
 &lt;pre class=&quot;prettyprint linenums&quot;&gt;
-.sceditor-button-headers div { background: url('/images/headers-button.png'); }
+.sceditor-button-headers div { background: url(&#39;/images/headers-button.png&#39;); }
 .sceditor-header-option {
     display: block;
     cursor: pointer;
@@ -792,7 +882,7 @@ $.sceditor.plugins.bbcode.bbcode
 &lt;p&gt;Finally add the command to the toolbar of the editor:&lt;/p&gt;
 &lt;pre class=&quot;prettyprint linenums&quot;&gt;
 $(&quot;#demo-cust-cmd&quot;).sceditor({
-    plugins: 'bbcode',
+    plugins: &#39;bbcode&#39;,
     toolbar: &quot;headers|source&quot;,
 });
 &lt;/pre&gt;
@@ -884,9 +974,9 @@ $(&quot;#demo-cust-cmd&quot;).sceditor({
 &lt;script&gt;
 $(document).ready(function() {
 	$(&quot;#demo-image&quot;).sceditor({
-		plugins: 'bbcode',
+		plugins: &#39;bbcode&#39;,
 		style: &quot;/minified/jquery.sceditor.default.min.css&quot;,
-		emoticonsRoot: '/'
+		emoticonsRoot: &#39;/&#39;
 	});
 
 	window.sceditorInstance = $(&quot;#demo-image&quot;).sceditor(&quot;instance&quot;);
@@ -922,9 +1012,9 @@ $(document).ready(function() {
 
 &lt;h2&gt;Code behind&lt;/h2&gt;
 
-&lt;p&gt;Quite a few people have asked how to upload and insert images into the editor so I've decided to make this little demo with the ImageShack API.&lt;/p&gt;
+&lt;p&gt;Quite a few people have asked how to upload and insert images into the editor so I&#39;ve decided to make this little demo with the ImageShack API.&lt;/p&gt;
 
-&lt;p&gt;All that's really needed to insert an image is to call &lt;code&gt;wysiwygEditorInsertHtml()&lt;/code&gt; or even just &lt;code&gt;insert()&lt;/code&gt; on an editor instance. &lt;code&gt;insert()&lt;/code&gt; accepts BBCode if using the BBCode plugin, otherwise it accepts HTML.&lt;/p&gt;
+&lt;p&gt;All that&#39;s really needed to insert an image is to call &lt;code&gt;wysiwygEditorInsertHtml()&lt;/code&gt; or even just &lt;code&gt;insert()&lt;/code&gt; on an editor instance. &lt;code&gt;insert()&lt;/code&gt; accepts BBCode if using the BBCode plugin, otherwise it accepts HTML.&lt;/p&gt;
 
 &lt;h4&gt;Setup the editor &amp;amp; upload form&lt;/h4&gt;
 &lt;pre class=&quot;prettyprint linenums&quot;&gt;
@@ -1019,28 +1109,28 @@ else if(queryString.message)
 
 &lt;script&gt;$(function() {
 	$(&quot;#demo-quote&quot;).sceditor({
-		plugins: 'bbcode',
+		plugins: &#39;bbcode&#39;,
 		style: &quot;/minified/jquery.sceditor.default.min.css&quot;,
-		emoticonsRoot: '/'
+		emoticonsRoot: &#39;/&#39;
 	});
 });
 
 function insertQuote(includeAuthor)
 {
-	// first get the editor's instance
+	// first get the editor&#39;s instance
 	var editor = $(&quot;#demo-quote&quot;).sceditor(&quot;instance&quot;);
 
 	// execute the insert command
 	if(includeAuthor)
-		editor.insert('[quote=author]This is an [b]example[/b] quote.[/quote]');
+		editor.insert(&#39;[quote=author]This is an [b]example[/b] quote.[/quote]&#39;);
 	else
-		editor.insert('[quote]This is an [b]example[/b] quote.[/quote]');
+		editor.insert(&#39;[quote]This is an [b]example[/b] quote.[/quote]&#39;);
 }
 
 &lt;/script&gt;
 
-&lt;p&gt;&lt;textarea style=&quot;width:600px; height:300px&quot; id=&quot;demo-quote&quot;&gt;This [b]is[/b] [color=#ff0000]a[/color] [size=3]demo[/size] :).&lt;/textarea&gt;
-&lt;a href=&quot;javascript:insertQuote();&quot;&gt;Insert Quote&lt;/a&gt; | &lt;a href=&quot;javascript:insertQuote(true);&quot;&gt;Insert Quote with author&lt;/a&gt;&lt;/p&gt;
+&lt;textarea style=&quot;width:600px; height:300px&quot; id=&quot;demo-quote&quot;&gt;This [b]is[/b] [color=#ff0000]a[/color] [size=3]demo[/size] :).&lt;/textarea&gt;
+&lt;p&gt;&lt;a href=&quot;javascript:insertQuote();&quot;&gt;Insert Quote&lt;/a&gt; | &lt;a href=&quot;javascript:insertQuote(true);&quot;&gt;Insert Quote with author&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2&gt;Code behind&lt;/h2&gt;
 
@@ -1052,7 +1142,7 @@ e.g.:&lt;/p&gt;
 var editor = $(&quot;#demo-quote&quot;).sceditor(&quot;instance&quot;);
 
 // Insert some BBCode
-editor.insert('[quote=author]This is an [b]example[/b] quote.[/quote]');
+editor.insert(&#39;[quote=author]This is an [b]example[/b] quote.[/quote]&#39;);
 &lt;/pre&gt;
 
 </content>
@@ -1070,14 +1160,14 @@ editor.insert('[quote=author]This is an [b]example[/b] quote.[/quote]');
 &lt;script type=&quot;text/javascript&quot; src=&quot;/minified/jquery.sceditor.xhtml.min.js&quot;&gt; &lt;/script&gt;
 
 &lt;script&gt;$(function() {
-	$('#demo-bbcode').sceditor({
-		style: '/minified/jquery.sceditor.default.min.css',
-		emoticonsRoot: '/',
-		plugins: 'xhtml'
+	$(&#39;#demo-bbcode&#39;).sceditor({
+		style: &#39;/minified/jquery.sceditor.default.min.css&#39;,
+		emoticonsRoot: &#39;/&#39;,
+		plugins: &#39;xhtml&#39;
 	});
 });&lt;/script&gt;
 
-&lt;p&gt;&lt;textarea style=&quot;width:600px; height:300px&quot; id=&quot;demo-bbcode&quot;&gt;This &amp;lt;strong&amp;gt;is&amp;lt;/strong&amp;gt; &amp;lt;span style=&quot;color:#ff0000&quot;&amp;gt;a&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;font-size: 16px;&quot;&amp;gt;demo&amp;lt;/span&amp;gt; :).&lt;/textarea&gt;&lt;/p&gt;
+&lt;textarea style=&quot;width:600px; height:300px&quot; id=&quot;demo-bbcode&quot;&gt;This &amp;lt;strong&amp;gt;is&amp;lt;/strong&amp;gt; &amp;lt;span style=&quot;color:#ff0000&quot;&amp;gt;a&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;font-size: 16px;&quot;&amp;gt;demo&amp;lt;/span&amp;gt; :).&lt;/textarea&gt;
 
 &lt;h2&gt;Code behind&lt;/h2&gt;
 
@@ -1090,7 +1180,7 @@ editor.insert('[quote=author]This is an [b]example[/b] quote.[/quote]');
 &amp;lt;!-- Include the default SCEditor theme --&amp;gt;
 &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;minified/jquery.sceditor.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&amp;gt;
 
-&amp;lt;!-- Include SCEditor's JS --&amp;gt;
+&amp;lt;!-- Include SCEditor&#39;s JS --&amp;gt;
 &amp;lt;script type=&quot;text/javascript&quot; src=&quot;minified/jquery.sceditor.bbcode.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
 
 &lt;h3&gt;Initialize SCEditor:&lt;/h3&gt;
@@ -1130,14 +1220,15 @@ $(function() {
 &lt;script type=&quot;text/javascript&quot; src=&quot;/minified/jquery.sceditor.bbcode.min.js&quot;&gt; &lt;/script&gt;
 
 &lt;script&gt;$(function() {
-	$('#demo-bbcode').sceditor({
-		style: '/minified/jquery.sceditor.default.min.css',
-		emoticonsRoot: '/',
-		plugins: 'bbcode'
+	$(&#39;#demo-bbcode&#39;).sceditor({
+		style: &#39;/minified/jquery.sceditor.default.min.css&#39;,
+		emoticonsRoot: &#39;/&#39;,
+		plugins: &#39;bbcode&#39;
 	});
 });&lt;/script&gt;
 
-&lt;p&gt;&lt;textarea style=&quot;width:600px; height:300px&quot; id=&quot;demo-bbcode&quot;&gt;This [b]is[/b] [color=#ff0000]a[/color] [size=3]demo[/size] :).&lt;/textarea&gt;&lt;!--more--&gt;&lt;/p&gt;
+&lt;textarea style=&quot;width:600px; height:300px&quot; id=&quot;demo-bbcode&quot;&gt;This [b]is[/b] [color=#ff0000]a[/color] [size=3]demo[/size] :).&lt;/textarea&gt;
+&lt;!--more--&gt;
 
 &lt;h2&gt;Code behind&lt;/h2&gt;
 
@@ -1150,7 +1241,7 @@ $(function() {
 &amp;lt;!-- Include the default SCEditor theme --&amp;gt;
 &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;minified/jquery.sceditor.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&amp;gt;
 
-&amp;lt;!-- Include SCEditor's JS --&amp;gt;
+&amp;lt;!-- Include SCEditor&#39;s JS --&amp;gt;
 &amp;lt;script type=&quot;text/javascript&quot; src=&quot;minified/jquery.sceditor.bbcode.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
 
 &lt;h3&gt;Initialize SCEditor:&lt;/h3&gt;

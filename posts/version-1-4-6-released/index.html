@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+
+		<title>Version 1.4.6 released - SCEditor</title>
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<link href="http://sceditor.com/atom.xml" rel="alternate" title="SCEditor" type="application/atom+xml" />
+
+		
+	</head>
+
+	<body>
+		<div id="main" class="container">
+			<div id="header">
+				<header>
+					<h1 id="project_title">SCEditor</h1>
+					<p>A lightweight WYSIWYG BBCode &amp; HTML editor</p>
+					</a>
+				</header>
+			</div>
+
+			<div class="navbar active">
+				<nav class="navbar-inner">
+					<ul class="nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="/posts/">Posts</a></li>
+						<li><a href="/documentation/getting-started/">Docs</a></li>
+						<li><a href="/integration/">Forum/CMS Plugins</a></li>
+						<li><a href="/documentation/support-licensing/">Support</a></li>
+						<li><a href="https://github.com/samclarke/SCEditor">GitHub</a></li>
+					</ul>
+
+					<div class="pull-right nav-collapse collapse">
+						<a class="btn btn-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=AVJSF5NEETYYG">Donate</a>
+						<a class="btn btn-primary" href="http://www.sceditor.com/latest.zip">Download</a>
+
+					</div>
+				</nav>
+			</div>
+
+			<div id="content">
+				<section>
+				<div class="post">
+	<h2>Version 1.4.6</h2>
+
+<p>Version 1.4.6 has been released. Thanks to everyone who contributed!</p>
+
+<p>This release is mostly code refactoring and bug fixes. There are a few new translations which have been added too.</p>
+
+<p>From this release onwards the version numbering will use <a href="http://semver.org">Semantic Versioning</a>.</p>
+
+<h3>Full 1.4.6 changelog:</h3>
+
+<div class="well">
+	<ul>
+			<li>Fixed resize issue with Android browsers.
+			 &ndash; Thanks to @scripple for fixing.</li>
+			<li>Fixed bug with table being turned into paragraphs.
+			 &ndash; Thanks to @jetand for fixing.</li>
+			<li>Refactored the code so that it's in modules.
+				The code is now much more readable and far easier to maintain and test.
+				This change is 100% backwards compatible with the minified version and
+				running the build will also create a backwards compatible non-minified
+				version.
+				The non-minified non-built code will require an AMD module loader to
+				load it.</li>
+			<li>Refactored all the unit tests for the new modules.</li>
+			<li>Added manual tests.</li>
+			<li>Fixed bug with RangeHelper.getOuterText() in IE &lt; 9 when getting text after</li>
+			<li>Fixed bug with RangeHelper.insertNode() in IE &lt; 9 when inserting a documentFragment</li>
+			<li>Fixed bug with dom.extractContents() method moving extracted element
+				children into the returned documentFragment</li>
+			<li>Fixed bug with valueChanged event causing an error if the editor is
+				destroyed before it has finished its checks.</li>
+			<li>Enabled valueChanged on sourceMode.</li>
+			<li>Updated the Brazilian Portuguese translation.
+			 &ndash; Thanks to @martec</li>
+			<li>Fixed HTML to BBCode newline handling causing extra newlines to be added.
+			 &ndash; Thanks to @jetand for reporting.</li>
+			<li>Added SaurceLabs integration to automatically run QUnit tests in multiple
+				browsers.</li>
+			<li>Added undo plugin.
+			 &ndash; Thanks to @brunoais for creating.</li>
+			<li>Added galician and catalan translations and updated Spanish translation.
+			 &ndash; Thanks to @FranSobrino for translating.</li>
+			<li>Fixed bug with FF causing newline to appear when something is typed.
+			 &ndash; Thanks to @q2apro for reporting.</li>
+			<li>Fixed bug with spaces sometimes disappearing from pasted text when using the
+				XHTML plugin.
+			 &ndash; Thanks to @q2apro for reporting.</li>
+			<li>Fixed issue with YouTube not showing fullscreen button inside the editor.
+			 &ndash; Thanks to @kron-1 for reporting.</li>
+			<li>Fixed bug causing window to scroll when blur is called in FF.
+			 &ndash; Thanks to @spuds for reporting.</li>
+			<li>Remove deprecated keyPress property from commands.</li>
+			<li>Fixed bug with button states not being updated when called via shortcuts.
+			 &ndash; Thanks to @echteinfachtv for reporting.</li>
+			<li>Added Lithuanian translation.
+			 &ndash; Thanks to @q2apro for translating.</li>
+			<li>Fixed bug causing newlines to not always be added when return is pressed
+				at the end of quotes and code blocks.
+			 &ndash; Thanks to @barbuslex for reporting.</li>
+			<li>Changed the http:// value in inputs to be a placeholder.</li>
+			<li>Changed createDropDown() to focus on the first input or textarea element.</li>
+			<li>Fixed bug with lists inside quote blocks.
+			 &ndash; Thanks to @barbuslex for reporting.</li>
+			<li>Fixed bug with code blocks not being removed when backspace is pressed.</li>
+			<li>Fixed bug with IE not removing blocks when backspace is pressed.</li>
+			<li>Added optional description to email dropdown.
+			 &ndash; Thanks to @PaulBender for suggesting.</li>
+			<li>Fixed bug with autoUpdate causing double clicking on [sub]/[sup] to not
+				remove styling.
+			 &ndash; Thanks to @q2apro for reporting.</li>
+			<li>Fixed possible XSS attack in IE &lt;= 8 when using BBCode plugin to edit
+				malicious BBCode.</li>
+			<li>Improved build and added CSS autoprefixer.
+			 &ndash; Thanks to @Gazenwagen for improving</li>
+			<li>Added Czech translation
+			 &ndash; Thanks to Daniel Vítek for translating</li>
+			<li>Fixed source button not showing as active when in source mode.
+			 &ndash; Thanks to @cyphix333 for reporting.</li>
+			<li>Fixed bug with extra newlines being ad
+			 &ndash; Thanks to @cyphix333 for reporting.</li>
+	</ul>
+</div>
+
+
+<p>If you are interested in new releases, subscribe to the <a href="http://sceditor.com/release.xml">releases RSS</a>.</p>
+
+</div>
+
+
+
+
+<div id="comments">
+        <div id="disqus_thread"></div>
+	<script type="text/javascript">
+	var disqus_shortname = 'sceditor';
+
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+				</section>
+			</div>
+
+			<div id="footer">
+				<footer>
+					<p class="muted credit">Website by <a href="https://github.com/samclarke">samclarke</a> &copy; 2013 &ndash;
+						Hosted by <a href="http://pages.github.com">GitHub Pages</a>
+						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/_posts/2015-02-26-version-1-4-6-released.md">Edit this page</a></span></p>
+				</footer>
+			</div>
+		</div>
+
+		<script src="/scripts.js"></script>
+		<script>
+			$(prettyPrint());
+		</script>
+		<!-- Piwik -->
+		<script>
+			var purl = "//www.samclarke.com/piwik/";
+			document.write(unescape("%3Cscript src='" + purl + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script>
+		try {
+			var p = Piwik.getTracker(purl + "piwik.php", 2);
+			p.trackPageView();
+			p.enableLinkTracking();
+		} catch( err ) {}
+		</script>
+		<noscript><p style="height: 0; width: 0;"><img src="//www.samclarke.com/piwik/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+		<!-- End Piwik -->
+	</body>
+</html>
