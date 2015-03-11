@@ -6,9 +6,44 @@
 		<atom:link href="http://sceditor.com/rss.xml" rel="self" type="application/rss+xml" />
 		<description>SCEditor posts and releases RSS feed</description>
 		<language>en</language>
-	<pubDate>Mon, 02 Mar 2015 20:44:24 +0000</pubDate>
-	<lastBuildDate>Mon, 02 Mar 2015 20:44:24 +0000</lastBuildDate>
+	<pubDate>Wed, 11 Mar 2015 22:11:21 +0000</pubDate>
+	<lastBuildDate>Wed, 11 Mar 2015 22:11:21 +0000</lastBuildDate>
 
+	
+	<item>
+		<title>Version 1.4.7 released</title>
+		<link>http://sceditor.com/posts/version-1-4-7-released</link>
+		<pubDate>Wed, 11 Mar 2015 00:00:00 +0000</pubDate>
+		<author>sam@samclarke.com (Sam Clarke)</author>
+		<guid>http://sceditor.com/posts/version-1-4-7-released</guid>
+		<description>&lt;h2&gt;Version 1.4.7&lt;/h2&gt;
+
+&lt;p&gt;Version 1.4.7 has been released. Thanks to everyone who contributed!&lt;/p&gt;
+
+&lt;p&gt;This release is mostly to fix a bug with buttons being disabled in source mode.&lt;/p&gt;
+
+&lt;h3&gt;Full 1.4.7 changelog:&lt;/h3&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Fixed bug with XHTML plugin not wrapping inline nodes in paragraphs.
+			&amp;ndash; Thanks to @Heart1010 for reporting&lt;/li&gt;
+		&lt;li&gt;Fixed bug with buttons appearing disabled in source mode.
+			&amp;ndash; Thanks to @brunoais for reporting.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with undo plugin when the valueChanged event is triggered before the ready event.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with undo plugin and IE &amp;lt; 8 compatibility.&lt;/li&gt;
+		&lt;li&gt;Fixed bug in IE where styles are not applied to text inside of a table cell.
+			&amp;ndash; Thanks to @AlbertPraveen for reporting.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with IE placing cursor at the start of the editor when a dropdown contains a textarea or input.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with FF showing the cursor in the wrong position when it hasn&#39;t had focus before.
+			&amp;ndash; Thanks to @cyphix333 for reporting.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with IE placing cursor inside table tag when inserted.
+			&amp;ndash; Thanks to @jetand for reporting.&lt;/li&gt;
+		&lt;li&gt;Fixed bug with IE placing the cursor before emoticons after inserting them.&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+	</item>
 	
 	<item>
 		<title>Version 1.4.6 released</title>

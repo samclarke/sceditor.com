@@ -7,7 +7,7 @@
 
 		
 
-		<title>Forum/CMS Plugins - SCEditor</title>
+		<title>Version 1.4.7 released - SCEditor</title>
 
 		<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -52,29 +52,57 @@
 
 			<div id="content">
 				<section>
-				<h3>MyBB</h3>
+				<div class="post">
+	<h2>Version 1.4.7</h2>
 
-<p>The MyBB forum plugin can be <a href="https://github.com/samclarke/SCEditor-MyBB/tags">downloaded here</a>.</p>
+<p>Version 1.4.7 has been released. Thanks to everyone who contributed!</p>
 
-<p>If you find any bugs or have any suggestions please use the <a href="https://github.com/samclarke/SCEditor-MyBB/issues">GitHub issues page</a> to report them.</p>
+<p>This release is mostly to fix a bug with buttons being disabled in source mode.</p>
 
-<h3>PunBB</h3>
+<h3>Full 1.4.7 changelog:</h3>
 
-<p>The PunBB forum plugin can be <a href="https://github.com/samclarke/SCEditor-PunBB/tags">downloaded here</a>.</p>
+<div class="well">
+	<ul>
+		<li>Fixed bug with XHTML plugin not wrapping inline nodes in paragraphs.
+			&ndash; Thanks to @Heart1010 for reporting</li>
+		<li>Fixed bug with buttons appearing disabled in source mode.
+			&ndash; Thanks to @brunoais for reporting.</li>
+		<li>Fixed bug with undo plugin when the valueChanged event is triggered before the ready event.</li>
+		<li>Fixed bug with undo plugin and IE &lt; 8 compatibility.</li>
+		<li>Fixed bug in IE where styles are not applied to text inside of a table cell.
+			&ndash; Thanks to @AlbertPraveen for reporting.</li>
+		<li>Fixed bug with IE placing cursor at the start of the editor when a dropdown contains a textarea or input.</li>
+		<li>Fixed bug with FF showing the cursor in the wrong position when it hasn't had focus before.
+			&ndash; Thanks to @cyphix333 for reporting.</li>
+		<li>Fixed bug with IE placing cursor inside table tag when inserted.
+			&ndash; Thanks to @jetand for reporting.</li>
+		<li>Fixed bug with IE placing the cursor before emoticons after inserting them.</li>
+	</ul>
+</div>
 
-<p>If you find any bugs or have any suggestions please use the <a href="https://github.com/samclarke/SCEditor-PunBB/issues">GitHub issues page</a> to report them.</p>
 
-<h3>Question2Answer</h3>
+<p>If you are interested in new releases, subscribe to the <a href="http://sceditor.com/release.xml">releases RSS</a>.</p>
 
-<p>There is a premium plugin for Question2Answer by <a href="http://www.q2apro.com/plugins/sceditor">Q2A Pro</a> which is <a href="http://www.q2apro.com/plugins/sceditor">available here</a>.</p>
+</div>
 
-<h3>SMF</h3>
 
-<p>There is a paid plugin for SMF from <a href="http://www.smfpacks.com/wysiwyg">SMFPacks here</a> which is <a href="http://www.smfpacks.com/wysiwyg">available here</a>.</p>
 
-<h3>Plugin missing?</h3>
 
-<p>If you have have written a plugin for SCEditor and would like it listed here please let me know by sending an email to <code>sam [at] sceditor.com</code>.</p>
+<div id="comments">
+        <div id="disqus_thread"></div>
+	<script type="text/javascript">
+	var disqus_shortname = 'sceditor';
+
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
 
 				</section>
 			</div>
@@ -83,7 +111,7 @@
 				<footer>
 					<p class="muted credit">Website by <a href="https://github.com/samclarke">samclarke</a> &copy; 2013 &ndash;
 						Hosted by <a href="http://pages.github.com">GitHub Pages</a>
-						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/integration.md">Edit this page</a></span></p>
+						<span class="pull-right"><a href="https://github.com/samclarke/sceditor.com/blob/source/_posts/2015-03-11-version-1-4-7-released.md">Edit this page</a></span></p>
 				</footer>
 			</div>
 		</div>
