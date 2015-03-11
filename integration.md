@@ -22,9 +22,14 @@ If you find any bugs or have any suggestions please use the [GitHub issues page]
 
 ### Question2Answer
 
-There is a premium plugin for Question2Answer from [Q2A Pro available here](http://www.q2apro.com/plugins/sceditor).
+There is a premium plugin for Question2Answer by [Q2A Pro](http://www.q2apro.com/plugins/sceditor) which is [available here](http://www.q2apro.com/plugins/sceditor).
 
 
-#### Plugin missing?
+### SMF
+
+There is a paid plugin for SMF from [SMFPacks here](http://www.smfpacks.com/wysiwyg) which is [available here](http://www.smfpacks.com/wysiwyg).
+
+
+### Plugin missing?
 
 If you have have written a plugin for SCEditor and would like it listed here please let me know by sending an email to `sam [at] sceditor.com`.
