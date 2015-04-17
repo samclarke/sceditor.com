@@ -12,6 +12,11 @@ The MyBB forum plugin can be [downloaded here](https://github.com/samclarke/SCEd
 If you find any bugs or have any suggestions please use the [GitHub issues page](https://github.com/samclarke/SCEditor-MyBB/issues) to report them.
 
 
+### PHPBB
+
+There is a free plugin for phpBB 3.1.x [available here](https://www.phpbb.com/community/viewtopic.php?f=456&t=2307121).
+
+
 ### PunBB
 
 
