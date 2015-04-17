@@ -6,8 +6,8 @@
 		<atom:link href="http://sceditor.com/rss.xml" rel="self" type="application/rss+xml" />
 		<description>SCEditor posts and releases RSS feed</description>
 		<language>en</language>
-	<pubDate>Wed, 11 Mar 2015 22:11:21 +0000</pubDate>
-	<lastBuildDate>Wed, 11 Mar 2015 22:11:21 +0000</lastBuildDate>
+	<pubDate>Fri, 17 Apr 2015 12:31:05 +0100</pubDate>
+	<lastBuildDate>Fri, 17 Apr 2015 12:31:05 +0100</lastBuildDate>
 
 	
 	<item>
@@ -1223,7 +1223,7 @@ editor.insert(&#39;[quote=author]This is an [b]example[/b] quote.[/quote]&#39;);
 	});
 });&lt;/script&gt;
 
-&lt;textarea style=&quot;width:600px; height:300px&quot; id=&quot;demo-bbcode&quot;&gt;This &amp;lt;strong&amp;gt;is&amp;lt;/strong&amp;gt; &amp;lt;span style=&quot;color:#ff0000&quot;&amp;gt;a&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;font-size: 16px;&quot;&amp;gt;demo&amp;lt;/span&amp;gt; :).&lt;/textarea&gt;
+&lt;textarea style=&quot;width:600px; height:300px&quot; id=&quot;demo-bbcode&quot;&gt;&amp;lt;p&amp;gt;This &amp;lt;strong&amp;gt;is&amp;lt;/strong&amp;gt; &amp;lt;span style=&quot;color:#ff0000&quot;&amp;gt;a&amp;lt;/span&amp;gt; &amp;lt;span style=&quot;font-size: 16px;&quot;&amp;gt;demo&amp;lt;/span&amp;gt; :).&amp;lt;/p&amp;gt;&lt;/textarea&gt;
 
 &lt;h2&gt;Code behind&lt;/h2&gt;
 
@@ -1234,7 +1234,7 @@ editor.insert(&#39;[quote=author]This is an [b]example[/b] quote.[/quote]&#39;);
 &amp;lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
 
 &amp;lt;!-- Include the default SCEditor theme --&amp;gt;
-&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;minified/jquery.sceditor.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&amp;gt;
+&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;minified/themes/default.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&amp;gt;
 
 &amp;lt;!-- Include SCEditor&#39;s JS --&amp;gt;
 &amp;lt;script type=&quot;text/javascript&quot; src=&quot;minified/jquery.sceditor.bbcode.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
@@ -1296,7 +1296,7 @@ $(function() {
 &amp;lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
 
 &amp;lt;!-- Include the default SCEditor theme --&amp;gt;
-&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;minified/jquery.sceditor.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&amp;gt;
+&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;minified/themes/default.min.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&amp;gt;
 
 &amp;lt;!-- Include SCEditor&#39;s JS --&amp;gt;
 &amp;lt;script type=&quot;text/javascript&quot; src=&quot;minified/jquery.sceditor.bbcode.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
