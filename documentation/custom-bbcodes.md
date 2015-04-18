@@ -148,7 +148,7 @@ If this output HTML for this BBCode is inline or not. Only needs to be set if it
 If null/undefined then all children will be allowed. If it's an array only the tags specified will be allowed. To allow plain text use `#` as the tag name.
 
 To only allow plain text:
-`allowedChildren: [#]`
+`allowedChildren: ['#']`
 
 To only allow bold and italic as children:
 `allowedChildren: ['b', 'i']`
