@@ -339,7 +339,15 @@ If the cursor should be placed at the end when auto focusing or at the beginning
 
 **autoExpand** *bool* Defaults to `false`
 
-If to auto expand the editor to fit the content
+If to auto expand the editor to fit the content.
+
+
+### ignoreMaxHeight <a id="ignoreMaxHeight"></a>
+
+**ignoreMaxHeight** *bool* Defaults to `false`
+ 
+ Only affects behavior when **autoExpand** is set to `true`.
+ If set to true, editor will auto expand passed any maximum height that has been set.
 
 
 ### autoUpdate <a id="autoUpdate"></a>
