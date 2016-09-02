@@ -13,7 +13,7 @@ url_parts:
 {%	assign crumbs = page.url | split: '/' %}
 {%	for crumb in crumbs %}
 {%		unless forloop.last %}
-{%			for part_hash in page.url_parts %}
+{%			for part_hash in layout.url_parts %}
 {%				for part in part_hash %}
 {%					if part[0] == crumb %}
 						<li><a href="{{ base }}{{ crumb }}/">{{ part[1] }}</a> <span class="divider">/</span></li>
@@ -44,7 +44,8 @@ url_parts:
 	<div class="span3">
 		<h5>{{api_title}}</h5>
 		<ul class="nav nav-tabs nav-stacked">
-{% 		sorted_for link in site.html_pages sort_by:title %}
+{% 		assign sorted_pages = (site.html_pages | sort: 'title') %}
+{% 		for link in sorted_pages %}
 {% 			if link.categories contains api_category %}
 {% 				if page.url == link.url %}
 					<li class="active"><a href="{{ link.url }}">{{ link.title }}</a></li>
@@ -52,7 +53,7 @@ url_parts:
 					<li><a href="{{ link.url }}">{{ link.title }}</a></li>
 {% 				endif %}
 {% 			endif %}
-{% 		endsorted_for %}
+{% 		endfor %}
 		</ul>
 	</div>
 	<div class="span9">
@@ -61,7 +62,8 @@ url_parts:
 </div>
 
 <ul class="pager">
-{% sorted_for link in site.html_pages sort_by:title %}
+{% assign sorted_pages = (site.html_pages | sort: 'title') %}
+{% for link in sorted_pages %}
 {% 	if link.categories contains api_category %}
 {% 		if page.url == link.url %}
 {% 			if prev %}
@@ -76,5 +78,5 @@ url_parts:
 {% 			assign prev = link %}
 {% 		endif %}
 {% 	endif %}
-{% endsorted_for %}
+{% endfor %}
 </ul>

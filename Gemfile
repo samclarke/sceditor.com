@@ -1,4 +1,3 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '2.5.3'
-gem 'kramdown', '1.5.0'
+gem 'github-pages', group: :jekyll_plugins

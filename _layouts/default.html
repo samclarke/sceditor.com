@@ -74,18 +74,20 @@
 			$(prettyPrint());
 		</script>
 		<!-- Piwik -->
-		<script>
-			var purl = "//www.samclarke.com/piwik/";
-			document.write(unescape("%3Cscript src='" + purl + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+		<script type="text/javascript">
+			var _paq = _paq || [];
+			_paq.push(["setDomains", ["*.sceditor.com"]]);
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			(function() {
+				var u="//www.samclarke.com/piwik/";
+				_paq.push(['setTrackerUrl', u+'piwik.php']);
+				_paq.push(['setSiteId', '2']);
+				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+				g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+			})();
 		</script>
-		<script>
-		try {
-			var p = Piwik.getTracker(purl + "piwik.php", 2);
-			p.trackPageView();
-			p.enableLinkTracking();
-		} catch( err ) {}
-		</script>
-		<noscript><p style="height: 0; width: 0;"><img src="//www.samclarke.com/piwik/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
-		<!-- End Piwik -->
+		<noscript><p><img src="//www.samclarke.com/piwik/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+		<!-- End Piwik Code -->
 	</body>
 </html>

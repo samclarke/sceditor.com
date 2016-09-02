@@ -1,32 +1,32 @@
 ---
 layout: disqus
 docmenu:
-    - url: /documentation/getting-started/
-      title: Getting started
-    - url: /documentation/options/
-      title: Options
-    - url: '/documentation/plugins/'
-      title: Plugins
-    - url: '/documentation/plugins/bbcode/'
-      title: BBCode Plugin
-    - url: '/documentation/plugins/xhtml/'
-      title: XHTML Plugin
-    - url: '/documentation/custom-commands/'
-      title: Custom Commands
-    - url: '/documentation/custom-bbcodes/'
-      title: Custom BBCodes
-    - url: '/documentation/custom-plugins/'
-      title: Custom Plugins
-    - url: /documentation/theming/
-      title: Theming
-    - url: '/api/'
-      title: API
-    - url: '/documentation/files/'
-      title: Files
-    - url: '/documentation/browser-compatibility/'
-      title: Browser Compatibility
-    - url: '/documentation/support-licensing/'
-      title: Support/Licensing
+  - url: /documentation/getting-started/
+    title: Getting started
+  - url: /documentation/options/
+    title: Options
+  - url: '/documentation/plugins/'
+    title: Plugins
+  - url: '/documentation/plugins/bbcode/'
+    title: BBCode Plugin
+  - url: '/documentation/plugins/xhtml/'
+    title: XHTML Plugin
+  - url: '/documentation/custom-commands/'
+    title: Custom Commands
+  - url: '/documentation/custom-bbcodes/'
+    title: Custom BBCodes
+  - url: '/documentation/custom-plugins/'
+    title: Custom Plugins
+  - url: /documentation/theming/
+    title: Theming
+  - url: '/api/'
+    title: API
+  - url: '/documentation/files/'
+    title: Files
+  - url: '/documentation/browser-compatibility/'
+    title: Browser Compatibility
+  - url: '/documentation/support-licensing/'
+    title: Support/Licensing
 url_parts:
   - plugins: Plugins
 ---
@@ -35,9 +35,10 @@ url_parts:
   <li><a href="/documentation/">Documentation</a> <span class="divider">/</span></li>
 {%  assign base = '/documentation/' %}
 {%  assign crumbs = page.url | split: '/' %}
+{%  assign all_url_parts = layout.url_parts | concat: page.url_parts  %}
 {%  for crumb in crumbs %}
 {%    unless forloop.last %}
-{%      for part_hash in page.url_parts %}
+{%      for part_hash in all_url_parts %}
 {%        for part in part_hash %}
 {%          if part[0] == crumb %}
             <li><a href="{{ base }}{{ crumb }}/">{{ part[1] }}</a> <span class="divider">/</span></li>
@@ -53,7 +54,7 @@ url_parts:
 <div class="row-fluid docs">
 	<div class="span3">
 		<ul class="nav nav-tabs nav-stacked">
-{% 		for link in page.docmenu %}
+{% 		for link in layout.docmenu %}
 {% 			if page.url == link.url %}
 				<li class="active"><a href="{{ link.url }}">{{ link.title }}</a></li>
 {% 			else %}

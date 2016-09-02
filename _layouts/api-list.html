@@ -5,7 +5,8 @@ layout: api
 <h2>{{ page.api_title }}</h2>
 
 <ul class="api-list">
-{% sorted_for link in site.html_pages sort_by:title %}
+{% assign sorted_pages = (site.html_pages | sort: 'title') %}
+{% for link in sorted_pages %}
 	{% if link.categories contains page.api_category %}
 		<li>
 			<a href="{{ link.url }}">{{ link.title }}</a>
@@ -14,5 +15,5 @@ layout: api
 			{% endif %}
 		</li>
 	{% endif %}
-{% endsorted_for %}
+{% endfor %}
 </ul>
