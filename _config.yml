@@ -23,5 +23,5 @@ sceditor:
   version: 1.4.4
   download: http://www.sceditor.com/latest.zip
 
-paginate: 10
-paginate_path: "posts/page:num"
+paginate: 1000
+paginate_path: "/posts/page:num/"
