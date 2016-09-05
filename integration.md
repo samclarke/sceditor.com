@@ -14,7 +14,7 @@ If you find any bugs or have any suggestions please use the [GitHub issues page]
 
 ### PHPBB
 
-There is a free plugin for phpBB 3.1.x [available here](https://www.phpbb.com/community/viewtopic.php?f=456&t=2307121).
+There is a free plugin for phpBB 3.1.x [available here](https://www.phpbb.com/community/viewtopic.php?f=456&t=2322921).
 
 
 ### PunBB
