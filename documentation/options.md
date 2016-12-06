@@ -113,7 +113,7 @@ Should be comma separated list of hex colours with bar (&#124;) characters to si
 For example:
 
 <pre class="prettyprint linenums">
-colors: '#ffff00,#ff00ff,#00ffff|#ff000,#00ff00,#0000ff',
+colors: '#ffff00,#ff00ff,#00ffff|#ff0000,#00ff00,#0000ff',
 </pre>
 
 Would produce:
@@ -125,7 +125,7 @@ Would produce:
         <span class="sceditor-color-option" style="display: block; border: 1px solid #fff; height: 10px; width: 10px; overflow: hidden; background-color: #00ffff" data-color="#00ffff"></span>
     </div>
     <div class="sceditor-color-column" style="float: left;">
-        <span class="sceditor-color-option" style="display: block; border: 1px solid #fff; height: 10px; width: 10px; overflow: hidden; background-color: #ff000" data-color="#ff000"></span>
+        <span class="sceditor-color-option" style="display: block; border: 1px solid #fff; height: 10px; width: 10px; overflow: hidden; background-color: #ff0000" data-color="#ff000"></span>
         <span class="sceditor-color-option" style="display: block; border: 1px solid #fff; height: 10px; width: 10px; overflow: hidden; background-color: #00ff00" data-color="#00ff00"></span>
         <span class="sceditor-color-option" style="display: block; border: 1px solid #fff; height: 10px; width: 10px; overflow: hidden; background-color: #0000ff" data-color="#0000ff"></span>
     </div>
@@ -398,9 +398,31 @@ If to trim the whitespace from the start and end of BBCode. By default the white
 
 **bbcodeTrim** *Boolean* Defaults to `false`
 
-BBCode parser options, only applies if using the editor in BBCode mode.
+<span class="label label-important">Important</span> This only applies if using
+the editor in BBCode mode.
 
-See $.sceditor.BBCodeParser.defaults for list of valid options
+Trims white space from the start and end of editors value.
+
+This does not affect the contents of BBCode tags or white space between them,
+only white space at the start and end of the editors value.
+
+So for example:
+
+```
+
+[b]  example  [/b]
+
+[b]  example  [/b]
+
+```
+
+will become:
+
+```
+[b]  example  [/b]
+
+[b]  example  [/b]
+```
 
 
 ### dropDownCss <a id="dropDownCss"></a>
