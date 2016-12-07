@@ -154,6 +154,10 @@ When the BBCode plugin is enabled, it will add the methods `toBBCode()` and `fro
 
 Converts HTML or a DOM node to a BBCode string.
 
+In order for this method to convert YouTube embed codes into the `[youtube]`
+tag, a `data-youtube-id` attribtue must be added to the YT embed code with the
+value of the YouTube video it embeds.
+
 
 #### Syntax
 
