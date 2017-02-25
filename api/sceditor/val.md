@@ -1,7 +1,7 @@
 ---
 layout: api
 title: val()
-excerpt: Gets or sets teh editors value.
+excerpt: Gets or sets the editors value.
 permalink: /api/sceditor/val/
 categories:
     - Docs

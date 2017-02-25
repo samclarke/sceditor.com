@@ -22,7 +22,7 @@ categories:
 &lt;script type="text/javascript" src="minified/jquery.sceditor.bbcode.min.js">&lt;/script&gt;
 </pre>
 
-The file `jquery.sceditor.bbcode.min.js` has the BBCode plugin bundled with it and the file `jquery.sceditor.xhtml.min.js` has teh XHTML plugin bundled with it.
+The file `jquery.sceditor.bbcode.min.js` has the BBCode plugin bundled with it and the file `jquery.sceditor.xhtml.min.js` has the XHTML plugin bundled with it.
 
 For a complete list of files, see the [Files](/documentation/files/) documentation page.
 
