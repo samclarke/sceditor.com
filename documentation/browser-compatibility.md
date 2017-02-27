@@ -15,19 +15,19 @@ You can set the editor to run in source mode if there is no <abbr title="What Yo
 
 ### Desktop <a id="desktop"></a>
 
- * IE 6+
- * Firefox
  * Chrome &amp; Chromium
- * Opera
+ * Firefox
  * Safari
+ * IE 6+ &amp; Edge
+ * Opera
  * Midora
  * Epiphany
 
 
 ### Mobile <a id="mobile"></a>
 
- * Android browser 534+
+ * Chrome
  * iOS 5+
  * Firefox
- * Chrome
+ * Android browser 534+
 
