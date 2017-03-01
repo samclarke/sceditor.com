@@ -90,6 +90,23 @@ exec: "bold"
 Error message to show if the `exec` fails when calling the browsers native `execCommand()`. Only applies if `exec` is a string.
 
 
+### shortcut <a id="shortcut"></a>
+
+### state <a id="state"></a>
+
+**state** *String or function*
+
+If `state` is a string, it will be passed to the native `queryCommandEnabled`
+and `queryCommandState` methods to get the state.
+
+If `state` is a function if will be passed the parent node and the firstBlock
+parent node as arguments. It should return `-1`, `0` or `1` where:
+
+- `-1` is disabled (can't be pressed)
+- `0` is inactive (default state, can be pressed)
+- `1` is active (shows as pressed)
+
+
 ### txtExec <a id="txtExec"></a>
 
 **txtExec** *String or array*
