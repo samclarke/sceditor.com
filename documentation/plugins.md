@@ -21,3 +21,8 @@ Makes SCEditor output BBCode instead of HTML. For more information see the [BBCo
 ### XHTML <a id="xhtml"></a>
 
 Makes SCEditor output valid XHTML instead of HTML. For more information see the [XHTML plugin page](/documentation/plugins/xhtml/).
+
+
+### Undo <a id="undo"></a>
+
+Enables undo/redo functionality in . For more information see the [undo plugin page](/documentation/plugins/undo/).
