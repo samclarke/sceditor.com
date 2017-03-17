@@ -8,15 +8,12 @@ layout: default
 	<div id="disqus_thread"></div>
 
 	<script>
-	var disqus_shortname = 'sceditor';
-
 	(function() {
-		var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-		d.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.body).appendChild(d);
+		var d = document.createElement('script'); d.async = true;
+		d.src = 'https://sceditor.disqus.com/embed.js';
+		(document.head || document.body).appendChild(d);
 	})();
 	</script>
-	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-	<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
 </div>
 {% endif %}
