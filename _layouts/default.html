@@ -18,10 +18,10 @@
 		<link rel="stylesheet" type="text/css" href="/style.css" />
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-		<link href="http://{{ site.domain }}/atom.xml" rel="alternate" title="{{ site.title }}" type="application/atom+xml" />
+		<link href="https://{{ site.domain }}/atom.xml" rel="alternate" title="{{ site.title }}" type="application/atom+xml" />
 
 		{% if site.feedburner %}
-		<link href="http://feeds.feedburner.com/{{ site.feedburner.id }}" rel="alternate" title="{{ site.title }}" type="application/atom+xml" />
+		<link href="https://feeds.feedburner.com/{{ site.feedburner.id }}" rel="alternate" title="{{ site.title }}" type="application/atom+xml" />
 		{% endif %}
 	</head>
 
@@ -74,17 +74,17 @@
 			$(prettyPrint());
 		</script>
 		<!-- Piwik -->
-		<script type="text/javascript">
+		<script>
 			var _paq = _paq || [];
-			_paq.push(["setDomains", ["*.sceditor.com"]]);
+			_paq.push(['setDomains', ['*.sceditor.com']]);
 			_paq.push(['trackPageView']);
 			_paq.push(['enableLinkTracking']);
 			(function() {
-				var u="//www.samclarke.com/piwik/";
+				var u='https://www.samclarke.com/piwik/';
 				_paq.push(['setTrackerUrl', u+'piwik.php']);
 				_paq.push(['setSiteId', '2']);
 				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-				g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+				g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
 			})();
 		</script>
 		<noscript><p><img src="//www.samclarke.com/piwik/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
