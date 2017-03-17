@@ -8,6 +8,9 @@ layout: default
 	<div id="disqus_thread"></div>
 
 	<script>
+	var disqus_config = function () {
+        this.page.url = 'http://www.sceditor.com{{ page.url }}';
+    };
 	(function() {
 		var d = document.createElement('script'); d.async = true;
 		d.src = 'https://sceditor.disqus.com/embed.js';
