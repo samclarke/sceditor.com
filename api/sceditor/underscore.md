@@ -13,12 +13,14 @@ categories:
 <article class="api method" markdown="1">
 ### <a id="_" href="#_">_(str, args)</a> <span class="since">Since: 1.3.0</span>
 
-Translates a string into the locale language. Replaces {0}, {1}, {2}, ect. with the arguments provided.
+Translates a string into the language current used by the editor.
+
+The strings {0}, {1}, {2}, ect. will be replaced with the arguments provided.
 
 
 #### Syntax
 
-	instance.bind(str[, arg1[, arg2[, ...]]]);
+	instance._(str[, arg1[, arg2[, ...]]]);
 
 
 #### Parameters
@@ -48,8 +50,12 @@ Type: **[String](/api/types/#string)**
 <article class="api examples" markdown="1">
 ### Examples
 
-	var boldTranslation = $('textarea').sceditor('instance')._('Bold');
-	var helloWorld      = $('textarea').sceditor('instance')._('Hello {0}!', 'World');
+```js
+var boldTranslation = instance._('Bold');
+
+// helloWorld will be "Hello World!" or the translated version
+var helloWorld = instance._('Hello {0}!', 'World');
+```
 
 </article>
 </article>
