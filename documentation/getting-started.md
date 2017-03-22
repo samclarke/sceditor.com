@@ -13,13 +13,13 @@ categories:
 
 <pre class="prettyprint linenums">
 &lt;!-- Include jQuery, this can be omitted if it's already included --&gt;
-&lt;script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
 
 &lt;!-- Include the default theme --&gt;
-&lt;link rel="stylesheet" href="minified/themes/default.min.css" type="text/css" media="all" /&gt;
+&lt;link rel="stylesheet" href="minified/themes/default.min.css" media="all" /&gt;
 
 &lt;!-- Include the editors JS --&gt;
-&lt;script type="text/javascript" src="minified/jquery.sceditor.bbcode.min.js">&lt;/script&gt;
+&lt;script src="minified/jquery.sceditor.bbcode.min.js">&lt;/script&gt;
 </pre>
 
 The file `jquery.sceditor.bbcode.min.js` has the BBCode plugin bundled with it and the file `jquery.sceditor.xhtml.min.js` has the XHTML plugin bundled with it.
