@@ -8,8 +8,8 @@ navtitle: Home
 {% if paginator.page != 1 %}
 	{% include posts.html %}
 {% else %}
-	<link rel="stylesheet" type="text/css" href="minified/themes/default.min.css" />
-	<script type="text/javascript" src="minified/jquery.sceditor.bbcode.min.js"></script>
+	<link rel="stylesheet" href="minified/themes/default.min.css" />
+	<script src="minified/jquery.sceditor.bbcode.min.js"></script>
 	<script>$(function() {
 		$("textarea").sceditor({
 			plugins: 'bbcode',
@@ -73,5 +73,8 @@ $(function() {
 
 	<h4>Finished!</h4>
 
-	<p><a class="btn btn-primary btn-large" href="{{ site.sceditor.download }}">Download</a> or <a class="btn btn-large" href="/documentation/">Read the docs</a></p>
+	<p>
+		<a class="btn btn-primary btn-large" href="{{ site.sceditor.download }}">Download</a>
+		or <a class="btn btn-large" href="/documentation/">Read the docs</a>
+	</p>
 {% endif %}
