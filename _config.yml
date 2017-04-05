@@ -23,5 +23,9 @@ sceditor:
   version: 1.4.4
   download: http://www.sceditor.com/latest.zip
 
+collections:
+  api:
+    output: true
+
 paginate: 1000
 paginate_path: "/posts/page:num/"

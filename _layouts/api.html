@@ -40,11 +40,12 @@ url_parts:
 {% 	assign api_category = 'RangeHelper-API' %}
 {% endif %}
 
+{% assign sorted_pages = (site.api | sort: 'title') %}
+
 <div class="row-fluid docs">
 	<div class="span3">
 		<h5>{{api_title}}</h5>
 		<ul class="nav nav-tabs nav-stacked">
-{% 		assign sorted_pages = (site.html_pages | sort: 'title') %}
 {% 		for link in sorted_pages %}
 {% 			if link.categories contains api_category %}
 {% 				if page.url == link.url %}
@@ -62,7 +63,6 @@ url_parts:
 </div>
 
 <ul class="pager">
-{% assign sorted_pages = (site.html_pages | sort: 'title') %}
 {% for link in sorted_pages %}
 {% 	if link.categories contains api_category %}
 {% 		if page.url == link.url %}
