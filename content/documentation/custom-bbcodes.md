@@ -4,7 +4,7 @@ slug: custom-bbcodes
 weight: 5000
 ---
 
-# Adding Custom BBCodes <a id="custom-bbcodes"></a>
+# Custom BBCodes <a id="custom-bbcodes"></a>
 
 
 ## Creating/Updating a BBCode <a id="adding"></a>

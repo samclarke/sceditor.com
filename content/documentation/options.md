@@ -35,9 +35,8 @@ $('textarea').sceditor({
 
 A comma separated list of commands. To separate commands into groups, use the bar character (&#124;) instead of a comma. e.g.: `"bold,italic,underline|source"`
 
-Below is a list of default commands that can be included.
+The default commands bundled with the editor are:
 
-<div class="well" markdown="1">
  * **bold**
  * **italic**
  * **underline**
@@ -53,9 +52,7 @@ Below is a list of default commands that can be included.
  * **color**
  * **removeformat**
  * **cut**  
- * This only works in IE because of security permissions. It's disabled in other browsers.
  * **copy**  
- * This only works in IE because of security permissions. It's disabled in other browsers.
  * **paste**  
  * This only works in IE because of security permissions. It's disabled in other browsers.
  * **pastetext**
@@ -78,7 +75,6 @@ Below is a list of default commands that can be included.
  * **print**
  * **maximize**
  * **source**
-</div>
 
 
 ## toolbarExclude <a id="toolbarexclude"></a>
@@ -90,7 +86,7 @@ Comma separated list of commands to exclude from the toolbar. Leave as `null` to
 
 ## style <a id="style"></a>
 
-**style** *String* Defaults to `"jquery.sceditor.default.css"`
+**style** *String*
 
 URL of the stylesheet to used to style the <abbr title="What You See Is What You Get">WYSIWYG</abbr> editors content.
 

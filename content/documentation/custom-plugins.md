@@ -4,7 +4,7 @@ slug: custom-plugins
 weight: 6000
 ---
 
-# Adding Custom Plugins <a id="custom-plugins"></a>
+# Custom Plugins <a id="custom-plugins"></a>
 
 
 ## Creating a Plugin <a id="creating"></a>

@@ -4,13 +4,13 @@ permalink: /documentation/custom-commands/
 weight: 4000
 ---
 
-# Adding Custom Commands <a id="custom-commands"></a>
+# Custom Commands <a id="custom-commands"></a>
 
 ## Creating/Updating a Custom Command<a id="creating-command"></a>
 
 To add/update a command use the `$.sceditor.command.set()` function.
 
-<span class="Label Label--warning">Warning:</span>  This function will update any existing command with the same name.
+<span class="Label Label--warning">Warning:</span> This function will update any existing command with the same name.
 
 The `$.sceditor.command.set()` function takes two arguments, `name` and `cmd`.
 
@@ -20,14 +20,16 @@ The `$.sceditor.command.set()` function takes two arguments, `name` and `cmd`.
   The command object. See below for more details of this.
 
 ```js
-$.sceditor.command.set("commandname", {
+$.sceditor.command.set('commandname', {
 	exec: function() {
-		this.insert("a");
+		// this is set to the editor instance
+		this.insert('a');
 	},
 	txtExec: function() {
-		this.insert("a");
+		// this is set to the editor instance
+		this.insert('a');
 	},
-	tooltip: "Insert the letter a"
+	tooltip: 'Insert the letter a'
 });
 ```
 
@@ -71,13 +73,13 @@ Or a function that takes 1 argument, `caller`. The functions `this` will be set 
 
 ```js
 exec: function () {
-	this.insert("[b]Hello World[/b]");
+	this.insert('[b]Hello World[/b]');
 }
 ```
 
 ```js
 // Bold will be passed to the native execCommand
-exec: "bold"
+exec: 'bold'
 ```
 
 
@@ -122,12 +124,12 @@ If `txtExec` is a function it should take 1 argument, `caller`. The functions `t
 
 ```js
 txtExec: function () {
-	this.insert("[b]Hello World[/b]");
+	this.insert('[b]Hello World[/b]');
 }
 ```
 
 ```js
-txtExec: ["[b]", "[/b]"]
+txtExec: ['[b]', '[/b]']
 ```
 
 
