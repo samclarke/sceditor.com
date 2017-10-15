@@ -17,14 +17,14 @@
 
             {{ with $section }}
             <li class="Breadcrumb__item">
-                <a class="Breadcrumb__link" href="{{ .Permalink }}">{{ .Title }}</a>
+                <a class="Breadcrumb__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
                 <span class="Breadcrumb__divider">/</span>
             </li>
             {{ end }}
 
             {{ with $page }}
             <li class="Breadcrumb__item Breadcrumb__item--active">
-                <a class="Breadcrumb__link" href="{{ .Permalink }}">{{ .Title }}</a>
+                <a class="Breadcrumb__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
             </li>
             {{ end }}
             {{ $.Scratch.Add "path" "/" }}
