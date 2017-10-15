@@ -4,27 +4,11 @@ backend:
   branch: v2-netlify
 
 publish_mode: editorial_workflow
-<<<<<<< HEAD
-media_folder: "images/uploads"
-=======
 media_folder: "static/images/uploads"
->>>>>>> new-design-hugo
 
 collections:
   - name: "news"
     label: "News"
-<<<<<<< HEAD
-    folder: "_posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Excerpt", name: "excerpt", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
-=======
     folder: "content/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -56,4 +40,3 @@ collections:
       - {label: "Excerpt", name: "excerpt", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
->>>>>>> new-design-hugo
