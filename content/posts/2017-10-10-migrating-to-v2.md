@@ -97,3 +97,8 @@ It is now handled automatically.
 
 The `caller` argument to the `exec` and `txtExec` methods is now a
 HTMLDivElement and not a jQuery object.
+
+## Plugins
+
+The `signalToWysiwyg` and `signalToSource` methods have been removed.
+Plugins that used them should be migrated to formats instead.

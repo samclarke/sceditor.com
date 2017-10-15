@@ -9,21 +9,18 @@ weight: 6000
 
 ## Creating a Plugin <a id="creating"></a>
 
-Plugins *must* be created in the `$.sceditor.plugins.*` namespace.
+Plugins *must* be added as a property of the `sceditor.plugins.*` object.
 
 For example to create a plugin called `myplugin` it would be:
 
 ```js
-// Created in $.sceditor.plugins.[name] namespace
-$.sceditor.plugins.myplugin = function() {
-	// Store the value of this
-	var base = this;
-
+// Created in sceditor.plugins.[name] object
+sceditor.plugins.myplugin = function() {
 	// Place signal handlers and functions here
 };
 ```
 
-The to add the plugin to the editor just add `myplugin` to the [plugins option](/documentation/options/#plugins) when creating the editor.
+To then enable the plugin in the editor, add `myplugin` to the [plugins option](/documentation/options/#plugins) when creating the editor.
 
 
 ## Handling Signals <a id="handling-signals"></a>
@@ -33,9 +30,7 @@ To create a signal handler, just create a function with the name of the signal a
 e.g.
 
 ```js
-$.sceditor.plugins.myplugin = function() {
-	var base = this;
-
+sceditor.plugins.myplugin = function() {
 	base.signalKeydownEvent = function(e) {
 		// this will automatically be called when 'myplugin'
 		// is registered with an editor instance and there
@@ -54,7 +49,7 @@ Called when the plugin is registered to the editor.
 
 ## destroy <a id="destroy"></a>
 
-Called when `destory()` is called on the editor or the plugin is removed from the editor.
+Called when `destroy()` is called on the editor or the plugin is removed from the editor.
 
 This signal should be used to unbind any DOM events and to do any clean up so that any memory used can be freed by the browser.
 
@@ -147,35 +142,4 @@ Use `this.sourceMode()` to check which mode the editor is in.
 
 Called whenever the selection has changed in the WYSIWYG editor.
 
-<span class="Label Label--important">Important:</span> This signal does not occur when in source mode.
-
-
-## signalToSource <a id="signalToSource"></a>
-
-**Parameters:**
-
- * **html** *string*  
-   A string containing the HTML content of the WYSIWYG editor
- * **body** *jQuery element*  
-   The `body` element wrapped in a jQuery object.
-
-<span class="Label Label--important">Important:</span> Only the first plugin to handle this signal will be called, all other plugins will be ignored.
-
-This should return the source string to be used when in source mode or returned when `val()` is called.
-
-For example the BBCode plugin returns the source BBCode string when this is called.
-
-
-## signalToWysiwyg <a id="signalToWysiwyg"></a>
-
-**Parameters:**
-
- * **sourceStr** *string*  
-   A string contianing the source code to be converted ready to be displayed in the WYSIWYG editor.
- * **asFragment** *bool*  
-   If this is a fragment. Currently only used by the paste event.
-
-<span class="Label Label--important">Important:</span> Only the first plugin to handle this signal will be called, all other plugins will be ignored.
-
-This should return a HTML string ready to be used with the WYSIWYG editor.
-
+<span class="Label Label--important">Important:</span> This event does not occur when in source mode.
