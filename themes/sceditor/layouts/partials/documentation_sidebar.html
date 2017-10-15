@@ -7,7 +7,7 @@
         {{ $pages := union .Sections .Pages }}
         {{ range (sort $pages ".Params.weight") }}
             <li class="Menu__item">
-                <a class="Menu__link {{ if eq $currentPage . }}Menu__link--current{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a>
+                <a class="Menu__link {{ if eq $currentPage . }}Menu__link--current{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
             </li>
         {{ end }}
     </ul>
