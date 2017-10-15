@@ -1,0 +1,15 @@
+<aside class="Documentation__sidebar">
+    {{ $currentPage := .}}
+    {{ with ($.Site.GetPage "section" (trim .Dir "/")) }}
+    <h3>{{ .Title }}</h3>
+
+    <ul class="Sidebar__menu Menu">
+        {{ $pages := union .Sections .Pages }}
+        {{ range (sort $pages ".Params.weight") }}
+            <li class="Menu__item">
+                <a class="Menu__link {{ if eq $currentPage . }}Menu__link--current{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</aside>

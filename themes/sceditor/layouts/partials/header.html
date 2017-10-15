@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }} - SCEditor</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="/js/prism.js"></script>
+    <link rel="stylesheet" href="/css/prism.github.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,700i|Source+Code+Pro:400,700" rel="stylesheet">
+</head>
+<body>
+    <header class="Header">
+        <div class="Header__container">
+            <h1 class="Header__title">
+                <a class="Header__link" href="/">SCEditor</a>
+            </h1>
+
+            <nav class="Header__nav">
+                <ul class="Header__menu Menu">
+                    <li class="Menu__item">
+                        <a class="Menu__link" href="/posts/">News</a>
+                    </li>
+                    <li class="Menu__item">
+                        <a class="Menu__link" href="/documentation/">Docs</a>
+
+                        <ul class="Menu__submenu Menu">
+                            <li class="Menu__item">
+                                <a class="Menu__link Menu__link--current" href="#">Getting started</a>
+                            </li>
+                            <li class="Menu__item">
+                                <a class="Menu__link" href="#">Options</a>
+                            </li>
+                            <li class="Menu__item">
+                                <a class="Menu__link" href="#">Plugins</a>
+                            </li>
+                            <li class="Menu__item">
+                                <a class="Menu__link" href="#">API</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="Menu__item">
+                        <a class="Menu__link" href="/integration/">Integrations</a>
+                    </li>
+                    <li class="Menu__item">
+                        <a class="Menu__link" href="/documentation/support-licensing/">Support</a>
+                    </li>
+                    <li class="Menu__item">
+                        <a class="Menu__link" href="https://github.com/samclarke/SCEditor">GitHub</a>
+                    </li>
+                    <li class="Menu__item">
+                        <a class="Menu__link Menu__link--download" href="#">Download</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>

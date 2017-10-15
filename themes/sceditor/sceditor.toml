@@ -1,0 +1,12 @@
+name = "sceditor.com"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+description = "Theme for sceditor.com"
+homepage = "https://www.sceditor.com/"
+tags = []
+features = []
+min_version = 0.19
+
+[author]
+  name = "Sam Clarke"
+  homepage = "https://www.samclarke.com/"

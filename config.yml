@@ -1,0 +1,14 @@
+baseURL: "https://www.sceditor.com/"
+languageCode: "en-us"
+title: "SCEditor"
+theme: "sceditor"
+
+paginate: 10
+paginatePath: ""
+
+permalinks:
+  - post: /posts/:title
+
+# disableKinds:
+#   - taxonomy
+#   - taxonomyTerm

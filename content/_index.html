@@ -1,0 +1,78 @@
+---
+layout: default
+title: SCEditor - A lightweight WYSIWYG HTML and BBCode editor
+menuTitle: Home
+navtitle: Home
+---
+
+<script src="//cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/minified/themes/default.min.css" />
+<script src="/minified/jquery.sceditor.bbcode.min.js"></script>
+<script>
+$(function() {
+	$('textarea').sceditor({
+		plugins: 'bbcode',
+		width: '80%',
+		style: 'minified/jquery.sceditor.default.min.css'
+	});
+});
+</script>
+<div class="fullwidth Intro">
+	<h1 style="margin-top: 1rem">SCEditor</h1>
+	<p>A lightweight, open source, WYSIWYG BBCode and (X)HTML editor.</p>
+
+	<textarea style="width: 80%; height: 300px">Give it a try! :)
+
+[color=#ff00]Red text and [/color][color=#3399ff]blue text![/color]
+
+[ul][li]A simple list[/li][li]With two items[/li][/ul]
+
+If just type [b]:[/b]) and it will be converted into :) as you type.</textarea>
+</div>
+
+
+<h2>Quick Start</h2>
+
+<h3>
+	Include the
+	<abbr title="JavaScript">JS</abbr>
+	&amp;
+	<abbr title="Cascading Style Sheet">CSS</abbr>:
+</h3>
+<pre><code class="language-html">
+&lt;link rel="stylesheet" href="minified/themes/default.min.css" /&gt;
+&lt;script src="minified/sceditor.min.js">&lt;/script&gt;</code></pre>
+
+<h3>Initialize the editor</h3>
+
+<div class="Columns Columns--two">
+	<div class="Columns__column">
+		<h4>BBCode</h4>
+		<pre><code class="language-html">&lt;script src="minified/formats/bbcode.min.js">&lt;/script&gt;
+&lt;script&gt;
+// Replace all textarea tags with SCEditor
+$('textarea').sceditor({
+	format: 'bbcode',
+	style: 'minified/theme/default.content.min.css'
+});
+&lt;/script&gt;</code></pre>
+	</div>
+	<div class="Columns__column">
+		<h4>XHTML</h4>
+		<pre><code class="language-html"?>&lt;script src="minified/formats/xhtml.min.js">&lt;/script&gt;
+&lt;script&gt;
+// Replace all textarea tags with SCEditor
+$('textarea').sceditor({
+	format: 'xhtml',
+	style: 'minified/theme/default.content.min.css'
+});
+&lt;/script&gt;</code></pre>
+	</div>
+</div>
+
+<h3>Finished!</h3>
+
+<p>
+	<a class="Button Button--primary" href="{{ site.sceditor.download }}">Download</a>
+	<a class="Button" href="/documentation/">Documentation</a>
+</p>

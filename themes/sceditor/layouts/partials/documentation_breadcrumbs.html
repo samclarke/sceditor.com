@@ -1,0 +1,33 @@
+<ul class="Breadcrumb">
+    {{ if ne .Section "documentation" }}
+    <li class="Breadcrumb__item">
+        <a class="Breadcrumb__link" href="/documentation/">Documentation</a>
+        <span class="Breadcrumb__divider">/</span>
+    </li>
+    {{ end }}
+
+    {{ $url := .File.Path }}
+
+    {{ range $index, $element := split $url "/" }}
+        {{ $.Scratch.Add "path" $element }}
+
+        {{ if ne $element "" }}
+            {{ $section := $.Site.GetPage "section" ($.Scratch.Get "path") }}
+            {{ $page := $.Site.GetPage "page" ($.Scratch.Get "path") }}
+
+            {{ with $section }}
+            <li class="Breadcrumb__item">
+                <a class="Breadcrumb__link" href="{{ .Permalink }}">{{ .Title }}</a>
+                <span class="Breadcrumb__divider">/</span>
+            </li>
+            {{ end }}
+
+            {{ with $page }}
+            <li class="Breadcrumb__item Breadcrumb__item--active">
+                <a class="Breadcrumb__link" href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+            {{ $.Scratch.Add "path" "/" }}
+        {{ end }}
+    {{ end }}
+</ul>

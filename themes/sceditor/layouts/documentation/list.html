@@ -1,0 +1,7 @@
+{{ if eq .File.Path "documentation/_index.md" }}
+{{ partial "redirect.html" . }}
+{{ end }}
+
+{{ if ne .File.Path "documentation/_index.md" }}
+{{ partial "documentation_list.html" . }}
+{{ end }}

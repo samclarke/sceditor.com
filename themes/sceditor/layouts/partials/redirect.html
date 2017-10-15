@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="robots" content="noindex">
+		<meta http-equiv="refresh" content="0;url={{ .Params.redirect }}">
+		<script>
+			window.location.href = "{{ .Params.redirect }}"
+		</script>
+		<title>Page Redirection</title>
+	</head>
+	<body>
+		<p>
+			If you are not redirected automatically, please click the following
+			link to continue <a href="{{ .Params.redirect }}">{{ .Params.redirect }}</a>.
+		</p>
+	</body>
+</html>

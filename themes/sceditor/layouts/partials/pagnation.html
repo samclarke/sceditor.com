@@ -1,0 +1,42 @@
+{{ $pag := $.Paginator }}
+{{ if gt $pag.TotalPages 1 }}
+<ul class="Pagnation">
+    {{ with $pag.First }}
+    <li class="Pagnation__item">
+        <a class="Pagnation__link" href="{{ .URL }}" aria-label="First">
+            <span aria-hidden="true">&laquo;&laquo;</span>
+        </a>
+    </li>
+    {{ end }}
+    <li class="Pagnation__item {{ if not $pag.HasPrev }}Pagnation__item--disabled{{ end }}">
+        <a
+            class="Pagnation__link {{ if not $pag.HasPrev }}Pagnation__link--disabled{{ end }}"
+            href="{{ if $pag.HasPrev }}{{ $pag.Prev.URL }}{{ end }}"
+            aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+        </a>
+    </li>
+    {{ range $pag.Pagers }}
+        <li class="Pagnation__item {{ if eq . $pag }}Pagnation__item--active{{ end }}">
+            <a
+                class="Pagnation__link {{ if not $pag.HasPrev }}Pagnation__link--active{{ end }}"
+                href="{{ .URL }}">{{ .PageNumber }}</a>
+        </li>
+    {{ end }}
+    <li  class="Pagnation__item {{ if not $pag.HasNext }}Pagnation__item--disabled{{ end }}">
+        <a
+            class="Pagnation__link {{ if not $pag.HasPrev }}Pagnation__link--disabled{{ end }}"
+            href="{{ if $pag.HasNext }}{{ $pag.Next.URL }}{{ end }}"
+            aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+        </a>
+    </li>
+    {{ with $pag.Last }}
+    <li class="Pagnation__item">
+        <a class="Pagnation__link" href="{{ .URL }}" aria-label="Last">
+            <span aria-hidden="true">&raquo;&raquo;</span>
+        </a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}

@@ -1,0 +1,19 @@
+{{ if or (.NextInSection) (.PrevInSection) }}
+    <ul class="QuickPagnation">
+
+    {{ if .NextInSection }}
+        <li class="QuickPagnation__item QuickPagnation__item--previous">
+            <a class="QuickPagnation__link" rel="prev" href="{{ .NextInSection.Permalink | absURL }}">
+                « {{ .NextInSection.Title }}
+            </a>
+    {{ end }}
+    {{ if .PrevInSection }}
+        <li class="QuickPagnation__item QuickPagnation__item--next">
+            <a class="QuickPagnation__link" rel="next" href="{{ .PrevInSection.Permalink }}">
+                {{ .PrevInSection.Title }} »
+            </a>
+        </li>
+    {{ end }}
+
+    </ul>
+{{ end }}

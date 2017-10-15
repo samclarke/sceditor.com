@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+    <section class="Content">
+        <h1>{{ .Title }}</h1>
+
+        {{ partial "pagnation.html" . }}
+
+        <ul class="Archive">
+            {{ range .Paginator.Pages }}
+                <li class="Archive__item">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+                    <a class="Archive__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <p class="Archive__excerpt">{{ .Params.excerpt }}</p>
+                </li>
+            {{ end }}
+        </ul>
+
+        {{ partial "pagnation.html" . }}
+    </section>
+{{ partial "footer.html" . }}

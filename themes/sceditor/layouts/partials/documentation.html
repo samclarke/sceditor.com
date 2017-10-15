@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+    <section class="Content">
+        {{ partial "documentation_breadcrumbs.html" . }}
+
+        <div class="Documentation">
+
+            <div class="Documentation__content">
+                {{ .Content }}
+            </div>
+
+            {{ partial "documentation_sidebar.html" . }}
+        </div>
+
+        <!-- {{ partial "quick-pagnation.html" . }} -->
+    </section>
+{{ partial "footer.html" . }}
