@@ -1,10 +1,8 @@
 ---
-layout: post
 title: Themes Demo
 excerpt: Demo of all the current themes for SCEditor
-tags: [demo, 1.3.5]
-categories:
-    - demo
+date: 2012-06-28
+slug: themes-demo
 ---
 
 <link id="default" rel="stylesheet" href="/minified/themes/default.min.css" type="text/css" media="all" />
@@ -21,9 +19,12 @@ categories:
 		document.getElementsByTagName('head')[0].appendChild(link);
 	
 		var img = document.createElement('img');
-		img.onerror = function(){
-			if(callback)
-				setTimeout(function() { callback(link); }, 250);
+		img.onerror = function() {
+			if(callback) {
+				setTimeout(function() {
+					callback(link);
+				}, 250);
+			}
 		}
 		img.src = url;
 	}

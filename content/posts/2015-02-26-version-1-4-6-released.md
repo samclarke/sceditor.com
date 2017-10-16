@@ -1,10 +1,8 @@
 ---
-layout: release
 title: Version 1.4.6 released
 excerpt: Details of the 1.4.6 release
-tags: [releases, 1.4.6]
-categories:
-    - releases
+date: 2015-02-26
+slug: version-1-4-6-released
 ---
 ## Version 1.4.6
 

@@ -1,10 +1,8 @@
 ---
-layout: release
 title: Version 1.3.3 released
 excerpt: Details of the 1.3.3 release
-tags: [releases, 1.3.2]
-categories:
-    - releases
+date: 2012-05-23
+slug: version-1-3-3-released
 ---
 ## Version 1.3.3
 

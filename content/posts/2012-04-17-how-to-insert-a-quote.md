@@ -1,12 +1,8 @@
 ---
-layout: post
 title: How to insert quotes
-excerpt: Breif example of how to insert a quote
-tags: [HTML, BBCode, demo, example]
-categories:
-    - Demo
-    - BBCode
-    - HTML
+excerpt: Brief example of how to insert a quote
+date: 2012-04-17
+slug: how-to-insert-a-quote
 ---
 ## Quote demo
 

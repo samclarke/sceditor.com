@@ -1,10 +1,8 @@
 ---
-layout: release
 title: Version 1.3.6 released
 excerpt: Details of the 1.3.6 release
-tags: [releases, 1.3.6]
-categories:
-    - releases
+date: 2012-07-14
+slug: version-1-3-6-released
 ---
 ## Version 1.3.6
 

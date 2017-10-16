@@ -1,10 +1,8 @@
 ---
-layout: release
 title: Version 1.4.4 released
 excerpt: Details of the 1.4.4 release
-tags: [releases, 1.4.4]
-categories:
-    - releases
+date: 2015-08-12
+slug: version-1-4-4-released
 ---
 ## Version 1.4.4
 

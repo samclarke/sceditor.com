@@ -1,10 +1,8 @@
 ---
-layout: release
 title: Version 1.4.1 released
 excerpt: Details of the 1.4.1 release
-tags: [releases, 1.4.1]
-categories:
-    - releases
+date: 2013-01-25
+slug: version-1-4-1-released
 ---
 ## Version 1.4.1
 

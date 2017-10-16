@@ -1,7 +1,6 @@
 ---
 title: BBCode Demo
 excerpt: Demo of SCEditor used to produce BBCode
-tags: [example]
 date: 2012-04-16
 slug: bbcode-demo
 ---

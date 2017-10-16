@@ -1,10 +1,8 @@
 ---
-layout: release
 title: Version 1.3.7 released
 excerpt: Details of the 1.3.7 release
-tags: [releases, 1.3.7]
-categories:
-    - releases
+date: 2012-07-20
+slug: version-1-3-7-released
 ---
 ## Version 1.3.7
 

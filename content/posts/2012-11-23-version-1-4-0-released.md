@@ -1,10 +1,8 @@
 ---
-layout: release
 title: Version 1.4.0 released
 excerpt: Details of the 1.4.0 release
-tags: [releases, 1.4.0]
-categories:
-    - releases
+date: 2012-11-23
+slug: version-1-4-0-released
 ---
 ## Version 1.4.0
 
