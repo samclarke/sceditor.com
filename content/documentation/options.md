@@ -6,24 +6,20 @@ weight: 2000
 
 # Options
 
-## How to use <a id="howto"></a>
+## Specifying options <a id="specifying"></a>
 
 All options should be passed via the constructor.
 
-e.g.
+For example.
 
 ```js
 // Create the editor
-$('textarea').sceditor({
+sceditor.create(textarea, {
 	// Options go here
 
-	// Option 1
-	plugins: 'bbcode',
-
-	// Option 2
+    plugins: 'undo',
+    format: 'bbcode',
 	toolbar: 'bold,italic,underline|source',
-
-	// Option 3
 	locale: 'no-NB'
 });
 ```
@@ -138,13 +134,11 @@ The locale to use, e.g.: `en`, `en-US`, `fr`, etc.
 <script src="../minified/jquery.sceditor.min.js"></script>
 <script src="../languages/nl.js"></script>
 
-<!-- create the editor here -->
+<!-- Create the editor after including the translation -->
 <script>
-$(function() {
-	$('textarea').sceditor({
-		plugins: 'bbcode'
-	});
-});
+sceditor.create(
+    ...
+);
 </script>
 ```
 
@@ -191,19 +185,19 @@ Object in the following format:
 {
     // Emoticons to be included in the dropdown
     dropdown: {
-        ":)": "emoticons/smile.png",
-        ":angel:": "emoticons/angel.png"
+        ':)': 'emoticons/smile.png',
+        ':angel:': 'emoticons/angel.png'
     },
     // Emoticons to be included in the more section
     more: {
-        ":alien:": "emoticons/alien.png",
-        ":blink:": "emoticons/blink.png"
+        ':alien:': 'emoticons/alien.png',
+        ':blink:': 'emoticons/blink.png'
     },
     // Emoticons that are not shown in the dropdown but will still
     // be converted. Can be used for things like aliases
     hidden: {
-        ":aliasforalien:": "emoticons/alien.png",
-        ":aliasforblink:": "emoticons/blink.png"
+        ':aliasforalien:': 'emoticons/alien.png',
+        ':aliasforblink:': 'emoticons/blink.png'
     }
 }
 ```
@@ -372,7 +366,7 @@ See plugins documentation for list of default plugins.
 
 **spellcheck** *Boolean* Defaults to `true`
 
-If to enable the browsers built in spell checker. This option is mostly so the built in spell checker can be disabled.
+If to enable the browsers built in spell checker. This option is only really useful if you want to disabled the browsers built in spellchecker.
 
 
 
