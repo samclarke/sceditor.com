@@ -2,4 +2,3 @@
   Link: </css/stylesheet.css>; rel=preload; as=style
   Link: </css/prism.github.css>; rel=preload; as=style
   Link: </js/prism.js>; rel=preload; as=script
-  Link: <https://www.samclarke.com/piwik/piwik.js>; rel=preload; as=script
