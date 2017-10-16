@@ -3,28 +3,27 @@ title: XHTML
 excerpt: XHTML format for SCEditor
 ---
 
-# XHTML Plugin <a id="xhtml"></a>
+# XHTML Format <a id="xhtml"></a>
 
-This plugin will convert the output of SCEditor into valid XHTML.
+This format will convert the output of SCEditor into valid XHTML.
 
 <div class="Callout Callout--warning">
 	<h3 class="Callout__header">Warning!</h3>
-	<p>Never trust the output from this plugin. Like all client side code the output can be altered or forged by attackers to produce XSS attacks.</p>
+	<p>Never trust the output from this format. Like all client side code the output can be altered or forged by attackers to produce XSS attacks.</p>
 	<p>Always make sure to filter user input server side through a library like <a href="http://htmlpurifier.org/">htmlpurifier (PHP)</a> or  <a href="https://www.owasp.org/index.php/OWASP_Java_HTML_Sanitizer">OWASP Java HTML Sanitizer</a> to prevent XSS attacks.</p>
 </div>
 
 
 ## Initialise <a id="initialise"></a>
 
-To enable the XHTML plugin just add `xhtml` to the `plugins` option. e.g.
+To enable the XHTML format, set the `format` option to `xhtml`. e.g.
 
 ```html
 <script>
-$(function() {
-	$('textarea').sceditor({
-		plugins: 'xhtml',
-		style: 'minified/jquery.sceditor.default.min.css'
-	});
+var textarea = ...;
+sceditor.create(textarea, {
+	format: 'xhtml',
+	style: 'minified/jquery.sceditor.default.min.css'
 });
 </script>
 ```
@@ -37,7 +36,7 @@ All of the options below should be set before creating an instance of the editor
 
 ## converters <a id="converters"></a>
 
-`$.sceditor.plugins.xhtml.converters` *Array*
+`sceditor.formats.xhtml.converters` *Array*
 
 An `array of` converter `objects` used to convert HTML into valid XHTML or HTML5.
 
@@ -76,7 +75,7 @@ For example:
 
 ```js
 // Push this converter onto the end of the converters array
-$.sceditor.plugins.xhtml.converters.push({
+sceditor.formats.xhtml.converters.push({
 	tags: {
 		// Match any tag with the attribute border
 		'*': {
@@ -98,7 +97,7 @@ The above will match any tag with the attibute `border` and convert the `border`
 
 ## allowedAttribs <a id="allowedAttribs"></a>
 
-`$.sceditor.plugins.xhtml.allowedAttribs` *Object*
+`sceditor.formats.xhtml.allowedAttribs` *Object*
 
 Acts as a whitelist of allowed attributes. If this is null or empty then all attributes will be allowed unless blacklisted.
 
@@ -107,7 +106,7 @@ The allowed attributes can be specified on a tag by tag basis or for all tags by
 `allowedAttribs` should be in the following format format:
 
 ```js
-$.sceditor.plugins.xhtml.disallowedAttribs['tagname']['attributename'] = [
+sceditor.formats.xhtml.disallowedAttribs['tagname']['attributename'] = [
 	'array', 'of', 'valid', 'values', 'or', 'null', 'to', 'allow', 'all', 'values'
 ];
 ```
@@ -115,7 +114,7 @@ $.sceditor.plugins.xhtml.disallowedAttribs['tagname']['attributename'] = [
 For example:
 
 ```js
-$.sceditor.plugins.xhtml.disallowedAttribs = {
+sceditor.formats.xhtml.disallowedAttribs = {
 	// The * sign matches every tags so this will allow the id
 	// and class attributes on all tags
 	'*': {
@@ -139,7 +138,7 @@ Acts as a blacklist of disallowed tags. If null or empty then all tags will be a
 
 ## disallowedAttribs <a id="disallowedAttribs"></a>
 
-`$.sceditor.plugins.xhtml.disallowedAttribs` *Object*
+`sceditor.formats.xhtml.disallowedAttribs` *Object*
 
 <span class="Label Label--important">Important:</span> This will only be used if allowedAttribs is empty.
 
@@ -150,24 +149,24 @@ The format of `disallowedAttribs` is the same as `allowedAttribs` above except i
 
 ## allowedTags <a id="allowedTags"></a>
 
-`$.sceditor.plugins.xhtml.allowedTags` *Array* 
+`sceditor.formats.xhtml.allowedTags` *Array* 
 
 Acts as a whitelist of allowed tags. If null or empty then all tags will be allowed unless blacklisted.
 
 ```js
-$.sceditor.plugins.xhtml.allowedTags = ['a', 'strong', 'p', 'span', 'div'];
+sceditor.formats.xhtml.allowedTags = ['a', 'strong', 'p', 'span', 'div'];
 ```
 
 
 ## disallowedTags <a id="disallowedTags"></a>
 
-`$.sceditor.plugins.xhtml.disallowedTags` *Array*
+`sceditor.formats.xhtml.disallowedTags` *Array*
 
 <span class="Label Label--important">Important:</span> This will only be used if allowedTags is empty.
 
 Acts as a blacklist of disallowed tags. If null or empty then all tags will be allowed.
 
 ```js
-$.sceditor.plugins.xhtml.disallowedTags = ['a', 'strong', 'p', 'span', 'div'];
+sceditor.formats.xhtml.disallowedTags = ['a', 'strong', 'p', 'span', 'div'];
 ```
 
