@@ -58,4 +58,4 @@ sceditor.formats['youformatname'] = function () {
 };
 ```
 
-If a method is missing it just won't be called, no error will occur.
+If a method is missing no error will occur, it just won't be called.

@@ -1,6 +1,5 @@
 ---
 title: SCEditor Forum/CMS Integrations
-navtitle: Forum/CMS Plugins
 permalink: /integration/
 ---
 
