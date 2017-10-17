@@ -42,7 +42,6 @@ h1, h2, h3, h4, h5, h6 {
 	color: #4a4a4a;
 	line-height: 1.1;
 	margin: 2rem 0 .5rem;
-	/* font-weight: 600; */
 	letter-spacing: 0.5px;
 }
 
@@ -69,8 +68,6 @@ html pre[class*="language-"],
 html pre {
 	overflow: auto;
 	tab-size: 4;
-	/*white-space: pre-wrap;
-	word-break: break-all;*/
 }
 
 html pre[class*=language-], html pre, html pre code {
@@ -108,19 +105,10 @@ html code {
 	margin: 0;
 	border-bottom: 1px solid #ddd;
 	box-shadow: 0 0 6px 1px rgba(17, 17, 17, 0.09);
-/*position: sticky;
-top:0 ;
-z-index: 10;
-background: #fff;*/
-/*position: -webkit-sticky;
-position: sticky;
-top: -1.5rem;
-z-index: 10;
-padding-top: 1rem;
-background: #fff;*/
 }
 .Header__container {
 	display: flex;
+	flex-wrap: wrap;
 	padding: .75em 0;
 	font-size: 1.0625rem;
 	font-size: 1.125rem;
@@ -422,8 +410,7 @@ background: #fff;*/
 .QuickPagnation__item--next {
 	text-align: right;
 }
-.QuickPagnation__link {
-}
+
 
 .Pagnation {
 	display: block;
@@ -462,9 +449,39 @@ background: #fff;*/
 	margin: 0;
 }
 
-.Footer__quick_links {
-	width: 100%;
+
+@media only screen and (max-width: 60em) {
+    .Header, .Footer {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	.Menu {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
-.Footer__quick_link_item {
-	display: inline-block;
+
+@media only screen and (max-width: 760px) {
+    .Documentation {
+		display: block;
+	}
+	.Documentation__sidebar {
+		margin-right: 0;
+		border-top: 1px solid #ebebeb;
+		border-right: none;
+		padding-top: 1rem;
+		padding-right: 1.25rem;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 660px) {
+    .Header__container {
+		display: block;
+	}
+	.Header__title,
+	.Header__nav {
+		display: block;
+		text-align: center;
+	}
 }
