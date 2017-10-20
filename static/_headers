@@ -2,15 +2,31 @@
   Link: </css/stylesheet.css>; rel=preload; as=style
   Link: </css/prism.github.css>; rel=preload; as=style
   Link: </js/prism.js>; rel=preload; as=script
+  Link: </fonts/source-sans-pro-v11-latin-700.woff2>; rel=preload; as=font; crossorigin    
+  Link: </fonts/source-sans-pro-v11-latin-regular.woff2>; rel=preload; as=font; crossorigin    
+  Link: </fonts/source-sans-pro-v11-latin-600.woff2>; rel=preload; as=font; crossorigin    
+  Link: </fonts/source-code-pro-v7-latin-regular.woff2>; rel=preload; as=font; crossorigin    
 /api*
   Link: </css/stylesheet.css>; rel=preload; as=style
   Link: </css/prism.github.css>; rel=preload; as=style
   Link: </js/prism.js>; rel=preload; as=script
+  Link: </fonts/source-sans-pro-v11-latin-700.woff2>; rel=preload; as=font; crossorigin    
+  Link: </fonts/source-sans-pro-v11-latin-regular.woff2>; rel=preload; as=font; crossorigin    
+  Link: </fonts/source-sans-pro-v11-latin-600.woff2>; rel=preload; as=font; crossorigin    
+  Link: </fonts/source-code-pro-v7-latin-regular.woff2>; rel=preload; as=font; crossorigin    
 /documentation*
   Link: </css/stylesheet.css>; rel=preload; as=style
   Link: </css/prism.github.css>; rel=preload; as=style
   Link: </js/prism.js>; rel=preload; as=script
+  Link: </fonts/source-sans-pro-v11-latin-700.woff2>; rel=preload; as=font; crossorigin    
+  Link: </fonts/source-sans-pro-v11-latin-regular.woff2>; rel=preload; as=font; crossorigin    
+  Link: </fonts/source-sans-pro-v11-latin-600.woff2>; rel=preload; as=font; crossorigin    
+  Link: </fonts/source-code-pro-v7-latin-regular.woff2>; rel=preload; as=font; crossorigin    
 /posts*
   Link: </css/stylesheet.css>; rel=preload; as=style
   Link: </css/prism.github.css>; rel=preload; as=style
   Link: </js/prism.js>; rel=preload; as=script
+  Link: </fonts/source-sans-pro-v11-latin-700.woff2>; rel=preload; as=font; crossorigin    
+  Link: </fonts/source-sans-pro-v11-latin-regular.woff2>; rel=preload; as=font; crossorigin    
+  Link: </fonts/source-sans-pro-v11-latin-600.woff2>; rel=preload; as=font; crossorigin    
+  Link: </fonts/source-code-pro-v7-latin-regular.woff2>; rel=preload; as=font; crossorigin    
