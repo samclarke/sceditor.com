@@ -1,66 +1,61 @@
 ---
 title: traverse()
-permalink: /api/dom/traverse/
 excerpt: Traverses the children of a DOM node.
-categories:
-    - Docs
-    - API
-    - DOM-API
 ---
-## Traverse()
+## traverse
 
-<article class="api method" markdown="1">
-### <a id="traverse" href="#traverse">traverse(node, func)</a> <span class="since">Since: 1.3.0</span>
+{{% api_method name="traverse(node, func)" since="1.3.0" %}}
 
 Traverses the children of a DOM node.
 
 
-#### Syntax
-
-	$.sceditor.dom.traverse(node, func[, innermostFirst][, firstLevelOnly][, reverse]);
-
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **node**  
 Type: **[Node](/api/types/#node)**
 
 The node to traverse the children of.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **func**  
-Type: **[Function](/api/types/#function)**
+Type: **[function](/api/types/#function)**
 
 The function to call for each child. Should take 1 parameter, the child DOM node.
 
 If `func` returns boolean false, traversing will stop immediately.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **innermostFirst**  
-Type: **[Boolean](/api/types/#bool)**  
+Type: **[boolean](/api/types/#bool)**  
 Default: `false`
 
 If to start with the innermost child nodes first.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **firstLevelOnly**  
-Type: **[Boolean](/api/types/#bool)**  
+Type: **[boolean](/api/types/#bool)**  
 Default: `false`
 
 If to only traverse the first level of child nodes.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **reverse**  
-Type: **[Boolean](/api/types/#bool)**  
+Type: **[boolean](/api/types/#bool)**  
 Default: `false`
 
 If to traverse the child nodes backwards.
-</div>
-</div>
-</article>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
+
+
+{{% api_section title="Syntax" %}}
+```js
+sceditor.dom.traverse(node, func[, innermostFirst][, firstLevelOnly][, reverse]);
+```
+{{% /api_section %}}
+
+{{% /api_method %}}

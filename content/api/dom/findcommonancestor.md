@@ -1,43 +1,38 @@
 ---
 title: findCommonAncestor()
-permalink: /api/dom/findcommonancestor/
 excerpt: Finds the first common parent of two DOM nodes.
-categories:
-    - Docs
-    - API
-    - DOM-API
 ---
-## FindCommonAncestor()
+## findCommonAncestor
 
-<article class="api method" markdown="1">
-### <a id="findCommonAncestor" href="#findCommonAncestor">findCommonAncestor(nodeA, nodeB)</a> <span class="since">Since: 1.3.0</span>
+{{% api_method name="findCommonAncestor(nodeA, nodeB)" since="1.3.0" %}}
 
 Finds the first common parent of two DOM nodes.
 
 
-#### Syntax
-
-	var commonAncestor = $.sceditor.dom.findCommonAncestor(nodeA, nodeB);
-
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **nodeA**  
 Type: **[Node](/api/types/#node)**
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **nodeB**  
 Type: **[Node](/api/types/#node)**
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[Node](/api/types/#node)**
 
 Returns `null` if there is no common ancestor of the two nodes.
-</article>
+{{% /api_section %}}
+
+
+{{% api_section title="Syntax" %}}
+```js
+var commonAncestor = sceditor.dom.findCommonAncestor(nodeA, nodeB);
+```
+{{% /api_section %}}
+
+{{% /api_method %}}

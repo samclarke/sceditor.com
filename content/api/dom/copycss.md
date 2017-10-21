@@ -2,34 +2,34 @@
 title: copyCSS()
 excerpt: Copies the CSS from one DOM node to another.
 ---
-## CopyCSS()
+## copyCSS
 
-<article class="api method" markdown="1">
-### <a id="copyCSS" href="#copyCSS">copyCSS(from, to)</a> <span class="since">Since: 1.3.0</span>
+{{% api_method name="copyCSS(from, to)" since="1.3.0" %}}
 
-Copys the CSS from one DOM node to another.
-
-
-#### Syntax
-
-	$.sceditor.dom.copyCSS(from, to);
+Copies the CSS from one DOM node to another.
 
 
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **from**  
 Type: **[Node](/api/types/#node)**
 
 The DOM node to copy the CSS from.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **to**  
 Type: **[Node](/api/types/#node)**
 
 The DOM node to copy the CSS to.
-</div>
-</div>
-</article>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
+
+
+{{% api_section title="Syntax" %}}
+```js
+sceditor.dom.copyCSS(from, to);
+```
+{{% /api_section %}}
+
+{{% /api_method %}}
