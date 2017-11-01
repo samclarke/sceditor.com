@@ -304,20 +304,14 @@ html code {
 	margin-top: 0;
 }
 .Documentation__content {
-	flex: 1 0 0;
+	flex: 1 1 0;
 	order: 1;
-	min-width: 0;
 }
-/* TODO: only api pages
-.Documentation__content h2:not(:first-child) {
-	border-top: 1px solid #ccc;
-	padding-top: 1.55rem;
-} */
 .Documentation__sidebar {
 	margin-right: 1.5rem;
     border-right: 1px solid #ebebeb;
 	padding-right: 1.5rem;
-	min-width: 12rem;
+	flex: 0 0 12rem;
 }
 
 
