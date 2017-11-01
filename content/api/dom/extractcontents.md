@@ -10,6 +10,13 @@ excerpt: Extracts all the nodes between two DOM nodes.
 Extracts all the DOM nodes between the start and end nodes.
 
 
+{{% api_section title="Syntax" %}}
+```js
+var contents = sceditor.dom.extractContents(start, end);
+```
+{{% /api_section %}}
+
+
 {{% api_parameters %}}
 {{% api_parameter %}}
 **start**  
@@ -27,13 +34,6 @@ The DOM node to check.
 
 {{% api_section title="Return" %}}
 Type: **[boolean](/api/types/#bool)**
-{{% /api_section %}}
-
-
-{{% api_section title="Syntax" %}}
-```js
-var contents = sceditor.dom.extractContents(start, end);
-```
 {{% /api_section %}}
 
 {{% /api_method %}}

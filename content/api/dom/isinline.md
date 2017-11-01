@@ -9,6 +9,13 @@ excerpt: Checks if a node is inline or block level.
 Checks if the passed node is inline or block level.
 
 
+{{% api_section title="Syntax" %}}
+```js
+var isInline = sceditor.dom.isInline(node[, includeCode]);
+```
+{{% /api_section %}}
+
+
 {{% api_parameters %}}
 {{% api_parameter %}}
 **includeCode**  
@@ -29,13 +36,6 @@ The DOM node to check.
 
 {{% api_section title="Return" %}}
 Type: **[boolean](/api/types/#bool)**
-{{% /api_section %}}
-
-
-{{% api_section title="Syntax" %}}
-```js
-var isInline = sceditor.dom.isInline(node[, includeCode]);
-```
 {{% /api_section %}}
 
 {{% /api_method %}}

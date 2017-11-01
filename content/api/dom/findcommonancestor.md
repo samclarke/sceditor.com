@@ -9,6 +9,13 @@ excerpt: Finds the first common parent of two DOM nodes.
 Finds the first common parent of two DOM nodes.
 
 
+{{% api_section title="Syntax" %}}
+```js
+var commonAncestor = sceditor.dom.findCommonAncestor(nodeA, nodeB);
+```
+{{% /api_section %}}
+
+
 {{% api_parameters %}}
 {{% api_parameter %}}
 **nodeA**  
@@ -26,13 +33,6 @@ Type: **[Node](/api/types/#node)**
 Type: **[Node](/api/types/#node)**
 
 Returns `null` if there is no common ancestor of the two nodes.
-{{% /api_section %}}
-
-
-{{% api_section title="Syntax" %}}
-```js
-var commonAncestor = sceditor.dom.findCommonAncestor(nodeA, nodeB);
-```
 {{% /api_section %}}
 
 {{% /api_method %}}

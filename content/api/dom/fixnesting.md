@@ -20,6 +20,14 @@ they would become:
 <span>test</span><div>test</div><span>test</span>
 ```
 
+
+{{% api_section title="Syntax" %}}
+```js
+sceditor.dom.fixNesting(node);
+```
+{{% /api_section %}}
+
+
 {{% api_parameters %}}
 {{% api_parameter %}}
 **nodeA**  
@@ -28,12 +36,5 @@ Type: **[Node](/api/types/#node)**
 The node to fix the children of.
 {{% /api_parameter %}}
 {{% /api_parameters %}}
-
-
-{{% api_section title="Syntax" %}}
-```js
-sceditor.dom.fixNesting(node);
-```
-{{% /api_section %}}
 
 {{% /api_method %}}

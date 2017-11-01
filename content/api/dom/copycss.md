@@ -9,6 +9,13 @@ excerpt: Copies the CSS from one DOM node to another.
 Copies the CSS from one DOM node to another.
 
 
+{{% api_section title="Syntax" %}}
+```js
+sceditor.dom.copyCSS(from, to);
+```
+{{% /api_section %}}
+
+
 {{% api_parameters %}}
 {{% api_parameter %}}
 **from**  
@@ -24,12 +31,5 @@ Type: **[Node](/api/types/#node)**
 The DOM node to copy the CSS to.
 {{% /api_parameter %}}
 {{% /api_parameters %}}
-
-
-{{% api_section title="Syntax" %}}
-```js
-sceditor.dom.copyCSS(from, to);
-```
-{{% /api_section %}}
 
 {{% /api_method %}}

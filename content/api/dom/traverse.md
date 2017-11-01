@@ -9,6 +9,13 @@ excerpt: Traverses the children of a DOM node.
 Traverses the children of a DOM node.
 
 
+{{% api_section title="Syntax" %}}
+```js
+sceditor.dom.traverse(node, func[, innermostFirst][, firstLevelOnly][, reverse]);
+```
+{{% /api_section %}}
+
+
 {{% api_parameters %}}
 {{% api_parameter %}}
 **node**  
@@ -50,12 +57,5 @@ Default: `false`
 If to traverse the child nodes backwards.
 {{% /api_parameter %}}
 {{% /api_parameters %}}
-
-
-{{% api_section title="Syntax" %}}
-```js
-sceditor.dom.traverse(node, func[, innermostFirst][, firstLevelOnly][, reverse]);
-```
-{{% /api_section %}}
 
 {{% /api_method %}}
