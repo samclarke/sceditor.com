@@ -1,30 +1,25 @@
 ---
 title: selectedRange()
-permalink: /api/rangehelper/selectedrange/
 excerpt: Gets the currently selected Range.
-categories:
-    - Docs
-    - API
-    - RangeHelper-API
 ---
-## SelectedRange()
+## selectedRange()
 
-<article class="api method" markdown="1">
-### <a id="selectedRange" href="#selectedRange">selectedRange()</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="selectedRange()" since="1.3.5" %}}
 
 Gets the currently selected DOM range.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+var range = instance.selectedRange();
+```
+{{% /api_section %}}
 
-	var range = instance.selectedRange();
 
-
-#### Return
-
-Type: **[Range](/api/types/#range)** or **[TextRange](/api/types/#textrange)**
-
-Returns a `TextRange` for IE &lt;= 8., returns a `Range` in all other browsers.
+{{% api_section title="Return" %}}
+Type: **[Range](/api/types/#range)**
 
 Will return `null` if there is currently no selection.
-</article>
+{{% /api_section %}}
+
+{{% /api_method %}}

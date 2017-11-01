@@ -1,31 +1,26 @@
 ---
 title: removeMarker()
-permalink: /api/rangehelper/removmakrer/
 excerpt: Removes the marker for the specified ID.
-categories:
-    - Docs
-    - API
-    - RangeHelper-API
 ---
-## RemoveMarker()
+## removeMarker()
 
-<article class="api method" markdown="1">
-### <a id="removeMarker" href="#removeMarker">removeMarker(id)</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="removeMarker(id)" since="1.3.5" %}}
 
 Removes the current marker for the specified ID.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.removeMarker(id);
+```
+{{% /api_section %}}
 
-	instance.removeMarker(id);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **id**  
 Type: **[String](/api/types/#string)** 
-</div>
-</div>
-</article>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
+
+{{% /api_method %}}

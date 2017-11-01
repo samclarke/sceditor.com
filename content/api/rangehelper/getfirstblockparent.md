@@ -1,40 +1,35 @@
 ---
 title: getFirstBlockParent()
-permalink: /api/rangehelper/getfirstblockparent/
 excerpt: Gets the first block level parent of the current selection.
-categories:
-    - Docs
-    - API
-    - RangeHelper-API
 ---
-## GetFirstBlockParent()
+## getFirstBlockParent
 
-<article class="api method" markdown="1">
-### <a id="getFirstBlockParent" href="#getFirstBlockParent">getFirstBlockParent()</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="getFirstBlockParent()" since="1.3.5" %}}
 
 Gets the first block level parent node of the current selection.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+var parent = instance.getFirstBlockParent([node]);
+```
+{{% /api_section %}}
 
-	var parent = instance.getFirstBlockParent([node]);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **node**  
 Type: **[Node](/api/types/#node)** 
 
-If set, it will get the first block level parent of this node instead of the current selection.
-</div>
-</div>
+If specified, this method will get the first block level parent of the specified node instead of getting the first block parent of the current selection.
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
-Type: **[Node](/api/types/#node)** 
+{{% api_section title="Return" %}}
+Type: **[Range](/api/types/#range)**
 
 Will return `null` if there is no current selection.
-</article>
+{{% /api_section %}}
+
+{{% /api_method %}}

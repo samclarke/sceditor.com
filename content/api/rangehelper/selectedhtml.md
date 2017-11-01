@@ -1,26 +1,25 @@
 ---
 title: selectedHtml()
-permalink: /api/rangehelper/selectedhtml/
 excerpt: Gets the currently selected HTML.
-categories:
-    - Docs
-    - API
-    - RangeHelper-API
 ---
-## SelectedHtml()
+## selectedHtml()
 
-<article class="api method" markdown="1">
-### <a id="selectedHtml" href="#selectedHtml">selectedHtml()</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="selectedHtml()" since="1.3.5" %}}
 
 Gets the HTML that is currently selected by tne range.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+var html = instance.selectedHtml();
+```
+{{% /api_section %}}
 
-	var html = instance.selectedHtml();
 
-
-#### Return
-
+{{% api_section title="Return" %}}
+```js
 Type: **[String](/api/types/#string)** 
-</article>
+```
+{{% /api_section %}}
+
+{{% /api_method %}}

@@ -1,28 +1,25 @@
 ---
 title: parentNode()
-permalink: /api/rangehelper/parentnode/
 excerpt: Gets the parent node of the current selection.
-categories:
-    - Docs
-    - API
-    - RangeHelper-API
 ---
-## GetMarker()
+## parentNode()
 
-<article class="api method" markdown="1">
-### <a id="parentNode" href="#parentNode">parentNode()</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="parentNode()" since="1.3.5" %}}
 
 Gets the parent node of the currently selected the range.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+var parent = instance.parentNode();
+```
+{{% /api_section %}}
 
-	var parent = instance.parentNode();
 
-
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[Node](/api/types/#node)** 
 
 Will return `null` if there is no current selection.
-</article>
+{{% /api_section %}}
+
+{{% /api_method %}}

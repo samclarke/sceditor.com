@@ -1,30 +1,25 @@
 ---
 title: cloneSelected()
-permalink: /api/rangehelper/cloneselected/
 excerpt: Clones the current range.
-categories:
-    - Docs
-    - API
-    - RangeHelper-API
 ---
-## CloneSelected()
+## coneSelected
 
-<article class="api method" markdown="1">
-### <a id="cloneSelected" href="#cloneSelected">cloneSelected()</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="cloneSelected()" since="1.3.5" %}}
 
 Clones the current range.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+var range = instance.cloneSelected();
+```
+{{% /api_section %}}
 
-	var range = instance.cloneSelected();
 
-
-#### Return
-
-Type: **[Range](/api/types/#range)** or **[TextRange](/api/types/#textrange)**
-
-Returns a `TextRange` for IE &lt;= 8., returns a `Range` in all other browsers.
+{{% api_section title="Return" %}}
+Type: **[Range](/api/types/#range)**
 
 Will return `null` if there is no current selection to clone.
-</article>
+{{% /api_section %}}
+
+{{% /api_method %}}

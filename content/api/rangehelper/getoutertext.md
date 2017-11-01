@@ -1,61 +1,61 @@
 ---
 title: getOuterText()
-permalink: /api/rangehelper/getoutertext/
-excerpt: Gets the text left or right of the current selction/caret.
-categories:
-    - Docs
-    - API
-    - RangeHelper-API
+excerpt: Gets the text left or right of the current selection/caret.
 ---
-## GetOuterText()
+## getOuterText()
 
-<article class="api method" markdown="1">
-### <a id="getOuterText" href="#getOuterText">getOuterText(before, length)</a> <span class="since">Since: 1.4.3</span>
+{{% api_method name="getOuterText(before, length)" since="1.4.3" %}}
 
 Gets the text left or right of the current selction/caret.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+var text = instance.getOuterText(before, length);
+```
+{{% /api_section %}}
 
-	var text = instance.getOuterText(before, length);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **before**  
 Type: **[Boolean](/api/types/#bool)**
 
 If to get the text before or after the current selection.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **length**  
 Type: **[Integer](/api/types/#int)**
 
 The number of characters to get from the left or right of the current selection.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[String](/api/types/#string)**
+{{% /api_section %}}
 
 
-
-<article class="api examples" markdown="1">
-### Examples
-
+{{% api_example %}}
 Get 10 characters before the current selection:
 
-	var text = $('textarea').sceditor('instance').getRangeHelper().getOuterText(true, 10);
-
+```js
+var textarea = ...;
+var text = sceditor.instance(textarea)
+    .getRangeHelper()
+    .getOuterText(true, 10);
+```
 
 Get 5 characters after the current selection:
 
-	var text = $('textarea').sceditor('instance').getRangeHelper().getOuterText(false, 5);
+```js
+var textarea = ...;
+var text = sceditor.instance(textarea)
+    .getRangeHelper()
+    .getOuterText(false, 5);
+```
+{{% /api_example %}}
 
-</article>
-</article>
+{{% /api_method %}}

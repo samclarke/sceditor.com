@@ -1,21 +1,18 @@
 ---
 title: restoreRange()
-permalink: /api/rangehelper/restorerange/
 excerpt: Restores the range saved by saveRange().
-categories:
-    - Docs
-    - API
-    - RangeHelper-API
 ---
-## RestoreRange()
+## restoreRange()
 
-<article class="api method" markdown="1">
-### <a id="restoreRange" href="#restoreRange">restoreRange()</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="restoreRange()" since="1.3.5" %}}
 
 Restores the range saved by the [saveRange()](/api/rangehelper/saverange/) method.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.restoreRange();
+```
+{{% /api_section %}}
 
-	instance.restoreRange();
-</article>
+{{% /api_method %}}

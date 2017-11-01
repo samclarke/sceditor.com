@@ -1,40 +1,35 @@
 ---
 title: selectOuterText()
-permalink: /api/rangehelper/selectoutertext/
 excerpt: Selects the text left and right of the current selection/caret.
-categories:
-    - Docs
-    - API
-    - RangeHelper-API
 ---
-## SelectOuterText()
+## selectOuterText()
 
-<article class="api method" markdown="1">
-### <a id="selectOuterText" href="#selectOuterText">selectOuterText(left, right)</a> <span class="since">Since: 1.4.3</span>
+{{% api_method name="selectOuterText(left, right)" since="1.4.3" %}}
 
 Selects the text left and/or right of the current selection/caret.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.selectOuterText(left, right);
+```
+{{% /api_section %}}
 
-	instance.selectOuterText(left, right);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **left**  
 Type: **[Integer](/api/types/#int)**
 
 Number of characters left of the current selection to select. Set to `0` to not select any.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **right**  
 Type: **[Integer](/api/types/#int)**
 
 Number of characters right of the current selection to select. Set to `0` to not select any.
-</div>
-</div>
-</article>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
+
+{{% /api_method %}}

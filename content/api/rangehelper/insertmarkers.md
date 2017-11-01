@@ -1,21 +1,18 @@
 ---
 title: insertMarkers()
-permalink: /api/rangehelper/insertmarkers/
 excerpt: Inserts markers at the start and end of the current selection.
-categories:
-    - Docs
-    - API
-    - RangeHelper-API
 ---
-## InsertMarkers()
+## insertMarkers()
 
-<article class="api method" markdown="1">
-### <a id="insertMarkers" href="#insertMarkers">insertMarkers()</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="insertMarkers()" since="1.3.5" %}}
 
 Inserts markers at the start and end of the current selection which can be used by the [restoreRange()](/api/rangehelper/restorerange/) method to re-select the range.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.insertMarkers();
+```
+{{% /api_section %}}
 
-	instance.insertMarkers();
-</article>
+{{% /api_method %}}

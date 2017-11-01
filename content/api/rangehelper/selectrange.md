@@ -1,32 +1,28 @@
 ---
 title: selectRange()
-permalink: /api/rangehelper/selectrange/
 excerpt: Gets the currently selected Range.
-categories:
-    - Docs
-    - API
-    - RangeHelper-API
 ---
-## SelectRange()
+## selectRange()
 
-<article class="api method" markdown="1">
-### <a id="selectRange" href="#selectRange">selectRange()</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="selectRange(range)" since="1.3.5" %}}
 
 Selects the passed DOM range.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.selectRange(range);
+```
+{{% /api_section %}}
 
-	instance.selectRange(range);
 
-
-#### Parameters
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **range**  
 Type: **[Range](/api/types/#range)** or **[TextRange](/api/types/#textrange)**
 
 The range to select.
-</div>
-</div>
-</article>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
+
+{{% /api_method %}}

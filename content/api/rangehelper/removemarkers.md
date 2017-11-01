@@ -1,21 +1,18 @@
 ---
 title: removeMarkers()
-permalink: /api/rangehelper/removemarkers/
 excerpt: Removes the markers inserted by insertMarkers().
-categories:
-    - Docs
-    - API
-    - RangeHelper-API
 ---
-## RemoveMarkers()
+## removeMarkers()
 
-<article class="api method" markdown="1">
-### <a id="removeMarkers" href="#removeMarkers">removeMarkers()</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="removeMarkers()" since="1.3.5" %}}
 
 Removes the markers inserted by the [insertMarkers()](/api/rangehelper/insertmarkers/) method.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.removeMarkers();
+```
+{{% /api_section %}}
 
-	instance.removeMarkers();
-</article>
+{{% /api_method %}}
