@@ -306,6 +306,7 @@ html code {
 .Documentation__content {
 	flex: 1 1 0;
 	order: 1;
+	overflow: hidden;
 }
 .Documentation__sidebar {
 	margin-right: 1.5rem;
