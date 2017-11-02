@@ -1,30 +1,26 @@
 ---
 title: ie
 excerpt: Gets the IE version.
-permalink: /api/sceditor/ie/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
 ## ie
 
-<article class="api method" markdown="1">
-### <a id="ie" href="#ie">ie</a> <span class="since">Since: 1.3.0</span>
+{{% api_method name="ie" since="1.3.0" %}}
 
 Static property containing the version of IE being used.
 
 Will be the IE version number (6, 7, 8, 9, 10) or `undefined` if the browser is not IE.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+var ieVersion = sceditor.ie;
+```
+{{% /api_section %}}
 
-	var ieVersion = $.sceditor.ie;
-
-
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[Int](/api/types/#int)**
 
 The IE version or undefined.
-</article>
+{{% /api_section %}}
+
+{{% /api_method %}}

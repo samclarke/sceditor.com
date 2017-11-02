@@ -1,29 +1,24 @@
 ---
 title: currentNode()
 excerpt: Gets the current DOM node that contains the selection/caret.
-permalink: /api/sceditor/currentnode/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## CurrentNode()
+## currentNode()
 
-<article class="api method" markdown="1">
-### <a id="currentNode" href="#currentNode">currentNode()</a> <span class="since">Since: 1.4.1</span>
+{{% api_method name="currentNode()" since="1.4.1" %}}
 
 Gets the current DOM node that contains the selection/caret in WYSIWYG mode.
 
 Will return `null` if there is currently no selection or in source mode.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+var node = instance.currentNode();
+```
+{{% /api_section %}}
 
-	var node = instance.currentNode();
-
-
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[Node](/api/types/#node)**
-</article>
+{{% /api_section %}}
 
+{{% /api_method %}}

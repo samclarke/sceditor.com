@@ -1,16 +1,10 @@
 ---
 title: addShortcut()
 excerpt: Adds a shortcut handler to the editor.
-permalink: /api/sceditor/addshortcut/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## AddShortcut()
+## addShortcut()
 
-<article class="ApiMethod" markdown="1">
-### <a id="addShortcut" href="#addShortcut">addShortcut()</a> <span class="since">Since: 1.4.3</span>
+{{% api_method name="addShortcut(shortcut, handler)" since="1.4.3" %}}
 
 Adds a shortcut handler to the editor. If a handler for the specified shortcut already exists, it will be replaced.
 
@@ -24,34 +18,36 @@ e.g.:
 	alt+b
 
 
-<span class="Label Label--info">Info:</span> The shortcut is binded to both WYSIWYG and source modes. It's up to the shortcut handler to check which mode the editor is in and take appropriate action.
+<span class="Label Label--info">Info:</span> The shortcut is bound to both WYSIWYG and source modes. It's up to the shortcut handler to check which mode the editor is in and take appropriate action.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.addShortcut(shortcut, handler);
+```
+{{% /api_section %}}
 
-	instance.addShortcut(shortcut, handler);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **shortcut**
 Type: *[String](/api/types/#string)*
 
 The shortcut string to match.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **handler**
 Type *[Function](/api/types/#function)* or *[String](/api/types/#string)*
 
-The function to be called when the shortcut is pressed or a string. If this is a string, it will call the command with the same name as the passed string.
-</div>
-</div>
+The function to be called when the shortcut is pressed or a string.
+If this is a string the editor will call the command with the same name as the string value.
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
-</article>
+{{% /api_section %}}
+
+{{% /api_method %}}

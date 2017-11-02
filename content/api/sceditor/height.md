@@ -1,69 +1,63 @@
 ---
 title: height()
 excerpt: Gets or sets the current editor height.
-permalink: /api/sceditor/height/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## Height()
+## height()
 
-<article class="api method" markdown="1">
-### <a id="height" href="#height">height()</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="height()" since="1.3.5" %}}
 
 Gets the current height of the editor in px.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+var val = instance.height();
+```
+{{% /api_section %}}
 
-	var val = instance.height();
-
-
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[Int](/api/types/#int)**
 
 The height in pixels
-</article>
+{{% /api_section %}}
+
+{{% /api_method %}}
 
 
-
-<article class="api method" markdown="1">
-### <a id="height-value" href="#height-value">height(value)</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="height(value)" since="1.3.5" %}}
 
 Sets the height of the editor.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.height(value);
+```
+{{% /api_section %}}
 
-	instance.height(value[, filter]);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **value**  
 Type: *[Int](/api/types/#int)* or *[String](/api/types/#string)*
 
 Should either be the height in pixels or a string percentage.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
+{{% /api_section %}}
 
 
-<article class="api examples" markdown="1">
-### Examples
-
+{{% api_example %}}
 Set the height to 200px:
 
-	$('textarea').sceditor('instance').height(200);
+```js
+var textarea = ...;
+sceditor.instance(textarea).height(200);
+```
+{{% /api_example %}}
 
-</article>
-</article>
-
+{{% /api_method %}}

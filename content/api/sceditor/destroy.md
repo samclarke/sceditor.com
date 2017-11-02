@@ -1,21 +1,18 @@
 ---
 title: destroy()
-permalink: /api/sceditor/destroy/
 excerpt: Removes the editor leaving only the original textarea.
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## Destroy()
+## destroy()
 
-<article class="api method" markdown="1">
-### <a id="destroy" href="#destroy">destroy()</a> <span class="since">Since: 1.3.0</span>
+{{% api_method name="destroy()" since="1.3.0" %}}
 
 Destroys the instance of SCEditor by removing all elements and event handlers, leaving only the original textarea.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.destroy();
+```
+{{% /api_section %}}
 
-	instance.destroy();
-</article>
+{{% /api_method %}}

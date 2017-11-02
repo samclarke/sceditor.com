@@ -1,44 +1,40 @@
 ---
 title: getWysiwygEditorValue()
 excerpt: Gets the current WYSIWYG editor value.
-permalink: /api/sceditor/getwysiwygeditorvalue/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## GetWysiwygEditorValue()
+## getWysiwygEditorValue()
 
-<article class="api method" markdown="1">
-### <a id="getWysiwygEditorValue" href="#getWysiwygEditorValue">getWysiwygEditorValue()</a> <span class="since">Since: 1.3.0</span>
+{{% api_method name="getWysiwygEditorValue()" since="1.3.0" %}}
 
 Gets the WYSIWYG editors current HTML value.
 
-If using a plugin that filters the HTML, like the BBCode plugin, it will return the result of the filtering (BBCode) unless the `filter` param is set to false.
+If using a format that like the BBCode format, this will return the result of the running the value through the format.
 
-<span class="Label Label--info">Info:</span> Using the [val()](/api/sceditor/val/) method is the prefered way of getting the editors value. It will check if the editor is in WYSIWYG or source mode and return the appropriate value.
+If the `filter` parameter is set to false, this will return the unfiltered contents of the source editor (BBCode if using the BBCode format).
 
-
-#### Syntax
-
-	var val = instance.getWysiwygEditorValue([filter]);
+<span class="Label Label--info">Info:</span> Using the [val()](/api/sceditor/val/) method is the preferred way of getting the editors value. It will check if the editor is in WYSIWYG or source mode and return the appropriate value.
 
 
-#### Parameters
+{{% api_section title="Syntax" %}}
+```js
+var val = instance.getWysiwygEditorValue([filter]);
+```
+{{% /api_section %}}
 
-<div class="parameters">
-<div class="parameter" markdown="1">
+
+{{% api_parameters %}}
+{{% api_parameter %}}
 **filter**  
 Type: *[Boolean](/api/types/#bool)*  
 Default: `true`
 
-If to filter the value through any plugins. Will cause the HTML to be converted to BBCode if using the BBCode plugin.
-</div>
-</div>
+If to filter the value through the current format. Will cause the HTML to be converted to BBCode if using the BBCode format.
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[String](/api/types/#string)**
-</article>
+{{% /api_section %}}
 
+{{% /api_method %}}

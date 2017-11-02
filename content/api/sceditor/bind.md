@@ -1,16 +1,10 @@
 ---
 title: bind()
-permalink: /api/sceditor/bind/
 excerpt: Binds a handler to an event.
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## Bind()
+## bind()
 
-<article class="api method" markdown="1">
-### <a id="bind" href="#bind">bind(events, func)</a> <span class="since">Since: 1.4.1</span>
+{{% api_method name="bind(events, func)" since="1.4.1" %}}
 
 Binds a handler to the specified events.
 
@@ -25,60 +19,64 @@ The supported events are:
  * focus
  * nodechanged  
    When the current node containing the selection changes in WYSIWYG mode
+ * valuechange  
+   Triggered when the editors value changes (this isn't called after every
+   key press)
  * contextmenu
 
-#### Syntax
 
-	instance.bind(events, func[, excludeWysiwyg][, excludeSource]);
+{{% api_section title="Syntax" %}}
+```js
+instance.bind(events, func[, excludeWysiwyg][, excludeSource]);
+```
+{{% /api_section %}}
 
 
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **events**  
 Type: *[String](/api/types/#string)*
 
 List of events separated by spaces to bind the handler to.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **func**  
 Type: *[Function](/api/types/#function)*
 
 Function that will be called when the event occurs
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **excludeWysiwyg**  
 Type: *[Boolean](/api/types/#bool)*  
 Default: `false`
 
 If to not bind the handler to the WYSIWYG editor.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **excludeSource**  
 Type: *[Boolean](/api/types/#bool)*  
 Default: `false`
 
 If to not bind the handler to the source editor.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
+{{% /api_section %}}
 
 
-<article class="api examples" markdown="1">
-### Examples
+{{% api_example %}}
+```js
+var textarea = ...;
+sceditor.instance(textarea).bind('keypress', function(e) {
+    alert('Key pressed');
+});
+```
+{{% /api_example %}}
 
-	$('textarea').sceditor('instance').bind('keypress', function(e) {
-		alert('Key pressed');
-	});
-
-</article>
-</article>
-
+{{% /api_method %}}

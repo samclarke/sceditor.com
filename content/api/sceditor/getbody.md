@@ -1,26 +1,22 @@
 ---
 title: getBody()
 excerpt: Gets the DOM body element of the WYSIWYG editor.
-permalink: /api/sceditor/getbody/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## GetBody()
+## getBody()
 
-<article class="api method" markdown="1">
-### <a id="getBody" href="#getBody">getBody()</a> <span class="since">Since: 1.4.3</span>
+{{% api_method name="getBody()" since="1.4.3" %}}
 
-Returns a jQuery object containing the DOM body element of the WYSIWYG editor.
-
-
-#### Syntax
-
-	var body = instance.getBody();
+Returns the DOM body element of the WYSIWYG editor.
 
 
-#### Return
+{{% api_section title="Syntax" %}}
+```js
+var body = instance.getBody();
+```
+{{% /api_section %}}
 
-Type: **[jQuery](/api/types/#jquery)**
-</article>
+{{% api_section title="Return" %}}
+Type: **[Node](/api/types/#node)**
+{{% /api_section %}}
+
+{{% /api_method %}}

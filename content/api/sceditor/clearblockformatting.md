@@ -1,57 +1,53 @@
 ---
 title: clearBlockFormatting()
 excerpt: Clears the formatting of the first block level element that has the cursor
-permalink: /api/sceditor/clearblockformatting/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## ClearBlockFormatting()
+## clearBlockFormatting()
 
-<article class="api method" markdown="1">
-### <a id="clearBlockFormatting" href="#clearBlockFormatting">clearBlockFormatting()</a> <span class="since">Since: 1.4.4</span>
+{{% api_method name="clearBlockFormatting()" since="1.4.4" %}}
 
 Clears the formatting of the first block level element that contains the cursor.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.clearBlockFormatting();
+```
+{{% /api_section %}}
 
-	instance.clearBlockFormatting();
 
-
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
-</article>
+{{% /api_section %}}
+
+{{% /api_method %}}
 
 
 
-<article class="api method" markdown="1">
-### <a id="clearBlockFormatting-element" href="#clearBlockFormatting-element">clearBlockFormatting(element)</a> <span class="since">Since: 1.4.4</span>
+{{% api_method name="clearBlockFormatting(element)" since="1.4.4" %}}
 
 Clears the formatting of the passed element by removing all CSS classes, all inline styling and if it isn't a `p` or `div` tag by converting it into a `p` tag.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.clearBlockFormatting(element);
+```
+{{% /api_section %}}
 
-	instance.clearBlockFormatting(element);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **element**  
 Type: **[HTMLElement](/api/types/#htmlelement)**
 
 The DOM element to remove the formatting from.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
-</article>
+{{% /api_section %}}
 
+{{% /api_method %}}

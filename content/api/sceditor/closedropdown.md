@@ -1,49 +1,39 @@
 ---
 title: closeDropDown()
 excerpt: Closes any open dropdown.
-permalink: /api/sceditor/closedropdown/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## CloseDropDown()
+## closeDropDown()
 
-<article class="api method" markdown="1">
-### <a id="closeDropDown" href="#closeDropDown">closeDropDown()</a> <span class="since">Since: 1.3.0</span>
+{{% api_method name="closeDropDown()" since="1.3.0" %}}
 
-Closes any currently open editor dropdown.
-
-
-#### Syntax
-
-	instance.closeDropDown([focus]);
+Closes any currently open editor dropdown. If there is no currently open dropdown
+this does nothing.
 
 
-#### Parameters
+{{% api_section title="Syntax" %}}
+```js
+instance.closeDropDown([focus]);
+```
+{{% /api_section %}}
 
-<div class="parameters">
-<div class="parameter" markdown="1">
+
+{{% api_parameters %}}
+{{% api_parameter %}}
 **focus**  
 Type: *[Boolean](/api/types/#bool)*  
 Default: `false`
 
 If to focus the editor after closing the drop down
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
+{{% api_example %}}
+```js
+// Close the currently open dropdown if there is one
+var textarea = ...;
+sceditor.instance(textarea).closeDropDown();
+```
+{{% /api_example %}}
 
-Type: **[Void](/api/types/#void)**
-
-
-<article class="api examples" markdown="1">
-### Examples
-
-	// Close the currently open dropdown if there is one
-	$('textarea').sceditor('instance').closeDropDown();
-
-</article>
-</article>
-
+{{% /api_method %}}

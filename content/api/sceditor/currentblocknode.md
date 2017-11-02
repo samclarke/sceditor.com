@@ -1,29 +1,24 @@
 ---
 title: currentBlockNode()
 excerpt: Gets the current block level DOM node that contains the selection/caret.
-permalink: /api/sceditor/currentblocknode/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## CurrentBlockNode()
+## currentBlockNode()
 
-<article class="api method" markdown="1">
-### <a id="currentBlockNode" href="#currentBlockNode">currentBlockNode()</a> <span class="since">Since: 1.4.4</span>
+{{% api_method name="currentBlockNode()" since="1.4.4" %}}
 
 Gets the current block level DOM node that contains the selection/caret in WYSIWYG mode.
 
 Will return `null` if there is currently no selection or in source mode.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+var node = instance.currentBlockNode();
+```
+{{% /api_section %}}
 
-	var node = instance.currentBlockNode();
-
-
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[Node](/api/types/#node)**
-</article>
+{{% /api_section %}}
 
+{{% /api_method %}}

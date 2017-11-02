@@ -1,87 +1,81 @@
 ---
 title: focus()
 excerpt: Binds a handler to the focus event, or triggers the focus event.
-permalink: /api/sceditor/focus/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## Focus()
+## focus()
 
-<article class="api method" markdown="1">
-### <a id="focus" href="#focus">focus()</a> <span class="since">Since: 1.3.0</span>
+{{% api_method name="focus()" since="1.3.0" %}}
 
 Focuses the editor.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.focus();
+```
+{{% /api_section %}}
 
-	instance.focus();
-
-
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
-</article>
+{{% /api_section %}}
+
+{{% /api_method %}}
 
 
+{{% api_method name="focus(func)" since="1.4.1" %}}
 
-<article class="api method" markdown="1">
-### <a id="focus-func" href="#focus-func">focus(func)</a> <span class="since">Since: 1.4.1</span>
+Binds a handler to the focus event. This is just a shortcut for:
 
-Binds a handler to the focus event.
-
-This is just a shortcut for:
-
-	instance.bind('focus', func[, excludeWysiwyg][, excludeSource]);
+```js
+instance.bind('focus', func[, excludeWysiwyg][, excludeSource]);
+```
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.focus(func[, excludeWysiwyg][, excludeSource]);
+```
+{{% /api_section %}}
 
-	instance.focus(func[, excludeWysiwyg][, excludeSource]);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **func**  
 Type *[Function](/api/types/#function)*
 
 Function that will be called when the event occurs
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **excludeWysiwyg**  
 Type: *[Boolean](/api/types/#bool)*  
 Default: `false`
 
 If to not bind the event to the WYSIWYG editor.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **excludeSource**  
 Type: *[Boolean](/api/types/#bool)*  
 Default: `false`
 
 If to not bind the event to the source editor.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
+{{% /api_section %}}
 
 
-<article class="api examples" markdown="1">
-### Examples
+{{% api_example %}}
+```js
+var textarea = ...;
+sceditor.instance(textarea).focus(function(e) {
+	alert('Gained focus');
+});
+```
+{{% /api_example %}}
 
-	$('textarea').sceditor('instance').focus(function(e) {
-		alert('Gained focus');
-	});
-
-</article>
-</article>
-
+{{% /api_method %}}

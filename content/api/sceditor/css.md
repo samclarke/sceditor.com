@@ -1,68 +1,63 @@
 ---
 title: css()
 excerpt: Gets or sets inline CSS in the WYSIWYG editor.
-permalink: /api/sceditor/css/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## Css()
+## css()
 
-<article class="api method" markdown="1">
-### <a id="css" href="#css">css()</a> <span class="since">Since: 1.4.3</span>
+{{% api_method name="css()" since="1.4.3" %}}
 
 Gets the current inline CSS of the WYSIWYG editor.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+var css = instance.css();
+```
+{{% /api_section %}}
 
-	var css = instance.css();
+{{% api_section title="Return" %}}
+Type: **[string](/api/types/#string)**
+{{% /api_section %}}
+
+{{% /api_method %}}
 
 
-#### Return
-
-Type: **[String](/api/types/#string)**
-</article>
-
-
-
-<article class="api method" markdown="1">
-### <a id="css-value" href="#css-value">css(value)</a> <span class="since">Since: 1.4.3</span>
+{{% api_method name="css(value)" since="1.4.3" %}}
 
 Sets the current inline CSS of the WYSIWYG editor.
 
-<span class="Label Label--important">Important:</span> Like all CSS changes, changing the style can cause issues in different browsers.
-
-#### Syntax
-
-	instance.css(value);
+<span class="Label Label--important">Important:</span> Changing the editor CSS can cause browser incompatibility issues. 
 
 
-#### Parameters
+{{% api_section title="Syntax" %}}
+```js
+instance.css(value);
+```
+{{% /api_section %}}
 
-<div class="parameters">
-<div class="parameter" markdown="1">
+
+{{% api_parameters %}}
+{{% api_parameter %}}
 **css**  
-Type: *[String](/api/types/#string)*
+Type: *[string](/api/types/#string)*
 
 The CSS to add.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
+{{% /api_section %}}
 
 
-<article class="api examples" markdown="1">
-### Examples
-
+{{% api_example %}}
 Change the default font colour:
 
-	$('textarea').sceditor('instance').css('body { color: #ff0; }');
+```js
+var textarea = ...;
+sceditor.instance(textarea).css('body { color: #ff0; }');
+```
+{{% /api_example %}}
 
-</article>
-</article>
-
+{{% /api_method %}}

@@ -1,57 +1,51 @@
 ---
 title: emoticons()
 excerpt: Gets or sets if emoticons are enabled.
-permalink: /api/sceditor/emoticons/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## Emoticons()
+## emoticons()
 
-<article class="api method" markdown="1">
-### <a id="emoticons" href="#emoticons">emoticons()</a> <span class="since">Since: 1.4.2</span>
+{{% api_method name="emoticons()" since="1.4.2" %}}
 
 Gets if emoticons are currently enabled in the editor.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+var enabled = instance.emoticons();
+```
+{{% /api_section %}}
 
-	var enabled = instance.emoticons();
+{{% api_section title="Return" %}}
+Type: **[boolean](/api/types/#bool)**
+{{% /api_section %}}
+
+{{% /api_method %}}
 
 
-#### Return
-
-Type: **[Boolean](/api/types/#bool)**
-</article>
-
-
-
-<article class="api method" markdown="1">
-### <a id="emoticons-en" href="#emoticons-en">emoticons(enable)</a> <span class="since">Since: 1.4.2</span>
+{{% api_method name="emoticons(enable)" since="1.4.2" %}}
 
 Enables/disables emoticons in the editor.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.emoticons(enable);
+```
+{{% /api_section %}}
 
-	instance.emoticons(enable);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **save**  
-Type: *[Boolean](/api/types/#bool)*
+Type: *[boolean](/api/types/#bool)*
 
 If to enable emoticons or not.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
-</article>
+{{% /api_section %}}
 
+{{% /api_method %}}

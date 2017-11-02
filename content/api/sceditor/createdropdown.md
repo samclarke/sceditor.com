@@ -1,56 +1,50 @@
 ---
 title: createDropDown()
 excerpt: Creates a dropdown.
-permalink: /api/sceditor/createdropdown/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## CreateDropDown()
+## createDropDown()
 
-<article class="api method" markdown="1">
-### <a id="createDropDown" href="#createDropDown">createDropDown(mItem, name, content)</a> <span class="since">Since: 1.3.0</span>
+{{% api_method name="createDropDown(mItem, name, content)" since="1.3.0" %}}
 
 Creates a dropdown menu aligned to the to the menu item `mItem`.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.createDropDown(mItem, name, content[, unselectable]);
+```
+{{% /api_section %}}
 
-	instance.createDropDown(mItem, name, content[, unselectable]);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **mItem**  
 Type: *[Node](/api/types/#node)*
 
 The menu button to align the drop down to.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **name**  
 Type: *[String](/api/types/#string)*
 
 The name to give the dropdown. Will add the class `sceditor-name` to the dropdown. 
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **content**  
 Type: *[Node](/api/types/#node)*
 
 The HTML content of the dropdown.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **unselectable**  
 Type: *[Boolean](/api/types/#bool)*  
 Default: `true`
 
 If to add the `unselectable` attribute to all the elements in the content. This stops IE from deselecting the text in the editor when an element is clicked.
-</div>
-</div>
-</article>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
+{{% /api_method %}}

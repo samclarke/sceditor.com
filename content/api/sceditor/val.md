@@ -7,87 +7,93 @@ categories:
     - API
     - SCEditor-API
 ---
-## Val()
+## val()
 
-<article class="api method" markdown="1">
-### <a id="val" href="#val">val()</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="val()" since="1.3.5" %}}
 
 Gets the current value of the editor.
 
 This will return the filtered HTML from the WYSIWYG editor or the unfiltered contents of the source editor.
 
-If using a plugin that filters the HTML like the BBCode plugin, this will return the filtered HTML or BBCode in the case of the BBCode plugin.
+If using a format like the BBCode format, this will return the filtered HTML i.e. BBCode in the case of the BBCode format.
+
+{{% api_section title="Syntax" %}}
+```js
+var val = instance.val();
+```
+{{% /api_section %}}
 
 
-#### Syntax
-
-	var val = instance.val();
-
-
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[String](/api/types/#string)**
 
 The filtered value of the editor
-</article>
+{{% /api_section %}}
+
+{{% /api_method %}}
 
 
 
-<article class="api method" markdown="1">
-### <a id="val-value" href="#val-value">val(value)</a> <span class="since">Since: 1.3.5</span>
+
+
+
+{{% api_method name="val(value)" since="1.3.5" %}}
 
 Sets the value of the editor.
 
-If `filter` is not set to `false` the value will be filtered by any plugins that support filtering. This means that if using a plugin like the BBCode plugin, the value should be BBCode instead of HTML.
+If the `filter` parameter is *not* set to `false` the value will be run through the current editor format. This means that if using a format like BBCode, the value passed to this method should be BBCode and not HTML.
+
+{{% api_section title="Syntax" %}}
+```js
+instance.val(value[, filter]);
+```
+{{% /api_section %}}
 
 
-#### Syntax
-
-	instance.val(value[, filter]);
-
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **value**  
 Type: *[String](/api/types/#string)*
 
 String to set as the editors value
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **filter**  
 Type: *[Boolean](/api/types/#bool)*  
 Default: `true`
 
 If to filter the value through any plugins.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
+{{% /api_section %}}
 
 
-<article class="api examples" markdown="1">
-### Examples
-
+{{% api_example %}}
 Setting the value:
 
-	$('textarea').sceditor('instance').val('Hello <strong>World!</strong>');
-
+```js
+sceditor.instance(textarea)
+	.val('Hello <strong>World!</strong>');
+```
 
 If using the BBCode plugin, BBCode should be passed instead of HTML:
 
-	$('textarea').sceditor('instance').val('Hello [b]World![/b]');
-
+```js
+sceditor.instance(textarea)
+	.val('Hello [b]World![/b]');
+```
 
 If `filter` is set to `false`, HTML can be passed even when using the BBCode plugin:
 
-	$('textarea').sceditor('instance').val('Hello <strong>World!</strong>', false);
+```js
+sceditor.instance(textarea)
+	.val('Hello <strong>World!</strong>', false);
+```
+{{% /api_example %}}
 
-</article>
-</article>
-
+{{% /api_method %}}
