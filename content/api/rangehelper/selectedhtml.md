@@ -17,9 +17,7 @@ var html = instance.selectedHtml();
 
 
 {{% api_section title="Return" %}}
-```js
-Type: **[String](/api/types/#string)** 
-```
+Type: **[String](/api/types/#string)**
 {{% /api_section %}}
 
 {{% /api_method %}}
