@@ -1,66 +1,59 @@
 ---
 title: keyDown()
-excerpt: Binds a handeler the key down event.
-permalink: /api/sceditor/keydown/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
+excerpt: Binds a handler the key down event.
 ---
-## KeyDown()
+## keyDown()
 
-
-<article class="api method" markdown="1">
-### <a id="keyDown-func" href="#keyDown-func">keyDown(func)</a> <span class="since">Since: 1.4.1</span>
+{{% api_method name="keyDown(func)" since="1.4.1" %}}
 
 Binds a handler to the key down event on the editor.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.keyDown(func[, excludeWysiwyg][, excludeSource]);
+```
+{{% /api_section %}}
 
-	instance.keyDown(func[, excludeWysiwyg][, excludeSource]);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **func**  
 Type *[Function](/api/types/#function)*
 
 Function that will be called when the event occurs
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **excludeWysiwyg**  
 Type: *[Boolean](/api/types/#bool)*  
 Default: `false`
 
 If to not bind the event to the WYSIWYG editor.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **excludeSource**  
 Type: *[Boolean](/api/types/#bool)*  
 Default: `false`
 
 If to not bind the event to the source editor.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
+{{% /api_section %}}
 
 
-<article class="api examples" markdown="1">
-### Examples
+{{% api_example %}}
+```js
+var textarea = ...;
+sceditor.instance(textarea).keyDown(function(e) {
+	alert('Key down event fired.');
+});
+```
+{{% /api_example %}}
 
-	$('textarea').sceditor('instance').keyDown(function(e) {
-		alert('Key down event fired.');
-	});
-
-</article>
-</article>
-
+{{% /api_method %}}

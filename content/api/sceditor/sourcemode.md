@@ -1,72 +1,70 @@
 ---
 title: sourceMode()
 excerpt: Gets or sets if the editor is in source mode.
-permalink: /api/sceditor/sourcemode/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## SourceMode()
+## sourceMode()
 
-<article class="api method" markdown="1">
-### <a id="sourceMode" href="#sourceMode">sourceMode()</a> <span class="since">Since: 1.4.0</span>
+{{% api_method name="sourceMode()" since="1.4.0" %}}
 
 Gets if the editor is in source mode.
 
 
-#### Syntax
-
-	var isInSourceMode = instance.sourceMode();
-
-
-#### Return
-
-Type: **[Boolean](/api/types/#bool)**
-</article>
+{{% api_section title="Syntax" %}}
+```js
+var isInSourceMode = instance.sourceMode();
+```
+{{% /api_section %}}
 
 
+{{% api_section title="Return" %}}
+Type: **[boolean](/api/types/#bool)**
+{{% /api_section %}}
 
-<article class="api method" markdown="1">
-### <a id="sourceMode-val" href="#sourceMode-val">sourceMode(val)</a> <span class="since">Since: 1.4.0</span>
+{{% /api_method %}}
+
+
+
+{{% api_method name="sourceMode(val)" since="1.4.0" %}}
 
 Sets if the editor is in source mode.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.sourceMode(val);
+```
+{{% /api_section %}}
 
-	instance.sourceMode(val);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **val**  
 Type: *[Boolean](/api/types/#bool)*  
 
 If to put the editor into source mode or not.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
+{{% /api_section %}}
 
 
-<article class="api examples" markdown="1">
-### Examples
-
+{{% api_example %}}
 Set the editor to source mode:
 
-	$('textarea').sceditor('instance').sourceMode(true);
-
+```js
+var textarea = ...;
+sceditor.instance(textarea).sourceMode(true);
+```
 
 Set the editor to WYSIWYG mode:
 
-	$('textarea').sceditor('instance').sourceMode(false);
+```js
+var textarea = ...;
+sceditor.instance(textarea).sourceMode(false);
+```
+{{% /api_example %}}
 
-</article>
-</article>
-
+{{% /api_method %}}

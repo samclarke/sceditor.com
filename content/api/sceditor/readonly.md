@@ -1,72 +1,70 @@
 ---
 title: readOnly()
 excerpt: Gets or sets if the editor is read only.
-permalink: /api/sceditor/readonly/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## ReadOnly()
+## readOnly()
 
-<article class="api method" markdown="1">
-### <a id="readOnly" href="#readOnly">readOnly()</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="readOnly()" since="1.3.5" %}}
 
 Gets if the editor is read only
 
 
-#### Syntax
-
-	var isReadOnly = instance.readOnly();
-
-
-#### Return
-
-Type: **[Boolean](/api/types/#bool)**
-</article>
+{{% api_section title="Syntax" %}}
+```js
+var isReadOnly = instance.readOnly();
+```
+{{% /api_section %}}
 
 
+{{% api_section title="Return" %}}
+Type: **[boolean](/api/types/#bool)**
+{{% /api_section %}}
 
-<article class="api method" markdown="1">
-### <a id="readOnly-val" href="#readOnly-val">readOnly(val)</a> <span class="since">Since: 1.3.5</span>
+{{% /api_method %}}
+
+
+
+{{% api_method name="readOnly(val)" since="1.3.5" %}}
 
 Sets if the editor is read only
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.readOnly(val);
+```
+{{% /api_section %}}
 
-	instance.readOnly(val);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **val**  
 Type: *[Boolean](/api/types/#bool)*  
 
 If to make the editor read-only.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
+{{% /api_section %}}
 
 
-<article class="api examples" markdown="1">
-### Examples
-
+{{% api_example %}}
 Set the editor to read only:
 
-	$('textarea').sceditor('instance').readOnly(true);
-
+```js
+var textarea = ...;
+sceditor.instance(textarea).readOnly(true);
+```
 
 Make the editor editable:
 
-	$('textarea').sceditor('instance').readOnly(false);
+```js
+var textarea = ...;
+sceditor.instance(textarea).readOnly(false);
+```
+{{% /api_example %}}
 
-</article>
-</article>
-
+{{% /api_method %}}

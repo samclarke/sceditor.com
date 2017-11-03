@@ -1,16 +1,10 @@
 ---
 title: unbind()
 excerpt: Unbinds a handler from an event.
-permalink: /api/sceditor/unbind/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## Unbind()
+## unbind()
 
-<article class="api method" markdown="1">
-### <a id="unbind" href="#unbind">unbind(events, func)</a> <span class="since">Since: 1.4.1</span>
+{{% api_method name="unbind(events, func)" since="1.4.1" %}}
 
 Unbinds a handler to the specified events.
 
@@ -23,52 +17,58 @@ The supported events are:
  * keypress
  * blur
  * focus
+ * contextmenu
  * nodechanged  
    When the current node containing the selection changes in WYSIWYG mode
- * contextmenu
+ * valuechange  
+   Triggered when the editors value changes (this isn't called after every
+   key press)
+ * selectionchanged
+   When the editors selection changes (triggered a lot)
 
-#### Syntax
 
-	instance.unbind(events, func[, excludeWysiwyg][, excludeSource]);
+{{% api_section title="Syntax" %}}
+```js
+instance.unbind(events, func[, excludeWysiwyg][, excludeSource]);
+```
+{{% /api_section %}}
 
 
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **events**  
 Type: *[String](/api/types/#string)*
 
 List of events separated by spaces to unbind the handler from.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **func**  
 Type: *[Function](/api/types/#function)*
 
 Function that to unbind
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **excludeWysiwyg**  
 Type: *[Boolean](/api/types/#bool)*  
 Default: `false`
 
 If to not unbind the event from the WYSIWYG editor.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **excludeSource**  
 Type: *[Boolean](/api/types/#bool)*  
 Default: `false`
 
 If to not unbind the event from the source editor.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
-</article>
+{{% /api_section %}}
 
+{{% /api_method %}}

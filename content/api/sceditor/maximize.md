@@ -7,66 +7,71 @@ categories:
     - API
     - SCEditor-API
 ---
-## Maximize()
+## maximize()
 
-<article class="api method" markdown="1">
-### <a id="maximize" href="#maximize">maximize()</a> <span class="since">Since: 1.4.1</span>
+
+{{% api_method name="maximize()" since="1.4.1" %}}
 
 Gets if the editor is maximised or not
 
 
-#### Syntax
-
-	var isMaximised = instance.maximize();
-
-
-#### Return
-
-Type: **[Boolean](/api/types/#bool)**
-</article>
+{{% api_section title="Syntax" %}}
+```js
+var isMaximised = instance.maximize();
+```
+{{% /api_section %}}
 
 
+{{% api_section title="Return" %}}
+Type: **[boolean](/api/types/#boolean)**
+{{% /api_section %}}
 
-<article class="api method" markdown="1">
-### <a id="maximize-maximize" href="#maximize-maximize">maximize(maximize)</a> <span class="since">Since: 1.4.1</span>
+{{% /api_method %}}
+
+
+
+{{% api_method name="maximize(maximize)" since="1.4.1" %}}
 
 Sets if the editor is maximised or not
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.maximize(maximize);
+```
+{{% /api_section %}}
 
-	instance.maximize(maximize);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **maximize**  
-Type: *[Boolean](/api/types/#bool)*  
+Type *[boolean](/api/types/#boolean)*
 
-If to maximize the editor or not.
-</div>
-</div>
+If to maximize the editor or not
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
+{{% /api_section %}}
 
 
-<article class="api examples" markdown="1">
-### Examples
+{{% api_example %}}
 
 Maximise the editor:
 
-	$('textarea').sceditor('instance').maximize(true);
-
+```js
+var textarea = ...;
+sceditor.instance(textarea).maximize(true);
+```
 
 Set the editor back to normal:
 
-	$('textarea').sceditor('instance').maximize(false);
+```js
+var textarea = ...;
+sceditor.instance(textarea).maximize(false);
+```
+{{% /api_example %}}
 
-</article>
-</article>
-
+{{% /api_method %}}

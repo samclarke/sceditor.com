@@ -1,11 +1,6 @@
 ---
 title: val()
 excerpt: Gets or sets the editors value.
-permalink: /api/sceditor/val/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
 ## val()
 

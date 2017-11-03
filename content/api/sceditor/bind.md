@@ -17,12 +17,14 @@ The supported events are:
  * keypress
  * blur
  * focus
+ * contextmenu
  * nodechanged  
    When the current node containing the selection changes in WYSIWYG mode
  * valuechange  
    Triggered when the editors value changes (this isn't called after every
    key press)
- * contextmenu
+ * selectionchanged
+   When the editors selection changes (triggered a lot)
 
 
 {{% api_section title="Syntax" %}}

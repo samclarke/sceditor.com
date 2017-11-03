@@ -1,74 +1,72 @@
 ---
 title: rtl()
 excerpt: Gets or sets if the editor is in Right-To-Left mode.
-permalink: /api/sceditor/rtl/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## Rtl()
+## rtl()
 
-<article class="api method" markdown="1">
-### <a id="rtl" href="#rtl">rtl()</a> <span class="since">Since: 1.4.1</span>
+{{% api_method name="rtl()" since="1.4.1" %}}
 
 Gets if the editor is in Right-To-Left mode.
 
 The default Right-To-Left mode will be picked up from the parent node of the editor.
 
 
-#### Syntax
-
-	var isRtl = instance.rtl();
-
-
-#### Return
-
-Type: **[Boolean](/api/types/#bool)**
-</article>
+{{% api_section title="Syntax" %}}
+```js
+var isRtl = instance.rtl();
+```
+{{% /api_section %}}
 
 
+{{% api_section title="Return" %}}
+Type: **[boolean](/api/types/#bool)**
+{{% /api_section %}}
 
-<article class="api method" markdown="1">
-### <a id="rtl-val" href="#rtl-val">rtl(val)</a> <span class="since">Since: 1.4.1</span>
+{{% /api_method %}}
+
+
+
+{{% api_method name="rtl(val)" since="1.4.1" %}}
 
 Sets if the editor is in Right-To-Left mode
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.rtl(val);
+```
+{{% /api_section %}}
 
-	instance.rtl(val);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **val**  
 Type: *[Boolean](/api/types/#bool)*  
 
 If to make the editor into RTL mode.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
+{{% /api_section %}}
 
 
-<article class="api examples" markdown="1">
-### Examples
-
+{{% api_example %}}
 Set the editor to right-to-left:
 
-	$('textarea').sceditor('instance').rtl(true);
-
+```js
+var textarea = ...;
+sceditor.instance(textarea).rtl(true);
+```
 
 Set the editor to left-to-right:
 
-	$('textarea').sceditor('instance').rtl(false);
+```js
+var textarea = ...;
+sceditor.instance(textarea).rtl(false);
+```
+{{% /api_example %}}
 
-</article>
-</article>
-
+{{% /api_method %}}

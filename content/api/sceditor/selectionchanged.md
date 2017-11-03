@@ -1,52 +1,45 @@
 ---
 title: selectionChanged()
-excerpt: Binds a handeler the selection changed event.
-permalink: /api/sceditor/selectionchanged/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
+excerpt: Binds a handler the selection changed event.
 ---
-## SelectionChanged()
+## selectionChanged()
 
-
-<article class="api method" markdown="1">
-### <a id="selectionChanged-func" href="#selectionChanged-func">selectionChanged(func)</a> <span class="since">Since: 1.4.1</span>
+{{% api_method name="selectionChanged(func)" since="1.4.1" %}}
 
 Binds a handler to the WYSIWYG selection changed event.
 
 This event will fire whenever the selection changes in the WYSIWYG editor.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.selectionChanged(func);
+```
+{{% /api_section %}}
 
-	instance.selectionChanged(func);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **func**  
 Type *[Function](/api/types/#function)*
 
 Function that will be called when the event occurs
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
+{{% /api_section %}}
 
 
-<article class="api examples" markdown="1">
-### Examples
+{{% api_example %}}
+```js
+var textarea = ...;
+sceditor.instance(textarea).selectionChanged(function(e) {
+	alert('The selection has changed');
+});
+```
+{{% /api_example %}}
 
-	$('textarea').sceditor('instance').selectionChanged(function(e) {
-		alert('The selection has changed');
-	});
-
-</article>
-</article>
-
+{{% /api_method %}}

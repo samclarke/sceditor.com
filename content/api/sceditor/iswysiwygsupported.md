@@ -1,26 +1,22 @@
 ---
 title: isWysiwygSupported
 excerpt: Gets if the browser supports WYSIWYG editing.
-permalink: /api/sceditor/iswysiwygsupported/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## IsWysiwygSupported
+## isWysiwygSupported
 
-<article class="api method" markdown="1">
-### <a id="isWysiwygSupported" href="#isWysiwygSupported">isWysiwygSupported</a> <span class="since">Since: 1.3.0</span>
+{{% api_method name="isWysiwygSupported" since="1.3.0" %}}
 
 Static boolean property. Will be `true` if the current browser supports WYSIWYG editing.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+var wysiwygSupported = sceditor.isWysiwygSupported;
+```
+{{% /api_section %}}
 
-	var wysiwygSupported = $.sceditor.isWysiwygSupported;
-
-
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[Boolean](/api/types/#bool)**
-</article>
+{{% /api_section %}}
+
+{{% /api_method %}}

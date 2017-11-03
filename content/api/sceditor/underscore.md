@@ -1,61 +1,57 @@
 ---
 title: _()
 excerpt: Translates a string into the current locale.
-permalink: /api/sceditor/underscore/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
 ## _()
 
-<article class="api method" markdown="1">
-### <a id="_" href="#_">_(str, args)</a> <span class="since">Since: 1.3.0</span>
+{{% api_method name="_(str, args)" since="1.3.0" %}}
 
 Translates a string into the language current used by the editor.
 
 The strings {0}, {1}, {2}, ect. will be replaced with the arguments provided.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance._(str[, arg1[, arg2[, ...]]]);
+```
+{{% /api_section %}}
 
-	instance._(str[, arg1[, arg2[, ...]]]);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **str**  
 Type: *[String](/api/types/#string)*
 
 The string to translate.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **arg1, arg2, ...**  
 Type: *[String](/api/types/#string)*
 
 Arguments to replace in the transalted string.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[String](/api/types/#string)**
+{{% /api_section %}}
 
 
-<article class="api examples" markdown="1">
-### Examples
+{{% api_example %}}
+Inserting text:
 
 ```js
+var textarea = ...;
+var instance = sceditor.instance(textarea);
+
 var boldTranslation = instance._('Bold');
 
 // helloWorld will be "Hello World!" or the translated version
 var helloWorld = instance._('Hello {0}!', 'World');
 ```
+{{% /api_example %}}
 
-</article>
-</article>
-
+{{% /api_method %}}

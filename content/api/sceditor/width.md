@@ -1,73 +1,68 @@
 ---
 title: width()
 excerpt: Gets or sets the editors width.
-permalink: /api/sceditor/width/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## Height()
+## width()
 
-<article class="api method" markdown="1">
-### <a id="width" href="#height">width()</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="width()" since="1.3.5" %}}
 
 Gets the current width of the editor in px.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+var val = instance.width();
+```
+{{% /api_section %}}
 
-	var val = instance.width();
-
-
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[Int](/api/types/#int)**
 
 The width in pixels
-</article>
+{{% /api_section %}}
+
+{{% /api_method %}}
 
 
-
-<article class="api method" markdown="1">
-### <a id="width-value" href="#width-value">width(value)</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="width(value)" since="1.3.5" %}}
 
 Sets the width of the editor.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.width(value);
+```
+{{% /api_section %}}
 
-	instance.width(value[, filter]);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **value**  
 Type: *[Int](/api/types/#int)* or *[String](/api/types/#string)*
 
 Should either be the width in pixels or a string percentage.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
+{{% /api_section %}}
 
 
-<article class="api examples" markdown="1">
-### Examples
-
+{{% api_example %}}
 Set the width to 200px:
 
-	$('textarea').sceditor('instance').width(200);
+```js
+var textarea = ...;
+sceditor.instance(textarea).width(200);
+```
 
-Set the width to 100%:
+```js
+var textarea = ...;
+sceditor.instance(textarea).width('100%');
+```
+{{% /api_example %}}
 
-	$('textarea').sceditor('instance').width('100%');
-
-</article>
-</article>
-
+{{% /api_method %}}

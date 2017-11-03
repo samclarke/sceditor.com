@@ -1,21 +1,18 @@
 ---
 title: updateOriginal()
 excerpt: Sets the value of the original textarea.
-permalink: /api/sceditor/updateoriginal/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## UpdateOriginal()
+## updateOriginal()
 
-<article class="api method" markdown="1">
-### <a id="updateOriginal" href="#updateOriginal">updateOriginal()</a> <span class="since">Since: 1.4.0</span>
+{{% api_method name="updateOriginal()" since="1.4.0" %}}
 
 Updates the original textarea that the editor is replacing with the value currently inside the editor.
 
-#### Syntax
 
-	instance.updateOriginal();
-</article>
+{{% api_section title="Syntax" %}}
+```js
+instance.updateOriginal();
+```
+{{% /api_section %}}
 
+{{% /api_method %}}

@@ -1,16 +1,10 @@
 ---
 title: insertText()
 excerpt: Inserts text into the editor.
-permalink: /api/sceditor/inserttext/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
 ---
-## InsertText()
+## insertText()
 
-<article class="api method" markdown="1">
-### <a id="insertText" href="#insertText">insertText(start)</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="insertText(value)" since="1.4.3" %}}
 
 Inserts text into the editor at the position of the cursor.
 
@@ -19,22 +13,22 @@ If `end` is not null and there is some selected text, the selected text will be 
 If there is no selection and `end` is set, it will just be appended to the end of `start` before inserting.
 
 
-#### Syntax
+{{% api_section title="Syntax" %}}
+```js
+instance.insertText(start[, end]);
+```
+{{% /api_section %}}
 
-    instance.insertText(start[, end]);
 
-
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **start**  
 Type: *[String](/api/types/#string)*
 
 The text to insert
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **end**  
 Type: *[String](/api/types/#string)*  
 Default: `null`
@@ -42,20 +36,22 @@ Default: `null`
 If not null and there is some text selected, the selected text will be placed between the `start` and `end` strings.
 
 If there is no selected text, this will just be appended to the end of `start`.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
-#### Return
 
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
+{{% /api_section %}}
 
-<article class="api examples" markdown="1">
-### Examples
 
-Inserting some text:
+{{% api_example %}}
+Inserting text:
 
-	$('textarea').sceditor('instance').insertText('Hello World!');
+```js
+var textarea = ...;
+sceditor.instance(textarea).insertText('Hello World!');
+```
+{{% /api_example %}}
 
-</article>
-</article>
-
+{{% /api_method %}}

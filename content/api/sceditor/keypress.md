@@ -1,66 +1,59 @@
 ---
 title: keyPress()
-excerpt: Binds a handeler the key press changed event.
-permalink: /api/sceditor/keypress/
-categories:
-    - Docs
-    - API
-    - SCEditor-API
+excerpt: Binds a handler the key press changed event.
 ---
-## KeyPress()
+## keyPress()
+
+{{% api_method name="keyPress(func)" since="1.4.1" %}}
+
+Binds a handler to the key press event on the editor.
 
 
-<article class="api method" markdown="1">
-### <a id="keyPress-func" href="#keyPress-func">keyPress(func)</a> <span class="since">Since: 1.4.1</span>
-
-Binds a handler to the keyPress event.
-
-
-#### Syntax
-
-	instance.keyPress(func[, excludeWysiwyg][, excludeSource]);
+{{% api_section title="Syntax" %}}
+```js
+instance.keyPress(func[, excludeWysiwyg][, excludeSource]);
+```
+{{% /api_section %}}
 
 
-#### Parameters
-
-<div class="parameters">
-<div class="parameter" markdown="1">
+{{% api_parameters %}}
+{{% api_parameter %}}
 **func**  
 Type *[Function](/api/types/#function)*
 
 Function that will be called when the event occurs
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **excludeWysiwyg**  
 Type: *[Boolean](/api/types/#bool)*  
 Default: `false`
 
 If to not bind the event to the WYSIWYG editor.
-</div>
+{{% /api_parameter %}}
 
-<div class="parameter" markdown="1">
+{{% api_parameter %}}
 **excludeSource**  
 Type: *[Boolean](/api/types/#bool)*  
 Default: `false`
 
 If to not bind the event to the source editor.
-</div>
-</div>
+{{% /api_parameter %}}
+{{% /api_parameters %}}
 
 
-#### Return
-
+{{% api_section title="Return" %}}
 Type: **[sceditor](/api/types/#sceditor)**
+{{% /api_section %}}
 
 
-<article class="api examples" markdown="1">
-### Examples
+{{% api_example %}}
+```js
+var textarea = ...;
+sceditor.instance(textarea).keyPress(function(e) {
+	alert('Key press event fired.');
+});
+```
+{{% /api_example %}}
 
-	$('textarea').sceditor('instance').keyPress(function(e) {
-		alert('Key press event fired.');
-	});
-
-</article>
-</article>
-
+{{% /api_method %}}
