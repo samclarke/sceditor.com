@@ -165,8 +165,6 @@ Enables or disables emoticons compatibility mode.
 
 When this is enabled, emoticons must be surrounded by whitespace or <abbr title="End Of Line">EOL</abbr> characters. For example, if you have an emoticon with the code `:/`, in compatibility mode it will not replace the `:/` in `http://`.
 
-Compatibility mode currently has limited As You Type emoticon conversion support. <abbr title="End Of Line">EOL</abbr> characters are not recognised as whitespace with <abbr title="As You Type">AYT</abbr> conversion so only emoticons surrounded by whitespace will be converted. This does not affect non-<abbr title="As You Type">AYT</abbr> conversion which will still work as normal.
-
 
 ## emoticonsRoot <a id="emoticonsRoot"></a>
 
