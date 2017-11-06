@@ -17,7 +17,10 @@ Old themes will need to be updated to the new CSS and HTML in order to work.
 
 Support for IE < 9 has been dropped so themes can use more modern CSS now.
 
-[svg icons]
+The editor now supports SVG icons sets. The default bundled sets are monocons
+and material design icons. Themes will need to be updated to handle them.
+
+Finally `jquery.sceditor.default.css` has been moved to `themes/content/default.css` and `jquery.sceditor.default.min.css` has been moved to `themes/content/default.min.css`.
 
 
 ## BBCode and XHTML plugins
@@ -79,6 +82,8 @@ SCEditor instance, instead use `sceditor.instance(testarea)`.
 
 The deprecated `jQuery.fn.sceditorBBCodePlugin()` method has been removed as has
 the deprecated `$.sceditorBBCodePlugin` variable.
+
+The `updateStyleCache` method has been removed from the editor.
 
 ### BBCode and XHTML methods and variables
 

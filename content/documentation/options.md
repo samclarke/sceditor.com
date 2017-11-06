@@ -201,6 +201,15 @@ Object in the following format:
 ```
 
 
+## icons <a id="icons"></a>
+
+**icons** *String* Defaults to `null`
+
+Icon set to use with the editor. If this is null no icon set will be used and icons will be loaded from the current theme instead.
+
+The bundled icon sets are [monocons](https://github.com/samclarke/monocons) (use `monocons` as the option value) and [material design icons](https://materialdesignicons.com/) (use `material` as the option value).
+
+
 ## width <a id="width"></a>
 
 **width** *String or int* Defaults to `null`
