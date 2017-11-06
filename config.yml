@@ -9,6 +9,10 @@ paginatePath: ""
 permalinks:
   - post: /posts/:title
 
+params:
+  downloadUrl: "https://github.com/samclarke/SCEditor/releases/download/v2.0.0-beta1/sceditor-2.0.0-beta1.zip"
+  twitter: "twitternamehere"
+
 # disableKinds:
 #   - taxonomy
 #   - taxonomyTerm
