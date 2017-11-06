@@ -2,7 +2,7 @@
 title: Plaintext
 excerpt: Adds option to remove formatting when pasting.
 ---
-# Plaintext plugin <a id="undo"></a>
+# Plaintext plugin <a id="plaintext"></a>
 
 Removes all formatting when pasting content in the editor.
 
