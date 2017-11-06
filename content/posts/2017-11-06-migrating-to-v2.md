@@ -2,7 +2,7 @@
 title: Migrating to V2
 slug: migrating-to-v2
 excerpt: How to migrate from 1.x to 2.x
-date: 2017-10-10
+date: 2017-11-06
 ---
 
 There have been a number of backwards incompatible changes in this release which
@@ -15,7 +15,7 @@ In order to fix some issues around re-sizing and resizing the editor in a hidden
 parent, the theme has been updated to use `flex-box`.
 Old themes will need to be updated to the new CSS and HTML in order to work.
 
-Support for IE < 9 has been dropped so themes can use more modern CSS now.
+Support for IE < 10 has been dropped so themes can use more modern CSS now.
 
 The editor now supports SVG icons sets. The default bundled sets are monocons
 and material design icons. Themes will need to be updated to handle them.
