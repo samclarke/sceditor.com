@@ -8,11 +8,11 @@ weight: 4000
 
 ## Creating/Updating a Custom Command<a id="creating-command"></a>
 
-To add/update a command use the `$.sceditor.command.set()` function.
+To add/update a command use the `sceditor.command.set()` function.
 
 <span class="Label Label--warning">Warning:</span> This function will update any existing command with the same name.
 
-The `$.sceditor.command.set()` function takes two arguments, `name` and `cmd`.
+The `sceditor.command.set()` function takes two arguments, `name` and `cmd`.
 
 * **name** *String*  
   The name of the command, used to include it in the toolbar. Must be lower-case!
@@ -20,7 +20,7 @@ The `$.sceditor.command.set()` function takes two arguments, `name` and `cmd`.
   The command object. See below for more details of this.
 
 ```js
-$.sceditor.command.set('commandname', {
+sceditor.command.set('commandname', {
 	exec: function() {
 		// this is set to the editor instance
 		this.insert('a');
@@ -39,7 +39,7 @@ To add an icon to the command use the the following CSS:
 .sceditor-button-[name] div { background: url('/images/icon.png'); }
 ```
 
-where `[name]` is the name used with `$.sceditor.command.set()`. See [Theming](/documentation/theming/) for more information.
+where `[name]` is the name used with `sceditor.command.set()`. See [Theming](/documentation/theming/) for more information.
 
 Once you've created a command you can add it to the editor toolbar via the [toolbar option](/documentation/options/#toolbar).
 
@@ -117,7 +117,7 @@ If set to an array and has two strings, then any selected content will be surrou
 
 If `txtExec` is a function it should take 1 argument, `caller`. The functions `this` will be set to the editor.
 
-* **caller** *HTMLElement*  #
+* **caller** *HTMLElement*
   The commands HTML button element or null.
 
 **Example**
