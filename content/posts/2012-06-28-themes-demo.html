@@ -25,21 +25,6 @@ slug: themes-demo
 </p>
 
 <script>
-	// Source: http://www.backalleycoder.com/2011/03/20/link-tag-css-stylesheet-load-event/
-	var loadCSS = function(url, callback){
-		document.getElementById('theme-link').href = url;
-	
-		var img = document.createElement('img');
-		img.onerror = function() {
-			if(callback) {
-				setTimeout(function() {
-					callback();
-				}, 250);
-			}
-		}
-		img.src = url;
-	}
-
 	var themeInput = document.getElementById('theme');
 	themeInput.onchange = function () {
 		var themeUrl = '/minified/themes/' + themeInput.value + '.min.css';
