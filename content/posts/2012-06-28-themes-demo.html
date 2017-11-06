@@ -5,61 +5,53 @@ date: 2012-06-28
 slug: themes-demo
 ---
 
-<link id="default" rel="stylesheet" href="/minified/themes/default.min.css" type="text/css" media="all" />
-<script type="text/javascript" src="/minified/jquery.sceditor.bbcode.min.js"> </script>
-<script>
-	// Source: http://www.backalleycoder.com/2011/03/20/link-tag-css-stylesheet-load-event/
-	var loadCSS = function(url, callback){
-		var link = document.createElement('link');
-		link.type = 'text/css';
-		link.rel = 'stylesheet';
-		link.href = url;
-		link.id = 'theme-style';
-	
-		document.getElementsByTagName('head')[0].appendChild(link);
-	
-		var img = document.createElement('img');
-		img.onerror = function() {
-			if(callback) {
-				setTimeout(function() {
-					callback(link);
-				}, 250);
-			}
-		}
-		img.src = url;
-	}
-	
-	$(function() {
-		var initEditor = function() {
-			$("textarea").sceditor({
-				plugins: 'bbcode',
-				style: "/minified/jquery.sceditor.default.min.css"
-			});
-		};
+<link rel="stylesheet" href="/minified/themes/default.min.css" id="theme-link" />
+<script src="/minified/sceditor.min.js"></script>
+<script src="/minified/formats/bbcode.js"></script>
+<script src="/minified/icons/monocons.js"></script>
 
-		$("#theme").change(function() {
-			var theme = "/minified/themes/" + $(this).val() + ".min.css";
-
-			$("textarea").data("sceditor").destroy();
-			$("#default").remove();
-			$("#theme-style").remove();
-			
-			loadCSS(theme, initEditor);
-		});
-
-		initEditor();
-	});
-</script>
-	
-<p><textarea name="bbcode_field" style="height:300px;width:500px;">Themes example</textarea></p>
+<p><textarea id="demo" style="height:300px;width:500px;">Themes example</textarea></p>
 
 <p>
 	<label for="theme">Theme:</label>
 	<select id="theme">
 		<option value="default">Default</option>
+		<option value="defaultdark">Default Dark</option>
 		<option value="modern">Modern</option>
 		<option value="office-toolbar">Office Toolbar</option>
 		<option value="office">Office</option>
 		<option value="square">Square</option>
 	</select>
 </p>
+
+<script>
+	// Source: http://www.backalleycoder.com/2011/03/20/link-tag-css-stylesheet-load-event/
+	var loadCSS = function(url, callback){
+		document.getElementById('theme-link').href = url;
+	
+		var img = document.createElement('img');
+		img.onerror = function() {
+			if(callback) {
+				setTimeout(function() {
+					callback();
+				}, 250);
+			}
+		}
+		img.src = url;
+	}
+
+	var themeInput = document.getElementById('theme');
+	themeInput.onchange = function () {
+		var themeUrl = '/minified/themes/' + themeInput.value + '.min.css';
+		document.getElementById('theme-link').href = themeUrl;
+	}
+	
+	
+	sceditor.create(document.getElementById('demo'), {
+		width: '100%',
+		style: '/minified/themes/content/default.min.css',
+		emoticonsRoot: '/',
+		format: 'bbcode',
+		icons: 'monocons'
+	});
+</script>
