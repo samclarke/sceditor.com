@@ -1,27 +1,17 @@
 ---
-layout: default
 title: SCEditor - A lightweight WYSIWYG HTML and BBCode editor
 menuTitle: Home
-navtitle: Home
 ---
 
-<script src="//cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="/minified/themes/default.min.css" />
-<script src="/minified/jquery.sceditor.bbcode.min.js"></script>
-<script>
-$(function() {
-	$('textarea').sceditor({
-		plugins: 'bbcode',
-		width: '80%',
-		style: 'minified/jquery.sceditor.default.min.css'
-	});
-});
-</script>
+<script src="/minified/sceditor.min.js"></script>
+<script src="/minified/formats/bbcode.js"></script>
+<script src="/minified/icons/monocons.js"></script>
 <div class="fullwidth Intro">
 	<h1 style="margin-top: 1rem">SCEditor</h1>
 	<p>A lightweight, open source, WYSIWYG BBCode and (X)HTML editor.</p>
 
-	<textarea style="width: 80%; height: 300px">Give it a try! :)
+	<textarea id="example" style="width: 80%; height: 300px">Give it a try! :)
 
 [color=#ff00]Red text and [/color][color=#3399ff]blue text![/color]
 
@@ -29,7 +19,14 @@ $(function() {
 
 If just type [b]:[/b]) and it will be converted into :) as you type.</textarea>
 </div>
-
+<script>
+sceditor.create(document.getElementById('example'), {
+	format: 'bbcode',
+	width: '80%',
+	icons: 'monocons',
+	style: 'minified/themes/content/default.min.css'
+});
+</script>
 
 <h2>Quick Start</h2>
 
@@ -50,10 +47,11 @@ If just type [b]:[/b]) and it will be converted into :) as you type.</textarea>
 		<h4>BBCode</h4>
 		<pre><code class="language-html">&lt;script src="minified/formats/bbcode.min.js">&lt;/script&gt;
 &lt;script&gt;
-// Replace all textarea tags with SCEditor
-$('textarea').sceditor({
+// Replace the textarea #example with SCEditor
+var textarea = document.getElementById('example');
+sceditor.create(textarea, {
 	format: 'bbcode',
-	style: 'minified/theme/default.content.min.css'
+	style: 'minified/jquery.sceditor.default.min.css'
 });
 &lt;/script&gt;</code></pre>
 	</div>
@@ -61,10 +59,11 @@ $('textarea').sceditor({
 		<h4>XHTML</h4>
 		<pre><code class="language-html"?>&lt;script src="minified/formats/xhtml.min.js">&lt;/script&gt;
 &lt;script&gt;
-// Replace all textarea tags with SCEditor
-$('textarea').sceditor({
+// Replace the textarea #example with SCEditor
+var textarea = document.getElementById('example');
+sceditor.create(textarea, {
 	format: 'xhtml',
-	style: 'minified/theme/default.content.min.css'
+	style: 'minified/jquery.sceditor.default.min.css'
 });
 &lt;/script&gt;</code></pre>
 	</div>
