@@ -48,7 +48,7 @@ sceditor.create(textarea, {
 	// Load the XHTML format
 	format: 'bbcode',
 
-	// Use jquery.sceditor.default.min.css to style the content
+	// Use themes/content/default.min.css to style the content
 	style: '/minified/themes/content/default.min.css'
 });
 </script>

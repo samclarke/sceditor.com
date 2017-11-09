@@ -256,7 +256,7 @@ html: function(token, attrs, content) {
 
 ## quoteType
 
-**quoteType** *sceditor.BBCodeParser.QuoteType* Defaults to `$.sceditor.BBCodeParser.QuoteType.auto`
+**quoteType** *sceditor.BBCodeParser.QuoteType* Defaults to `sceditor.BBCodeParser.QuoteType.auto`
 
 The attribute quote type.
 

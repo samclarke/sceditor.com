@@ -16,7 +16,7 @@ To enable the undo plugin add `undo` to the `plugins` option. e.g.
 <script>
 sceditor.create(textarea, {
 	plugins: 'undo',
-	style: 'minified/jquery.sceditor.default.min.css'
+	style: 'minified/themes/content/default.min.css'
 });
 </script>
 ```

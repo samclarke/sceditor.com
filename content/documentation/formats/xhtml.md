@@ -23,7 +23,7 @@ To enable the XHTML format, set the `format` option to `xhtml`. e.g.
 var textarea = ...;
 sceditor.create(textarea, {
 	format: 'xhtml',
-	style: 'minified/jquery.sceditor.default.min.css'
+	style: 'minified/themes/content/default.min.css'
 });
 </script>
 ```

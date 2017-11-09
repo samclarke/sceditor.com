@@ -15,7 +15,7 @@ To enable the plaintext plugin add `plaintext` to the `plugins` option. e.g.
 <script>
 sceditor.create(textarea, {
 	plugins: 'plugin',
-	style: 'minified/jquery.sceditor.default.min.css'
+	style: 'minified/themes/content/default.min.css'
 });
 </script>
 ```
@@ -38,7 +38,7 @@ sceditor.create(textarea, {
         addButton: true,
         enabled: false // Set to true to start in enabled state
     },
-	style: 'minified/jquery.sceditor.default.min.css'
+	style: 'minified/themes/content/default.min.css'
 });
 </script>
 ```

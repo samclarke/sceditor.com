@@ -16,7 +16,7 @@ specify the dragdrop options. e.g.
 <script>
 sceditor.create(textarea, {
 	plugins: 'dragdrop',
-    style: 'minified/jquery.sceditor.default.min.css',
+    style: 'minified/themes/content/default.min.css',
     dragdrop: {
         allowedTypes: ...,
         handleFile: function (file, createPlaceholder) {
