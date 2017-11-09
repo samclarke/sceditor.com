@@ -223,20 +223,19 @@ Type: **[String](/api/types/#string)**
 
 ```html
 <script>
-$(function() {
-	$('textarea').sceditor({
-		format: 'bbcode',
-		style: 'minified/jquery.sceditor.default.min.css'
-	});
-
-	// Will be [b]Bold![/b]
-	var bbcode       = $('textarea').sceditor('instance').toBBCode('<strong>Bold!</strong>');
-
-	// Will be <div><strong>Bold!</strong></div>
-	var html         = $('textarea').sceditor('instance').fromBBCode('[b]Bold![b]');
-
-	// Will be <strong>Bold!</strong>
-	var htmlFragment = $('textarea').sceditor('instance').fromBBCode('[b]Bold![b]', true);
+var textarea = ...;
+sceditor.create(textarea, {
+	format: 'bbcode',
+	style: 'minified/themes/content/default.min.css'
 });
+
+// Will be [b]Bold![/b]
+var bbcode = sceditor.instance(textarea).toBBCode('<strong>Bold!</strong>');
+
+// Will be <div><strong>Bold!</strong></div>
+var html = sceditor.instance(textarea).fromBBCode('[b]Bold![b]');
+
+// Will be <strong>Bold!</strong>
+var htmlFragment = sceditor.instance(textarea).fromBBCode('[b]Bold![b]', true);
 </script>
 ```

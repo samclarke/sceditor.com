@@ -10,17 +10,16 @@ weight: 1000
 ## Include the <abbr title="JavaScript">JS</abbr> &amp; <abbr title="Cascading Style Sheet">CSS</abbr>: <a id="include"></a>
 
 ```html
-<!-- Include jQuery, this can be omitted if it's already included -->
-<script src="//cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
-
 <!-- Include the default theme -->
 <link rel="stylesheet" href="minified/themes/default.min.css" />
 
 <!-- Include the editors JS -->
-<script src="minified/jquery.sceditor.bbcode.min.js"></script>
-```
+<script src="minified/sceditor.min.js"></script>
 
-The file `jquery.sceditor.bbcode.min.js` has the BBCode plugin bundled with it and the file `jquery.sceditor.xhtml.min.js` has the XHTML plugin bundled with it.
+<!-- Include the BBCode or XHTML formats -->
+<script src="minified/formats/bbcode.js"></script>
+<script src="minified/formats/xhtml.js"></script>
+```
 
 For a complete list of files, see the [Files](/documentation/files/) documentation page.
 
@@ -29,30 +28,28 @@ For a complete list of files, see the [Files](/documentation/files/) documentati
 
 ### BBCode <a id="bbcode"></a>
 
-To enable the BBCode plugin just add `bbcode` to the `plugins` option. e.g.
+To enable the BBCode plugin just add `bbcode` to the `format` option. e.g.
 
 ```html
 <script>
-$(function() {
-	$('textarea').sceditor({
-		plugins: 'bbcode',
-		style: 'minified/jquery.sceditor.default.min.css'
-	});
+var textarea = ...;
+sceditor.create(textarea, {
+	format: 'bbcode',
+	style: 'minified/themes/content/default.min.css'
 });
 </script>
 ```
 
 ### XHTML <a id="xhtml"></a>
 
-To enable the XHTML plugin just add `xhtml` to the `plugins` option. e.g.
+To enable the XHTML plugin just add `xhtml` to the `format` option. e.g.
 
 ```html
 <script>
-$(function() {
-	$('textarea').sceditor({
-		plugins: 'xhtml',
-		style: 'minified/jquery.sceditor.default.min.css'
-	});
+var textarea = ...;
+sceditor.create(textarea, {
+	format: 'xhtml',
+	style: 'minified/themes/content/default.min.css'
 });
 </script>
 ```
