@@ -1,0 +1,13 @@
+{
+  "name": "sceditor-theme",
+  "private": true,
+  "scripts": {
+    "build": "postcss --config postcss.config.json ./static/css/style.css -o ./static/css/style.min.css"
+  },
+  "dependencies": {
+    "cssnano": "^3.10.0",
+    "postcss": "^6.0.13",
+    "postcss-cli": "^4.1.1",
+    "postcss-import": "^11.0.0"
+  }
+}
