@@ -4,7 +4,6 @@ excerpt: Brief example of how to upload an image and then insert it
 date: 2012-04-17
 slug: how-to-upload-and-insert-an-image
 ---
-<h2>Image upload demo</h2>
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"> </script>
 <link rel="stylesheet" href="/minified/themes/default.min.css" type="text/css" media="all" />
@@ -12,8 +11,8 @@ slug: how-to-upload-and-insert-an-image
 <script>
 $(document).ready(function() {
 	$("#demo-image").sceditor({
-		plugins: 'bbcode',
-		style: "/minified/jquery.sceditor.default.min.css",
+		format: 'bbcode',
+        style: '/minified/themes/content/default.min.css',
 		emoticonsRoot: '/'
 	});
 
@@ -59,8 +58,8 @@ $(document).ready(function() {
 &lt;script&gt;
 $(function() {
     $("textarea").sceditor({
-        plugins: "bbcode",
-        style: "/minified/jquery.sceditor.default.min.css"
+		format: 'bbcode',
+        style: '/minified/themes/content/default.min.css',
     });
 
     // Save this editor instance so the iframe can access it
