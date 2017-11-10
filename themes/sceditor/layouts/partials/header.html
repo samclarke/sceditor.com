@@ -15,6 +15,7 @@
     <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
     
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet" />    
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,700i|Source+Code+Pro:400,700" rel="stylesheet">
 </head>
 <body>
@@ -26,6 +27,16 @@
 
             <nav class="Header__nav">
                 <ul class="Header__menu Menu">
+                    <li class="Menu__item Header_search" id="docsearch-hide">
+                        <input type="text" id="search-input" class="Header__searchbox" placeholder="Search the docs...">
+                        
+                        <label for="search-input" class="Header__searchlabel">
+                            <svg fill="#000000" viewBox="0 0 24 24" class="Header__searchicon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                            </svg>
+                        </label>
+                    </li>
                     <li class="Menu__item">
                         <a class="Menu__link" href="/posts/">News</a>
                     </li>
