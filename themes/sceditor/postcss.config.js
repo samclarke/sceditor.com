@@ -12,6 +12,7 @@ module.exports = {
         }),
         require('cssnano')({
             preset: 'default',
+            zindex: false
         })
     ],
 };
