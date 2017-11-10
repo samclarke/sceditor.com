@@ -5,6 +5,7 @@
     "build": "postcss --config postcss.config.json ./static/css/style.css -o ./static/css/style.min.css"
   },
   "dependencies": {
+    "autoprefixer": "^7.1.6",
     "cssnano": "^3.10.0",
     "postcss": "^6.0.13",
     "postcss-cli": "^4.1.1",
