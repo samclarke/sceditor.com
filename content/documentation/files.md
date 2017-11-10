@@ -11,32 +11,44 @@ You should normally only include the minified files from the `minified/` directo
 
 ## Core files <a id="core"></a>
 
-   * `minified/jquery.sceditor.min.js`  
+   * `minified/sceditor.min.js`  
      The core editor minified.
 
-   * `minified/jquery.sceditor.default.min.css`  
-     The default CSS used to style the content of the editor. The URL to this file should be passed via the `style` option.
-
-   * `minified/jquery.sceditor.bbcode.min.js`  
-     The core editor bundled with the BBCode plugin.
-
-   * `minified/jquery.sceditor.xhtml.min.js`  
-     The core editor bundled with the XHTML plugin.
+   * `minified/jquery.sceditor.min.js`  
+     The core editor minified with jQuery intergration.
 
 
 ## Plugins <a id="plugins"></a>
 
-   * `minified/plugins/bbcode.js`  
-     The minified BBCode plugin. Not needed if using the `minified/jquery.sceditor.bbcode.min.js` file.
+   * `minified/plugins/autoyoutube.js`  
+     The minified AutoYoutube plugin. Add to the `plugin` option to enable it.
 
-   * `minified/plugins/xhtml.js`  
-     The minified XHTML plugin. Not needed if using the `minified/jquery.sceditor.bbcode.xhtml.js` file.
+   * `minified/plugins/dragdrop.js`  
+     The minified Drag and Drop plugin. Add to the `plugin` option to enable it.
+
+   * `minified/plugins/undo.js`  
+     The minified undo plugin. Add to the `plugin` option to enable it.
+
+   * `minified/plugins/plaintext.js`  
+     The minified plain text plugin. Add to the `plugin` option to enable it.
+
+
+## Formats <a id="formats"></a>
+
+   * `minified/formats/bbcode.js`  
+     The minified BBCode format. Use the `format` option to enable it.
+
+   * `minified/formats/xhtml.js`  
+     The minified XHTML format. Use the `format` option to enable it.
 
 
 ## Themes <a id="themes"></a>
 
    * `minified/themes/default.css`  
      Default theme.
+
+   * `minified/themes/defaultdark.css`  
+     Dark version of the default theme. Works best with SVG icons.
 
    * `minified/themes/modern.css`  
      Modern theme.
@@ -49,3 +61,8 @@ You should normally only include the minified files from the `minified/` directo
 
    * `minified/themes/square.css`  
      Square theme.
+
+## Content Themes <a id="content-themes"></a>
+
+   * `minified/themes/content/default.min.css`  
+     The default CSS used to style the content of the editor. The URL to this file should be passed via the `style` option.
