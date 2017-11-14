@@ -11,13 +11,8 @@ date: 2017-11-06
 Drag and drop a .jpeg or .png image over the editor and it will be uploaded to imgur and then inserted.</textarea>
 </p>
 
-<link rel="stylesheet" href="/minified/themes/default.min.css" />
-<script src="/minified/sceditor.min.js"></script>
-<script src="/minified/formats/bbcode.js"></script>
-<script src="/minified/plugins/dragdrop.js"></script>
-<script src="/minified/icons/monocons.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sceditor@2/minified/themes/default.min.css" />
+<script src="https://cdn.jsdelivr.net/combine/npm/sceditor@2/minified/sceditor.min.js,npm/sceditor@2/minified/formats/bbcode.js,npm/sceditor@2/minified/icons/monocons.js,npm/sceditor@2/minified/plugins/dragdrop.js,npm/whatwg-fetch@2,npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
 
 <script>
 /**
@@ -75,7 +70,7 @@ sceditor.create(textarea, {
     autofocus: true,
     emoticonsRoot: '/',
     width: '100%',
-	style: '/minified/themes/content/default.min.css'
+	style: 'https://cdn.jsdelivr.net/npm/sceditor@2/minified/themes/content/default.min.css'
 });
 
 sceditor.instance(textarea).css('img { max-width: 50%; }');
