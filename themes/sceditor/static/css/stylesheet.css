@@ -121,7 +121,7 @@ html code {
 	font-size: 1.75rem;
 	margin: 0 .4rem 0 0;
 	line-height: inherit;
-	align-self: flex-end;
+	align-self: center;
 }
 .Header__link {
 	text-decoration: none;
