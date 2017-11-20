@@ -25,6 +25,8 @@ The supported events are:
    key press)
  * selectionchanged
    When the editors selection changes (triggered a lot)
+ * pasteraw
+ * paste
 
 
 {{% api_section title="Syntax" %}}
