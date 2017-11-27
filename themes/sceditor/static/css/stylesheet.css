@@ -400,6 +400,14 @@ html code {
 	color: #f2af4f;
 }
 
+.Callout--important {
+	border-left-color: #d9534f;
+}
+.Callout--important .Callout__header {
+	color: #d9534f;
+}
+
+
 
 .ApiMethod {
 	border: 1px solid #d9d9d9;

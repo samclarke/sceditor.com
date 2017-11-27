@@ -52,10 +52,9 @@ To add a new BBCode, use the `sceditor.formats.bbcode.set()` function.
     format: 'string|function',
     html: 'string|function',
 
-    quoteType: $.sceditor.BBCodeParser.QuoteType.auto
+    quoteType: sceditor.BBCodeParser.QuoteType.auto
 }
 ```
-
 
 ## styles <a id="styles"></a>
 
@@ -78,6 +77,24 @@ To match all occurrences of a style regardless of value do:
 ```
 
 The `null` value means that the value of the CSS property doesn't matter all that matters is the node has the property `style-name`.
+
+<div class="Callout Callout--warning">
+	<h3 class="Callout__header">Warning</h3>
+	<p>Currently it's not possible to target both styles and tags at the same time
+  via the <code>styles</code> and <code>tags</code> properties.</p>
+	<p>To target a tags that have specific styles, target the tag using the <code>tags</code> property and then in the format method check if the node has the desired styles. If it does handle it otherwise just return the contents.</p>
+  <p>For example:</p>
+  <pre class=" language-js"><code class=" language-js">
+format: function(element, content) {
+    // Only handle tags with the font-weight: bold style
+    if(element.style.fontWeight !== 'bold') {
+        return content;
+    }
+
+    return '[b]' + content + '[/b]';
+}
+</code></pre>
+</div>
 
 
 ## tags <a id="tags"></a>
