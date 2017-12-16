@@ -14,7 +14,7 @@ To enable the plaintext plugin add `plaintext` to the `plugins` option. e.g.
 ```html
 <script>
 sceditor.create(textarea, {
-	plugins: 'plugin',
+	plugins: 'plaintext',
 	style: 'minified/themes/content/default.min.css'
 });
 </script>
