@@ -7,6 +7,11 @@ excerpt: Automatically saves the editors contents to localStorage.
 
 Automatically saves the editors contents (for 1 day by default) to localStorage.
 
+It will remove auto saved content when a form containing the editor is submitted
+or when the method `sceditor.plugins.autosave.clear()` is manually called.
+If using custom `storageKey` it will need to be passed as the first argument to
+`clear()` if manually clearing the auto saved data.
+
 <div class="Callout Callout--warning">
 	<h3 class="Callout__header">Warning!</h3>
 	<p>If using multiple instances of the editor on a page, always specify the
@@ -54,6 +59,8 @@ The `autosave` plugin supports the following options:
 ```js
 autosave: {
     // The storage key to use for storing the draft in local storage.
+    // Key should start with "sce-autodraft-" for the autosave plugin to
+    // remove it if it is passed the expires.
     // Defaults to "sce-autodraft-" plus the path and query string:
     storageKey: 'sce-autodraft-' + location.pathname + location.search;,
     // Save handler function, see below for data object
