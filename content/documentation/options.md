@@ -150,6 +150,13 @@ sceditor.create(
 The charset to use for the <abbr title="What You See Is What You Get">WYSIWYG</abbr> content.
 
 
+## startInSourceMode <a id="startInSourceMode"></a>
+
+**startInSourceMode** *Bool* Defaults to `false`
+
+If to start the editor in source mode. Set to `true` to start in source mode.
+
+
 ## emoticonsEnabled <a id="emoticonsEnabled"></a>
 
 **emoticonsEnabled** *Bool* Defaults to `true`
