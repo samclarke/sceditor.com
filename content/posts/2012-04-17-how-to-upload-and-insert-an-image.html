@@ -21,7 +21,7 @@ $(document).ready(function() {
 </script>
 
 <p><textarea style="width:600px; height:300px" id="demo-image">This [b]is[/b] [color=#ff0000]a[/color] [size=3]demo[/size] :).</textarea></p>
-<form action="http://www.imageshack.us/redirect_api.php" method="post" enctype="multipart/form-data" target="upload">
+<form action="https://www.imageshack.us/redirect_api.php" method="post" enctype="multipart/form-data" target="upload">
 	<p><label>Image: <input type="file" name="media" /></label></p>
 
 	<p><label>Resize Image? <input type="checkbox" name="optimage" id="optimage" value="1" checked onclick="optsize.disabled=!this.checked"></label></p>
@@ -40,8 +40,8 @@ $(document).ready(function() {
 
 	<input type="hidden" name="key" value="346BFSTXbeec88bae13b92b2f4c8d888fdc8e420" />
 	<input type="hidden" name="rembar" value="yes" />
-	<input type="hidden" name="error_url" value="http://{{ site.domain }}/misc/imageshack-example.html" />
-	<input type="hidden" name="success_url" value="http://{{ site.domain }}/misc/imageshack-example.html?url=%u&server=%s&bucket=%b&filename=%i" />
+	<input type="hidden" name="error_url" value="https://{{ site.domain }}/misc/imageshack-example.html" />
+	<input type="hidden" name="success_url" value="https://{{ site.domain }}/misc/imageshack-example.html?url=%u&server=%s&bucket=%b&filename=%i" />
 
 	<p><input type="submit" value="Upload" /></p>
 </form>
@@ -69,7 +69,7 @@ $(function() {
 
 &lt;textarea&gt;&lt;/textarea&gt;
 
-&lt;form action="http://www.imageshack.us/redirect_api.php" method="post" enctype="multipart/form-data" target="upload"&gt;
+&lt;form action="https://www.imageshack.us/redirect_api.php" method="post" enctype="multipart/form-data" target="upload"&gt;
     &lt;p&gt;&lt;label&gt;Image: &lt;input type="file" name="media" /&gt;&lt;/label&gt;&lt;/p&gt;
 
     &lt;p&gt;&lt;label&gt;Resize Image? &lt;input type="checkbox" name="optimage" id="optimage" value="1" checked onclick="optsize.disabled=!this.checked"&gt;&lt;/label&gt;&lt;/p&gt;
@@ -88,8 +88,8 @@ $(function() {
 
     &lt;input type="hidden" name="key" value="DEVELOPER_KEY_HERE" /&gt;
     &lt;input type="hidden" name="rembar" value="yes" /&gt;
-    &lt;input type="hidden" name="error_url" value="http://example.com/imageshack-example.html" /&gt;
-    &lt;input type="hidden" name="success_url" value="http://example.com/imageshack-example.html?url=%u&server=%s&bucket=%b&filename=%i" /&gt;
+    &lt;input type="hidden" name="error_url" value="https://example.com/imageshack-example.html" /&gt;
+    &lt;input type="hidden" name="success_url" value="https://example.com/imageshack-example.html?url=%u&server=%s&bucket=%b&filename=%i" /&gt;
 
     &lt;p&gt;&lt;input type="submit" value="Upload" /&gt;&lt;/p&gt;
 &lt;/form&gt;
@@ -110,7 +110,7 @@ window.location.search.replace(
 
 if(queryString.url)
 {
-    var img_url = "http://" +
+    var img_url = "https://" +
         queryString.server + ".imageshack.us/img" +
         queryString.server + "/" +
         queryString.bucket + "/" + queryString.filename;
