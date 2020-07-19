@@ -223,7 +223,7 @@ The bundled icon sets are [monocons](https://github.com/samclarke/monocons) (use
 
 Initial width of the editor. Can be either an int which will be treated as the px value or a string percentage. e.g. `"100%"`.
 
-If set to null the width will be set the with of the textarea it is replacing.
+If set to null the width will be set to the width of the textarea it is replacing.
 
 
 ## height <a id="height"></a>
@@ -232,7 +232,7 @@ If set to null the width will be set the with of the textarea it is replacing.
 
 Initial height of the editor. Can be either an int which will be treated as the px value or a string percentage. e.g. `"100%"`.
 
-If set to null the height will be set the height of the textarea it is replacing.
+If set to null the height will be set to the height of the textarea it is replacing.
 
 
 ## resizeEnabled <a id="resizeEnabled"></a>
