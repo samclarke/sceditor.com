@@ -13,7 +13,7 @@ Sets the current value of the source editor.
 
 {{% api_section title="Syntax" %}}
 ```js
-instance.getSourceEditorValue(val);
+instance.setSourceEditorValue(val);
 ```
 {{% /api_section %}}
 
