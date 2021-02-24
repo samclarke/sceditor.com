@@ -1,6 +1,6 @@
 <aside class="Documentation__sidebar">
     {{ $currentPage := .}}
-    {{ with ($.Site.GetPage "section" (trim .Dir "/")) }}
+    {{ with ($.Site.GetPage "section" (trim .File.Dir "/")) }}
     <h3>{{ .Title }}</h3>
 
     <ul class="Sidebar__menu Menu">
