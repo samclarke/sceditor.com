@@ -11,3 +11,9 @@ permalinks:
 
 params:
   downloadUrl: "https://github.com/samclarke/SCEditor/releases/download/v2.1.3/sceditor-2.1.3.zip"
+
+markup:
+  defaultMarkdownHandler: blackfriday
+  highlight:
+    codeFences: false
+    noClasses: true
