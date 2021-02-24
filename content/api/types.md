@@ -81,11 +81,6 @@ A DOM HTMLElement object. For more information see the [MDN element page](https:
 A DOM range object. For more information see the [MDN range page](https://developer.mozilla.org/en/docs/DOM/range).
 
 
-### <a id="textrange" href="#textrange">TextRange</a>
-
-An IE TextRange object. For more information see the [MSDN TextRange page](http://msdn.microsoft.com/en-gb/library/ie/ms535872(v=vs.85).aspx).
-
-
 ### <a id="jquery" href="#jquery">jQuery</a>
 
 A jQuery object. For more information see the [jQuery docs](http://api.jquery.com/jQuery/).

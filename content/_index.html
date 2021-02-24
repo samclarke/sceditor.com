@@ -3,8 +3,8 @@ title: SCEditor - A lightweight WYSIWYG HTML and BBCode editor
 menuTitle: Home
 ---
 
-<link rel="stylesheet" href="/minified/themes/default.min.css" />
-<script src="https://cdn.jsdelivr.net/combine/npm/sceditor@2/minified/sceditor.min.js,npm/sceditor@2/minified/formats/bbcode.min.js,npm/sceditor@2/minified/icons/monocons.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sceditor@3/minified/themes/default.min.css" />
+<script src="https://cdn.jsdelivr.net/combine/npm/sceditor@3/minified/sceditor.min.js,npm/sceditor@3/minified/formats/bbcode.min.js,npm/sceditor@3/minified/icons/monocons.min.js"></script>
 <div class="fullwidth Intro">
 	<h1 style="margin-top: 1rem">SCEditor</h1>
 	<p>A lightweight, open source, WYSIWYG BBCode and (X)HTML editor.</p>
@@ -22,7 +22,7 @@ sceditor.create(document.getElementById('example'), {
 	format: 'bbcode',
 	width: '80%',
 	icons: 'monocons',
-	style: 'minified/themes/content/default.min.css'
+	style: 'https://cdn.jsdelivr.net/npm/sceditor@3/minified/themes/content/default.min.css'
 });
 </script>
 
@@ -35,33 +35,33 @@ sceditor.create(document.getElementById('example'), {
 	<abbr title="Cascading Style Sheet">CSS</abbr>:
 </h3>
 <pre><code class="language-html">
-&lt;link rel="stylesheet" href="minified/themes/default.min.css" /&gt;
-&lt;script src="minified/sceditor.min.js">&lt;/script&gt;</code></pre>
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sceditor@3/minified/themes/default.min.css" /&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/sceditor@3/minified/sceditor.min.js">&lt;/script&gt;</code></pre>
 
 <h3>Initialize the editor</h3>
 
 <div class="Columns Columns--two">
 	<div class="Columns__column">
 		<h4>BBCode</h4>
-		<pre><code class="language-html">&lt;script src="minified/formats/bbcode.min.js">&lt;/script&gt;
+		<pre><code class="language-html">&lt;script src="https://cdn.jsdelivr.net/npm/sceditor@3/minified/formats/bbcode.min.js">&lt;/script&gt;
 &lt;script&gt;
 // Replace the textarea #example with SCEditor
 var textarea = document.getElementById('example');
 sceditor.create(textarea, {
 	format: 'bbcode',
-	style: 'minified/themes/content/default.min.css'
+	style: 'https://cdn.jsdelivr.net/npm/sceditor@3/minified/themes/content/default.min.css'
 });
 &lt;/script&gt;</code></pre>
 	</div>
 	<div class="Columns__column">
 		<h4>XHTML</h4>
-		<pre><code class="language-html"?>&lt;script src="minified/formats/xhtml.min.js">&lt;/script&gt;
+		<pre><code class="language-html"?>&lt;script src="https://cdn.jsdelivr.net/npm/sceditor@3/minified/formats/xhtml.min.js">&lt;/script&gt;
 &lt;script&gt;
 // Replace the textarea #example with SCEditor
 var textarea = document.getElementById('example');
 sceditor.create(textarea, {
 	format: 'xhtml',
-	style: 'minified/themes/content/default.min.css'
+	style: 'https://cdn.jsdelivr.net/npm/sceditor@3/minified/themes/content/default.min.css'
 });
 &lt;/script&gt;</code></pre>
 	</div>

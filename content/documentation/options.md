@@ -50,7 +50,6 @@ The default commands bundled with the editor are:
  * **cut**  
  * **copy**  
  * **paste**  
- * This only works in IE because of security permissions. It's disabled in other browsers.
  * **pastetext**
  * **bulletlist**
  * **orderedlist**
