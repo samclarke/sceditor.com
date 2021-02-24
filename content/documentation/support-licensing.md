@@ -68,4 +68,4 @@ If BBCode is parsed on the client side, it can no longer be trusted. There is no
 
 Nothing on client side can prevent this as an attacker can simply disable JavaScript or bypass the web page completely by sending a request directly to the server.
 
-If you want to send (X)HTML, the XHTML plugin would be a better choice. The HTML will still need to sanitised server side to prevent XSS attacks.
+If you want to send (X)HTML, the XHTML plugin would be a better choice. The HTML will still need to be sanitised server side to prevent XSS attacks.
