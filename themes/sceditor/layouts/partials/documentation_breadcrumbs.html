@@ -13,21 +13,17 @@
             {{ $.Scratch.Add "path" $element }}
 
             {{ if ne $element "" }}
-                {{ $section := $.Site.GetPage "section" ($.Scratch.Get "path") }}
                 {{ $page := $.Site.GetPage "page" ($.Scratch.Get "path") }}
-
-                {{ with $section }}
-                <li class="Breadcrumb__item">
-                    <a class="Breadcrumb__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    <span class="Breadcrumb__divider">/</span>
-                </li>
-                {{ end }}
-
+                
                 {{ with $page }}
                 <li class="Breadcrumb__item Breadcrumb__item--active">
+                    {{ if ne $index 0 }}
+                        <span class="Breadcrumb__divider">/</span>
+                    {{ end }}
                     <a class="Breadcrumb__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </li>
                 {{ end }}
+
                 {{ $.Scratch.Add "path" "/" }}
             {{ end }}
         {{ end }}
