@@ -19,7 +19,7 @@ instance.selectRange(range);
 {{% api_parameters %}}
 {{% api_parameter %}}
 **range**  
-Type: **[Range](/api/types/#range)** or **[TextRange](/api/types/#textrange)**
+Type: **[Range](/api/types/#range)**
 
 The range to select.
 {{% /api_parameter %}}

@@ -16,7 +16,7 @@ You can set the editor to run in source mode if there is no <abbr title="What Yo
  * Chrome & Chromium
  * Safari
  * Firefox
- * IE 10+ & Edge
+ * Edge
  * Opera
 
 

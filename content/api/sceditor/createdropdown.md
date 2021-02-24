@@ -11,7 +11,7 @@ Creates a dropdown menu aligned to the to the menu item `mItem`.
 
 {{% api_section title="Syntax" %}}
 ```js
-instance.createDropDown(mItem, name, content[, unselectable]);
+instance.createDropDown(mItem, name, content);
 ```
 {{% /api_section %}}
 
@@ -36,14 +36,6 @@ The name to give the dropdown. Will add the class `sceditor-name` to the dropdow
 Type: *[Node](/api/types/#node)*
 
 The HTML content of the dropdown.
-{{% /api_parameter %}}
-
-{{% api_parameter %}}
-**unselectable**  
-Type: *[Boolean](/api/types/#bool)*  
-Default: `true`
-
-If to add the `unselectable` attribute to all the elements in the content. This stops IE from deselecting the text in the editor when an element is clicked.
 {{% /api_parameter %}}
 {{% /api_parameters %}}
 
