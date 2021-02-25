@@ -6,9 +6,14 @@ weight: 4000
 
 # Custom Commands <a id="custom-commands"></a>
 
+
 ## Creating/Updating a Custom Command<a id="creating-command"></a>
 
 To add/update a command use the `sceditor.command.set()` function.
+
+<span class="Label Label--important">Important:</span> When creating or updating
+a command, it must be done before creating an instance of the editor, 
+e.g. before calling `sceditor.create()`.
 
 <span class="Label Label--warning">Warning:</span> This function will update any existing command with the same name.
 

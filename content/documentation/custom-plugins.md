@@ -22,6 +22,10 @@ sceditor.plugins.myplugin = function() {
 
 To then enable the plugin in the editor, add `myplugin` to the [plugins option](/documentation/options/#plugins) when creating the editor.
 
+<span class="Label Label--important">Important:</span> When creating a custom
+plugin, it must be done before creating an instance of the editor, 
+e.g. before calling `sceditor.create()`.
+
 
 ## Handling Signals <a id="handling-signals"></a>
 

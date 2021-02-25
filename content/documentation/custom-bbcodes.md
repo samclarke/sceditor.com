@@ -11,6 +11,10 @@ weight: 5000
 
 To add a new BBCode, use the `sceditor.formats.bbcode.set()` function.
 
+<span class="Label Label--important">Important:</span> When creating or updating
+a BBCode, it must be done before creating an instance of the editor, 
+e.g. before calling `sceditor.create()`.
+
 <span class="Label Label--warning">Warning:</span> This function will update any existing BBCode with the same name.
 
 `sceditor.formats.bbcode.set()` takes two arguments, `name` and `bbcode`.
