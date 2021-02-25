@@ -4,5 +4,10 @@
         <span class="ApiMethod__since">Since: {{ .Get "since" }}</span>
     </h3>
 
-    {{ .Inner }}
+    {{ $markdown := .Inner | markdownify }}
+    {{ if not ( strings.Contains $markdown "<p>" ) }}
+        <p>{{ $markdown }}</p>
+    {{ else }}
+        {{ $markdown }}
+    {{ end }}
 </article>

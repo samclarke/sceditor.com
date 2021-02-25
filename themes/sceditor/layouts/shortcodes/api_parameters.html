@@ -1,5 +1,10 @@
 <section class="ApiMethod__parameters">
     <h4 class="ApiMethod__subtitle">Parameters</h4>
 
-    {{ .Inner }}
+    {{ $markdown := .Inner | markdownify }}
+    {{ if not ( strings.Contains $markdown "<p>" ) }}
+        <p>{{ $markdown }}</p>
+    {{ else }}
+        {{ $markdown }}
+    {{ end }}
 </section>
