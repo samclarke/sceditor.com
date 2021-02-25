@@ -4,9 +4,18 @@ slug: custom-formats
 weight: 5500
 ---
 
-## Structure
+# Custom Formats <a id="custom-formats"></a>
 
-Formats can the following methods:
+
+## Structure <a id="structure"></a>
+
+SCEditor currently supports BBCode and XHTML formats as well as custom formats.
+
+<span class="Label Label--important">Important:</span> When creating a custom
+format, it must be done before creating an instance of the editor, 
+e.g. before calling `sceditor.create()`.
+
+The structure of a custom format should be:
 
 ```js
 sceditor.formats['youformatname'] = function () {
