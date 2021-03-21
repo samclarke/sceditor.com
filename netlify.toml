@@ -1,4 +1,6 @@
-[context.production.environment]
-  HUGO_VERSION = "0.80.0"
-[context.deploy-preview.environment]
+[build]
+  command = "(cd themes/sceditor && npm ci) && hugo"
+  publish = "public"
+
+[build.environment]
   HUGO_VERSION = "0.80.0"
