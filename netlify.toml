@@ -1,5 +1,5 @@
 [build]
-  command = "(cd themes/sceditor && npm ci) && hugo"
+  command = "(cd themes/sceditor && npm ci) && npm install postcss-cli -g && hugo"
   publish = "public"
 
 [build.environment]
