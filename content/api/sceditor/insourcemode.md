@@ -3,24 +3,27 @@ title: inSourceMode()
 excerpt: Gets if the editor is in source mode.
 permalink: /api/sceditor/insourcemode/
 categories:
-    - Docs
-    - API
-    - SCEditor-API
+  - Docs
+  - API
+  - SCEditor-API
 ---
+
 ## InSourceMode()
 
-<article class="api method" markdown="1">
-### <a id="inSourceMode" href="#inSourceMode">inSourceMode()</a> <span class="since">Since: 1.3.5</span>
+{{% api_method name="inSourceMode()" since="1.3.5" %}}
 
 Gets if the editor is currently in source code mode.
 
+{{% api_section title="Syntax" %}}
 
-#### Syntax
+```js
+var isInSourceMode = instance.inSourceMode();
+```
 
-	var isInSourceMode = instance.inSourceMode();
+{{% /api_section %}}
 
+{{% api_section title="Return" %}}
+Type: **[boolean](/api/types/#bool)**
+{{% /api_section %}}
 
-#### Return
-
-Type: **[Boolean](/api/types/#bool)**
-</article>
+{{% /api_method %}}
