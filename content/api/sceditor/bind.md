@@ -20,7 +20,7 @@ The supported events are:
  * contextmenu
  * nodechanged  
    When the current node containing the selection changes in WYSIWYG mode
- * valuechange  
+ * valuechanged  
    Triggered when the editors value changes (this isn't called after every
    key press)
  * selectionchanged
