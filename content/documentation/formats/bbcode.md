@@ -215,9 +215,9 @@ Type: **[String](/api/types/#string)**
   var bbcode = sceditor.instance(textarea).toBBCode('<strong>Bold!</strong>');
 
   // Will be <div><strong>Bold!</strong></div>
-  var html = sceditor.instance(textarea).fromBBCode('[b]Bold![b]');
+  var html = sceditor.instance(textarea).fromBBCode('[b]Bold![/b]');
 
   // Will be <strong>Bold!</strong>
-  var htmlFragment = sceditor.instance(textarea).fromBBCode('[b]Bold![b]', true);
+  var htmlFragment = sceditor.instance(textarea).fromBBCode('[b]Bold![/b]', true);
 </script>
 ```
