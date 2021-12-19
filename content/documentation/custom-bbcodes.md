@@ -47,6 +47,7 @@ e.g. before calling `sceditor.create()`.
     allowsEmpty: false,
     excludeClosing: false,
     skipLastLineBreak: false,
+    strictMatch: false,
 
     breakBefore: false,
     breakStart: false,
@@ -100,6 +101,8 @@ format: function(element, content) {
 </code></pre>
 </div>
 
+Matching behaviour can be changed by changing the [strictMatch](#strictMatch) property.
+
 
 ## tags <a id="tags"></a>
 
@@ -135,6 +138,8 @@ To match all occurrences of a tag with an attribute with a specific value do:
 ```
 
 This will match any tag that is an instance of `<tag-name>` and has the attribute `attribute-name` with the value `value1` or `value2`.
+
+Matching behaviour can be changed by changing the [strictMatch](#strictMatch) property.
 
 
 ## isSelfClosing <a id="isSelfClosing"></a>
@@ -190,6 +195,17 @@ If to not add a closing tag. Mostly so that `[*]` can be used without `[/*]`.
 **skipLastLineBreak** *Bool* Defaults to `false`
 
 Block level tags have an extra `<br />` added to the end of them in all browsers except IE. If this is set to true the extra line break will not be added.
+
+
+## strictMatch <a id="strictMatch"></a>
+
+**strictMatch** *Bool* Defaults to `false`
+
+Whether to use strict matching on attributes and styles.
+
+When true this will perform AND matching requiring all tag attributes and styles to match.
+
+When false will perform OR matching and will match if any of a tags attributes or styles match.
 
 
 ## breakBefore <a id="breakBefore"></a>
