@@ -7,8 +7,8 @@ slug: how-to-add-custom-commands
 <h2>Custom command demo</h2>
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"> </script>
-<link rel="stylesheet" href="/minified/themes/default.min.css" type="text/css" media="all" />
-<script type="text/javascript" src="/minified/jquery.sceditor.bbcode.min.js"> </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sceditor@latest/minified/themes/default.min.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sceditor@latest/minified/jquery.sceditor.bbcode.min.js"> </script>
 <style>
 	.sceditor-button-headers div { background: url('/misc/headers-button.png'); }
 	.sceditor-header-option {
@@ -69,7 +69,7 @@ $.sceditor.command.set("headers", {
 	$("#demo-cust-cmd").sceditor({
 		format: 'bbcode',
 		toolbar: "headers|source",
-		style: "/minified/themes/content/default.min.css",
+		style: "https://cdn.jsdelivr.net/npm/sceditor@latest/minified/themes/content/default.min.css",
 		emoticonsRoot: "/"
 	});
 });

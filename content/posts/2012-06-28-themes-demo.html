@@ -5,10 +5,10 @@ date: 2012-06-28
 slug: themes-demo
 ---
 
-<link rel="stylesheet" href="/minified/themes/default.min.css" id="theme-link" />
-<script src="/minified/sceditor.min.js"></script>
-<script src="/minified/formats/bbcode.js"></script>
-<script src="/minified/icons/monocons.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sceditor@latest/minified/themes/default.min.css" id="theme-link" />
+<script src="https://cdn.jsdelivr.net/npm/sceditor@latest/minified/sceditor.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sceditor@latest/minified/formats/bbcode.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sceditor@latest/minified/icons/monocons.js"></script>
 
 <p><textarea id="demo" style="height:300px;width:500px;">Themes example</textarea></p>
 
@@ -27,14 +27,14 @@ slug: themes-demo
 <script>
 	var themeInput = document.getElementById('theme');
 	themeInput.onchange = function () {
-		var themeUrl = '/minified/themes/' + themeInput.value + '.min.css';
+		var themeUrl = 'https://cdn.jsdelivr.net/npm/sceditor@latest/minified/themes/' + themeInput.value + '.min.css';
 		document.getElementById('theme-link').href = themeUrl;
 	}
 	
 	
 	sceditor.create(document.getElementById('demo'), {
 		width: '100%',
-		style: '/minified/themes/content/default.min.css',
+		style: 'https://cdn.jsdelivr.net/npm/sceditor@latest/minified/themes/content/default.min.css',
 		emoticonsRoot: '/',
 		format: 'bbcode',
 		icons: 'monocons'
