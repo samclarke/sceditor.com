@@ -5,9 +5,9 @@ date: 2012-04-29
 slug: toggle-wysiwyg-and-source-modes
 ---
 
-<link rel="stylesheet" href="/minified/themes/default.min.css"/>
-<script src="/minified/sceditor.min.js"> </script>
-<script src="/minified/formats/bbcode.js"> </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sceditor@latest/minified/themes/default.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/sceditor@latest/minified/sceditor.min.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/sceditor@latest/minified/formats/bbcode.js"> </script>
 
 <p><textarea style="width:600px; height:300px" id="demo-toggle">Simple [b]demo[/b].</textarea></p>
 <p><a href="javascript:toggle();">Toggle editor mode</a></p>
@@ -17,7 +17,7 @@ var textarea = document.getElementById('demo-toggle');
 sceditor.create(textarea, {
 	format: 'bbcode',
 	toolbar: 'bold,italic,underline|source',
-	style: '/minified/themes/content/default.min.css',
+	style: 'https://cdn.jsdelivr.net/npm/sceditor@latest/minified/themes/content/default.min.css',
 	emoticonsRoot: '/'
 });
 

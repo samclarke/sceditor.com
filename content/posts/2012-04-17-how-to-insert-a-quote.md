@@ -6,9 +6,9 @@ slug: how-to-insert-a-quote
 ---
 ## Quote demo
 
-<link rel="stylesheet" href="/minified/themes/default.min.css" />
-<script src="/minified/sceditor.min.js"></script>
-<script src="/minified/formats/bbcode.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sceditor@latest/minified/themes/default.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/sceditor@latest/minified/sceditor.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sceditor@latest/minified/formats/bbcode.js"></script>
 
 <textarea style="width:600px; height:300px" id="demo-quote">This [b]is[/b] [color=#ff0000]a[/color] [size=3]demo[/size] :).</textarea>
 
@@ -16,7 +16,7 @@ slug: how-to-insert-a-quote
 var textarea = document.getElementById('demo-quote');
 sceditor.create(textarea, {
 	format: 'bbcode',
-	style: '/minified/themes/content/default.min.css',
+	style: 'https://cdn.jsdelivr.net/npm/sceditor@latest/minified/themes/content/default.min.css',
 	emoticonsRoot: '/'
 });
 function insertQuote(includeAuthor) {

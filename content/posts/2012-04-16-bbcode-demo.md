@@ -6,15 +6,15 @@ slug: bbcode-demo
 ---
 ## BBCode demo
 
-<link rel="stylesheet" href="/minified/themes/default.min.css" />
-<script src="/minified/sceditor.min.js"></script>
-<script src="/minified/formats/bbcode.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sceditor@latest/minified/themes/default.min.css" />
+<script src="https://cdn.jsdelivr.net/combine/npm/sceditor@latest/minified/sceditor.min.js,npm/sceditor@latest/minified/formats/bbcode.js,npm/sceditor@latest/minified/icons/monocons.js"></script>
+
 <textarea style="width:600px; height:300px" id="demo">This [b]is[/b] [color=#ff0000]a[/color] [size=3]demo[/size] :).</textarea><!--more-->
 
 <script>
 sceditor.create(document.getElementById('demo'), {
 	width: '100%',
-	style: '/minified/themes/content/default.min.css',
+	style: 'https://cdn.jsdelivr.net/combine/npm/sceditor@latest/minified/themes/content/default.min.css',
 	emoticonsRoot: '/',
 	format: 'bbcode'
 });
