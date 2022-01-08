@@ -13,8 +13,8 @@ There are a lot of bug fixes in this release along with three new translations.
 There are also some new methods, [css()][css], [toBBCode()][tobbode], [fromBBCode()][frombbode], [selectOuterText()][selectOuterText] and [getOuterText()][getOuterText] and [getBody()][getbody].
 
  [css]: /api/sceditor/css/
- [tobbode]: /documentation/plugins/bbcode/#toBBCode
- [frombbode]: /documentation/plugins/bbcode/#fromBBCode
+ [tobbode]: /documentation/formats/bbcode/#toBBCode%28%29
+ [frombbode]: /documentation/formats/bbcode/#fromBBCode%28%29
  [selectOuterText]: /api/rangehelper/selectoutertext/
  [getOuterText]: /api/rangehelper/getoutertext/
  [getbody]: /api/sceditor/getbody/
