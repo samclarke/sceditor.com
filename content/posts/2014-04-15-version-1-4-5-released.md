@@ -8,7 +8,7 @@ slug: version-1-4-5-released
 
 Version 1.4.5 has been released. Thanks to everyone who contributed!
 
-**Important**: This version fixes a potential XSS exploit where if someone loaded malicious BBCode into the editor (i.e. editing a malicious users BBCode) it could cause an XSS exploit. This does not affect the XHTML plugin as all XHTML, regardless of source, should be filtered server side unless it's from a trusted user. See the [XHTML plugin warning](/documentation/plugins/xhtml/#xhtml) for more information.
+**Important**: This version fixes a potential XSS exploit where if someone loaded malicious BBCode into the editor (i.e. editing a malicious users BBCode) it could cause an XSS exploit. This does not affect the XHTML plugin as all XHTML, regardless of source, should be filtered server side unless it's from a trusted user. See the [XHTML plugin warning](/documentation/formats/xhtml/#xhtml) for more information.
 
 Other than that this version is mostly just bug fixes, there are a few new translations as well as the new indent/outdent commands.
 
