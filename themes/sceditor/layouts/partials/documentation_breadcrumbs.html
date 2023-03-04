@@ -1,31 +1,26 @@
 <ul class="Breadcrumb">
-    {{ if ne .Section "documentation" }}
-    <li class="Breadcrumb__item">
-        <a class="Breadcrumb__link" href="/documentation/">Documentation</a>
-        <span class="Breadcrumb__divider">/</span>
-    </li>
-    {{ end }}
-
-    {{ with .File }}
-        {{ $url := .Path }}
-
-        {{ range $index, $element := split $url "/" }}
-            {{ $.Scratch.Add "path" $element }}
-
-            {{ if ne $element "" }}
-                {{ $page := $.Site.GetPage "page" ($.Scratch.Get "path") }}
-                
-                {{ with $page }}
-                <li class="Breadcrumb__item Breadcrumb__item--active">
-                    {{ if ne $index 0 }}
-                        <span class="Breadcrumb__divider">/</span>
-                    {{ end }}
-                    <a class="Breadcrumb__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
-                </li>
-                {{ end }}
-
-                {{ $.Scratch.Add "path" "/" }}
-            {{ end }}
+{{ if ne .Section "documentation" }}
+<li class="Breadcrumb__item">
+  <a class="Breadcrumb__link" href="/documentation/">Documentation</a>
+  <span class="Breadcrumb__divider">/</span>
+</li>
+{{ end }}
+{{ with .File }}
+  {{ $url := .Path }}
+  {{ range $index, $element := split $url "/" }}
+    {{ $.Scratch.Add "path" $element }}
+    {{ if and (ne $element "") (ne $element "_index.md") }}
+      {{ $page := $.Site.GetPage "page" ($.Scratch.Get "path") }}
+      {{ with $page }}
+      <li class="Breadcrumb__item Breadcrumb__item--active">
+        {{ if ne $index 0 }}
+          <span class="Breadcrumb__divider">/</span>
         {{ end }}
+        <a class="Breadcrumb__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+      {{ end }}
+      {{ $.Scratch.Add "path" "/" }}
     {{ end }}
+  {{ end }}
+{{ end }}
 </ul>

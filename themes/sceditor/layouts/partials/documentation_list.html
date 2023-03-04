@@ -1,34 +1,20 @@
 {{ partial "header.html" . }}
-    <section class="Content">
-        {{ partial "documentation_breadcrumbs.html" . }}
-
-        <div class="Documentation">
-                
-            <div class="Documentation__content">
-                <h1>{{ .Title }}</h1>
-
-                {{ .Content }}
-
-                <ul class="Archive">
-                    {{ range .Sections }}
-                        <li class="Archive__item">
-                            <a class="Archive__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-                            <p class="Archive__excerpt">{{ .Params.excerpt }}</p>
-                        </li>
-                    {{ end }}
-
-
-                    {{ range .Pages }}
-                    <li class="Archive__item">
-                        <a class="Archive__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-                        <p class="Archive__excerpt">{{ .Params.excerpt }}</p>
-                    </li>
-                {{ end }}
-                </ul>
-
-            </div>
-
-            {{ partial "documentation_sidebar.html" . }}
-        </div>
-    </section>
+<section class="Content">
+{{ partial "documentation_breadcrumbs.html" . }}
+<div class="Documentation">
+<div class="Documentation__content">
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+<ul class="Archive">
+{{ range .Pages }}
+<li class="Archive__item">
+<a class="Archive__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+<p class="Archive__excerpt">{{ .Params.excerpt }}</p>
+</li>
+{{ end }}
+</ul>
+</div>
+{{ partial "documentation_sidebar.html" . }}
+</div>
+</section>
 {{ partial "footer.html" . }}

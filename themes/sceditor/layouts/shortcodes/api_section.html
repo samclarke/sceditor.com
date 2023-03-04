@@ -1,10 +1,4 @@
 <section>
-    <h4 class="ApiMethod__subtitle">{{ .Get "title" }}</h4>
-
-    {{ $markdown := .Inner | markdownify }}
-    {{ if not ( strings.Contains $markdown "<p>" ) }}
-        <p>{{ $markdown }}</p>
-    {{ else }}
-        {{ $markdown }}
-    {{ end }}
+<h4 class="ApiMethod__subtitle">{{ .Get "title" }}</h4>
+{{ (htmlUnescape (replace .Inner "<pre>" "\n\n<pre>")) | safeHTML }}
 </section>
