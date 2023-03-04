@@ -18,5 +18,7 @@ markup:
     codeFences: false
     noClasses: true
   goldmark:
+    parser:
+      autoHeadingIDType: blackfriday
     renderer:
       unsafe: true
