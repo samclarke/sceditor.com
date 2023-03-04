@@ -1,8 +1,7 @@
 <div class="ApiMethod__parameter">
-    {{ $markdown := .Inner | markdownify }}
-    {{ if not ( strings.Contains $markdown "<p>" ) }}
-        <p>{{ $markdown }}</p>
-    {{ else }}
-        {{ $markdown }}
-    {{ end }}
+{{ if not ( strings.Contains .Inner "<p>" ) }}
+<div>{{ .Inner }}</div>
+{{ else }}
+{{ .Inner }}
+{{ end }}
 </div>

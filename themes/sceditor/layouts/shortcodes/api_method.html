@@ -1,13 +1,11 @@
 <article class="ApiMethod">
-    <h3 class="ApiMethod__title">
-        <a id="{{ .Get "name" }}" href="#{{ .Get "name" }}" class="ApiMethod__link">{{ .Get "name" }}</a>
-        <span class="ApiMethod__since">Since: {{ .Get "since" }}</span>
-    </h3>
-
-    {{ $markdown := .Inner | markdownify }}
-    {{ if not ( strings.Contains $markdown "<p>" ) }}
-        <p>{{ $markdown }}</p>
-    {{ else }}
-        {{ $markdown }}
-    {{ end }}
+  <h3 class="ApiMethod__title">
+    <a id="{{ .Get "name" }}" href="#{{ .Get "name" }}" class="ApiMethod__link">{{ .Get "name" }}</a>
+    <span class="ApiMethod__since">Since: {{ .Get "since" }}</span>
+  </h3>
+{{ if not ( strings.Contains .Inner "<p>" ) }}
+  <div>{{ .Inner }}</div>
+{{ else }}
+  {{ .Inner }}
+{{ end }}
 </article>

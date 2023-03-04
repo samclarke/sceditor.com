@@ -1,10 +1,4 @@
 <section class="ApiMethod__exmaple">
-    <h3 class="ApiMethod__subtitle">Example</h3>
-
-    {{ $markdown := .Inner | markdownify }}
-    {{ if not ( strings.Contains $markdown "<p>" ) }}
-        <p>{{ $markdown }}</p>
-    {{ else }}
-        {{ $markdown }}
-    {{ end }}
+<h3 class="ApiMethod__subtitle">Example</h3>
+{{ (htmlUnescape (replace .Inner "<pre>" "\n\n<pre>")) | safeHTML }}
 </section>
