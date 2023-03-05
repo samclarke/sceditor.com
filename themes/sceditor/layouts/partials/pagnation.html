@@ -2,8 +2,11 @@
 {{ if gt $pag.TotalPages 1 }}
 <ul class="Pagnation">
     {{ with $pag.First }}
-    <li class="Pagnation__item">
-        <a class="Pagnation__link" href="{{ .URL }}" aria-label="First">
+    <li class="Pagnation__item {{ if not $pag.HasPrev }}Pagnation__item--disabled{{ end }}">
+        <a 
+            class="Pagnation__link"
+            href="{{ if $pag.HasPrev }}{{ .URL }}{{ end }}"
+            aria-label="First">
             <span aria-hidden="true">&laquo;&laquo;</span>
         </a>
     </li>
@@ -32,8 +35,11 @@
         </a>
     </li>
     {{ with $pag.Last }}
-    <li class="Pagnation__item">
-        <a class="Pagnation__link" href="{{ .URL }}" aria-label="Last">
+    <li class="Pagnation__item {{ if not $pag.HasNext }}Pagnation__item--disabled{{ end }}">
+        <a 
+            class="Pagnation__link"
+            href="{{ if $pag.HasNext }}{{ .URL }}{{ end }}"
+            aria-label="Last">
             <span aria-hidden="true">&raquo;&raquo;</span>
         </a>
     </li>
