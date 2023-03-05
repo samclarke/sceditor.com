@@ -62,8 +62,11 @@ kbd {
 	user-select: all;
 }
 
+img {
+	max-width: 100%;
+}
 
-html code[class*="language-"],
+
 html pre[class*="language-"],
 html pre {
 	overflow: auto;
@@ -103,8 +106,7 @@ html code {
 
 .Header {
 	margin: 0;
-	border-bottom: 1px solid #ddd;
-	box-shadow: 0 0 6px 1px rgba(17, 17, 17, 0.09);
+	border-bottom: 1px solid #ccc;
 }
 .Header__container {
 	display: flex;
@@ -276,7 +278,6 @@ html code {
 .Button {
 	font-weight: bold;
     display: inline-block;
-    height: 3rem;
     line-height: 3rem;
     border: 1px solid #268aee;
     color: #268aee;
@@ -481,6 +482,13 @@ html code {
 .Pagnation__item {
 	display: inline-block;
 }
+.Pagnation__item--active {
+	font-weight: bold;
+}
+.Pagnation__item--disabled a {
+	color: inherit;
+	pointer-events: none;
+}
 .Pagnation__link {
 	display: inline-block;
 	padding: 0 .125rem;
@@ -489,9 +497,9 @@ html code {
 .Footer {
 	padding: 3em 0 2em;
 	margin: 0;
-	background: #3a3a3a;
-	color: #fff;
 	overflow: hidden;
+	background: #f4f5f6;
+	border-top: 1px solid #ddd;
 }
 .Footer a {
 	color: inherit;
