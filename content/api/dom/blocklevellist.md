@@ -10,7 +10,7 @@ Static **[string](/api/types/#string)** property containing the names of block-l
 
 This is used by the [isInline()](/api/dom/isinline/) method.
 
-Defaults to: `|body|hr|p|div|h1|h2|h3|h4|h5|h6|address|pre|form|table|tbody|thead|tfoot|th|tr|td|li|ol|ul|blockquote|center|`
+Defaults to: `|body|hr|p|div|h1|h2|h3|h4|h5|h6|address|pre|form|table|tbody|thead|tfoot|th|tr|td|li|ol|ul|blockquote|center|details|section|article|aside|nav|main|header|hgroup|footer|fieldset|dl|dt|dd|figure|figcaption|`
 
 
 {{% api_section title="Syntax" %}}

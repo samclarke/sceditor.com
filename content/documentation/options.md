@@ -433,3 +433,23 @@ will become:
 **dropDownCss** *Object* Defaults to an empty object
 
 Extra CSS to add to the dropdown menu (e.g. z-index).
+
+
+## allowedTags <a id="allowedTags"></a>
+
+**allowedTags** *Array&lt;string&gt;* Defaults to `[]`
+
+An array of extra tags that should be allowed in the editor content.
+
+By default custom HTML elements are removed by the HTML sanitiser. This option
+allows specify any custom HTML elements that should be allowed.
+
+
+## allowedAttributes <a id="allowedAttributes"></a>
+
+**allowedAttributes** *Array&lt;string&gt;* Defaults to `[]`
+
+An array of extra attributes that are allowed on tags in the editor content.
+
+By default custom attributes are removed by the HTML sanitiser. This option
+allows specify any custom attributes that should be allowed.
