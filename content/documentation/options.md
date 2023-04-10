@@ -15,7 +15,7 @@ For example.
 ```js
 // Create the editor
 sceditor.create(textarea, {
-	// Options go here
+    // Options go here
 
     plugins: 'undo',
     format: 'bbcode',
@@ -394,7 +394,27 @@ By default the editor will remove block level elements when the cursor is placed
 
 **parserOptions** *Object* Defaults to an empty object
 
-If to trim the whitespace from the start and end of BBCode. By default the whitespace will be left.
+An object with options to pass to the `BBCodeParser`. The options are:
+
+ * `breakBeforeBlock`  
+   If to add a newline before block BBCodes.
+ * `breakStartBlock`  
+   If to add a newline the start of block BBCodes.
+ * `breakEndBlock`  
+   If to add a newline to the end of block BBCodes.
+ * `breakAfterBlock`  
+   If to add a newline after block BBCodes.
+ * `fixInvalidNesting`  
+   If to fix invalid nested BBCodes such as block BBCodes inside inline BBCodes.
+ * `fixInvalidChildren`  
+   If fix children which should not be a child of the parent BBCode.
+ * `removeEmptyTags`  
+   If to remove empty tags.
+ * `quoteType`  
+   The type of quotes to use for BBCode attributes.
+
+See [BBCode format](/documentation/formats/bbcode/#parser-options-a-id-parser-options-a)
+for more information.
 
 
 ## bbcodeTrim <a id="bbcodeTrim"></a>
