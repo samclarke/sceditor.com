@@ -8,7 +8,7 @@ excerpt: Inserts HTML at the selection.
 
 Inserts some HTML at the position of the current selection.
 
-<span class="Label Label--info">Info:</span> Using the [sceditor.insert()](/api/sceditor/val/) method is the preferred way of inserting HTML into the editor as it checks if the editor is in WYSIWYG or source mode and insert it into the appropriate place.
+<span class="Label Label--info">Info:</span> Using the [sceditor.insert()](/api/sceditor/insert/) method is the preferred way of inserting HTML into the editor as it checks if the editor is in WYSIWYG or source mode and insert it into the appropriate place.
 
 
 {{% api_section title="Syntax" %}}
