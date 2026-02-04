@@ -3,8 +3,9 @@ languageCode: "en-us"
 title: "SCEditor"
 theme: "sceditor"
 
-paginate: 10
-paginatePath: ""
+pagination:
+  pagerSize: 10
+  path: ""
 
 permalinks:
   - post: /posts/:title
