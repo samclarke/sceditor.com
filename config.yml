@@ -11,7 +11,7 @@ permalinks:
   - post: /posts/:title
 
 params:
-  downloadUrl: "https://github.com/samclarke/SCEditor/releases/download/v3.2.0/sceditor-3.2.0.zip"
+  downloadUrl: "https://github.com/samclarke/SCEditor/releases/download/v3.2.1/sceditor-3.2.1.zip"
 
 markup:
   defaultMarkdownHandler: goldmark
