@@ -33,7 +33,7 @@ For example:
 ```html
 <script>
 sceditor.create(textarea, {
-    plugins: 'plugin',
+    plugins: 'plaintext',
     pastetext: {
         addButton: true,
         enabled: false // Set to true to start in enabled state

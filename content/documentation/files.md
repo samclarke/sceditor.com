@@ -20,17 +20,23 @@ You should normally only include the minified files from the `minified/` directo
 
 ## Plugins <a id="plugins"></a>
 
+   * `minified/plugins/autosave.js`  
+     The minified Autosave plugin. Add to the `plugin` option to enable it.
+   
    * `minified/plugins/autoyoutube.js`  
      The minified AutoYoutube plugin. Add to the `plugin` option to enable it.
 
    * `minified/plugins/dragdrop.js`  
      The minified Drag and Drop plugin. Add to the `plugin` option to enable it.
 
-   * `minified/plugins/undo.js`  
-     The minified undo plugin. Add to the `plugin` option to enable it.
+   * `minified/plugins/emojis.js`  
+     The minified Emojis plugin. Add to the `plugin` option to enable it.
 
    * `minified/plugins/plaintext.js`  
      The minified plain text plugin. Add to the `plugin` option to enable it.
+
+   * `minified/plugins/undo.js`  
+     The minified undo plugin. Add to the `plugin` option to enable it.
 
 
 ## Formats <a id="formats"></a>
